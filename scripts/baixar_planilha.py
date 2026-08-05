@@ -29,8 +29,10 @@ DESTINO = RAIZ / "data" / "raw"
 # aba na planilha -> nome do arquivo em data/raw
 ABAS = {
     "CAFÉ - SJC": "cafe-sjc.csv",
-    # Descomente conforme for incluindo operações no painel:
-    # "CAFÉ - GRU.": "cafe-gru.csv",
+    # A aba de Guarulhos guarda o ano inteiro, ~15 mil linhas. Baixa tudo e o
+    # corte por data acontece no build_data.py (RETENCAO_DIAS).
+    "CAFÉ - GRU.": "cafe-gru.csv",
+    # Descomente conforme for incluindo operações no painel.
 }
 
 ESCOPO = ["https://www.googleapis.com/auth/spreadsheets.readonly"]

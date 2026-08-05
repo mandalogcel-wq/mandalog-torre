@@ -46,6 +46,9 @@ PAINEL_PADRAO = "mandalogcel-wq.github.io/mandalog-torre"
 # Mesmo agrupamento do painel: devolução reúne três desfechos distintos.
 DEVOLUCAO = {"devolucao"}
 
+# Quantos veículos em rota listar por operação, antes de resumir o resto.
+TETO_VEICULOS = 6
+
 
 def pct(a: int, b: int) -> int:
     return round(100 * a / b) if b else 0
@@ -74,12 +77,8 @@ def carregar() -> dict:
     return json.loads(ENTRADA.read_text(encoding="utf-8"))
 
 
-def montar(base: dict, dia: str, interno: bool, painel: str) -> str | None:
-    """Devolve o texto do resumo, ou None se não houve operação no dia."""
-    notas = [n for n in base["notas"] if n["tipo"] == "ENTREGA" and n["data"] == dia]
-    if not notas:
-        return None
-
+def bloco(base: dict, notas: list[dict], interno: bool) -> list[str]:
+    """Linhas de uma operação: contagens do dia e quem ainda está na rua."""
     total = len(notas)
     conta = lambda k: sum(1 for n in notas if n["classe"] == k)  # noqa: E731
     entregues = conta("entregue")
@@ -95,36 +94,34 @@ def montar(base: dict, dia: str, interno: bool, painel: str) -> str | None:
     for n in notas:
         planos.setdefault(n.get("plano") or "(sem plano)", []).append(n)
 
-    em_rota, finalizados, sem_entrega = [], 0, 0
+    # Um motorista pode levar vários planos no mesmo dia. No grupo interessa o
+    # veículo, não o plano — por isso a consolidação por placa.
+    veiculos: dict[tuple[str, str], dict] = {}
+    finalizados = sem_entrega = 0
     for plano, ns in planos.items():
         meta = base["planos"].get(plano, {})
-        abertos = sum(1 for n in ns if n["classe"] in ("semapont", "andamento"))
-        feitas = sum(1 for n in ns if n["classe"] == "entregue")
         if not meta.get("motorista"):
             continue
-        if abertos:
-            em_rota.append({
-                "motorista": primeiro_nome(meta.get("motorista", "")),
-                "placa": meta.get("placa", "—"),
-                "feitas": feitas,
-                "total": len(ns),
-                "cidades": sorted({n["cidade"] for n in ns if n.get("cidade")}),
-            })
-        elif feitas:
-            finalizados += 1
-        else:
-            sem_entrega += 1
+        abertos = sum(1 for n in ns if n["classe"] in ("semapont", "andamento"))
+        feitas = sum(1 for n in ns if n["classe"] == "entregue")
+        if not abertos:
+            finalizados += 1 if feitas else 0
+            sem_entrega += 0 if feitas else 1
+            continue
+        chave = (meta.get("placa", "—"), primeiro_nome(meta.get("motorista", "")))
+        v = veiculos.setdefault(chave, {"feitas": 0, "total": 0, "cidades": set()})
+        v["feitas"] += feitas
+        v["total"] += len(ns)
+        v["cidades"].update(n["cidade"] for n in ns if n.get("cidade"))
 
+    em_rota = [
+        {"placa": placa, "motorista": nome, "feitas": v["feitas"],
+         "total": v["total"], "cidades": sorted(v["cidades"])}
+        for (placa, nome), v in veiculos.items()
+    ]
     em_rota.sort(key=lambda v: (v["feitas"] / v["total"] if v["total"] else 0))
 
-    agora = datetime.now(BRASILIA)
-    ops = " · ".join(sorted({n["operacao"] for n in notas}))
-    d = f"{dia[8:10]}/{dia[5:7]}"
-
     L = [
-        f"🚚 *TORRE VALE DO PARAÍBA* · {d} {agora:%Hh}",
-        ops,
-        "",
         f"Em rota {len(em_rota)} · Finalizados {finalizados} · S/ entrega {sem_entrega}",
         "",
         f"*NOTAS DO DIA: {total}*",
@@ -135,22 +132,51 @@ def montar(base: dict, dia: str, interno: bool, painel: str) -> str | None:
         f"📱 GreenMile         {pct(gm_ok, entregues)}%",
     ]
 
-    # Nota sem Status SAC é desfecho não informado, não entrega não realizada.
-    # Some da versão que vai ao grupo com o cliente, mas nunca vira "pendente".
-    if interno and semapont:
-        L.append(f"⚠️ Sem apontamento {semapont}")
+    # Nota sem Status SAC é desfecho não informado, não entrega não realizada —
+    # nunca somar a "pendente". Mas omitir também engana: de manhã cedo o dia
+    # inteiro está sem baixa, e sem esta linha a mensagem mostra 92 notas com
+    # tudo zerado, como se nada tivesse saído. No grupo com o cliente ela vai
+    # com rótulo neutro; internamente, com o nome que a operação usa.
+    if semapont:
+        L.append(f"{'⚠️ Sem apontamento' if interno else '🕗 Aguardando baixa'} {semapont}")
 
     if em_rota:
         L += ["", "*EM ROTA AGORA*"]
-        for v in em_rota:
+        # Mensagem de grupo precisa ser lida na notificação. Guarulhos chega a
+        # ter dezenas de veículos na rua; a lista mostra os que mais precisam de
+        # atenção, que a ordenação já colocou no topo. O painel tem o resto.
+        for v in em_rota[:TETO_VEICULOS]:
             L.append(f"• {v['motorista']} · {v['placa']} · {v['feitas']}/{v['total']} notas")
             if v["cidades"]:
                 cidades = " · ".join(v["cidades"][:3])
                 if len(v["cidades"]) > 3:
                     cidades += f" +{len(v['cidades']) - 3}"
                 L.append(f"  {cidades}")
+        resto = len(em_rota) - TETO_VEICULOS
+        if resto > 0:
+            L.append(f"_e mais {resto} veículo{'s' if resto > 1 else ''} em rota_")
     else:
         L += ["", "Nenhum veículo em rota no momento."]
+
+    return L
+
+
+def montar(base: dict, dia: str, interno: bool, painel: str) -> str | None:
+    """Resumo do dia, uma seção por operação. None se não houve operação."""
+    notas = [n for n in base["notas"] if n["tipo"] == "ENTREGA" and n["data"] == dia]
+    if not notas:
+        return None
+
+    agora = datetime.now(BRASILIA)
+    d = f"{dia[8:10]}/{dia[5:7]}"
+    L = [f"🚚 *TORRE VALE DO PARAÍBA* · {d} {agora:%Hh}"]
+
+    # Cada base tem motorista, meta e percentual próprios. Somar SJC e Guarulhos
+    # num número só esconde qual das duas está travada.
+    ops = sorted({n["operacao"] for n in notas})
+    for op in ops:
+        L += ["", f"*{op}*" if len(ops) > 1 else op]
+        L += bloco(base, [n for n in notas if n["operacao"] == op], interno)
 
     L += ["", f"Painel: {painel}"]
     return "\n".join(L)

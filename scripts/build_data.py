@@ -30,6 +30,13 @@ OPERACOES = {
     "cafe-gru": "Café · Guarulhos",
 }
 
+# Este é um painel de status diário, não um relatório histórico. A aba de
+# Guarulhos guarda o ano inteiro — 15 mil linhas, que virariam um .enc de 11 MB
+# baixado e decifrado a cada abertura, e um repositório que bate no limite de
+# 1 GB do Pages em poucos meses. Cortar em 30 dias mantém o arquivo em ~1,3 MB.
+# Notas sem data de saída ficam, porque são justamente as que pedem atenção.
+RETENCAO_DIAS = 30
+
 # A planilha tem dois pares de colunas com o mesmo cabeçalho (CARREGAMENTO e
 # PAGAMENTO). O csv.reader preserva a ordem, então usamos o índice da coluna.
 COL = {
@@ -173,13 +180,19 @@ def main() -> None:
         raise SystemExit(f"Nenhum CSV encontrado em {ENTRADA}. "
                          "Exporte a aba da planilha e salve aqui.")
 
+    agora = datetime.now(timezone(timedelta(hours=-3)))
+    corte = (agora.date() - timedelta(days=RETENCAO_DIAS)).isoformat()
+
     notas: list[dict] = []
     avisos: list[str] = []
     for arq in arquivos:
         n, a = ler_csv(arq)
-        notas.extend(n)
+        recentes = [x for x in n if not x["data"] or x["data"] >= corte]
+        notas.extend(recentes)
         avisos.extend(a)
-        print(f"  {arq.name}: {len(n)} notas")
+        fora = len(n) - len(recentes)
+        sufixo = f" ({fora} fora da janela de {RETENCAO_DIAS} dias)" if fora else ""
+        print(f"  {arq.name}: {len(recentes)} notas{sufixo}")
 
     # Metadados por plano, a partir da primeira linha que traz cada informação.
     planos: dict[str, dict] = {}
@@ -194,10 +207,10 @@ def main() -> None:
             if not p[campo] and n[campo]:
                 p[campo] = n[campo]
 
-    agora = datetime.now(timezone(timedelta(hours=-3)))
     saida = {
         "gerado_em": agora.isoformat(timespec="seconds"),
         "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
+        "retencao_dias": RETENCAO_DIAS,
         "arquivos": [a.name for a in arquivos],
         "planos": planos,
         "notas": notas,

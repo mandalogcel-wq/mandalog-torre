@@ -38,6 +38,12 @@ h1 em{font-style:normal;color:var(--laranja)}
 .recarregar:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
 .recarga-aviso{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .recarga-aviso.erro{color:#FFB4A8}
+.opbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.opbar[hidden]{display:none}
+.opbtn{appearance:none;cursor:pointer;background:none;border:1px solid rgba(255,255,255,.22);border-radius:2px;padding:6px 14px;color:rgba(255,255,255,.62);font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:15px;font-weight:600;letter-spacing:.06em;transition:color .12s,border-color .12s,background .12s}
+.opbtn:hover{color:#fff;border-color:rgba(255,255,255,.5)}
+.opbtn[aria-pressed="true"]{color:var(--navy);background:var(--laranja);border-color:var(--laranja)}
+.opbtn:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
 .datebar{display:flex;flex-wrap:wrap}
 .datebtn{appearance:none;background:none;border:0;cursor:pointer;text-align:left;padding:11px 18px 12px;color:rgba(255,255,255,.6);font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:17px;font-weight:600;letter-spacing:.04em;border-bottom:3px solid transparent;transition:color .12s,border-color .12s}
 .datebtn .n{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;font-weight:400;margin-top:1px}
@@ -204,6 +210,7 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
             title="Baixa a versão mais recente publicada pelo robô">Atualizar</button>
     <span class="recarga-aviso" id="recarga-aviso" role="status" aria-live="polite"></span>
   </div>
+  <nav class="opbar" id="opbar" aria-label="Selecionar operação" hidden></nav>
   <nav class="datebar" id="datebar" aria-label="Selecionar dia de operação"></nav>
 </div>
 
@@ -245,9 +252,19 @@ const CLASSES = {
 };
 const pct = (a,b) => b ? Math.round(100*a/b) : 0;
 const brDate = iso => iso ? iso.slice(8,10)+'/'+iso.slice(5,7) : '';
-let BASE = null, filtro = null;
+let BASE = null, filtro = null, opFiltro = 'TODAS';
 
-function entregas(){ return BASE.notas.filter(n => n.tipo === 'ENTREGA'); }
+// Todo o resto do painel — contagem por dia, percentuais, lista de veículos —
+// deriva daqui. Filtrar a operação neste ponto faz o seletor valer para a tela
+// inteira sem tocar em mais nada.
+function entregas(){
+  const e = BASE.notas.filter(n => n.tipo === 'ENTREGA');
+  return opFiltro === 'TODAS' ? e : e.filter(n => n.operacao === opFiltro);
+}
+
+function operacoes(){
+  return [...new Set(BASE.notas.filter(n => n.tipo === 'ENTREGA').map(n => n.operacao))].sort();
+}
 
 function notasDo(){
   const e = entregas();
@@ -298,10 +315,34 @@ function statusPlano(g){
     : {cls:'sement', txt:'Encerrado s/ entrega'};
 }
 
+function renderOperacoes(){
+  const ops = operacoes();
+  const el = document.getElementById('opbar');
+  // Com uma operação só, o seletor não informa nada — some da tela.
+  el.hidden = ops.length < 2;
+  if(el.hidden){ opFiltro = 'TODAS'; return; }
+
+  const rotulo = o => o.replace(/^Café\s*·\s*/, '');
+  const opts = [...ops.map(o => ({k:o, r:rotulo(o)})), {k:'TODAS', r:'Todas'}];
+  el.innerHTML = opts.map(o =>
+    `<button class="opbtn" data-k="${o.k}" aria-pressed="${o.k===opFiltro}">${o.r}</button>`).join('');
+  el.querySelectorAll('.opbtn').forEach(b =>
+    b.addEventListener('click', () => {
+      opFiltro = b.dataset.k;
+      renderOperacoes();
+      renderDatas();
+      render();
+    }));
+}
+
 function renderDatas(){
   const e = entregas();
   const dias = [...new Set(e.map(n => n.data).filter(Boolean))].sort();
   const semData = e.filter(n => !n.data).length;
+  // Trocar de operação pode deixar o dia selecionado sem nenhuma nota. Melhor
+  // cair no dia mais recente daquela base do que mostrar uma tela vazia.
+  if(filtro && filtro !== 'TODAS' && filtro !== 'SEMDATA' && !dias.includes(filtro)) filtro = null;
+  if(filtro === 'SEMDATA' && !semData) filtro = null;
   if(!filtro) filtro = dias[dias.length-1] || 'TODAS';
   const veic = f => new Set(e.filter(f).map(n => n.plano).filter(Boolean)).size;
   const opts = dias.map(d => ({k:d, r:brDate(d), n:veic(n => n.data === d)+' veíc.'}));
@@ -516,8 +557,14 @@ function abrirPainel(){
     const el = document.getElementById(id);
     if(el) el.hidden = false;
   });
-  const ops = [...new Set(entregas().map(n => n.operacao))];
-  document.getElementById('local').textContent = ops.join(' · ') + ' · Vale do Paraíba';
+  // "Café · Guarulhos · Café · SJC" repetiria o cliente. Junta as bases numa
+  // linha só: "Café · Guarulhos e SJC · Vale do Paraíba".
+  const bases = operacoes().map(o => o.replace(/^Café\s*·\s*/, ''));
+  const lista = bases.length > 1
+    ? bases.slice(0, -1).join(', ') + ' e ' + bases[bases.length - 1]
+    : bases[0] || '';
+  document.getElementById('local').textContent = `Café · ${lista} · Vale do Paraíba`;
+  renderOperacoes();
   renderDatas();
   render();
 }
@@ -562,11 +609,9 @@ async function recarregar(){
     const antes = BASE && BASE.gerado_em;
     BASE = novo;
 
-    // O dia selecionado pode ter sumido do recorte publicado. Nesse caso volta
-    // para o mais recente, em vez de exibir uma tela vazia sem explicação.
-    const dias = new Set(entregas().map(n => n.data).filter(Boolean));
-    if(filtro && filtro !== 'TODAS' && filtro !== 'SEMDATA' && !dias.has(filtro)) filtro = null;
-
+    // Se o dia selecionado saiu da janela de retenção, renderDatas cai sozinho
+    // no mais recente em vez de mostrar tela vazia.
+    renderOperacoes();
     renderDatas();
     render();
     elRecAvi.textContent = antes === BASE.gerado_em
