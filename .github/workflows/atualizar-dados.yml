@@ -67,3 +67,15 @@ jobs:
             git commit -m "dados: atualização automática $(TZ=America/Sao_Paulo date '+%d/%m %H:%M')"
             git push
           fi
+
+      # Depois do commit, de propósito: uma indisponibilidade da Z-API não pode
+      # impedir a atualização do painel, que é o que importa. O script decide
+      # sozinho se está na janela de envio (Brasília) e se há operação no dia.
+      - name: Avisar o grupo do Vale no WhatsApp
+        env:
+          ZAPI_INSTANCE:     ${{ secrets.ZAPI_INSTANCE }}
+          ZAPI_TOKEN:        ${{ secrets.ZAPI_TOKEN }}
+          ZAPI_CLIENT_TOKEN: ${{ secrets.ZAPI_CLIENT_TOKEN }}
+          ZAPI_GRUPO:        ${{ secrets.ZAPI_GRUPO }}
+          JANELA: "6-20"
+        run: python3 scripts/avisar_whatsapp.py
