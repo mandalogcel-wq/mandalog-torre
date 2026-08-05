@@ -30,7 +30,14 @@ body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system
 h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(24px,3.6vw,40px);line-height:1.05;margin:0 0 3px;white-space:nowrap;letter-spacing:-.005em}
 h1 em{font-style:normal;color:var(--laranja)}
 @media (max-width:430px){h1{white-space:normal}}
-.local{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);margin:0 0 18px}
+.local{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);margin:0}
+.topolinha{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 18px}
+.recarregar{appearance:none;cursor:pointer;background:none;color:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.24);border-radius:2px;padding:5px 12px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;transition:color .12s,border-color .12s,background .12s}
+.recarregar:hover{color:#fff;border-color:var(--laranja);background:rgba(238,118,35,.14)}
+.recarregar:disabled{cursor:progress;opacity:.55}
+.recarregar:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
+.recarga-aviso{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.recarga-aviso.erro{color:#FFB4A8}
 .datebar{display:flex;flex-wrap:wrap}
 .datebtn{appearance:none;background:none;border:0;cursor:pointer;text-align:left;padding:11px 18px 12px;color:rgba(255,255,255,.6);font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:17px;font-weight:600;letter-spacing:.04em;border-bottom:3px solid transparent;transition:color .12s,border-color .12s}
 .datebtn .n{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;font-weight:400;margin-top:1px}
@@ -191,7 +198,12 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
 
 <div class="topo" id="topo" hidden>
   <h1>Status diário <em>da operação</em></h1>
-  <p class="local" id="local">Carregando…</p>
+  <div class="topolinha">
+    <p class="local" id="local">Carregando…</p>
+    <button class="recarregar" id="recarregar" type="button"
+            title="Baixa a versão mais recente publicada pelo robô">Atualizar</button>
+    <span class="recarga-aviso" id="recarga-aviso" role="status" aria-live="polite"></span>
+  </div>
   <nav class="datebar" id="datebar" aria-label="Selecionar dia de operação"></nav>
 </div>
 
@@ -482,6 +494,21 @@ const elPorta  = document.getElementById('porta');
 const elSenha  = document.getElementById('senha');
 const elBotao  = document.getElementById('entrar');
 const elAviso  = document.getElementById('aviso');
+const elRecarr = document.getElementById('recarregar');
+const elRecAvi = document.getElementById('recarga-aviso');
+
+// A senha fica só em memória, como a chave derivada: é o que permite o botão
+// "Atualizar" rebuscar o .enc sem pedir a senha de novo. Recarregar a página
+// zera tudo e pede a senha outra vez, e isso é intencional.
+let SENHA = '';
+
+// Cada execução do robô publica um .enc novo. O parâmetro de tempo evita que o
+// CDN do Pages devolva a versão anterior mesmo com no-store.
+async function baixarEnv(){
+  const r = await fetch('data/operacao.enc?t=' + Date.now(), {cache:'no-store'});
+  if(!r.ok) throw Object.assign(new Error('HTTP ' + r.status), {rede:true});
+  return r.json();
+}
 
 function abrirPainel(){
   elPorta.hidden = true;
@@ -508,9 +535,8 @@ async function tentar(){
   elAviso.textContent = '';
 
   try {
-    const r = await fetch('data/operacao.enc', {cache:'no-store'});
-    if(!r.ok) throw Object.assign(new Error('HTTP ' + r.status), {rede:true});
-    BASE = await decifrar(await r.json(), senha);
+    BASE = await decifrar(await baixarEnv(), senha);
+    SENHA = senha;
     elSenha.value = '';
     abrirPainel();
   } catch(e) {
@@ -525,8 +551,41 @@ async function tentar(){
   }
 }
 
+async function recarregar(){
+  elRecarr.disabled = true;
+  elRecarr.textContent = 'Atualizando…';
+  elRecAvi.className = 'recarga-aviso';
+  elRecAvi.textContent = '';
+
+  try {
+    const novo = await decifrar(await baixarEnv(), SENHA);
+    const antes = BASE && BASE.gerado_em;
+    BASE = novo;
+
+    // O dia selecionado pode ter sumido do recorte publicado. Nesse caso volta
+    // para o mais recente, em vez de exibir uma tela vazia sem explicação.
+    const dias = new Set(entregas().map(n => n.data).filter(Boolean));
+    if(filtro && filtro !== 'TODAS' && filtro !== 'SEMDATA' && !dias.has(filtro)) filtro = null;
+
+    renderDatas();
+    render();
+    elRecAvi.textContent = antes === BASE.gerado_em
+      ? 'Sem dado novo · ' + new Date(BASE.gerado_em).toLocaleString('pt-BR')
+      : 'Atualizado · ' + new Date(BASE.gerado_em).toLocaleString('pt-BR');
+  } catch(e) {
+    elRecAvi.className = 'recarga-aviso erro';
+    elRecAvi.textContent = e.rede
+      ? 'Falha ao baixar os dados (' + e.message + ')'
+      : 'Não foi possível decifrar. A senha pode ter mudado — recarregue a página.';
+  } finally {
+    elRecarr.disabled = false;
+    elRecarr.textContent = 'Atualizar';
+  }
+}
+
 elBotao.addEventListener('click', tentar);
 elSenha.addEventListener('keydown', e => { if(e.key === 'Enter') tentar(); });
+elRecarr.addEventListener('click', recarregar);
 elSenha.focus();
 </script>
 </body>
