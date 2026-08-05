@@ -38,6 +38,14 @@ h1 em{font-style:normal;color:var(--laranja)}
 .recarregar:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
 .recarga-aviso{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .recarga-aviso.erro{color:#FFB4A8}
+.frescor{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:6px}
+.frescor::before{content:"";width:7px;height:7px;border-radius:50%;background:#3FBF8A;flex:none}
+.frescor.velho{color:#FFC98A}
+.frescor.velho::before{background:var(--laranja)}
+.frescor.parado{color:#FFB4A8}
+.frescor.parado::before{background:#F2585F}
+.andamento{margin:0;padding:11px 22px;background:#FFF4E8;border-bottom:1px solid #F0D6B8;color:#7A4A12;font-size:13px}
+.andamento b{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 .recorte{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:13px 22px;background:var(--surface);border-bottom:1px solid var(--rule)}
 .recorte h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;font-size:19px;letter-spacing:.03em;margin:0}
 .recorte .ver{appearance:none;background:none;border:0;cursor:pointer;padding:0;color:var(--laranja-esc);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid currentColor}
@@ -189,6 +197,21 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
   th.hide,td.hide{display:none}
   .marcas .selo{margin-left:0;text-align:left;width:100%}
 }
+/* No celular os quatro cards empilhavam em tela cheia cada um, e o cliente
+   rolava quatro telas antes de chegar em qualquer coisa acionável. Em 2x2 os
+   quatro percentuais cabem juntos, que é como se lê um painel de status. */
+@media (max-width:600px){
+  .consol{grid-template-columns:1fr 1fr}
+  .cons{padding:13px 15px 15px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .cons:nth-child(2n){border-right:0}
+  .cons dd{flex-direction:column;align-items:flex-start;gap:2px}
+  .cons .pc{font-size:31px}
+  .cons .abs{font-size:10px}
+  .cons dt{font-size:8.5px;letter-spacing:.1em;margin-bottom:6px}
+  .ct{padding:11px 15px}
+  .ct dd{font-size:23px}
+  .recorte,.legend,.andamento{padding-left:15px;padding-right:15px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -208,6 +231,7 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
     <p class="local" id="local">Carregando…</p>
     <button class="recarregar" id="recarregar" type="button"
             title="Baixa a versão mais recente publicada pelo robô">Atualizar</button>
+    <span class="frescor" id="frescor" role="status" aria-live="polite" hidden></span>
     <span class="recarga-aviso" id="recarga-aviso" role="status" aria-live="polite"></span>
   </div>
   <nav class="opbar" id="opbar" aria-label="Selecionar operação" hidden></nav>
@@ -436,6 +460,38 @@ function render(){
         </div></article>`;
     }).join('');
 
+// Cedo, com o dia todo sem desfecho lançado, os três percentuais aparecem
+// zerados e a leitura natural é "a operação não entregou nada". A contagem que
+// explica isso fica lá embaixo. Esta faixa põe o contexto antes dos números.
+function faixaAndamento(a){
+  if(!a.total || !a.semap) return '';
+  const p = pct(a.semap, a.total);
+  if(p < 25) return '';
+  const houve = a.entregue || a.reent || a.devol;
+  const corpo = houve
+    ? `<b>Dia em andamento</b> · ${a.semap} das ${a.total} notas ainda sem desfecho
+       lançado (${p}%) — os percentuais sobem conforme a operação aponta.`
+    : `<b>Dia iniciado</b> · nenhuma das ${a.total} notas teve desfecho lançado
+       ainda — os percentuais abaixo só fecham depois do apontamento.`;
+  return `<p class="andamento">${corpo}</p>`;
+}
+
+// Com atualização de hora em hora, um robô parado passa despercebido: o painel
+// segue mostrando o dado de ontem sem alarde. O selo torna isso visível.
+function renderFrescor(){
+  const el = document.getElementById('frescor');
+  if(!BASE || !BASE.gerado_em){ el.hidden = true; return; }
+  el.hidden = false;
+  const min = Math.max(0, Math.round((Date.now() - new Date(BASE.gerado_em)) / 60000));
+  el.className = 'frescor' + (min >= 240 ? ' parado' : min >= 120 ? ' velho' : '');
+  const quando = min < 1 ? 'agora'
+    : min < 60 ? `há ${min} min`
+    : min < 1440 ? `há ${Math.floor(min/60)}h${String(min%60).padStart(2,'0')}`
+    : `em ${new Date(BASE.gerado_em).toLocaleDateString('pt-BR')}`;
+  el.textContent = min >= 240 ? `sem atualizar ${quando}` : `atualizado ${quando}`;
+  el.title = 'Dados gerados em ' + new Date(BASE.gerado_em).toLocaleString('pt-BR');
+}
+
 function cabecalhoRecorte(acumulado, mostrados, total, ocultos){
   if(acumulado){
     return `<div class="recorte"><h2>Veículos do período</h2>
@@ -502,7 +558,10 @@ function tabelaDias(){
   // A seção "Pendências de apontamento" saiu quando o painel foi liberado para
   // a 3 Corações. As divergências também deixaram de ir no payload cifrado —
   // ficam no log do robô, em build_data.py.
+  renderFrescor();
+
   document.getElementById('app').innerHTML = `
+    ${faixaAndamento(a)}
     <dl class="consol">${cards.map(c =>
       `<div class="cons"><dt>${c.t}</dt><dd><span class="pc">${c.p}%</span><span class="abs">${c.abs}</span></dd>
        <div class="bar"><i class="${c.cls}" style="width:${c.p}%"></i></div></div>`).join('')}</dl>
@@ -589,6 +648,8 @@ function abrirPainel(){
   renderOperacoes();
   renderDatas();
   render();
+  // O selo envelhece sozinho enquanto a tela fica aberta na torre.
+  setInterval(renderFrescor, 60000);
 }
 
 async function tentar(){
