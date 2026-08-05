@@ -38,6 +38,13 @@ h1 em{font-style:normal;color:var(--laranja)}
 .recarregar:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
 .recarga-aviso{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .recarga-aviso.erro{color:#FFB4A8}
+.recorte{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:13px 22px;background:var(--surface);border-bottom:1px solid var(--rule)}
+.recorte h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;font-size:19px;letter-spacing:.03em;margin:0}
+.recorte .ver{appearance:none;background:none;border:0;cursor:pointer;padding:0;color:var(--laranja-esc);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid currentColor}
+.recorte .ver:hover{color:var(--navy)}
+.recorte .ver:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
+.recorte .obs{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-left:auto}
+.vazio{padding:22px;background:var(--surface);color:var(--ink-2);border-bottom:1px solid var(--rule)}
 .opbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
 .opbar[hidden]{display:none}
 .opbtn{appearance:none;cursor:pointer;background:none;border:1px solid rgba(255,255,255,.22);border-radius:2px;padding:6px 14px;color:rgba(255,255,255,.62);font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:15px;font-weight:600;letter-spacing:.06em;transition:color .12s,border-color .12s,background .12s}
@@ -254,6 +261,11 @@ const pct = (a,b) => b ? Math.round(100*a/b) : 0;
 const brDate = iso => iso ? iso.slice(8,10)+'/'+iso.slice(5,7) : '';
 let BASE = null, filtro = null, opFiltro = 'TODAS';
 
+// Num dia específico o painel é torre de controle: interessa quem ainda está na
+// rua. O histórico completo e os veículos já encerrados ficam no Acumulado.
+// "ver todos" destrava o dia inteiro sem sair do recorte.
+let soRota = true;
+
 // Todo o resto do painel — contagem por dia, percentuais, lista de veículos —
 // deriva daqui. Filtrar a operação neste ponto faz o seletor valer para a tela
 // inteira sem tocar em mais nada.
@@ -352,7 +364,7 @@ function renderDatas(){
   el.innerHTML = opts.map(o =>
     `<button class="datebtn" data-k="${o.k}" aria-pressed="${o.k===filtro}">${o.r}<span class="n">${o.n}</span></button>`).join('');
   el.querySelectorAll('.datebtn').forEach(b =>
-    b.addEventListener('click', () => { filtro = b.dataset.k; render(); }));
+    b.addEventListener('click', () => { filtro = b.dataset.k; soRota = true; render(); }));
 }
 
 function anel(p){
@@ -388,11 +400,16 @@ function render(){
     {t:'Sem apontamento',  n:a.semap}
   ];
 
-  const lanes = grupos
-    .sort((x,y) => {
-      const ax = agregar(x.notas), ay = agregar(y.notas);
-      return pct(ay.entregue,ay.total) - pct(ax.entregue,ax.total);
-    })
+  const acumulado = filtro === 'TODAS';
+  const ordenados = grupos.sort((x,y) => {
+    const ax = agregar(x.notas), ay = agregar(y.notas);
+    return pct(ay.entregue,ay.total) - pct(ax.entregue,ax.total);
+  });
+  const emRota = ordenados.filter(g => statusPlano(g).cls === 'rota');
+  const recortado = (acumulado || !soRota) ? ordenados : emRota;
+  const ocultos = ordenados.length - recortado.length;
+
+  const lanes = recortado
     .map((g,i) => {
       const ag = agregar(g.notas), s = statusPlano(g);
       const strip = g.notas.map(n =>
@@ -425,6 +442,22 @@ function render(){
             <th>Status SAC</th><th>GreenMile</th></tr></thead><tbody>${linhas}</tbody></table>
         </div></article>`;
     }).join('');
+
+function cabecalhoRecorte(acumulado, mostrados, total, ocultos){
+  if(acumulado){
+    return `<div class="recorte"><h2>Veículos do período</h2>
+      <span class="obs">${total} veículos no acumulado</span></div>`;
+  }
+  const titulo = ocultos ? 'Veículos em rota' : 'Veículos do dia';
+  const acao = ocultos
+    ? `<button class="ver" type="button" data-ver="todos">ver todos os ${total} do dia</button>`
+    : (mostrados < total || !soRota)
+      ? `<button class="ver" type="button" data-ver="rota">ver só quem está em rota</button>` : '';
+  const obs = ocultos
+    ? `${ocultos} já encerrado${ocultos > 1 ? 's' : ''} · ocultos`
+    : `${mostrados} de ${total} veículos`;
+  return `<div class="recorte"><h2>${titulo}</h2>${acao}<span class="obs">${obs}</span></div>`;
+}
 
 function tabelaDias(){
   const e = entregas();
@@ -486,11 +519,12 @@ function tabelaDias(){
        <div class="bar"><i class="${c.cls}" style="width:${c.p}%"></i></div></div>`).join('')}</dl>
     <dl class="contagens">${cont.map(x =>
       `<div class="ct"><dt>${x.t}</dt><dd>${String(x.n).padStart(2,'0')}</dd></div>`).join('')}</dl>
-    ${tabelaDias()}
+    ${acumulado ? tabelaDias() : ''}
+    ${cabecalhoRecorte(acumulado, recortado.length, ordenados.length, ocultos)}
     <div class="legend">
       ${Object.entries(CLASSES).map(([k,r]) => `<span class="lg"><i class="chip ${k}"></i>${r}</span>`).join('')}
     </div>
-    ${lanes}
+    ${lanes || '<p class="vazio">Nenhum veículo em rota neste dia — todas as notas já têm desfecho lançado.</p>'}
     <section class="interno">
       <h2>Pendências de apontamento <span>uso interno · não compartilhar</span></h2>
       <ul>${itens.length ? itens.map(t => `<li>${t}</li>`).join('') : '<li>Nenhuma pendência neste recorte.</li>'}</ul>
@@ -502,8 +536,11 @@ function tabelaDias(){
     b.querySelector('.caret').textContent = ab ? '\u2212' : '+';
   }));
 
+  document.querySelectorAll('.recorte .ver').forEach(b =>
+    b.addEventListener('click', () => { soRota = b.dataset.ver === 'rota'; render(); }));
+
   document.querySelectorAll('.dias tr[data-k]').forEach(tr => {
-    const ir = () => { filtro = tr.dataset.k; render(); window.scrollTo({top:0, behavior:'smooth'}); };
+    const ir = () => { filtro = tr.dataset.k; soRota = true; render(); window.scrollTo({top:0, behavior:'smooth'}); };
     tr.addEventListener('click', ir);
     tr.addEventListener('keydown', ev => {
       if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); ir(); }
