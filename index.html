@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Torre de controle · Status diário da operação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16233F; --navy-2:#22334F;
+  --laranja:#EE7623; --laranja-esc:#C85C12;
+  --paper:#EEF0F3; --surface:#FFF; --rule:#D6DAE1;
+  --ink:#16233F; --ink-2:#4E5A70; --ink-3:#8A94A5;
+  --ok:#1B6B4A; --reent:#C1272D; --devol:#8A1F6B; --neutro:#98A2B1;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 0 68px}
+
+.marcas{display:flex;align-items:center;gap:20px;background:#fff;padding:14px 24px;border-bottom:4px solid var(--laranja);flex-wrap:wrap}
+.marcas img{display:block;height:44px;width:auto}
+.marcas .div{width:1px;height:38px;background:var(--rule);flex:none}
+.marcas .selo{margin-left:auto;text-align:right;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);line-height:1.6}
+
+.topo{background:var(--navy);color:#fff;padding:22px 24px 0}
+h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(24px,3.6vw,40px);line-height:1.05;margin:0 0 3px;white-space:nowrap;letter-spacing:-.005em}
+h1 em{font-style:normal;color:var(--laranja)}
+@media (max-width:430px){h1{white-space:normal}}
+.local{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);margin:0 0 18px}
+.datebar{display:flex;flex-wrap:wrap}
+.datebtn{appearance:none;background:none;border:0;cursor:pointer;text-align:left;padding:11px 18px 12px;color:rgba(255,255,255,.6);font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:17px;font-weight:600;letter-spacing:.04em;border-bottom:3px solid transparent;transition:color .12s,border-color .12s}
+.datebtn .n{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;font-weight:400;margin-top:1px}
+.datebtn:hover{color:#fff}
+.datebtn[aria-pressed="true"]{color:#fff;border-bottom-color:var(--laranja)}
+.datebtn:focus-visible{outline:2px solid var(--laranja);outline-offset:-3px}
+
+.consol{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));background:var(--navy-2);margin:0}
+.cons{padding:18px 22px 20px;border-right:1px solid rgba(255,255,255,.1);color:#fff}
+.cons:last-child{border-right:0}
+.cons dt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.58);margin:0 0 8px}
+.cons dd{margin:0;display:flex;align-items:baseline;gap:8px}
+.cons .pc{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:44px;line-height:.82}
+.cons .abs{font-family:"IBM Plex Mono",monospace;font-size:11px;color:rgba(255,255,255,.6)}
+.bar{height:4px;background:rgba(255,255,255,.16);margin-top:11px}
+.bar i{display:block;height:100%}
+.bar i.ok{background:#3FBF8A}.bar i.reent{background:#F2585F}
+.bar i.devol{background:#C77BB4}.bar i.gm{background:var(--laranja)}
+
+.contagens{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));background:var(--surface);border-bottom:1px solid var(--rule);margin:0}
+.ct{padding:13px 22px;border-right:1px solid var(--rule)}
+.ct:last-child{border-right:0}
+.ct dt{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:0 0 3px}
+.ct dd{margin:0;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:27px;line-height:1}
+
+.legend{display:flex;flex-wrap:wrap;gap:15px;padding:12px 22px;background:var(--surface);border-bottom:1px solid var(--rule)}
+.lg{display:flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.chip{width:14px;height:14px;flex:none;border:1px solid rgba(0,0,0,.2)}
+.chip.entregue{background:var(--ok)}.chip.reentregar{background:var(--reent)}
+.chip.devolucao{background:var(--devol)}.chip.andamento{background:var(--laranja)}
+.chip.semapont{background:repeating-linear-gradient(45deg,var(--neutro) 0 2px,transparent 2px 5px);background-color:#EDEFF2}
+
+.lane{background:var(--surface);border-bottom:1px solid var(--rule)}
+.lane-head{display:grid;grid-template-columns:60px minmax(0,1fr) auto;gap:18px;align-items:center;width:100%;background:none;border:0;padding:15px 22px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.lane-head:hover{background:#F7F8FA}
+.lane-head:focus-visible{outline:2px solid var(--laranja);outline-offset:-2px}
+.ring{position:relative;width:56px;height:56px}
+.ring svg{transform:rotate(-90deg);display:block}
+.ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px}
+.idl{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px}
+.mot{font-family:"Barlow Condensed",sans-serif;font-weight:600;text-transform:uppercase;font-size:21px;line-height:1.05}
+.placa{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:11.5px;letter-spacing:.08em;border:1px solid var(--navy);padding:2px 6px 1px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.07em;color:var(--ink-3);text-transform:uppercase}
+.cidades{color:var(--ink-2);font-size:12.5px;margin-top:4px}
+.lane-right{display:flex;align-items:center;gap:15px;justify-content:flex-end;flex-wrap:wrap}
+.strip{display:flex;gap:2px;flex-wrap:wrap;max-width:320px}
+.blk{width:12px;height:21px;border:1px solid rgba(0,0,0,.16)}
+.blk.entregue{background:var(--ok)}.blk.reentregar{background:var(--reent)}
+.blk.devolucao{background:var(--devol)}.blk.andamento{background:var(--laranja)}
+.blk.semapont{background:repeating-linear-gradient(45deg,var(--neutro) 0 2px,transparent 2px 5px);background-color:#EDEFF2}
+.gmtag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;color:var(--ink-2);text-align:right;line-height:1.35}
+.gmtag b{font-size:13px;color:var(--laranja-esc)}
+.badge{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.11em;text-transform:uppercase;padding:4px 8px 3px;border:1px solid;white-space:nowrap}
+.badge.rota{color:var(--laranja-esc);border-color:var(--laranja)}
+.badge.fim{color:var(--ok);border-color:var(--ok)}
+.badge.aguard{color:var(--neutro);border-color:var(--neutro)}
+.badge.sement{color:var(--reent);border-color:var(--reent);background:#FCEEEE}
+.caret{font-family:"IBM Plex Mono",monospace;color:var(--ink-3);width:13px;text-align:center}
+.lane-body{display:none;padding:0 22px 18px;border-top:1px dashed var(--rule)}
+.lane.open .lane-body{display:block}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{text-align:left;padding:7px 10px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--navy)}
+td{font-size:12.5px}
+td.nf{font-family:"IBM Plex Mono",monospace;font-size:12px;white-space:nowrap}
+td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
+.st.entregue{color:var(--ok)}.st.reentregar{color:var(--reent)}
+.st.devolucao{color:var(--devol)}.st.andamento{color:var(--laranja-esc)}
+.st.semapont{color:var(--neutro)}
+.gm.sim{color:var(--laranja-esc)}.gm.nao{color:var(--neutro)}
+
+/* ---------- todos os dias ---------- */
+.dias{background:var(--surface);border-bottom:1px solid var(--rule)}
+.dias h2{
+  font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-weight:700;
+  font-size:17px;letter-spacing:.03em;margin:0;padding:13px 22px 10px;
+  border-bottom:1px solid var(--navy);display:flex;justify-content:space-between;align-items:baseline;gap:12px
+}
+.dias h2 span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;color:var(--ink-3);font-weight:400;text-transform:none}
+.dias table{margin:0}
+.dias th{padding:8px 14px 6px}
+.dias td{padding:9px 14px 8px;font-size:12.5px}
+.dias tbody tr{cursor:pointer}
+.dias tbody tr:hover{background:#F7F8FA}
+.dias tbody tr[aria-current="true"]{background:#FFF4E9;box-shadow:inset 3px 0 0 var(--laranja)}
+.dias .dia{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:18px;text-transform:uppercase;white-space:nowrap}
+.dias .dia small{display:block;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.09em;color:var(--ink-3);font-weight:400}
+.dias .num{font-family:"IBM Plex Mono",monospace;text-align:right;white-space:nowrap}
+.dias .pc{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;text-align:right;white-space:nowrap}
+.dias .pc.ok{color:var(--ok)}.dias .pc.re{color:var(--reent)}
+.dias .pc.gm{color:var(--laranja-esc)}.dias .pc.nulo{color:var(--neutro)}
+.dias .mini{display:flex;gap:1px;flex-wrap:wrap;max-width:210px}
+.dias .mini i{width:7px;height:15px}
+.dias .mini i.entregue{background:var(--ok)}
+.dias .mini i.reentregar{background:var(--reent)}
+.dias .mini i.devolucao{background:var(--devol)}
+.dias .mini i.andamento{background:var(--laranja)}
+.dias .mini i.semapont{background:repeating-linear-gradient(45deg,var(--neutro) 0 2px,transparent 2px 4px);background-color:#EDEFF2;outline:1px solid #DFE3E8;outline-offset:-1px}
+.dias tfoot td{background:#F4F6F8;font-weight:600;border-top:2px solid var(--navy);border-bottom:0}
+.dias tfoot .dia{font-size:16px}
+
+.interno{margin:30px 22px 0;border:2px solid var(--navy);background:var(--surface)}
+.interno h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-weight:700;font-size:19px;letter-spacing:.02em;margin:0;padding:11px 18px 9px;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.interno h2 span{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.55);font-weight:400}
+.interno ul{margin:0;padding:14px 18px 16px 34px}
+.interno li{margin-bottom:8px;font-size:13px}
+.interno li:last-child{margin-bottom:0}
+.interno b{font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+
+.regras{margin:26px 22px 0;border-left:3px solid var(--laranja);background:var(--surface);padding:16px 20px}
+.regras h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:17px;letter-spacing:.03em;margin:0 0 9px}
+.regras dl{margin:0;display:grid;gap:7px}
+.regras dt{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.regras dd{margin:0 0 3px;font-size:12.5px;color:var(--ink-2)}
+.rodape{margin:20px 22px 0;color:var(--ink-3);font-size:11.5px;font-family:"IBM Plex Mono",monospace;letter-spacing:.04em}
+.carregando{padding:60px 24px;text-align:center;color:var(--ink-3);font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.erro{margin:24px 22px;padding:16px 20px;border-left:3px solid var(--reent);background:#FCEEEE;color:#7A1A1A;font-size:13px}
+.erro b{font-family:"IBM Plex Mono",monospace}
+
+/* ---------- tela de acesso ---------- */
+.porta{max-width:430px;margin:0 auto;padding:56px 24px 72px;text-align:left}
+.porta h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-weight:700;font-size:26px;letter-spacing:.02em;margin:0 0 6px}
+.porta p{color:var(--ink-2);font-size:13px;margin:0 0 22px}
+.porta label{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+.porta input{
+  width:100%;padding:12px 14px;font-family:"IBM Plex Mono",monospace;font-size:15px;
+  border:1px solid var(--rule);background:#fff;color:var(--ink);border-radius:0
+}
+.porta input:focus{outline:2px solid var(--laranja);outline-offset:-1px;border-color:var(--laranja)}
+.porta button{
+  margin-top:14px;width:100%;padding:13px 18px;border:0;cursor:pointer;background:var(--navy);color:#fff;
+  font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-weight:600;font-size:17px;letter-spacing:.06em
+}
+.porta button:hover{background:var(--navy-2)}
+.porta button:disabled{background:var(--neutro);cursor:progress}
+.porta button:focus-visible{outline:2px solid var(--laranja);outline-offset:2px}
+.porta .aviso{margin-top:16px;font-size:12px;color:var(--reent);min-height:1.4em}
+.porta .nota{margin-top:26px;padding-top:16px;border-top:1px solid var(--rule);font-size:11.5px;color:var(--ink-3)}
+@media (max-width:760px){
+  .lane-head{grid-template-columns:52px 1fr;gap:12px}
+  .lane-right{grid-column:1/-1;justify-content:flex-start}
+  .strip{max-width:100%}
+  th.hide,td.hide{display:none}
+  .marcas .selo{margin-left:0;text-align:left;width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="marcas">
+  <img src="assets/mandalog.png" alt="Mandalog Operações Logísticas">
+  <i class="div"></i>
+  <img src="assets/3coracoes.png" alt="3 Corações">
+  <span class="selo">Parceria que move todo o Brasil<br>Operação de distribuição · Vale do Paraíba</span>
+</div>
+
+<div class="topo" id="topo" hidden>
+  <h1>Status diário <em>da operação</em></h1>
+  <p class="local" id="local">Carregando…</p>
+  <nav class="datebar" id="datebar" aria-label="Selecionar dia de operação"></nav>
+</div>
+
+<div class="porta" id="porta">
+  <h2>Acesso ao painel</h2>
+  <p>Painel de uso interno da Mandalog. Informe a senha de acesso da operação.</p>
+  <label for="senha">Senha</label>
+  <input id="senha" type="password" autocomplete="current-password" autocapitalize="off"
+         spellcheck="false" aria-describedby="aviso">
+  <button id="entrar" type="button">Abrir painel</button>
+  <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+  <p class="nota">Os dados são publicados cifrados. Sem a senha correta o conteúdo
+  não é legível, nem baixando o arquivo diretamente.</p>
+</div>
+
+<div id="app" hidden></div>
+
+<section class="regras" id="regras" hidden>
+  <h2>Regras de cálculo</h2>
+  <dl>
+    <dt>Veículos em rota</dt>
+    <dd>Planos com nota cuja data de saída é o dia selecionado. A data de saída é por nota: reentregas recebem a data da nova saída mantendo o número do plano, e por isso um plano aparece em mais de um dia.</dd>
+    <dt>% finalizadas · reentrega · devolução</dt>
+    <dd>Sobre o total de notas com saída no dia, a partir da coluna Status SAC. Reentrega considera <i>Reentregar</i>; devolução considera <i>Devolução</i>, <i>Finalizado c/ dev parcial</i> e <i>Recusa</i>. Transferências entre bases ficam fora do denominador por não serem entrega a recebedor.</dd>
+    <dt>% utilização do GreenMile</dt>
+    <dd>Notas com baixa eletrônica dividido pelas entregas realizadas — mede adesão à ferramenta sobre o que foi efetivamente entregue.</dd>
+    <dt>Sem apontamento</dt>
+    <dd>Nota sem Status SAC registrado. Não equivale a entrega não realizada: é desfecho ainda não informado, exibido em separado para não distorcer os percentuais.</dd>
+  </dl>
+</section>
+
+<p class="rodape" id="rodape" hidden></p>
+</div>
+
+<script>
+const CLASSES = {
+  entregue:'Entregue', reentregar:'Reentrega', devolucao:'Devolução',
+  andamento:'Em andamento', semapont:'Sem apontamento'
+};
+const pct = (a,b) => b ? Math.round(100*a/b) : 0;
+const brDate = iso => iso ? iso.slice(8,10)+'/'+iso.slice(5,7) : '';
+let BASE = null, filtro = null;
+
+function entregas(){ return BASE.notas.filter(n => n.tipo === 'ENTREGA'); }
+
+function notasDo(){
+  const e = entregas();
+  if(filtro === 'TODAS')   return e.filter(n => n.data);
+  if(filtro === 'SEMDATA') return e.filter(n => !n.data);
+  return e.filter(n => n.data === filtro);
+}
+
+function agregar(ns){
+  const c = k => ns.filter(n => n.classe === k).length;
+  const ent = ns.filter(n => n.classe === 'entregue');
+  return {
+    total:ns.length, entregue:c('entregue'), reent:c('reentregar'),
+    devol:c('devolucao'), andam:c('andamento'), semap:c('semapont'),
+    gmSim:ent.filter(n => n.gm_ok).length, gmBase:ent.length
+  };
+}
+
+function agruparPorPlano(ns){
+  const m = new Map();
+  ns.forEach(n => {
+    const k = n.plano || '(sem plano)';
+    if(!m.has(k)) m.set(k, []);
+    m.get(k).push(n);
+  });
+  return [...m.entries()].map(([plano, notas]) => {
+    const meta = BASE.planos[plano] || {};
+    return {
+      plano, notas,
+      motorista: meta.motorista || notas[0].motorista || '',
+      placa: meta.placa || notas[0].placa || '',
+      perfil: meta.perfil || notas[0].perfil || '',
+      origem: meta.origem || notas[0].origem || '',
+      cidades: [...new Set(notas.map(n => n.cidade).filter(Boolean))].sort()
+    };
+  });
+}
+
+function statusPlano(g){
+  if(!g.motorista) return {cls:'aguard', txt:'Não alocado'};
+  const abertos = g.notas.filter(n => n.classe === 'semapont' || n.classe === 'andamento').length;
+  if(abertos) return {cls:'rota', txt:'Em rota'};
+  const entregues = g.notas.filter(n => n.classe === 'entregue').length;
+  // Todas as notas têm desfecho, mas nenhuma foi entregue: o dia fechou sem
+  // entrega. Marcar como "Finalizado" nesse caso induziria a leitura errada.
+  return entregues
+    ? {cls:'fim', txt:'Finalizado'}
+    : {cls:'sement', txt:'Encerrado s/ entrega'};
+}
+
+function renderDatas(){
+  const e = entregas();
+  const dias = [...new Set(e.map(n => n.data).filter(Boolean))].sort();
+  const semData = e.filter(n => !n.data).length;
+  if(!filtro) filtro = dias[dias.length-1] || 'TODAS';
+  const veic = f => new Set(e.filter(f).map(n => n.plano).filter(Boolean)).size;
+  const opts = dias.map(d => ({k:d, r:brDate(d), n:veic(n => n.data === d)+' veíc.'}));
+  opts.push({k:'TODAS', r:'Acumulado', n:veic(n => n.data)+' veíc.'});
+  if(semData) opts.push({k:'SEMDATA', r:'Sem saída', n:veic(n => !n.data)+' plano'});
+  const el = document.getElementById('datebar');
+  el.innerHTML = opts.map(o =>
+    `<button class="datebtn" data-k="${o.k}" aria-pressed="${o.k===filtro}">${o.r}<span class="n">${o.n}</span></button>`).join('');
+  el.querySelectorAll('.datebtn').forEach(b =>
+    b.addEventListener('click', () => { filtro = b.dataset.k; render(); }));
+}
+
+function anel(p){
+  const R = 24, C = 2*Math.PI*R;
+  const cor = p >= 90 ? 'var(--ok)' : p >= 50 ? 'var(--laranja)' : 'var(--neutro)';
+  return `<span class="ring"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+    <circle cx="28" cy="28" r="${R}" fill="none" stroke="#E3E7EC" stroke-width="6"/>
+    <circle cx="28" cy="28" r="${R}" fill="none" stroke="${cor}" stroke-width="6"
+      stroke-dasharray="${C}" stroke-dashoffset="${C*(1-p/100)}"/>
+  </svg><b>${p}%</b></span>`;
+}
+
+function render(){
+  document.querySelectorAll('.datebtn').forEach(b =>
+    b.setAttribute('aria-pressed', b.dataset.k === filtro));
+
+  const ns = notasDo(), a = agregar(ns), grupos = agruparPorPlano(ns);
+  const cards = [
+    {t:'% entregas finalizadas', p:pct(a.entregue,a.total), abs:`${a.entregue} de ${a.total} notas`, cls:'ok'},
+    {t:'% reentrega',            p:pct(a.reent,a.total),    abs:`${a.reent} de ${a.total} notas`,    cls:'reent'},
+    {t:'% devoluções',           p:pct(a.devol,a.total),    abs:`${a.devol} de ${a.total} notas`,    cls:'devol'},
+    {t:'% utilização GreenMile', p:pct(a.gmSim,a.gmBase),
+     abs:a.gmBase ? `${a.gmSim} de ${a.gmBase} entregas` : 'sem entregas apontadas', cls:'gm'}
+  ];
+  const st = grupos.map(statusPlano);
+  const cont = [
+    {t:'Veículos em rota', n:st.filter(s => s.cls === 'rota').length},
+    {t:'Finalizados',      n:st.filter(s => s.cls === 'fim').length},
+    {t:'Sem entrega',      n:st.filter(s => s.cls === 'sement').length},
+    {t:'Entregas programadas', n:a.total},
+    {t:'Realizadas',       n:a.entregue},
+    {t:'Em andamento',     n:a.andam},
+    {t:'Sem apontamento',  n:a.semap}
+  ];
+
+  const lanes = grupos
+    .sort((x,y) => {
+      const ax = agregar(x.notas), ay = agregar(y.notas);
+      return pct(ay.entregue,ay.total) - pct(ax.entregue,ax.total);
+    })
+    .map((g,i) => {
+      const ag = agregar(g.notas), s = statusPlano(g);
+      const strip = g.notas.map(n =>
+        `<i class="blk ${n.classe}" title="NF ${n.nf} · ${CLASSES[n.classe]}"></i>`).join('');
+      const linhas = g.notas.map(n => `<tr>
+          <td class="nf">${n.nf || '—'}</td><td>${n.cliente || '—'}</td>
+          <td class="hide">${n.cidade || '—'}</td>
+          <td class="st ${n.classe}">${n.sac || CLASSES[n.classe]}</td>
+          <td class="gm ${n.gm_ok ? 'sim' : 'nao'}">${n.gm || '—'}</td></tr>`).join('');
+      return `<article class="lane">
+        <button class="lane-head" aria-expanded="false">
+          ${anel(pct(ag.entregue, ag.total))}
+          <span>
+            <span class="idl">
+              <span class="mot">${g.motorista || 'Motorista a definir'}</span>
+              ${g.placa ? `<span class="placa">${g.placa}</span>` : ''}
+              <span class="meta">${g.perfil || 's/ perfil'} · plano ${g.plano} · ${g.origem}</span>
+            </span>
+            <span class="cidades">${g.cidades.join(' · ') || 'sem cidade informada'}</span>
+          </span>
+          <span class="lane-right">
+            <span class="strip">${strip}</span>
+            <span class="gmtag">${ag.entregue}/${ag.total} entregas<br>GreenMile <b>${pct(ag.gmSim,ag.gmBase)}%</b></span>
+            <span class="badge ${s.cls}">${s.txt}</span>
+            <span class="caret" aria-hidden="true">+</span>
+          </span>
+        </button>
+        <div class="lane-body">
+          <table><thead><tr><th>NF</th><th>Recebedor</th><th class="hide">Cidade</th>
+            <th>Status SAC</th><th>GreenMile</th></tr></thead><tbody>${linhas}</tbody></table>
+        </div></article>`;
+    }).join('');
+
+function tabelaDias(){
+  const e = entregas();
+  const dias = [...new Set(e.map(n => n.data).filter(Boolean))].sort();
+  const semData = e.filter(n => !n.data);
+
+  const linha = (chave, rotulo, sub, ns) => {
+    const a = agregar(ns);
+    const veic = new Set(ns.map(n => n.plano).filter(Boolean)).size;
+    const ordem = {entregue:0, reentregar:1, devolucao:2, andamento:3, semapont:4};
+    const mini = [...ns].sort((x,y) => ordem[x.classe] - ordem[y.classe])
+      .map(n => `<i class="${n.classe}" title="NF ${n.nf} · ${CLASSES[n.classe]}"></i>`).join('');
+    const gm = a.gmBase ? pct(a.gmSim, a.gmBase) + '%' : '—';
+    return `<tr data-k="${chave}" aria-current="${chave === filtro}" tabindex="0">
+      <td class="dia">${rotulo}<small>${sub}</small></td>
+      <td class="num">${veic}</td>
+      <td class="num">${a.total}</td>
+      <td><span class="mini">${mini}</span></td>
+      <td class="pc ${a.entregue ? 'ok' : 'nulo'}">${pct(a.entregue, a.total)}%</td>
+      <td class="pc ${a.reent ? 're' : 'nulo'}">${pct(a.reent, a.total)}%</td>
+      <td class="pc ${a.devol ? 're' : 'nulo'}">${pct(a.devol, a.total)}%</td>
+      <td class="pc ${a.gmBase ? 'gm' : 'nulo'}">${gm}</td>
+      <td class="num">${a.semap || '—'}</td>
+    </tr>`;
+  };
+
+  const semana = ['dom','seg','ter','qua','qui','sex','sáb'];
+  const corpo = dias.map(dia => {
+    const [ano, mes, d2] = dia.split('-');
+    const dow = semana[new Date(+ano, +mes - 1, +d2).getDay()];
+    return linha(dia, brDate(dia), dow, e.filter(n => n.data === dia));
+  }).join('')
+    + (semData.length ? linha('SEMDATA', 'Sem saída', 'não programado', semData) : '');
+
+  return `<section class="dias">
+    <h2>Todos os dias de operação <span>clique em um dia para ver o detalhe</span></h2>
+    <table>
+      <thead><tr>
+        <th>Dia</th><th class="num">Veíc.</th><th class="num">Notas</th>
+        <th>Desfecho por nota</th><th class="num">Finaliz.</th><th class="num">Reentr.</th>
+        <th class="num">Devol.</th><th class="num">GreenMile</th><th class="num">S/ apont.</th>
+      </tr></thead>
+      <tbody>${corpo}</tbody>
+      <tfoot>${linha('TODAS', 'Acumulado', dias.length + ' dias', e.filter(n => n.data))}</tfoot>
+    </table>
+  </section>`;
+}
+
+  const d = BASE.divergencias, itens = [];  if(a.semap) itens.push(`<b>${a.semap} notas</b> sem Status SAC neste recorte — o percentual de finalizadas só fecha quando o desfecho for lançado.`);
+  if(d.sem_motorista.length) itens.push(`<b>${d.sem_motorista.join(', ')}</b> — plano emitido com notas vinculadas e sem motorista atribuído.`);
+  if(d.sem_emissao.length) itens.push(`<b>${d.sem_emissao.join(', ')}</b> — notas sem emissão confirmada.`);
+  if(d.entregue_sem_greenmile) itens.push(`<b>${d.entregue_sem_greenmile} notas</b> marcadas como entregues sem baixa no GreenMile — comprovação depende de canhoto físico.`);
+  if(d.greenmile_sem_sac) itens.push(`<b>${d.greenmile_sem_sac} notas</b> com baixa no GreenMile e sem Status SAC — os dois registros divergem.`);
+  if(d.sem_peso) itens.push(`<b>${d.sem_peso} notas</b> sem peso, o que impede avaliar ocupação e aderência do perfil cobrado.`);
+
+  document.getElementById('app').innerHTML = `
+    <dl class="consol">${cards.map(c =>
+      `<div class="cons"><dt>${c.t}</dt><dd><span class="pc">${c.p}%</span><span class="abs">${c.abs}</span></dd>
+       <div class="bar"><i class="${c.cls}" style="width:${c.p}%"></i></div></div>`).join('')}</dl>
+    <dl class="contagens">${cont.map(x =>
+      `<div class="ct"><dt>${x.t}</dt><dd>${String(x.n).padStart(2,'0')}</dd></div>`).join('')}</dl>
+    ${tabelaDias()}
+    <div class="legend">
+      ${Object.entries(CLASSES).map(([k,r]) => `<span class="lg"><i class="chip ${k}"></i>${r}</span>`).join('')}
+    </div>
+    ${lanes}
+    <section class="interno">
+      <h2>Pendências de apontamento <span>uso interno · não compartilhar</span></h2>
+      <ul>${itens.length ? itens.map(t => `<li>${t}</li>`).join('') : '<li>Nenhuma pendência neste recorte.</li>'}</ul>
+    </section>`;
+
+  document.querySelectorAll('.lane-head').forEach(b => b.addEventListener('click', () => {
+    const l = b.closest('.lane'), ab = l.classList.toggle('open');
+    b.setAttribute('aria-expanded', ab);
+    b.querySelector('.caret').textContent = ab ? '\u2212' : '+';
+  }));
+
+  document.querySelectorAll('.dias tr[data-k]').forEach(tr => {
+    const ir = () => { filtro = tr.dataset.k; render(); window.scrollTo({top:0, behavior:'smooth'}); };
+    tr.addEventListener('click', ir);
+    tr.addEventListener('keydown', ev => {
+      if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); ir(); }
+    });
+  });
+
+  const rot = filtro === 'TODAS' ? 'acumulado do período'
+    : filtro === 'SEMDATA' ? 'planos sem data de saída' : 'saída em ' + brDate(filtro);
+  document.getElementById('rodape').textContent =
+    `${BASE.fonte} · recorte: ${rot} · ${grupos.length} veículos, ${a.total} notas · ` +
+    `dados gerados em ${new Date(BASE.gerado_em).toLocaleString('pt-BR')}`;
+}
+
+/* ---------- abertura: decifra os dados com a senha ---------- */
+const b64bytes = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+
+async function decifrar(env, senha){
+  const material = await crypto.subtle.importKey(
+    'raw', new TextEncoder().encode(senha), 'PBKDF2', false, ['deriveKey']);
+  const chave = await crypto.subtle.deriveKey(
+    {name:'PBKDF2', salt:b64bytes(env.salt), iterations:env.iter, hash:'SHA-256'},
+    material, {name:'AES-GCM', length:256}, false, ['decrypt']);
+  const claro = await crypto.subtle.decrypt(
+    {name:'AES-GCM', iv:b64bytes(env.iv)}, chave, b64bytes(env.ct));
+  return JSON.parse(new TextDecoder().decode(claro));
+}
+
+const elPorta  = document.getElementById('porta');
+const elSenha  = document.getElementById('senha');
+const elBotao  = document.getElementById('entrar');
+const elAviso  = document.getElementById('aviso');
+
+function abrirPainel(){
+  elPorta.hidden = true;
+  ['topo','app','regras','rodape'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.hidden = false;
+  });
+  const ops = [...new Set(entregas().map(n => n.operacao))];
+  document.getElementById('local').textContent = ops.join(' · ') + ' · Vale do Paraíba';
+  renderDatas();
+  render();
+}
+
+async function tentar(){
+  const senha = elSenha.value;
+  if(!senha){ elAviso.textContent = 'Informe a senha.'; elSenha.focus(); return; }
+  if(!crypto.subtle){
+    elAviso.textContent = 'Este navegador não expõe a WebCrypto. Use HTTPS e um navegador atual.';
+    return;
+  }
+
+  elBotao.disabled = true;
+  elBotao.textContent = 'Abrindo…';
+  elAviso.textContent = '';
+
+  try {
+    const r = await fetch('data/operacao.enc', {cache:'no-store'});
+    if(!r.ok) throw Object.assign(new Error('HTTP ' + r.status), {rede:true});
+    BASE = await decifrar(await r.json(), senha);
+    elSenha.value = '';
+    abrirPainel();
+  } catch(e) {
+    if(e.rede){
+      elAviso.textContent = 'Não foi possível baixar data/operacao.enc (' + e.message + ').';
+    } else {
+      elAviso.textContent = 'Senha incorreta.';
+      elSenha.select();
+    }
+    elBotao.disabled = false;
+    elBotao.textContent = 'Abrir painel';
+  }
+}
+
+elBotao.addEventListener('click', tentar);
+elSenha.addEventListener('keydown', e => { if(e.key === 'Enter') tentar(); });
+elSenha.focus();
+</script>
+</body>
+</html>

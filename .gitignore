@@ -1,0 +1,27 @@
+# Dados em texto claro — NUNCA comitar.
+# Só data/operacao.enc (cifrado) vai para o repositório, porque o GitHub Pages
+# publica todo o conteúdo do repositório na internet.
+data/raw/
+data/operacao.json
+
+# Segredos
+*.json.key
+conta-servico*.json
+credenciais*.json
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Documentacao interna — nao publicar em repositorio publico
+HANDOFF.md
+DEPLOY.md
+CLAUDE.md
