@@ -31,12 +31,27 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 RAIZ = Path(__file__).resolve().parent.parent
 ENTRADA = RAIZ / "data" / "operacao.json"
 SAIDA = RAIZ / "data" / "operacao.enc"
+IMPRESSAO = RAIZ / "data" / "operacao.hash"
 
 ITERACOES = 600_000
 
 
 def b64(b: bytes) -> str:
     return base64.b64encode(b).decode()
+
+
+def impressao(claro: bytes) -> str:
+    """Hash do conteúdo, ignorando o carimbo de geração.
+
+    Salt e IV são sorteados a cada execução, e `gerado_em` muda sempre. Sem isso
+    o .enc sairia diferente a cada rodada mesmo com a planilha intacta, e o robô
+    comitaria de hora em hora para sempre. Comparar o conteúdo em si é o que
+    permite não republicar quando nada mudou.
+    """
+    d = json.loads(claro)
+    d.pop("gerado_em", None)
+    canon = json.dumps(d, sort_keys=True, ensure_ascii=False).encode()
+    return hashlib.sha256(canon).hexdigest()
 
 
 def main() -> None:
@@ -58,6 +73,12 @@ def main() -> None:
                  "Rode antes: python3 scripts/build_data.py")
 
     claro = ENTRADA.read_bytes()
+    marca = impressao(claro)
+
+    if SAIDA.exists() and IMPRESSAO.exists() \
+            and IMPRESSAO.read_text(encoding="utf-8").strip() == marca:
+        print("  conteúdo idêntico ao publicado — nada a recifrar.")
+        return
 
     salt = secrets.token_bytes(16)
     iv = secrets.token_bytes(12)
@@ -73,6 +94,7 @@ def main() -> None:
         "iv": b64(iv),
         "ct": b64(cifrado),
     }, indent=1), encoding="utf-8")
+    IMPRESSAO.write_text(marca + "\n", encoding="utf-8")
 
     print(f"  {ENTRADA.name} ({len(claro)/1024:.0f} KB) -> "
           f"{SAIDA.name} ({SAIDA.stat().st_size/1024:.0f} KB)")
