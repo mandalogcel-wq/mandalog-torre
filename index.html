@@ -152,13 +152,6 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
 .dias tfoot td{background:#F4F6F8;font-weight:600;border-top:2px solid var(--navy);border-bottom:0}
 .dias tfoot .dia{font-size:16px}
 
-.interno{margin:30px 22px 0;border:2px solid var(--navy);background:var(--surface)}
-.interno h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-weight:700;font-size:19px;letter-spacing:.02em;margin:0;padding:11px 18px 9px;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.interno h2 span{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.55);font-weight:400}
-.interno ul{margin:0;padding:14px 18px 16px 34px}
-.interno li{margin-bottom:8px;font-size:13px}
-.interno li:last-child{margin-bottom:0}
-.interno b{font-family:"IBM Plex Mono",monospace;font-size:12.5px}
 
 .regras{margin:26px 22px 0;border-left:3px solid var(--laranja);background:var(--surface);padding:16px 20px}
 .regras h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:17px;letter-spacing:.03em;margin:0 0 9px}
@@ -223,7 +216,7 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
 
 <div class="porta" id="porta">
   <h2>Acesso ao painel</h2>
-  <p>Painel de uso interno da Mandalog. Informe a senha de acesso da operação.</p>
+  <p>Acompanhamento da operação Mandalog · 3 Corações. Informe a senha de acesso.</p>
   <label for="senha">Senha</label>
   <input id="senha" type="password" autocomplete="current-password" autocapitalize="off"
          spellcheck="false" aria-describedby="aviso">
@@ -506,13 +499,9 @@ function tabelaDias(){
   </section>`;
 }
 
-  const d = BASE.divergencias, itens = [];  if(a.semap) itens.push(`<b>${a.semap} notas</b> sem Status SAC neste recorte — o percentual de finalizadas só fecha quando o desfecho for lançado.`);
-  if(d.sem_motorista.length) itens.push(`<b>${d.sem_motorista.join(', ')}</b> — plano emitido com notas vinculadas e sem motorista atribuído.`);
-  if(d.sem_emissao.length) itens.push(`<b>${d.sem_emissao.join(', ')}</b> — notas sem emissão confirmada.`);
-  if(d.entregue_sem_greenmile) itens.push(`<b>${d.entregue_sem_greenmile} notas</b> marcadas como entregues sem baixa no GreenMile — comprovação depende de canhoto físico.`);
-  if(d.greenmile_sem_sac) itens.push(`<b>${d.greenmile_sem_sac} notas</b> com baixa no GreenMile e sem Status SAC — os dois registros divergem.`);
-  if(d.sem_peso) itens.push(`<b>${d.sem_peso} notas</b> sem peso, o que impede avaliar ocupação e aderência do perfil cobrado.`);
-
+  // A seção "Pendências de apontamento" saiu quando o painel foi liberado para
+  // a 3 Corações. As divergências também deixaram de ir no payload cifrado —
+  // ficam no log do robô, em build_data.py.
   document.getElementById('app').innerHTML = `
     <dl class="consol">${cards.map(c =>
       `<div class="cons"><dt>${c.t}</dt><dd><span class="pc">${c.p}%</span><span class="abs">${c.abs}</span></dd>
@@ -524,11 +513,7 @@ function tabelaDias(){
     <div class="legend">
       ${Object.entries(CLASSES).map(([k,r]) => `<span class="lg"><i class="chip ${k}"></i>${r}</span>`).join('')}
     </div>
-    ${lanes || '<p class="vazio">Nenhum veículo em rota neste dia — todas as notas já têm desfecho lançado.</p>'}
-    <section class="interno">
-      <h2>Pendências de apontamento <span>uso interno · não compartilhar</span></h2>
-      <ul>${itens.length ? itens.map(t => `<li>${t}</li>`).join('') : '<li>Nenhuma pendência neste recorte.</li>'}</ul>
-    </section>`;
+    ${lanes || '<p class="vazio">Nenhum veículo em rota neste dia — todas as notas já têm desfecho lançado.</p>'}`;
 
   document.querySelectorAll('.lane-head').forEach(b => b.addEventListener('click', () => {
     const l = b.closest('.lane'), ab = l.classList.toggle('open');

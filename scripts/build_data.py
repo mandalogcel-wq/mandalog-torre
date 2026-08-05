@@ -35,7 +35,7 @@ OPERACOES = {
 # baixado e decifrado a cada abertura, e um repositório que bate no limite de
 # 1 GB do Pages em poucos meses. Cortar em 30 dias mantém o arquivo em ~1,3 MB.
 # Notas sem data de saída ficam, porque são justamente as que pedem atenção.
-RETENCAO_DIAS = 30
+RETENCAO_DIAS = 7
 
 # A planilha tem dois pares de colunas com o mesmo cabeçalho (CARREGAMENTO e
 # PAGAMENTO). O csv.reader preserva a ordem, então usamos o índice da coluna.
@@ -214,7 +214,10 @@ def main() -> None:
         "arquivos": [a.name for a in arquivos],
         "planos": planos,
         "notas": notas,
-        "divergencias": divergencias(notas),
+        # As divergências de apontamento não vão no payload publicado: o painel
+        # é acessível ao cliente, e esconder a seção no HTML não bastaria —
+        # bastaria baixar o .enc e ler o campo. Elas seguem impressas abaixo,
+        # visíveis no log do robô e ao rodar local.
         "avisos": avisos,
     }
 
@@ -227,7 +230,7 @@ def main() -> None:
     print(f"\n{SAIDA.relative_to(RAIZ)} gravado")
     print(f"  {len(entregas)} notas de entrega · {len(planos)} planos "
           f"· {len({n['data'] for n in entregas if n['data']})} dias")
-    for k, v in saida["divergencias"].items():
+    for k, v in divergencias(notas).items():
         if v:
             print(f"  divergência · {k}: {v if isinstance(v, int) else ', '.join(v)}")
     for a in avisos:
