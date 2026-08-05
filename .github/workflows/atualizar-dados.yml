@@ -1,0 +1,67 @@
+name: Atualizar dados da operação
+
+# Puxa a aba da planilha, regera data/operacao.json e comita se algo mudou.
+#
+# Pré-requisitos (Settings > Secrets and variables > Actions):
+#   SHEET_ID            id da planilha ROTEIRIZAÇÃO 2026
+#   GOOGLE_SA_JSON      JSON da conta de serviço com acesso de leitura à planilha
+#   PAINEL_SENHA        senha de acesso ao painel, usada para cifrar os dados
+#
+# Compartilhe a planilha com o e-mail da conta de serviço como Leitor.
+# Assim a planilha permanece privada — não é preciso publicá-la na web.
+#
+# Só data/operacao.enc é comitado. O CSV e o JSON em texto claro ficam no
+# .gitignore, porque o GitHub Pages publica todo o conteúdo do repositório.
+
+on:
+  schedule:
+    # 06:00, 12:00, 18:00 e 22:00 no horário de Brasília (UTC-3)
+    - cron: "0 9,15,21 * * *"
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-dados
+  cancel-in-progress: true
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install --quiet gspread google-auth cryptography
+
+      - name: Baixar abas da planilha
+        env:
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
+        run: python3 scripts/baixar_planilha.py
+
+      - name: Gerar JSON do painel
+        run: python3 scripts/build_data.py
+
+      - name: Cifrar os dados com a senha de acesso
+        env:
+          PAINEL_SENHA: ${{ secrets.PAINEL_SENHA }}
+        run: python3 scripts/cifrar.py
+
+      - name: Comitar se houver mudança
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/operacao.enc
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+          else
+            git commit -m "dados: atualização automática $(TZ=America/Sao_Paulo date '+%d/%m %H:%M')"
+            git push
+          fi
