@@ -14,14 +14,13 @@ name: Atualizar dados da operação
 # .gitignore, porque o GitHub Pages publica todo o conteúdo do repositório.
 
 on:
-  schedule:
-    # A cada 20 minutos, para conseguir aproximadamente de hora em hora.
-    # O `schedule` do Actions em repositório público é melhor esforço: o GitHub
-    # descarta execuções quando a fila está cheia. Medido em 05 e 06/08, com
-    # cron de hora em hora, o intervalo real ficou entre 1h15 e 3h08. Pedindo
-    # três vezes mais, o intervalo efetivo cai para perto de uma hora mesmo com
-    # descartes. Não custa nada: o robô só comita quando o conteúdo muda.
-    - cron: "*/20 * * * *"
+  # Quem agenda é o Apps Script, na planilha ROTEIRIZAÇÃO 2026, função
+  # torreDispararRobo, a cada 15 min entre 5h e 21h de Brasília.
+  #
+  # O `schedule` nativo foi removido de propósito: em repositório público é
+  # melhor esforço declarado e o GitHub descarta execuções sem aviso. Medido em
+  # 05 e 06/08, pedindo de 20 em 20 minutos, o intervalo real ficou entre 1h15 e
+  # 3h30. Mantê-lo junto do Apps Script só multiplicava disparos concorrentes.
   workflow_dispatch:
 
 permissions:
@@ -29,7 +28,11 @@ permissions:
 
 concurrency:
   group: atualizar-dados
-  cancel-in-progress: true
+  # NUNCA cancelar a execução em andamento. Ela pode estar no passo de commit,
+  # e matá-la significa perder a atualização do painel. Com disparos a cada
+  # 15 min e execução de ~30s, a fila praticamente nunca é usada; quando for,
+  # o disparo novo espera em vez de destruir o anterior.
+  cancel-in-progress: false
 
 jobs:
   atualizar:
