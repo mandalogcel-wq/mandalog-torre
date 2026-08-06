@@ -394,6 +394,38 @@ function anel(p){
   </svg><b>${p}%</b></span>`;
 }
 
+// Cedo, com o dia todo sem desfecho lançado, os três percentuais aparecem
+// zerados e a leitura natural é "a operação não entregou nada". A contagem que
+// explica isso fica lá embaixo. Esta faixa põe o contexto antes dos números.
+function faixaAndamento(a){
+  if(!a.total || !a.semap) return '';
+  const p = pct(a.semap, a.total);
+  if(p < 25) return '';
+  const houve = a.entregue || a.reent || a.devol;
+  const corpo = houve
+    ? `<b>Dia em andamento</b> · ${a.semap} das ${a.total} notas ainda sem desfecho
+       lançado (${p}%) — os percentuais sobem conforme a operação aponta.`
+    : `<b>Dia iniciado</b> · nenhuma das ${a.total} notas teve desfecho lançado
+       ainda — os percentuais abaixo só fecham depois do apontamento.`;
+  return `<p class="andamento">${corpo}</p>`;
+}
+
+// Com atualização de hora em hora, um robô parado passa despercebido: o painel
+// segue mostrando o dado de ontem sem alarde. O selo torna isso visível.
+function renderFrescor(){
+  const el = document.getElementById('frescor');
+  if(!BASE || !BASE.gerado_em){ el.hidden = true; return; }
+  el.hidden = false;
+  const min = Math.max(0, Math.round((Date.now() - new Date(BASE.gerado_em)) / 60000));
+  el.className = 'frescor' + (min >= 240 ? ' parado' : min >= 120 ? ' velho' : '');
+  const quando = min < 1 ? 'agora'
+    : min < 60 ? `há ${min} min`
+    : min < 1440 ? `há ${Math.floor(min/60)}h${String(min%60).padStart(2,'0')}`
+    : `em ${new Date(BASE.gerado_em).toLocaleDateString('pt-BR')}`;
+  el.textContent = min >= 240 ? `sem atualizar ${quando}` : `atualizado ${quando}`;
+  el.title = 'Dados gerados em ' + new Date(BASE.gerado_em).toLocaleString('pt-BR');
+}
+
 function render(){
   document.querySelectorAll('.datebtn').forEach(b =>
     b.setAttribute('aria-pressed', b.dataset.k === filtro));
@@ -460,37 +492,6 @@ function render(){
         </div></article>`;
     }).join('');
 
-// Cedo, com o dia todo sem desfecho lançado, os três percentuais aparecem
-// zerados e a leitura natural é "a operação não entregou nada". A contagem que
-// explica isso fica lá embaixo. Esta faixa põe o contexto antes dos números.
-function faixaAndamento(a){
-  if(!a.total || !a.semap) return '';
-  const p = pct(a.semap, a.total);
-  if(p < 25) return '';
-  const houve = a.entregue || a.reent || a.devol;
-  const corpo = houve
-    ? `<b>Dia em andamento</b> · ${a.semap} das ${a.total} notas ainda sem desfecho
-       lançado (${p}%) — os percentuais sobem conforme a operação aponta.`
-    : `<b>Dia iniciado</b> · nenhuma das ${a.total} notas teve desfecho lançado
-       ainda — os percentuais abaixo só fecham depois do apontamento.`;
-  return `<p class="andamento">${corpo}</p>`;
-}
-
-// Com atualização de hora em hora, um robô parado passa despercebido: o painel
-// segue mostrando o dado de ontem sem alarde. O selo torna isso visível.
-function renderFrescor(){
-  const el = document.getElementById('frescor');
-  if(!BASE || !BASE.gerado_em){ el.hidden = true; return; }
-  el.hidden = false;
-  const min = Math.max(0, Math.round((Date.now() - new Date(BASE.gerado_em)) / 60000));
-  el.className = 'frescor' + (min >= 240 ? ' parado' : min >= 120 ? ' velho' : '');
-  const quando = min < 1 ? 'agora'
-    : min < 60 ? `há ${min} min`
-    : min < 1440 ? `há ${Math.floor(min/60)}h${String(min%60).padStart(2,'0')}`
-    : `em ${new Date(BASE.gerado_em).toLocaleDateString('pt-BR')}`;
-  el.textContent = min >= 240 ? `sem atualizar ${quando}` : `atualizado ${quando}`;
-  el.title = 'Dados gerados em ' + new Date(BASE.gerado_em).toLocaleString('pt-BR');
-}
 
 function cabecalhoRecorte(acumulado, mostrados, total, ocultos){
   if(acumulado){
@@ -624,12 +625,29 @@ const elRecAvi = document.getElementById('recarga-aviso');
 // zera tudo e pede a senha outra vez, e isso é intencional.
 let SENHA = '';
 
-// Cada execução do robô publica um .enc novo. O parâmetro de tempo evita que o
-// CDN do Pages devolva a versão anterior mesmo com no-store.
+// O robô comita o .enc de hora em hora, mas publicar isso no Pages depende de
+// um deploy — que em 06/08 travou por horas do lado do GitHub e deixou o painel
+// mostrando dado de nove horas antes. O arquivo cifrado, porém, está no
+// repositório e o raw.githubusercontent serve com CORS liberado, sempre na
+// versão do último commit. Buscar de lá primeiro desacopla o dado do deploy:
+// só o HTML depende do Pages, e ele muda raramente. O caminho local fica de
+// reserva, para o caso de o repositório virar privado ou a rede bloquear o raw.
+const FONTES = [
+  'https://raw.githubusercontent.com/mandalogcel-wq/mandalog-torre/main/data/operacao.enc',
+  'data/operacao.enc'
+];
+
 async function baixarEnv(){
-  const r = await fetch('data/operacao.enc?t=' + Date.now(), {cache:'no-store'});
-  if(!r.ok) throw Object.assign(new Error('HTTP ' + r.status), {rede:true});
-  return r.json();
+  let ultimo;
+  for(const url of FONTES){
+    try {
+      const r = await fetch(url + '?t=' + Date.now(), {cache:'no-store'});
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      return await r.json();
+    } catch(e) { ultimo = e; }
+  }
+  throw Object.assign(new Error(ultimo ? ultimo.message : 'origem indisponível'),
+                      {rede:true});
 }
 
 function abrirPainel(){
