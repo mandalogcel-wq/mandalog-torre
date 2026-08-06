@@ -15,11 +15,13 @@ name: Atualizar dados da operação
 
 on:
   schedule:
-    # De hora em hora, no minuto zero. O agendador do Actions não é pontual:
-    # em horário de pico o disparo costuma atrasar alguns minutos, e execuções
-    # podem ser puladas. Para dado imediato, use o botão "Atualizar" do painel
-    # ou dispare o workflow manualmente.
-    - cron: "0 * * * *"
+    # A cada 20 minutos, para conseguir aproximadamente de hora em hora.
+    # O `schedule` do Actions em repositório público é melhor esforço: o GitHub
+    # descarta execuções quando a fila está cheia. Medido em 05 e 06/08, com
+    # cron de hora em hora, o intervalo real ficou entre 1h15 e 3h08. Pedindo
+    # três vezes mais, o intervalo efetivo cai para perto de uma hora mesmo com
+    # descartes. Não custa nada: o robô só comita quando o conteúdo muda.
+    - cron: "*/20 * * * *"
   workflow_dispatch:
 
 permissions:
