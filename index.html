@@ -238,17 +238,21 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
   <nav class="datebar" id="datebar" aria-label="Selecionar dia de operação"></nav>
 </div>
 
-<div class="porta" id="porta">
+<!-- Form de verdade, e não um input solto: é o que faz o navegador oferecer
+     "salvar senha" e preencher sozinho nas próximas vezes. O gerenciador do
+     sistema guarda, não o site — nada vai para localStorage. -->
+<form class="porta" id="porta" autocomplete="on">
   <h2>Acesso ao painel</h2>
   <p>Acompanhamento da operação Mandalog · 3 Corações. Informe a senha de acesso.</p>
   <label for="senha">Senha</label>
-  <input id="senha" type="password" autocomplete="current-password" autocapitalize="off"
-         spellcheck="false" aria-describedby="aviso">
-  <button id="entrar" type="button">Abrir painel</button>
+  <input id="senha" name="senha" type="password" autocomplete="current-password"
+         autocapitalize="off" spellcheck="false" aria-describedby="aviso">
+  <button id="entrar" type="submit">Abrir painel</button>
   <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
   <p class="nota">Os dados são publicados cifrados. Sem a senha correta o conteúdo
-  não é legível, nem baixando o arquivo diretamente.</p>
-</div>
+  não é legível, nem baixando o arquivo diretamente. Deixe esta aba aberta: o
+  painel se atualiza sozinho e não pede a senha de novo.</p>
+</form>
 
 <div id="app" hidden></div>
 
@@ -620,10 +624,14 @@ const elAviso  = document.getElementById('aviso');
 const elRecarr = document.getElementById('recarregar');
 const elRecAvi = document.getElementById('recarga-aviso');
 
-// A senha fica só em memória, como a chave derivada: é o que permite o botão
-// "Atualizar" rebuscar o .enc sem pedir a senha de novo. Recarregar a página
-// zera tudo e pede a senha outra vez, e isso é intencional.
+// A senha fica só em memória, como a chave derivada: é o que permite rebuscar
+// o .enc sem pedir a senha de novo. Recarregar a página zera tudo e pede a
+// senha outra vez, e isso é intencional.
 let SENHA = '';
+
+// De quanto em quanto tempo o painel busca dado novo sozinho. O robô publica a
+// cada ~20 min; verificar a cada 5 pega a mudança logo depois de sair.
+const AUTO_MS = 5 * 60 * 1000;
 
 // O robô comita o .enc de hora em hora, mas publicar isso no Pages depende de
 // um deploy — que em 06/08 travou por horas do lado do GitHub e deixou o painel
@@ -668,6 +676,16 @@ function abrirPainel(){
   render();
   // O selo envelhece sozinho enquanto a tela fica aberta na torre.
   setInterval(renderFrescor, 60000);
+
+  // Recarregar a página pede a senha de novo — e é isso que incomoda quem
+  // acompanha o dia inteiro. Buscando o dado sozinho, a aba fica aberta e o
+  // painel se mantém atualizado sem nova digitação. A senha continua só em
+  // memória: fechar a aba encerra o acesso, como antes.
+  setInterval(() => {
+    if(document.hidden) return;              // aba em segundo plano, não gasta
+    if(elRecarr.disabled) return;            // já tem uma busca em andamento
+    recarregar({auto:true});
+  }, AUTO_MS);
 }
 
 async function tentar(){
@@ -699,9 +717,10 @@ async function tentar(){
   }
 }
 
-async function recarregar(){
+async function recarregar(opc){
+  const auto = !!(opc && opc.auto);
   elRecarr.disabled = true;
-  elRecarr.textContent = 'Atualizando…';
+  elRecarr.textContent = auto ? 'Verificando…' : 'Atualizando…';
   elRecAvi.className = 'recarga-aviso';
   elRecAvi.textContent = '';
 
@@ -729,9 +748,10 @@ async function recarregar(){
   }
 }
 
-elBotao.addEventListener('click', tentar);
-elSenha.addEventListener('keydown', e => { if(e.key === 'Enter') tentar(); });
-elRecarr.addEventListener('click', recarregar);
+// submit cobre o clique no botão e o Enter no campo, e é o evento que dispara
+// o "salvar senha?" do navegador.
+elPorta.addEventListener('submit', e => { e.preventDefault(); tentar(); });
+elRecarr.addEventListener('click', () => recarregar());
 elSenha.focus();
 </script>
 </body>
