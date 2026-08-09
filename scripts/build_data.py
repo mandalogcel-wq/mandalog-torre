@@ -30,6 +30,15 @@ OPERACOES = {
     "cafe-gru": "Café · Guarulhos",
 }
 
+# A aba de Sumaré não tem uma operação só: a coluna MESO separa três praças.
+# TP SUMARÉ entra no CD por ser a mesma praça — decisão da operação, não técnica.
+MESOS = {
+    "CD SUMARE": "Café · CD Sumaré",
+    "TP SUMARE": "Café · CD Sumaré",
+    "MESO MARILIA": "Café · Meso Marília",
+    "MESO BAURU": "Café · Meso Bauru",
+}
+
 # Este é um painel de status diário, não um relatório histórico. A aba de
 # Guarulhos guarda o ano inteiro — 15 mil linhas, que virariam um .enc de 11 MB
 # baixado e decifrado a cada abertura, e um repositório que bate no limite de
@@ -39,7 +48,12 @@ RETENCAO_DIAS = 7
 
 # A planilha tem dois pares de colunas com o mesmo cabeçalho (CARREGAMENTO e
 # PAGAMENTO). O csv.reader preserva a ordem, então usamos o índice da coluna.
-COL = {
+#
+# Cada aba tem seu próprio layout: SJC e Guarulhos compartilham um; Sumaré tem
+# outro, com 27 colunas em ordem diferente, sem código de cliente e sem peso, e
+# com o desfecho em STATUS NOTA em vez de STATUS SAC. Por isso um mapa por
+# layout, e não um COL único.
+COL_PADRAO = {
     "emissao": 0,
     "manifesto": 1,
     "faixa": 2,
@@ -59,6 +73,31 @@ COL = {
     "status_sac": 19,
     "greenmile": 20,
     "canhoto": 23,
+}
+
+COL_SUMARE = {
+    "data_saida": 2,
+    "meso": 3,
+    "status": 4,
+    "plano": 5,
+    "cliente": 6,
+    "nf": 7,
+    "cidade": 8,
+    "emissao": 10,
+    "perfil_cobranca": 11,
+    "motorista": 12,
+    "placa": 13,
+    "manifesto": 15,
+    "status_sac": 17,
+    "canhoto": 23,
+    "greenmile": 24,
+}
+
+# arquivo em data/raw -> como lê-lo
+LAYOUTS = {
+    "cafe-sjc": COL_PADRAO,
+    "cafe-gru": COL_PADRAO,
+    "cafe-sumare": COL_SUMARE,
 }
 
 
@@ -91,7 +130,9 @@ def classificar(sac: str) -> str:
         return "entregue"
     if "REENTREG" in s:
         return "reentregar"
-    if "DEVOLU" in s or "RECUSA" in s:
+    # "FINALIZADO C/ DEV PARCIAL" não contém "DEVOLU" — o teste antigo deixava
+    # essas notas em "andamento" e subestimava o % de devoluções.
+    if "DEVOLU" in s or "RECUSA" in s or "DEV PARCIAL" in s:
         return "devolucao"
     return "andamento"
 
@@ -110,7 +151,10 @@ def data_iso(v: str) -> str:
 def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
     notas: list[dict] = []
     avisos: list[str] = []
-    operacao = OPERACOES.get(caminho.stem, caminho.stem)
+    sem_meso: list[int] = []
+    col = LAYOUTS.get(caminho.stem, COL_PADRAO)
+    operacao_fixa = OPERACOES.get(caminho.stem, caminho.stem)
+    largura = max(col.values())
 
     with caminho.open(encoding="utf-8-sig", newline="") as fh:
         linhas = list(csv.reader(fh))
@@ -119,22 +163,44 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
         return notas, [f"{caminho.name}: arquivo vazio"]
 
     for i, linha in enumerate(linhas[1:], start=2):
-        if len(linha) <= COL["greenmile"]:
-            linha = linha + [""] * (COL["greenmile"] + 1 - len(linha))
-        get = lambda k: limpar(linha[COL[k]])
+        if len(linha) <= largura:
+            linha = linha + [""] * (largura + 1 - len(linha))
+        get = lambda k: limpar(linha[col[k]]) if k in col else ""
 
         if not any(linha):
             continue
+
+        # Em Sumaré a operação é por linha: a coluna MESO separa as praças.
+        if "meso" in col:
+            m = sem_acento(get("meso"))
+            operacao = MESOS.get(m)
+            if not operacao:
+                # Nota sem MESO é nota ainda não roteirizada: sem data de saída
+                # e sem praça atribuída. Fica fora das três divisões, mas o
+                # total é contado num aviso só — 189 linhas de aviso afogariam
+                # tudo que importa no log.
+                if get("plano") or get("nf"):
+                    sem_meso.append(i)
+                continue
+        else:
+            operacao = operacao_fixa
 
         iso = data_iso(get("data_saida"))
         if get("data_saida") and not iso:
             avisos.append(f"{caminho.name} linha {i}: data de saída inválida "
                           f"({get('data_saida')!r})")
 
+        # Só transferência entre bases fica fora do denominador, porque não é
+        # entrega a recebedor. Reentrega, diária e coleta são entrega e contam —
+        # tratá-las como tipo próprio derrubava 11% das notas do painel e
+        # zerava o % de reentrega, que ficou meses mostrando 0%.
+        tipo = ("TRANSFERENCIA" if sem_acento(get("status")).startswith("TRANSFER")
+                else "ENTREGA")
+
         notas.append({
             "operacao": operacao,
             "linha": i,
-            "tipo": sem_acento(get("status")) or "ENTREGA",
+            "tipo": tipo,
             "plano": get("plano"),
             "manifesto": get("manifesto"),
             "data": iso,
@@ -153,6 +219,10 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
             "emitido": sem_acento(get("emissao")) == "EMITIDO",
             "canhoto": get("canhoto"),
         })
+
+    if sem_meso:
+        avisos.append(f"{caminho.name}: {len(sem_meso)} notas sem MESO "
+                      "(aguardando roteirização) ficaram fora do painel")
 
     return notas, avisos
 

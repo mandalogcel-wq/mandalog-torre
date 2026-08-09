@@ -32,6 +32,9 @@ ABAS = {
     # A aba de Guarulhos guarda o ano inteiro, ~15 mil linhas. Baixa tudo e o
     # corte por data acontece no build_data.py (RETENCAO_DIAS).
     "CAFÉ - GRU.": "cafe-gru.csv",
+    # Layout próprio, com 27 colunas e a coluna MESO separando três praças.
+    # Ver COL_SUMARE e MESOS em build_data.py.
+    "CAFÉ - SUMARÉ": "cafe-sumare.csv",
     # Descomente conforme for incluindo operações no painel.
 }
 
