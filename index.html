@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Única dependência além das fontes. O mapa precisa de tiles de verdade:
+     sem base geográfica, um ponto de latitude/longitude não diz nada a quem
+     opera. Se o Leaflet não carregar, renderMapa() sai calado e o resto do
+     painel funciona igual — o mapa é complemento, não pré-requisito. -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
 :root{
   --navy:#16233F; --navy-2:#22334F;
@@ -212,6 +218,28 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
   .ct dd{font-size:23px}
   .recorte,.legend,.andamento{padding-left:15px;padding-right:15px}
 }
+/* ---- última posição conhecida ---- */
+.mapasec{background:var(--surface);border-bottom:1px solid var(--rule)}
+.mapasec .recorte{border-bottom:0}
+#mapa{height:340px;background:#DFE3E8}
+#mapa.vazio{display:none}
+.leaflet-popup-content{font-family:"IBM Plex Sans",sans-serif;font-size:12px;margin:9px 12px}
+.leaflet-popup-content b{font-family:"IBM Plex Mono",monospace;font-size:12px}
+.leaflet-container{font-family:"IBM Plex Sans",sans-serif}
+.mapalegend{display:flex;gap:14px;flex-wrap:wrap;padding:9px 22px;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-3);border-top:1px solid var(--rule)}
+.mapalegend i{display:inline-block;width:9px;height:9px;border-radius:50%;
+  margin-right:5px;vertical-align:middle}
+/* A marca de origem só aparece onde o desfecho veio do motorista, no
+   GreenMile. Sem marca = apontamento manual da planilha. */
+.fonte-gm{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:9px;
+  letter-spacing:.08em;border:1px solid currentColor;padding:0 3px;margin-left:5px;
+  opacity:.75;vertical-align:1px}
+@media (max-width:600px){
+  #mapa{height:260px}
+  .mapalegend{padding-left:15px;padding-right:15px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -265,6 +293,10 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
     <dd>Sobre o total de notas com saída no dia, a partir da coluna Status SAC. Reentrega considera <i>Reentregar</i>; devolução considera <i>Devolução</i>, <i>Finalizado c/ dev parcial</i> e <i>Recusa</i>. Transferências entre bases ficam fora do denominador por não serem entrega a recebedor.</dd>
     <dt>% utilização do GreenMile</dt>
     <dd>Notas com baixa eletrônica dividido pelas entregas realizadas — mede adesão à ferramenta sobre o que foi efetivamente entregue.</dd>
+    <dt>Marca <i class="fonte-gm">GM</i> no status</dt>
+    <dd>Desfecho lançado pelo motorista no GreenMile, e não digitado depois na planilha. Onde o GreenMile cobre a nota, ele é a fonte do status; onde não cobre, vale o apontamento manual, intocado.</dd>
+    <dt>Última posição conhecida</dt>
+    <dd>Posição do rastreador registrada no GreenMile na última coleta, não telemetria ao vivo. A cor do ponto indica a idade da posição — cinza significa mais de 12 horas sem atualizar.</dd>
     <dt>Sem apontamento</dt>
     <dd>Nota sem Status SAC registrado. Não equivale a entrega não realizada: é desfecho ainda não informado, exibido em separado para não distorcer os percentuais.</dd>
   </dl>
@@ -430,6 +462,103 @@ function renderFrescor(){
   el.title = 'Dados gerados em ' + new Date(BASE.gerado_em).toLocaleString('pt-BR');
 }
 
+/* ---------- última posição conhecida ---------- */
+
+// O Leaflet guarda estado no elemento; recriar o mapa sobre um container já
+// usado dá "Map container is already initialized". Como render() roda a cada
+// troca de dia, de operação e a cada recarga automática, a instância anterior
+// precisa ser destruída antes.
+let MAPA = null;
+
+// A idade da posição importa mais que a posição: um ponto de ontem desenhado
+// igual a um de agora faz o painel mentir. A cor desbota com o tempo.
+function idadeCor(h){
+  return h < 2 ? {c:'#1B6B4A', r:'últimas 2h'}
+       : h < 12 ? {c:'#EE7623', r:`há ${Math.round(h)}h`}
+       :          {c:'#98A2B1', r:'desatualizada'};
+}
+
+function secaoMapa(){
+  const gm = BASE.greenmile;
+  if(!gm || !gm.disponivel || !(gm.posicoes || []).length) return '';
+  const n = gm.posicoes.length;
+  return `<section class="mapasec">
+    <div class="recorte"><h2>Última posição conhecida</h2>
+      <span class="obs">${n} veículo${n > 1 ? 's' : ''} com posição no GreenMile</span></div>
+    <div id="mapa"></div>
+    <div class="mapalegend">
+      <span><i style="background:#1B6B4A"></i>últimas 2h</span>
+      <span><i style="background:#EE7623"></i>entre 2h e 12h</span>
+      <span><i style="background:#98A2B1"></i>mais de 12h</span>
+      <span>posição do rastreador no GreenMile, não é tempo real</span>
+    </div>
+  </section>`;
+}
+
+function renderMapa(){
+  const alvo = document.getElementById('mapa');
+  if(!alvo) return;
+  // Leaflet vem de CDN e pode não ter carregado. Sem ele, esconde a moldura em
+  // vez de deixar um retângulo cinza vazio na tela.
+  if(typeof L === 'undefined'){ alvo.closest('.mapasec').hidden = true; return; }
+
+  if(MAPA){ MAPA.remove(); MAPA = null; }
+  const pts = (BASE.greenmile.posicoes || [])
+    .filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lon));
+  if(!pts.length){ alvo.closest('.mapasec').hidden = true; return; }
+
+  MAPA = L.map(alvo, {scrollWheelZoom:false}).setView([-23.2, -45.9], 8);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {maxZoom:18, attribution:'© OpenStreetMap'}).addTo(MAPA);
+
+  const agora = Date.now();
+  pts.forEach(p => {
+    const h = (agora - new Date(p.data_posicao).getTime()) / 3600e3;
+    const {c, r} = idadeCor(isFinite(h) ? h : 999);
+    L.circleMarker([p.lat, p.lon],
+      {radius:7, color:'#fff', weight:2, fillColor:c, fillOpacity:1})
+      .addTo(MAPA)
+      .bindPopup(`<b>${p.placa}</b><br>${p.velocidade_kmh} km/h · ${p.origem}<br>` +
+        `<span style="color:#8A94A5">${new Date(p.data_posicao).toLocaleString('pt-BR')}</span><br>` +
+        `<span style="color:${c}">${r}</span>`);
+  });
+
+  // O Leaflet calcula o enquadramento a partir do tamanho do container, e o
+  // container acabou de entrar no DOM. Enquanto ele mede 0, o fitBounds cai no
+  // zoom mínimo e o mapa abre no mundo inteiro — foi o que aconteceu com um
+  // setTimeout fixo de 120 ms, cedo demais dependendo da máquina. Em vez de
+  // apostar num prazo, o ajuste reage ao layout: dois quadros e, se ainda não
+  // houver altura, um observador que dispara assim que ela existir.
+  const limites = L.latLngBounds(pts.map(p => [p.lat, p.lon]));
+  // Assim que o usuário arrasta ou dá zoom, o enquadramento passa a ser dele:
+  // reenquadrar por baixo seria roubar o controle no meio da consulta.
+  let tocado = false;
+  MAPA.on('dragstart zoomstart', () => { tocado = true; });
+
+  const ajustar = () => {
+    if(!MAPA || tocado || !alvo.clientWidth || !alvo.clientHeight) return;
+    MAPA.invalidateSize();
+    MAPA.fitBounds(limites.pad(0.2));
+  };
+
+  // Tentativa única não converge: o container pode entrar no DOM sem altura e
+  // só ganhar tamanho depois, e requestAnimationFrame nem dispara em aba em
+  // segundo plano — que é exatamente como esta torre fica, aberta atrás de
+  // outras o dia inteiro. Então o enquadramento é reativo, não agendado: vale
+  // para o primeiro layout, para redimensionar a janela e para girar o
+  // celular, e se cala sozinho no instante em que o usuário mexe no mapa.
+  ajustar();
+  if(typeof ResizeObserver !== 'undefined'){
+    const obs = new ResizeObserver(() => ajustar());
+    obs.observe(alvo);
+    MAPA.on('unload', () => obs.disconnect());
+  }
+  [60, 250, 800, 2000].forEach(ms => setTimeout(ajustar, ms));
+  document.addEventListener('visibilitychange', () => {
+    if(!document.hidden) ajustar();
+  });
+}
+
 function render(){
   document.querySelectorAll('.datebtn').forEach(b =>
     b.setAttribute('aria-pressed', b.dataset.k === filtro));
@@ -470,7 +599,11 @@ function render(){
       const linhas = g.notas.map(n => `<tr>
           <td class="nf">${n.nf || '—'}</td><td>${n.cliente || '—'}</td>
           <td class="hide">${n.cidade || '—'}</td>
-          <td class="st ${n.classe}">${n.sac || CLASSES[n.classe]}</td>
+          <td class="st ${n.classe}">${n.sac || CLASSES[n.classe]}${
+            n.sac_origem === 'greenmile'
+              ? ` <i class="fonte-gm" title="Desfecho lançado pelo motorista no GreenMile${
+                    n.gm_status ? ' (' + n.gm_status + ')' : ''}">GM</i>`
+              : ''}</td>
           <td class="gm ${n.gm_ok ? 'sim' : 'nao'}">${n.gm || '—'}</td></tr>`).join('');
       return `<article class="lane">
         <button class="lane-head" aria-expanded="false">
@@ -572,12 +705,15 @@ function tabelaDias(){
        <div class="bar"><i class="${c.cls}" style="width:${c.p}%"></i></div></div>`).join('')}</dl>
     <dl class="contagens">${cont.map(x =>
       `<div class="ct"><dt>${x.t}</dt><dd>${String(x.n).padStart(2,'0')}</dd></div>`).join('')}</dl>
+    ${secaoMapa()}
     ${acumulado ? tabelaDias() : ''}
     ${cabecalhoRecorte(acumulado, recortado.length, ordenados.length, ocultos)}
     <div class="legend">
       ${Object.entries(CLASSES).map(([k,r]) => `<span class="lg"><i class="chip ${k}"></i>${r}</span>`).join('')}
     </div>
     ${lanes || '<p class="vazio">Nenhum veículo em rota neste dia — todas as notas já têm desfecho lançado.</p>'}`;
+
+  renderMapa();
 
   document.querySelectorAll('.lane-head').forEach(b => b.addEventListener('click', () => {
     const l = b.closest('.lane'), ab = l.classList.toggle('open');
