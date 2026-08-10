@@ -124,6 +124,11 @@ def main() -> None:
                 nota["sac_origem"] = "greenmile"
                 aplicadas += 1
             continue
+        # Se o GreenMile fechou a parada, houve baixa eletrônica — é o que a
+        # palavra significa. A coluna GM da planilha é transcrição manual e
+        # atrasa: dava "GreenMile 0%" em veículo com as quatro notas baixadas
+        # pelo próprio motorista no aplicativo, subestimando a adesão.
+        nota["gm_ok"] = True
         if nota["classe"] != classe_gm:
             divergentes += 1
         # O GreenMile é a fonte primária do desfecho onde cobre: o motorista

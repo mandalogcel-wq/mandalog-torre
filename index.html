@@ -462,6 +462,24 @@ function renderFrescor(){
   el.title = 'Dados gerados em ' + new Date(BASE.gerado_em).toLocaleString('pt-BR');
 }
 
+// O desfecho exibido tem de ser o mesmo que contou no indicador. Enquanto esta
+// célula imprimia o texto cru da planilha, uma nota baixada pelo motorista
+// aparecia como "EM ROTA" ao lado de um veículo marcado FINALIZADO com 4/4
+// entregas — a planilha ainda não tinha sido atualizada pelo SAC, mas quem
+// mandou na conta foi o GreenMile. O que a planilha dizia não some: vai para o
+// tooltip, que é onde a divergência interessa a quem apura.
+function rotuloDesfecho(n){
+  if(n.sac_origem !== 'greenmile'){
+    return n.sac || CLASSES[n.classe];
+  }
+  // Sem aspas duplas aqui: o texto vai dentro de title="…" e fecharia o
+  // atributo no meio, deixando o resto vazar como HTML.
+  const antes = n.sac ? ` · planilha ainda diz: ${n.sac}` : ' · planilha sem apontamento';
+  const titulo = `Desfecho lançado pelo motorista no GreenMile${
+    n.gm_status ? ' (' + n.gm_status + ')' : ''}${antes}`;
+  return `${CLASSES[n.classe]} <i class="fonte-gm" title="${titulo}">GM</i>`;
+}
+
 /* ---------- última posição conhecida ---------- */
 
 // O Leaflet guarda estado no elemento; recriar o mapa sobre um container já
@@ -599,12 +617,9 @@ function render(){
       const linhas = g.notas.map(n => `<tr>
           <td class="nf">${n.nf || '—'}</td><td>${n.cliente || '—'}</td>
           <td class="hide">${n.cidade || '—'}</td>
-          <td class="st ${n.classe}">${n.sac || CLASSES[n.classe]}${
-            n.sac_origem === 'greenmile'
-              ? ` <i class="fonte-gm" title="Desfecho lançado pelo motorista no GreenMile${
-                    n.gm_status ? ' (' + n.gm_status + ')' : ''}">GM</i>`
-              : ''}</td>
-          <td class="gm ${n.gm_ok ? 'sim' : 'nao'}">${n.gm || '—'}</td></tr>`).join('');
+          <td class="st ${n.classe}">${rotuloDesfecho(n)}</td>
+          <td class="gm ${n.gm_ok ? 'sim' : 'nao'}">${
+            n.gm || (n.gm_ok ? 'Baixa eletrônica' : '—')}</td></tr>`).join('');
       return `<article class="lane">
         <button class="lane-head" aria-expanded="false">
           ${anel(pct(ag.entregue, ag.total))}
