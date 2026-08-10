@@ -53,6 +53,16 @@ CLASSE_GM = {
     "IN_PROGRESS": "andamento",
 }
 
+# Só desfecho fechado pode sobrepor o apontamento manual. `PENDING` no GreenMile
+# significa "parada ainda aberta", e parada fica aberta por muito tempo: depois
+# que a consulta passou a buscar por número de plano em vez de janela de data,
+# vieram 493 notas nesse estado, várias de rotas de julho já entregues e
+# apontadas na planilha. Deixar `PENDING` sobrescrever rebaixaria essas notas
+# para "em andamento" e faria o painel piorar justamente onde a operação já
+# tinha feito o trabalho. O status ainda é guardado em `gm_status`, para
+# consulta, mas não manda na classe.
+CLASSE_FECHADA = {"entregue", "reentregar", "devolucao"}
+
 
 def buscar_gm() -> dict | None:
     url = os.environ.get("N8N_WEBHOOK_URL", "").strip()
@@ -106,7 +116,13 @@ def main() -> None:
         nota["gm_placa"] = g.get("placa") or nota.get("placa")
         nota["gm_atualizado_em"] = g.get("atualizado_em")
 
-        if classe_gm == "outro":
+        # Desfecho não fechado no GreenMile só vale onde a planilha também não
+        # tem nada. Nunca rebaixa uma nota já apontada.
+        if classe_gm not in CLASSE_FECHADA:
+            if nota["classe"] == "semapont" and classe_gm == "andamento":
+                nota["classe"] = "andamento"
+                nota["sac_origem"] = "greenmile"
+                aplicadas += 1
             continue
         if nota["classe"] != classe_gm:
             divergentes += 1
