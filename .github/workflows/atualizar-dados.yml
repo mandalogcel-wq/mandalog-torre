@@ -6,6 +6,8 @@ name: Atualizar dados da operação
 #   SHEET_ID            id da planilha ROTEIRIZAÇÃO 2026
 #   GOOGLE_SA_JSON      JSON da conta de serviço com acesso de leitura à planilha
 #   PAINEL_SENHA        senha de acesso ao painel, usada para cifrar os dados
+#   N8N_WEBHOOK_URL     URL de produção do workflow "Torre 3C · API GreenMile"
+#   N8N_WEBHOOK_TOKEN   valor do header X-Torre-Token dessa credencial
 #
 # Compartilhe a planilha com o e-mail da conta de serviço como Leitor.
 # Assim a planilha permanece privada — não é preciso publicá-la na web.
@@ -55,6 +57,16 @@ jobs:
 
       - name: Gerar JSON do painel
         run: python3 scripts/build_data.py
+
+      # Entre o build e a cifragem, de propósito: o desfecho do GreenMile entra
+      # no mesmo payload que o painel já consome, sem endpoint novo e sem dado
+      # em texto claro fora do .enc. Se o n8n estiver fora do ar, o script avisa
+      # e segue — o painel publica só com o dado da planilha, como sempre foi.
+      - name: Mesclar desfecho do GreenMile
+        env:
+          N8N_WEBHOOK_URL: ${{ secrets.N8N_WEBHOOK_URL }}
+          N8N_WEBHOOK_TOKEN: ${{ secrets.N8N_WEBHOOK_TOKEN }}
+        run: python3 scripts/mesclar_greenmile.py
 
       - name: Cifrar os dados com a senha de acesso
         env:
