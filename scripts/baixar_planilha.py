@@ -38,7 +38,26 @@ ABAS = {
     # Descomente conforme for incluindo operações no painel.
 }
 
+# Abas identificadas pelo gid, e não pelo título.
+#
+# O gid é o número no fim da URL da aba e não muda quando alguém a renomeia; o
+# título muda, e aí o robô deixa de achar a aba e publica um painel sem aquela
+# operação — sem quebrar, o que é pior, porque ninguém percebe. As abas de café
+# continuam por título por já estarem assim e funcionando. Aba nova entra aqui.
+ABAS_POR_GID = {
+    734086343: "supley.csv",
+    447429539: "arcor.csv",
+}
+
 ESCOPO = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
+
+
+def salvar(ws, arquivo: str, rotulo: str) -> None:
+    linhas = ws.get_all_values()
+    caminho = DESTINO / arquivo
+    with caminho.open("w", encoding="utf-8", newline="") as fh:
+        csv.writer(fh).writerows(linhas)
+    print(f"  {rotulo} -> {caminho.relative_to(RAIZ)} ({len(linhas)} linhas)")
 
 
 def main() -> None:
@@ -70,11 +89,16 @@ def main() -> None:
                   f"Abas disponíveis: {', '.join(sorted(disponiveis))}")
             continue
 
-        linhas = ws.get_all_values()
-        caminho = DESTINO / arquivo
-        with caminho.open("w", encoding="utf-8", newline="") as fh:
-            csv.writer(fh).writerows(linhas)
-        print(f"  {aba} -> {caminho.relative_to(RAIZ)} ({len(linhas)} linhas)")
+        salvar(ws, arquivo, aba)
+
+    por_gid = {w.id: w for w in disponiveis.values()}
+    for gid, arquivo in ABAS_POR_GID.items():
+        ws = por_gid.get(gid)
+        if ws is None:
+            print(f"  aviso: aba de gid {gid} não encontrada — "
+                  f"{arquivo} não será atualizado.")
+            continue
+        salvar(ws, arquivo, f"{ws.title} (gid {gid})")
 
 
 if __name__ == "__main__":
