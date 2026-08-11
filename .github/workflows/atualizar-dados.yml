@@ -68,16 +68,35 @@ jobs:
           N8N_WEBHOOK_TOKEN: ${{ secrets.N8N_WEBHOOK_TOKEN }}
         run: python3 scripts/mesclar_greenmile.py
 
+      # Um payload por cliente, e a prova de que não vazou nada entre eles.
+      # O script confere o arquivo pronto e derruba esta execução se encontrar
+      # dado de um cliente no payload de outro — antes de cifrar e publicar.
+      - name: Fatiar por cliente
+        run: python3 scripts/fatiar.py
+
       - name: Cifrar os dados com a senha de acesso
         env:
-          PAINEL_SENHA: ${{ secrets.PAINEL_SENHA }}
+          # A senha da 3 Corações mantém o nome antigo e o arquivo antigo
+          # (operacao.enc): é o painel que já está no ar, com o cliente usando.
+          PAINEL_SENHA:   ${{ secrets.PAINEL_SENHA }}
+          SENHA_ARCOR:    ${{ secrets.SENHA_ARCOR }}
+          SENHA_SUPLEY:   ${{ secrets.SENHA_SUPLEY }}
+          SENHA_MANDALOG: ${{ secrets.SENHA_MANDALOG }}
         run: python3 scripts/cifrar.py
 
       - name: Comitar se houver mudança
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/operacao.enc data/operacao.hash
+          # A pasta inteira, e não arquivo por arquivo: `git add` falha por
+          # completo se um dos caminhos não existir, e enquanto uma senha de
+          # cliente não estiver configurada o .enc dele não existe — isso
+          # derrubaria a publicação de todos os outros. Listar um a um também
+          # significa lembrar de editar aqui a cada cliente novo.
+          #
+          # É seguro porque o .gitignore bloqueia data/*.json e data/raw/:
+          # em data/ só sobra o que é cifrado.
+          git add -A data/
           if git diff --cached --quiet; then
             echo "Nada mudou."
           else
