@@ -218,6 +218,32 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
   .ct dd{font-size:23px}
   .recorte,.legend,.andamento{padding-left:15px;padding-right:15px}
 }
+/* ---- frota ---- */
+.veic{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(160px,1.6fr) minmax(130px,1fr);
+  gap:12px;align-items:center;background:var(--surface);padding:12px 22px;
+  border-bottom:1px solid #EDEFF2}
+.veic:hover{background:#F7F8FA}
+.veic-id{display:flex;flex-direction:column;gap:3px}
+.veic-id .placa{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+  letter-spacing:.04em;border:1px solid var(--rule);padding:1px 6px;align-self:flex-start}
+.veic-id .mot{font-size:13px;color:var(--ink)}
+.veic-meio{display:flex;flex-direction:column;gap:3px}
+.veic-meio .trecho{font-size:13px;font-weight:500}
+.veic-meio .meta{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.04em;
+  color:var(--ink-3);text-transform:uppercase}
+.veic-dir{display:flex;flex-direction:column;gap:3px;text-align:right}
+.veic-dir .sac{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em}
+.veic-dir .idade{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#8A5A12}
+/* Apontamento vencido não pode ter a mesma cara de apontamento de agora. */
+.veic.velho{background:#FFFCF5}
+.veic.velho .veic-dir .idade{color:#8A5A12}
+.veic.parado{background:#FBF7F7;opacity:.72}
+.veic.parado .veic-dir .idade{color:#9A3A3A}
+@media (max-width:700px){
+  .veic{grid-template-columns:1fr;gap:6px;padding-left:15px;padding-right:15px}
+  .veic-dir{text-align:left;flex-direction:row;gap:10px;align-items:baseline}
+}
+
 /* ---- última posição conhecida ---- */
 .mapasec{background:var(--surface);border-bottom:1px solid var(--rule)}
 .mapasec .recorte{border-bottom:0}
@@ -480,6 +506,102 @@ function rotuloDesfecho(n){
   return `${CLASSES[n.classe]} <i class="fonte-gm" title="${titulo}">GM</i>`;
 }
 
+/* ---------- frota: o ciclo do veículo ---------- */
+
+// Ordem em que a operação lê, e não ordem alfabética: primeiro o que dá para
+// carregar agora, depois o que está chegando, e o resto do ciclo em seguida.
+const GRUPOS_FROTA = [
+  ['disponivel', 'Disponíveis para carregamento', 'ok'],
+  ['chegando',   'Chegando vazios',               'gm'],
+  ['carregando', 'Em carregamento',               'gm'],
+  ['em_viagem',  'Em viagem',                     'reent'],
+  ['descarga',   'Em descarga',                   'reent'],
+  ['livre',      'Sem viagem em aberto',          'ok'],
+  ['parado',     'Parados',                       'devol'],
+  ['indefinido', 'Situação não informada',        'devol']
+];
+
+const temFrota = () => (BASE && (BASE.frota || []).length > 0);
+const temCafe  = () => (BASE && (BASE.notas || []).some(n => n.tipo === 'ENTREGA'));
+
+// Apontamento envelhece, e apontamento vencido é o defeito que mais atrapalha
+// este painel — foi assim que a lista chegou a mostrar 65 veículos
+// "disponíveis" com mediana de 78 dias. Mesma lógica de cor do mapa: o que é de
+// hoje aparece firme, o resto desbota e diz a idade.
+function frescorApontamento(dias){
+  if(dias <= 0) return {cls:'', txt:''};
+  if(dias === 1) return {cls:'velho', txt:'apontado ontem'};
+  return {cls:'parado', txt:`apontado há ${dias} dias`};
+}
+
+function cartaoVeiculo(v){
+  const f = frescorApontamento(v.dias_desde);
+  const trecho = v.situacao === 'chegando' && v.destino_vazio
+    ? `vazio → ${v.destino_vazio}`
+    : [v.origem, v.destino].filter(Boolean).join(' → ');
+  const extra = [];
+  if(v.carreta) extra.push(`carreta ${v.carreta}`);
+  if(v.oc) extra.push(`OC ${v.oc}`);
+  else if(v.manifesto) extra.push(`manifesto ${v.manifesto}`);
+  // A OC seguinte fica visível mas separada: é o que vem depois, não o que
+  // está acontecendo. Misturar as duas foi o erro que a regra de frota evita.
+  if(v.proxima_oc) extra.push(`depois: OC ${v.proxima_oc} em ${v.proxima_origem}`);
+  if(v.rastreada === false) extra.push('sem rastreamento');
+
+  return `<article class="veic ${f.cls}">
+    <span class="veic-id">
+      <span class="placa">${v.placa}</span>
+      <span class="mot">${v.motorista || 'Motorista a definir'}</span>
+    </span>
+    <span class="veic-meio">
+      <span class="trecho">${trecho || '—'}</span>
+      <span class="meta">${extra.join(' · ')}</span>
+    </span>
+    <span class="veic-dir">
+      <span class="sac">${v.sac || '—'}</span>
+      ${f.txt ? `<span class="idade">${f.txt}</span>` : ''}
+    </span>
+  </article>`;
+}
+
+function secaoFrota(){
+  if(!temFrota()) return '';
+  const frota = BASE.frota;
+  const por = k => frota.filter(v => v.situacao === k);
+  const disp = por('disponivel'), cheg = por('chegando');
+
+  const contagem = GRUPOS_FROTA
+    .map(([k, rot, cls]) => ({k, rot, cls, lista: por(k)}))
+    .filter(g => g.lista.length);
+
+  const blocos = contagem.map(g => `
+    <div class="recorte"><h2>${g.rot}</h2>
+      <span class="obs">${g.lista.length} ${g.lista.length > 1 ? 'veículos' : 'veículo'}</span></div>
+    ${g.lista.map(cartaoVeiculo).join('')}`).join('');
+
+  const dias = BASE.frota_dias || 3;
+  return `
+    <dl class="consol">
+      <div class="cons"><dt>Disponíveis para carregamento</dt>
+        <dd><span class="pc">${disp.length}</span>
+        <span class="abs">${disp.length ? 'prontos na base' : 'nenhum apontado agora'}</span></dd>
+        <div class="bar"><i class="ok" style="width:${frota.length ? 100*disp.length/frota.length : 0}%"></i></div></div>
+      <div class="cons"><dt>Chegando vazios</dt>
+        <dd><span class="pc">${cheg.length}</span>
+        <span class="abs">${cheg.length ? 'em retorno' : 'nenhum em retorno'}</span></dd>
+        <div class="bar"><i class="gm" style="width:${frota.length ? 100*cheg.length/frota.length : 0}%"></i></div></div>
+      <div class="cons"><dt>Frota ativa</dt>
+        <dd><span class="pc">${frota.length}</span>
+        <span class="abs">com viagem nos últimos ${dias} dias</span></dd>
+        <div class="bar"><i class="ok" style="width:100%"></i></div></div>
+      <div class="cons"><dt>Parados</dt>
+        <dd><span class="pc">${por('parado').length}</span>
+        <span class="abs">manutenção ou ocorrência</span></dd>
+        <div class="bar"><i class="devol" style="width:${frota.length ? 100*por('parado').length/frota.length : 0}%"></i></div></div>
+    </dl>
+    ${blocos}`;
+}
+
 /* ---------- última posição conhecida ---------- */
 
 // O Leaflet guarda estado no elemento; recriar o mapa sobre um container já
@@ -713,20 +835,26 @@ function tabelaDias(){
   // ficam no log do robô, em build_data.py.
   renderFrescor();
 
-  document.getElementById('app').innerHTML = `
+  // Arcor e Supley não têm café, e a Mandalog tem os dois. A frota vem antes:
+  // é a pergunta que o cliente faz primeiro ao abrir a tela.
+  const blocoCafe = !temCafe() ? '' : `
     ${faixaAndamento(a)}
     <dl class="consol">${cards.map(c =>
       `<div class="cons"><dt>${c.t}</dt><dd><span class="pc">${c.p}%</span><span class="abs">${c.abs}</span></dd>
        <div class="bar"><i class="${c.cls}" style="width:${c.p}%"></i></div></div>`).join('')}</dl>
     <dl class="contagens">${cont.map(x =>
       `<div class="ct"><dt>${x.t}</dt><dd>${String(x.n).padStart(2,'0')}</dd></div>`).join('')}</dl>
-    ${secaoMapa()}
     ${acumulado ? tabelaDias() : ''}
     ${cabecalhoRecorte(acumulado, recortado.length, ordenados.length, ocultos)}
     <div class="legend">
       ${Object.entries(CLASSES).map(([k,r]) => `<span class="lg"><i class="chip ${k}"></i>${r}</span>`).join('')}
     </div>
     ${lanes || '<p class="vazio">Nenhum veículo em rota neste dia — todas as notas já têm desfecho lançado.</p>'}`;
+
+  document.getElementById('app').innerHTML = `
+    ${secaoFrota()}
+    ${secaoMapa()}
+    ${blocoCafe}`;
 
   renderMapa();
 
@@ -749,9 +877,11 @@ function tabelaDias(){
 
   const rot = filtro === 'TODAS' ? 'acumulado do período'
     : filtro === 'SEMDATA' ? 'planos sem data de saída' : 'saída em ' + brDate(filtro);
-  document.getElementById('rodape').textContent =
-    `${BASE.fonte} · recorte: ${rot} · ${grupos.length} veículos, ${a.total} notas · ` +
-    `dados gerados em ${new Date(BASE.gerado_em).toLocaleString('pt-BR')}`;
+  const partes = [BASE.fonte || 'Planilha ROTEIRIZAÇÃO 2026'];
+  if(temCafe()) partes.push(`recorte: ${rot}`, `${grupos.length} veículos, ${a.total} notas`);
+  if(temFrota()) partes.push(`${BASE.frota.length} veículos na frota ativa`);
+  partes.push(`dados gerados em ${new Date(BASE.gerado_em).toLocaleString('pt-BR')}`);
+  document.getElementById('rodape').textContent = partes.join(' · ');
 }
 
 /* ---------- abertura: decifra os dados com a senha ---------- */
@@ -791,9 +921,27 @@ const AUTO_MS = 5 * 60 * 1000;
 // versão do último commit. Buscar de lá primeiro desacopla o dado do deploy:
 // só o HTML depende do Pages, e ele muda raramente. O caminho local fica de
 // reserva, para o caso de o repositório virar privado ou a rede bloquear o raw.
+// Qual cliente esta aba está mostrando, pela URL: ?c=arcor, ?c=supley,
+// ?c=mandalog. Sem parâmetro é a 3 Corações, e isso é de propósito: o link que
+// o cliente já tem e usa continua funcionando exatamente igual.
+//
+// O parâmetro só escolhe qual arquivo buscar. Não é controle de acesso — quem
+// trocar a URL na mão baixa um arquivo cifrado que a senha dele não abre. O
+// isolamento está na senha, não aqui.
+const CLIENTES = {
+  '3coracoes': {arquivo: 'operacao.enc', rotulo: 'Café · Vale do Paraíba'},
+  'arcor':     {arquivo: 'arcor.enc',    rotulo: 'Arcor'},
+  'supley':    {arquivo: 'supley.enc',   rotulo: 'Supley'},
+  'mandalog':  {arquivo: 'mandalog.enc', rotulo: 'Mandalog · todas as operações'}
+};
+const SLUG = (new URLSearchParams(location.search).get('c') || '3coracoes')
+  .toLowerCase().replace(/[^a-z0-9]/g, '');
+const CLIENTE = CLIENTES[SLUG] || CLIENTES['3coracoes'];
+
 const FONTES = [
-  'https://raw.githubusercontent.com/mandalogcel-wq/mandalog-torre/main/data/operacao.enc',
-  'data/operacao.enc'
+  'https://raw.githubusercontent.com/mandalogcel-wq/mandalog-torre/main/data/'
+    + CLIENTE.arquivo,
+  'data/' + CLIENTE.arquivo
 ];
 
 async function baixarEnv(){
@@ -821,9 +969,25 @@ function abrirPainel(){
   const lista = bases.length > 1
     ? bases.slice(0, -1).join(', ') + ' e ' + bases[bases.length - 1]
     : bases[0] || '';
-  document.getElementById('local').textContent = `Café · ${lista} · Vale do Paraíba`;
-  renderOperacoes();
-  renderDatas();
+  document.getElementById('local').textContent = temCafe()
+    ? (SLUG === 'mandalog'
+        ? `${BASE.cliente || CLIENTE.rotulo} · café e transferência`
+        : `Café · ${lista} · Vale do Paraíba`)
+    : (BASE.cliente || CLIENTE.rotulo);
+
+  // Sem café não há dia nem operação para escolher: a frota é sempre o agora.
+  // Deixar as barras vazias na tela pareceria defeito.
+  ['opbar', 'datebar'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.hidden = !temCafe();
+  });
+  const regras = document.getElementById('regras');
+  if(regras) regras.hidden = !temCafe();
+
+  if(temCafe()){
+    renderOperacoes();
+    renderDatas();
+  }
   render();
   // O selo envelhece sozinho enquanto a tela fica aberta na torre.
   setInterval(renderFrescor, 60000);
