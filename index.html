@@ -218,6 +218,24 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
   .ct dd{font-size:23px}
   .recorte,.legend,.andamento{padding-left:15px;padding-right:15px}
 }
+/* ---- layout de torre: status à esquerda, mapa à direita ----
+   O mapa fica preso no alto enquanto a lista rola. É o que diferencia uma torre
+   de controle de um relatório: a pessoa lê a lista sem perder de vista onde as
+   coisas estão. */
+.torre{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  align-items:start;background:var(--paper)}
+.torre-col{min-width:0}
+.torre-mapa{position:sticky;top:0;align-self:start;border-left:1px solid var(--rule)}
+.torre-mapa #mapa{height:calc(100vh - 190px);min-height:340px}
+.painel-vazio{padding:26px 22px;color:var(--ink-3);font-size:13px;background:var(--surface)}
+/* Abaixo de 1080 a coluna dupla espreme as duas: melhor empilhar, com o mapa
+   primeiro, que é a leitura de relance. */
+@media (max-width:1080px){
+  .torre{grid-template-columns:1fr}
+  .torre-mapa{position:static;border-left:0;border-bottom:1px solid var(--rule);order:-1}
+  .torre-mapa #mapa{height:320px}
+}
+
 /* ---- frota ---- */
 .veic{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(160px,1.6fr) minmax(130px,1fr);
   gap:12px;align-items:center;background:var(--surface);padding:12px 22px;
@@ -272,11 +290,15 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
 <body>
 <div class="wrap">
 
+<!-- Só a marca da Mandalog é fixa. A do cliente é preenchida pelo script a
+     partir da URL: o logo de um cliente na tela de outro contaria a cada um
+     com quem mais a Mandalog opera, e a regra é que cada um vê só a sua
+     operação. Nasce escondido e só aparece quando a imagem carrega. -->
 <div class="marcas">
   <img src="assets/mandalog.png" alt="Mandalog Operações Logísticas">
-  <i class="div"></i>
-  <img src="assets/3coracoes.png" alt="3 Corações">
-  <span class="selo">Parceria que move todo o Brasil<br>Operação de distribuição · Vale do Paraíba</span>
+  <i class="div" id="marca-div" hidden></i>
+  <img id="marca-cliente" alt="" hidden>
+  <span class="selo" id="selo"></span>
 </div>
 
 <div class="topo" id="topo" hidden>
@@ -929,10 +951,20 @@ const AUTO_MS = 5 * 60 * 1000;
 // trocar a URL na mão baixa um arquivo cifrado que a senha dele não abre. O
 // isolamento está na senha, não aqui.
 const CLIENTES = {
-  '3coracoes': {arquivo: 'operacao.enc', rotulo: 'Café · Vale do Paraíba'},
-  'arcor':     {arquivo: 'arcor.enc',    rotulo: 'Arcor'},
-  'supley':    {arquivo: 'supley.enc',   rotulo: 'Supley'},
-  'mandalog':  {arquivo: 'mandalog.enc', rotulo: 'Mandalog · todas as operações'}
+  '3coracoes': {arquivo: 'operacao.enc', rotulo: 'Café · Vale do Paraíba',
+                logo: 'assets/3coracoes.png', marca: '3 Corações',
+                selo: 'Operação de distribuição · Vale do Paraíba'},
+  'arcor':     {arquivo: 'arcor.enc',    rotulo: 'Arcor',
+                logo: 'assets/arcor.png', marca: 'Arcor',
+                selo: 'Transferência e coleta · Campinas, Extrema e Bragança'},
+  'supley':    {arquivo: 'supley.enc',   rotulo: 'Supley',
+                logo: 'assets/supley.png', marca: 'Supley',
+                selo: 'Transferência · Matão e Jundiaí'},
+  // A visão interna não leva marca de cliente nenhum: ela mostra todos, e
+  // estampar um só daria a entender que é o painel daquele cliente.
+  'mandalog':  {arquivo: 'mandalog.enc', rotulo: 'Mandalog · todas as operações',
+                logo: '', marca: '',
+                selo: 'Torre de controle · todas as operações'}
 };
 const SLUG = (new URLSearchParams(location.search).get('c') || '3coracoes')
   .toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -943,6 +975,34 @@ const FONTES = [
     + CLIENTE.arquivo,
   'data/' + CLIENTE.arquivo
 ];
+
+// A marca vai no ar antes da senha, então é montada aqui e não no render.
+//
+// Se o arquivo do logo ainda não existir, o `onerror` esconde a imagem e o
+// divisor: melhor a tela abrir só com a Mandalog do que com o ícone de imagem
+// quebrada, que passa impressão de painel malfeito logo na primeira tela que o
+// cliente vê. Assim dá para publicar antes de ter todos os logos, e cada um
+// acende sozinho quando o arquivo chega em assets/.
+(function marcarCliente(){
+  const selo = document.getElementById('selo');
+  if(selo){
+    selo.innerHTML = 'Parceria que move todo o Brasil<br>' + CLIENTE.selo;
+  }
+  if(!CLIENTE.logo) return;
+  const img = document.getElementById('marca-cliente');
+  const risco = document.getElementById('marca-div');
+  if(!img) return;
+  img.alt = CLIENTE.marca;
+  img.addEventListener('load', () => {
+    img.hidden = false;
+    if(risco) risco.hidden = false;
+  });
+  img.addEventListener('error', () => {
+    img.remove();
+    if(risco) risco.remove();
+  });
+  img.src = CLIENTE.logo;
+})();
 
 async function baixarEnv(){
   let ultimo;
