@@ -290,6 +290,11 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
     return notas, avisos
 
 
+# Status que significam trânsito e caem em `andamento` de propósito. Estão aqui
+# só para o aviso de vocabulário novo não disparar com eles todo dia.
+EM_TRANSITO = {"ROTA DE ENTREGA", "EM ROTA", "EM TRANSITO", "A CAMINHO"}
+
+
 def classificar_viagem(status: str) -> str:
     """Traduz STATUS ENTREGA das abas de viagem nas classes do painel.
 
@@ -386,7 +391,11 @@ def ler_viagens(caminho: Path) -> tuple[list[dict], list[str]]:
 
         bruto = get("status")
         classe = classificar_viagem(bruto)
-        if classe == "andamento" and bruto:
+        # O aviso só serve se apontar palavra nova. Termo já conhecido que cai
+        # em `andamento` de propósito não entra, senão o log grita todo dia e a
+        # gente para de ler — e aí o dia em que aparecer status de verdade novo
+        # passa batido.
+        if classe == "andamento" and bruto and sem_acento(bruto) not in EM_TRANSITO:
             vocabulario.add(bruto.upper())
 
         viagens.append({
