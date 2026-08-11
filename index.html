@@ -236,30 +236,55 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
   .torre-mapa #mapa{height:320px}
 }
 
-/* ---- frota ---- */
-.veic{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(160px,1.6fr) minmax(130px,1fr);
-  gap:12px;align-items:center;background:var(--surface);padding:12px 22px;
-  border-bottom:1px solid #EDEFF2}
-.veic:hover{background:#F7F8FA}
-.veic-id{display:flex;flex-direction:column;gap:3px}
-.veic-id .placa{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
-  letter-spacing:.04em;border:1px solid var(--rule);padding:1px 6px;align-self:flex-start}
-.veic-id .mot{font-size:13px;color:var(--ink)}
-.veic-meio{display:flex;flex-direction:column;gap:3px}
-.veic-meio .trecho{font-size:13px;font-weight:500}
-.veic-meio .meta{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.04em;
-  color:var(--ink-3);text-transform:uppercase}
-.veic-dir{display:flex;flex-direction:column;gap:3px;text-align:right}
-.veic-dir .sac{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em}
-.veic-dir .idade{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#8A5A12}
-/* Apontamento vencido não pode ter a mesma cara de apontamento de agora. */
-.veic.velho{background:#FFFCF5}
-.veic.velho .veic-dir .idade{color:#8A5A12}
-.veic.parado{background:#FBF7F7;opacity:.72}
-.veic.parado .veic-dir .idade{color:#9A3A3A}
+/* ---- quadro por colunas: o ciclo do veículo da esquerda para a direita ---- */
+.clibar{display:flex;gap:8px;flex-wrap:wrap;padding:12px 22px;background:var(--surface);
+  border-bottom:1px solid var(--rule)}
+.clibtn{appearance:none;cursor:pointer;background:none;border:1px solid var(--rule);
+  padding:6px 12px;font-family:"Barlow Condensed",sans-serif;font-weight:600;
+  text-transform:uppercase;font-size:14px;letter-spacing:.05em;color:var(--ink);
+  display:inline-flex;align-items:center;gap:7px}
+.clibtn b{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;
+  color:var(--ink-3)}
+.clibtn[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.clibtn[aria-pressed="true"] b{color:rgba(255,255,255,.65)}
+
+.quadro{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);
+  gap:1px;background:var(--rule);overflow-x:auto;border-bottom:1px solid var(--rule)}
+.qcol{background:var(--paper);display:flex;flex-direction:column;min-width:0}
+.qhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+  padding:11px 13px;background:var(--navy);color:#fff;position:sticky;top:0;z-index:2}
+.qhead span{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:14px;
+  text-transform:uppercase;letter-spacing:.04em;line-height:1.15}
+.qhead b{font-family:"IBM Plex Mono",monospace;font-size:15px;flex:none}
+/* Cada coluna rola por dentro. Sem isto, uma coluna com 26 veículos esticava a
+   página para quase 7 mil pixels e as outras viravam um filete no topo — o
+   contrário de uma torre, onde o valor está em ver tudo de uma vez. */
+.qbody{padding:9px;display:flex;flex-direction:column;gap:8px;
+  max-height:calc(100vh - 250px);min-height:90px;overflow-y:auto}
+.qvazio{margin:4px 4px 8px;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+
+.qcard{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--navy);
+  padding:9px 11px;display:flex;flex-direction:column;gap:3px}
+.qtopo{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.qtopo .placa{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:600;
+  letter-spacing:.04em}
+/* A marca do cliente em cada cartão: na torre unificada, saber de quem é o
+   veículo importa tanto quanto saber em que etapa ele está. */
+.qcli{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);border:1px solid var(--rule);
+  padding:1px 5px;white-space:nowrap}
+.qmot{font-size:12px;line-height:1.3}
+.qtrecho{font-size:12px;font-weight:500;color:var(--ink)}
+.qmeta{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--ink-3);line-height:1.5}
+.qidade{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#8A5A12}
+.qcard.velho{border-left-color:var(--laranja);background:#FFFCF5}
+.qcard.parado{border-left-color:var(--alerta);background:#FBF7F7}
+.qcard.parado .qidade{color:#9A3A3A}
 @media (max-width:700px){
-  .veic{grid-template-columns:1fr;gap:6px;padding-left:15px;padding-right:15px}
-  .veic-dir{text-align:left;flex-direction:row;gap:10px;align-items:baseline}
+  .quadro{grid-auto-columns:minmax(215px,88vw)}
+  .clibar{padding-left:15px;padding-right:15px}
 }
 
 /* ---- última posição conhecida ---- */
@@ -411,6 +436,7 @@ function agruparPorPlano(ns){
       placa: meta.placa || notas[0].placa || '',
       perfil: meta.perfil || notas[0].perfil || '',
       origem: meta.origem || notas[0].origem || '',
+      operacao: meta.operacao || notas[0].operacao || '',
       cidades: [...new Set(notas.map(n => n.cidade).filter(Boolean))].sort()
     };
   });
@@ -546,6 +572,110 @@ const GRUPOS_FROTA = [
 const temFrota = () => (BASE && (BASE.frota || []).length > 0);
 const temCafe  = () => (BASE && (BASE.notas || []).some(n => n.tipo === 'ENTREGA'));
 
+// O quadro por colunas é a visão de torre: vale para Arcor, Supley e Mandalog.
+// A tela da 3 Corações fica como está — está no ar, o cliente usa todo dia, e
+// trocar o layout dela não foi pedido.
+const ehQuadro = () => SLUG !== '3coracoes';
+
+let cliFiltro = 'TODOS';
+
+// Situações em que o veículo está parado num ponto, e portanto o apontamento
+// diz onde ele está. Em trânsito não entra: sem rastreador, marcar um ponto no
+// meio da estrada seria inventar posição.
+const NO_PONTO = {disponivel: 'origem', carregando: 'origem',
+                  descarga: 'destino', livre: 'destino'};
+
+// Um veículo, venha de onde vier. O café é modelado por nota e plano; a
+// transferência, por viagem. Para a torre da Mandalog os dois viram a mesma
+// coisa: uma placa, um cliente, uma situação. Sem isso a visão unificada
+// mostrava só metade da operação — que foi exatamente o defeito relatado.
+function frotaUnificada(){
+  const lista = (BASE.frota || []).map(v => ({
+    cliente: v.cliente, placa: v.placa, motorista: v.motorista,
+    situacao: v.situacao, rotulo: v.sac,
+    trecho: v.situacao === 'chegando' && v.destino_vazio
+      ? `vazio → ${v.destino_vazio}`
+      : [v.origem, v.destino].filter(Boolean).join(' → '),
+    extra: [v.carreta && `carreta ${v.carreta}`,
+            v.oc ? `OC ${v.oc}` : (v.manifesto && `manifesto ${v.manifesto}`),
+            v.proxima_oc && `depois: OC ${v.proxima_oc} em ${v.proxima_origem}`,
+            v.rastreada === false && 'sem rastreamento'].filter(Boolean),
+    dias: v.dias_desde,
+    local: NO_PONTO[v.situacao] === 'origem' ? v.origem
+         : NO_PONTO[v.situacao] === 'destino' ? v.destino : ''
+  }));
+
+  // O café entra pelo plano do dia selecionado: um plano é o dia de um veículo.
+  if(temCafe()){
+    agruparPorPlano(notasDo()).forEach(g => {
+      const s = statusPlano(g), ag = agregar(g.notas);
+      lista.push({
+        // Cliente é 3 Corações; SJC, Guarulhos e as mesos são operações dele.
+        // A barra de filtro tem que oferecer cliente — oferecer meso foi o que
+        // deixou Arcor e Supley fora da vista na torre unificada.
+        cliente: '3 Corações',
+        placa: g.placa || '—', motorista: g.motorista,
+        situacao: s.cls === 'rota' ? 'em_viagem'
+                : s.cls === 'fim' ? 'livre'
+                : s.cls === 'sement' ? 'parado' : 'indefinido',
+        rotulo: s.txt,
+        trecho: g.cidades.slice(0, 2).join(' · ') || 'sem cidade informada',
+        extra: [g.operacao.replace(/^Café\s*·\s*/, ''),
+                `plano ${g.plano}`,
+                `${ag.entregue}/${ag.total} entregas`].filter(Boolean),
+        dias: 0,
+        local: g.origem || ''
+      });
+    });
+  }
+  return lista;
+}
+
+function cartaoQuadro(v){
+  const f = frescorApontamento(v.dias);
+  return `<article class="qcard ${f.cls}">
+    <span class="qtopo"><span class="placa">${v.placa}</span>
+      <span class="qcli">${v.cliente}</span></span>
+    <span class="qmot">${v.motorista || 'Motorista a definir'}</span>
+    <span class="qtrecho">${v.trecho || '—'}</span>
+    ${v.extra.length ? `<span class="qmeta">${v.extra.join(' · ')}</span>` : ''}
+    ${f.txt ? `<span class="qidade">${f.txt}</span>` : ''}
+  </article>`;
+}
+
+// Quadro por colunas: cada coluna é uma etapa do ciclo, e ler da esquerda para
+// a direita é acompanhar o caminho do veículo. Coluna vazia continua na tela —
+// "nenhum disponível" é notícia, e escondê-la faria as colunas trocarem de
+// lugar a cada atualização, que é o que mais atrapalha quem olha o dia inteiro.
+function secaoQuadro(){
+  const todos = frotaUnificada();
+  if(!todos.length) return '';
+  const clientes = [...new Set(todos.map(v => v.cliente))].sort();
+  const lista = cliFiltro === 'TODOS' ? todos
+              : todos.filter(v => v.cliente === cliFiltro);
+
+  const barra = clientes.length > 1 ? `
+    <nav class="clibar" aria-label="Filtrar por cliente">
+      ${['TODOS', ...clientes].map(c => `
+        <button class="clibtn" data-cli="${c}" aria-pressed="${c === cliFiltro}">
+          ${c === 'TODOS' ? 'Todos os clientes' : c}
+          <b>${c === 'TODOS' ? todos.length
+                             : todos.filter(v => v.cliente === c).length}</b>
+        </button>`).join('')}
+    </nav>` : '';
+
+  const colunas = GRUPOS_FROTA.map(([k, rot]) => {
+    const doGrupo = lista.filter(v => v.situacao === k);
+    return `<section class="qcol">
+      <header class="qhead"><span>${rot}</span><b>${doGrupo.length}</b></header>
+      <div class="qbody">${doGrupo.map(cartaoQuadro).join('')
+        || '<p class="qvazio">nenhum</p>'}</div>
+    </section>`;
+  }).join('');
+
+  return `${barra}<div class="quadro">${colunas}</div>`;
+}
+
 // Apontamento envelhece, e apontamento vencido é o defeito que mais atrapalha
 // este painel — foi assim que a lista chegou a mostrar 65 veículos
 // "disponíveis" com mediana de 78 dias. Mesma lógica de cor do mapa: o que é de
@@ -556,51 +686,16 @@ function frescorApontamento(dias){
   return {cls:'parado', txt:`apontado há ${dias} dias`};
 }
 
-function cartaoVeiculo(v){
-  const f = frescorApontamento(v.dias_desde);
-  const trecho = v.situacao === 'chegando' && v.destino_vazio
-    ? `vazio → ${v.destino_vazio}`
-    : [v.origem, v.destino].filter(Boolean).join(' → ');
-  const extra = [];
-  if(v.carreta) extra.push(`carreta ${v.carreta}`);
-  if(v.oc) extra.push(`OC ${v.oc}`);
-  else if(v.manifesto) extra.push(`manifesto ${v.manifesto}`);
-  // A OC seguinte fica visível mas separada: é o que vem depois, não o que
-  // está acontecendo. Misturar as duas foi o erro que a regra de frota evita.
-  if(v.proxima_oc) extra.push(`depois: OC ${v.proxima_oc} em ${v.proxima_origem}`);
-  if(v.rastreada === false) extra.push('sem rastreamento');
-
-  return `<article class="veic ${f.cls}">
-    <span class="veic-id">
-      <span class="placa">${v.placa}</span>
-      <span class="mot">${v.motorista || 'Motorista a definir'}</span>
-    </span>
-    <span class="veic-meio">
-      <span class="trecho">${trecho || '—'}</span>
-      <span class="meta">${extra.join(' · ')}</span>
-    </span>
-    <span class="veic-dir">
-      <span class="sac">${v.sac || '—'}</span>
-      ${f.txt ? `<span class="idade">${f.txt}</span>` : ''}
-    </span>
-  </article>`;
-}
-
 function secaoFrota(){
-  if(!temFrota()) return '';
-  const frota = BASE.frota;
+  // Conta a frota unificada, e não só as viagens: na visão da Mandalog o café
+  // também é veículo em operação, e um indicador que ignora metade da frota
+  // contradiz o quadro logo abaixo dele.
+  const todos = frotaUnificada();
+  if(!todos.length) return '';
+  const frota = cliFiltro === 'TODOS' ? todos
+              : todos.filter(v => v.cliente === cliFiltro);
   const por = k => frota.filter(v => v.situacao === k);
   const disp = por('disponivel'), cheg = por('chegando');
-
-  const contagem = GRUPOS_FROTA
-    .map(([k, rot, cls]) => ({k, rot, cls, lista: por(k)}))
-    .filter(g => g.lista.length);
-
-  const blocos = contagem.map(g => `
-    <div class="recorte"><h2>${g.rot}</h2>
-      <span class="obs">${g.lista.length} ${g.lista.length > 1 ? 'veículos' : 'veículo'}</span></div>
-    ${g.lista.map(cartaoVeiculo).join('')}`).join('');
-
   const dias = BASE.frota_dias || 3;
   return `
     <dl class="consol">
@@ -620,8 +715,7 @@ function secaoFrota(){
         <dd><span class="pc">${por('parado').length}</span>
         <span class="abs">manutenção ou ocorrência</span></dd>
         <div class="bar"><i class="devol" style="width:${frota.length ? 100*por('parado').length/frota.length : 0}%"></i></div></div>
-    </dl>
-    ${blocos}`;
+    </dl>`;
 }
 
 /* ---------- última posição conhecida ---------- */
@@ -873,10 +967,16 @@ function tabelaDias(){
     </div>
     ${lanes || '<p class="vazio">Nenhum veículo em rota neste dia — todas as notas já têm desfecho lançado.</p>'}`;
 
-  document.getElementById('app').innerHTML = `
-    ${secaoFrota()}
-    ${secaoMapa()}
-    ${blocoCafe}`;
+  document.getElementById('app').innerHTML = ehQuadro()
+    ? `${secaoFrota()}
+       ${secaoQuadro()}
+       ${secaoMapa()}
+       ${blocoCafe}`
+    : `${secaoMapa()}
+       ${blocoCafe}`;
+
+  document.querySelectorAll('.clibtn').forEach(b =>
+    b.addEventListener('click', () => { cliFiltro = b.dataset.cli; render(); }));
 
   renderMapa();
 
@@ -1075,18 +1175,35 @@ async function tentar(){
   elBotao.textContent = 'Abrindo…';
   elAviso.textContent = '';
 
+  // Decifrar e desenhar em blocos separados, de propósito.
+  //
+  // Com um try só, qualquer erro de código dentro do render aparecia como
+  // "Senha incorreta" — e a pessoa ficava redigitando uma senha correta
+  // enquanto o defeito estava em outro lugar. Aconteceu duas vezes neste
+  // projeto e custou tempo nas duas. Se o payload decifrou, a senha estava
+  // certa; o que vier depois é problema nosso e tem que dizer isso.
+  let dados;
   try {
-    BASE = await decifrar(await baixarEnv(), senha);
-    SENHA = senha;
-    elSenha.value = '';
+    dados = await decifrar(await baixarEnv(), senha);
+  } catch(e) {
+    elAviso.textContent = e.rede
+      ? `Não foi possível baixar ${CLIENTE.arquivo} (${e.message}).`
+      : 'Senha incorreta.';
+    if(!e.rede) elSenha.select();
+    elBotao.disabled = false;
+    elBotao.textContent = 'Abrir painel';
+    return;
+  }
+
+  BASE = dados;
+  SENHA = senha;
+  elSenha.value = '';
+  try {
     abrirPainel();
   } catch(e) {
-    if(e.rede){
-      elAviso.textContent = 'Não foi possível baixar data/operacao.enc (' + e.message + ').';
-    } else {
-      elAviso.textContent = 'Senha incorreta.';
-      elSenha.select();
-    }
+    elAviso.textContent = 'Os dados abriram, mas o painel falhou ao desenhar: '
+      + e.message + '. Avise a Mandalog — não é a sua senha.';
+    console.error(e);
     elBotao.disabled = false;
     elBotao.textContent = 'Abrir painel';
   }
