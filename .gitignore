@@ -2,12 +2,19 @@
 # Só data/operacao.enc (cifrado) vai para o repositório, porque o GitHub Pages
 # publica todo o conteúdo do repositório na internet.
 #
-# Curinga de propósito, em vez do nome de cada arquivo: com mais de um cliente
-# passam a existir vários payloads em claro em data/, e listar um a um é apostar
-# que ninguém vai esquecer. Aqui o padrão é bloquear; o que pode ser publicado
-# é exceção explícita, e só o cifrado é.
-data/raw/
-data/*.json
+# Em data/ o padrão é BLOQUEAR TUDO, e só o que é cifrado passa.
+#
+# Listar o que não pode entrar é apostar que ninguém esquece — e não é hipótese:
+# com a lista negativa, um data/segredo.txt qualquer entraria no commit, porque
+# só .json e raw/ estavam barrados. O workflow adiciona a pasta inteira
+# (`git add -A data/`), então a única defesa segura é a lista ser positiva.
+#
+# Arquivo novo em data/ que precise ser publicado tem que ser liberado aqui,
+# de propósito, por alguém que pensou no assunto.
+data/*
+!data/.gitkeep
+!data/*.enc
+!data/*.hash
 
 # Segredos
 *.json.key
