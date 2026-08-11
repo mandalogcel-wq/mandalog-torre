@@ -294,6 +294,163 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
 # só para o aviso de vocabulário novo não disparar com eles todo dia.
 EM_TRANSITO = {"ROTA DE ENTREGA", "EM ROTA", "EM TRANSITO", "A CAMINHO"}
 
+# ---------------------------------------------------------------------------
+# Frota: o ciclo do veículo
+#
+# A pergunta que Arcor e Supley fazem primeiro é "quantas carretas tenho para
+# carregar". A aba não responde isso diretamente — ela registra viagem, não
+# estado de frota —, mas a **última linha de cada placa** responde, desde que se
+# corte pela recência.
+#
+# Sem o corte o número mente feio: das 70 placas do Supley, 65 apareceriam como
+# disponíveis, com mediana de 78 dias desde a última viagem. São agregados que
+# saíram da operação, não carretas paradas no pátio.
+#
+# FROTA_DIAS = 3 não é chute: com 3 dias a lista bate exatamente com o
+# "Relatório de Tempos e Movimentos" que a operação manda no grupo — 9 veículos
+# no Supley, 7 na Arcor, medido em 11/08/2026.
+FROTA_DIAS = 3
+
+# Situação do veículo -> o que ela significa para quem quer carregar.
+# Vocabulário exato do menu suspenso configurado na planilha em 11/08/2026.
+# `ROTA DE ENTREGA` é o trânsito carregado, e é o par de `EM ROTA (VAZIO)`:
+# ficou com o nome antigo de propósito, para não invalidar o histórico.
+CICLO = {
+    "AG CARREGAMENTO": "disponivel",
+    "EM CARREGAMENTO": "carregando",
+    "ROTA DE ENTREGA": "em_viagem",
+    "AG DESCARGA": "descarga",
+    "EM DESCARGA": "descarga",
+    "EM ROTA (VAZIO)": "chegando",
+    "FINALIZADO": "livre",
+    "FINALIZADO COM DEV PARCIAL": "livre",
+    "RECUSADO": "livre",
+    "MANUTENCAO": "parado",
+}
+
+# Estados terminais: a viagem acabou e o veículo não está mais preso a ela.
+# Serve para escolher qual linha descreve o veículo agora, quando há mais de uma
+# aberta — ver `montar_frota`.
+TERMINAIS = {"livre"}
+
+# O menu suspenso é novo e a adoção é gradual; o texto que já está na planilha
+# precisa cair em algum lugar razoável, senão o painel nasce vazio e ninguém
+# confia nele. Casamento por trecho, na ordem — o mais específico primeiro,
+# senão "AG DESCARGA" seria capturado por "DESCARGA" e "EM ROTA (VAZIO)" por
+# "EM ROTA".
+CICLO_APROXIMADO = (
+    ("AGUARDANDO CARREG", "disponivel"),
+    ("AG CARREG", "disponivel"),
+    ("EM CARREGAMENTO", "carregando"),
+    ("CARREGANDO", "carregando"),
+    ("VAZIO", "chegando"),
+    ("AGUARDANDO DESCARGA", "descarga"),
+    ("AG DESCARGA", "descarga"),
+    ("EM DESCARGA", "descarga"),
+    ("DESCARREGANDO", "descarga"),
+    ("NO CLIENTE", "descarga"),
+    ("MANUTEN", "parado"),
+    ("PROBLEMA", "parado"),
+    ("QUEBRA", "parado"),
+    ("ROTA DE ENTREGA", "em_viagem"),
+    ("EM ROTA", "em_viagem"),
+    ("FINALIZ", "livre"),
+    ("RECUSA", "livre"),
+)
+
+# Rótulo de cada grupo no painel, na ordem em que a operação lê.
+GRUPOS_FROTA = [
+    ("disponivel", "Disponíveis para carregamento"),
+    ("chegando", "Chegando vazios"),
+    ("carregando", "Em carregamento"),
+    ("em_viagem", "Em viagem"),
+    ("descarga", "Em descarga"),
+    ("livre", "Sem viagem em aberto"),
+    ("parado", "Parados"),
+]
+
+
+def situacao_frota(status: str) -> str:
+    """Situação do veículo a partir do STATUS ENTREGA da última viagem."""
+    s = sem_acento(limpar(status))
+    if not s:
+        return "indefinido"
+    if s in CICLO:
+        return CICLO[s]
+    for trecho, grupo in CICLO_APROXIMADO:
+        if trecho in s:
+            return grupo
+    return "indefinido"
+
+
+def montar_frota(viagens: list[dict], hoje: str) -> list[dict]:
+    """Uma linha por placa: qual viagem descreve o veículo agora.
+
+    Não é simplesmente "a linha mais recente". O planejamento da Arcor amarra a
+    OC ao motorista já com origem e destino, e o mesmo motorista pode ter duas
+    OCs para as 24 horas. Pegar a última linha mostraria a **viagem seguinte**,
+    ainda não iniciada, em vez da que está acontecendo — e o veículo apareceria
+    como disponível estando em rota.
+
+    A regra é: vale a **primeira viagem ainda não encerrada**. Se todas já
+    encerraram, vale a última, e o veículo está livre. A OC seguinte não é
+    descartada: é dela que sai o destino do retorno vazio, porque é para lá que
+    a carreta está indo carregar.
+    """
+    hoje_d = datetime.fromisoformat(hoje).date()
+    corte = (hoje_d - timedelta(days=FROTA_DIAS)).isoformat()
+
+    porPlaca: dict[tuple[str, str], list[dict]] = {}
+    for v in viagens:
+        placa = v["placa"]
+        if not placa or len(placa) < 6 or not v["data"] or v["data"] < corte:
+            continue
+        porPlaca.setdefault((v["cliente"], placa), []).append(v)
+
+    frota = []
+    for (cliente, placa), lista in sorted(porPlaca.items()):
+        # Empate de data resolvido pela linha: a de baixo foi lançada depois.
+        lista.sort(key=lambda v: (v["data"], v["linha"]))
+        abertas = [v for v in lista if situacao_frota(v["sac"]) not in TERMINAIS]
+
+        atual = abertas[0] if abertas else lista[-1]
+        seguinte = abertas[1] if len(abertas) > 1 else None
+        situacao = situacao_frota(atual["sac"])
+
+        # Para onde o vazio está indo. A operação define que é o campo de origem
+        # do próximo carregamento — e não o destino da viagem que acabou, que
+        # apontaria para o lado contrário.
+        destino_vazio = ""
+        if situacao == "chegando" and seguinte:
+            destino_vazio = seguinte["origem"]
+
+        frota.append({
+            "cliente": cliente,
+            "placa": placa,
+            "carreta": atual["carreta"],
+            "motorista": atual["motorista"],
+            "situacao": situacao,
+            "sac": atual["sac"],
+            "origem": atual["origem"],
+            "destino": atual["destino"],
+            "manifesto": atual["manifesto"],
+            "oc": atual.get("oc", ""),
+            "tipo": atual["tipo"],
+            "data": atual["data"],
+            "rastreada": atual["rastreada"],
+            "destino_vazio": destino_vazio,
+            # A OC seguinte já planejada. Serve para a torre mostrar o que vem
+            # depois sem misturar com o que está acontecendo.
+            "proxima_oc": (seguinte or {}).get("oc", ""),
+            "proxima_origem": (seguinte or {}).get("origem", ""),
+            "viagens_abertas": len(abertas),
+            # Sem isto o painel não distingue apontamento de agora de
+            # apontamento de anteontem, e foi assim que a lista chegou a mostrar
+            # 65 veículos "disponíveis" com mediana de 78 dias.
+            "dias_desde": (hoje_d - datetime.fromisoformat(atual["data"]).date()).days,
+        })
+    return frota
+
 
 def classificar_viagem(status: str) -> str:
     """Traduz STATUS ENTREGA das abas de viagem nas classes do painel.
@@ -525,12 +682,16 @@ def main() -> None:
         sufixo = f" ({fora} fora da janela de {RETENCAO_DIAS} dias)" if fora else ""
         print(f"  {arq.name}: {len(recentes)} viagens{sufixo}")
 
+    frota = montar_frota(viagens, agora.date().isoformat())
+
     SAIDA_VIAGENS.write_text(json.dumps({
         "gerado_em": agora.isoformat(timespec="seconds"),
         "fonte": "Planilha ROTEIRIZAÇÃO 2026 · abas Arcor e Supley",
         "retencao_dias": RETENCAO_DIAS,
+        "frota_dias": FROTA_DIAS,
         "modelo": "viagem",
         "viagens": viagens,
+        "frota": frota,
         "avisos": avisos_v,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -555,6 +716,20 @@ def main() -> None:
                 classes[v["classe"]] = classes.get(v["classe"], 0) + 1
             resumo = ", ".join(f"{k} {n}" for k, n in sorted(classes.items()))
             print(f"  {cliente}: {len(lista)} viagens · {resumo}")
+
+        print(f"\n  frota ativa (linha nos últimos {FROTA_DIAS} dias)")
+        for cliente in sorted({f["cliente"] for f in frota}):
+            da_vez = [f for f in frota if f["cliente"] == cliente]
+            grupos = {}
+            for f in da_vez:
+                grupos[f["situacao"]] = grupos.get(f["situacao"], 0) + 1
+            resumo = " · ".join(f"{r.lower()} {grupos[k]}"
+                                for k, r in GRUPOS_FROTA if grupos.get(k))
+            indef = grupos.get("indefinido", 0)
+            if indef:
+                resumo += f" · situação não reconhecida {indef}"
+            print(f"    {cliente}: {len(da_vez)} veículos · {resumo}")
+
         for a in avisos_v:
             print(f"  aviso · {a}")
 

@@ -72,11 +72,17 @@ def conferir(slug: str, cfg: dict, payload: dict) -> None:
     provaria nada.
     """
     permitidas = set(cfg["viagens"])
-    intrusas = sorted({v.get("cliente") for v in payload.get("viagens", [])}
-                      - permitidas)
-    if intrusas:
-        sys.exit(f"VAZAMENTO em painel-{slug}: viagens de {', '.join(intrusas)} "
-                 f"num payload que só pode conter {sorted(permitidas) or 'nenhuma'}.")
+    # Toda lista que carrega `cliente` é conferida, e não só `viagens`. Quando a
+    # frota entrou no payload, a conferência que olhava só viagens teria deixado
+    # passar a placa e o motorista de outro cliente — o dado mais sensível dos
+    # dois. Campo novo com `cliente` dentro tem que entrar aqui junto.
+    for campo in ("viagens", "frota"):
+        intrusas = sorted({v.get("cliente") for v in payload.get(campo, [])}
+                          - permitidas)
+        if intrusas:
+            sys.exit(f"VAZAMENTO em painel-{slug}: {campo} de "
+                     f"{', '.join(map(str, intrusas))} num payload que só pode "
+                     f"conter {sorted(permitidas) or 'nenhuma'}.")
 
     tem_cafe = any(n.get("operacao", "").startswith(PREFIXO_CAFE)
                    for n in payload.get("notas", []))
@@ -125,8 +131,12 @@ def main() -> None:
         if cfg["viagens"]:
             payload["viagens"] = [v for v in viagens.get("viagens", [])
                                   if v.get("cliente") in cfg["viagens"]]
+            payload["frota"] = [f for f in viagens.get("frota", [])
+                                if f.get("cliente") in cfg["viagens"]]
+            payload["frota_dias"] = viagens.get("frota_dias")
         else:
             payload["viagens"] = []
+            payload["frota"] = []
 
         # Os avisos citam número de linha da planilha e erro de apontamento.
         # É material de operação, não de cliente — fica só na visão interna.
