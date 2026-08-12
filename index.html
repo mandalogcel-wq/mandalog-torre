@@ -1121,25 +1121,25 @@ const AUTO_MS = 5 * 60 * 1000;
 // O parâmetro só escolhe qual arquivo buscar. Não é controle de acesso — quem
 // trocar a URL na mão baixa um arquivo cifrado que a senha dele não abre. O
 // isolamento está na senha, não aqui.
-const CLIENTES = {
-  '3coracoes': {arquivo: 'operacao.enc', rotulo: 'Café · Vale do Paraíba',
-                logo: 'assets/3coracoes.png', marca: '3 Corações',
-                selo: 'Operação de distribuição · Vale do Paraíba'},
-  'arcor':     {arquivo: 'arcor.enc',    rotulo: 'Arcor',
-                logo: 'assets/arcor.png', marca: 'Arcor',
-                selo: 'Transferência e coleta · Campinas, Extrema e Bragança'},
-  'supley':    {arquivo: 'supley.enc',   rotulo: 'Supley',
-                logo: 'assets/supley.png', marca: 'Supley',
-                selo: 'Transferência · Matão e Jundiaí'},
-  // A visão interna não leva marca de cliente nenhum: ela mostra todos, e
-  // estampar um só daria a entender que é o painel daquele cliente.
-  'mandalog':  {arquivo: 'mandalog.enc', rotulo: 'Mandalog · todas as operações',
-                logo: '', marca: '',
-                selo: 'Torre de controle · todas as operações'}
-};
 const SLUG = (new URLSearchParams(location.search).get('c') || '3coracoes')
   .toLowerCase().replace(/[^a-z0-9]/g, '');
-const CLIENTE = CLIENTES[SLUG] || CLIENTES['3coracoes'];
+
+// O arquivo e o logo saem do próprio endereço, e não de uma lista.
+//
+// Uma lista de clientes aqui contaria a cada um quem são os outros — este
+// script é público, basta abrir o código-fonte na tela da Arcor para descobrir
+// que existe um supley.enc. Não vaza dado, mas contradiz a regra de que um
+// cliente não enxerga o outro. O slug já está na URL de quem abriu, então dá
+// para derivar tudo dele e não guardar roster nenhum.
+//
+// O nome operacao.enc é exceção histórica: é o arquivo que o painel da 3
+// Corações já busca e que o cliente acessa hoje.
+const CLIENTE = {
+  arquivo: SLUG === '3coracoes' ? 'operacao.enc' : SLUG + '.enc',
+  // A visão interna não leva marca de cliente: mostra todos, e estampar um só
+  // daria a entender que é o painel daquele.
+  logo: SLUG === 'mandalog' ? '' : 'assets/' + SLUG + '.png'
+};
 
 const FONTES = [
   'https://raw.githubusercontent.com/mandalogcel-wq/mandalog-torre/main/data/'
@@ -1156,9 +1156,9 @@ const FONTES = [
 // acende sozinho quando o arquivo chega em assets/.
 (function marcarCliente(){
   const selo = document.getElementById('selo');
-  if(selo){
-    selo.innerHTML = 'Parceria que move todo o Brasil<br>' + CLIENTE.selo;
-  }
+  // Antes da senha a linha é genérica: a descrição da operação vem do payload
+  // cifrado, junto com o resto. Quem não tem a senha não lê nem isso.
+  if(selo) selo.innerHTML = 'Parceria que move todo o Brasil';
   if(!CLIENTE.logo) return;
   const img = document.getElementById('marca-cliente');
   const risco = document.getElementById('marca-div');
@@ -1201,10 +1201,16 @@ function abrirPainel(){
     ? bases.slice(0, -1).join(', ') + ' e ' + bases[bases.length - 1]
     : bases[0] || '';
   document.getElementById('local').textContent = temCafe()
-    ? (SLUG === 'mandalog'
-        ? `${BASE.cliente || CLIENTE.rotulo} · café e transferência`
+    ? (temFrota()
+        ? `${BASE.cliente || 'Mandalog'} · café e transferência`
         : `Café · ${lista} · Vale do Paraíba`)
-    : (BASE.cliente || CLIENTE.rotulo);
+    : (BASE.cliente || '');
+
+  // A descrição da operação só aparece depois de decifrar, porque vem de lá.
+  const selo = document.getElementById('selo');
+  if(selo && BASE.selo){
+    selo.innerHTML = 'Parceria que move todo o Brasil<br>' + BASE.selo;
+  }
 
   // Sem café não há dia nem operação para escolher: a frota é sempre o agora.
   // Deixar as barras vazias na tela pareceria defeito.

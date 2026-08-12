@@ -48,13 +48,20 @@ PREFIXO_CAFE = "Café ·"
 # slug -> o que o cliente enxerga.
 #   cafe:    inclui as notas de café
 #   viagens: nomes de cliente da aba de viagem que entram
+# `selo` é a linha que descreve a operação no cabeçalho. Vai dentro do payload
+# cifrado, e não no HTML: o script da página é público, e uma lista de clientes
+# lá contaria a cada um quem são os outros.
 CLIENTES = {
-    "3coracoes": {"rotulo": "3 Corações", "cafe": True, "viagens": []},
-    "arcor": {"rotulo": "Arcor", "cafe": False, "viagens": ["Arcor"]},
-    "supley": {"rotulo": "Supley", "cafe": False, "viagens": ["Supley"]},
+    "3coracoes": {"rotulo": "3 Corações", "cafe": True, "viagens": [],
+                  "selo": "Operação de distribuição · Vale do Paraíba"},
+    "arcor": {"rotulo": "Arcor", "cafe": False, "viagens": ["Arcor"],
+              "selo": "Transferência e coleta · Campinas, Extrema e Bragança"},
+    "supley": {"rotulo": "Supley", "cafe": False, "viagens": ["Supley"],
+               "selo": "Transferência · Matão, Jundiaí e matriz Guarulhos"},
     # A visão da torre. Senha interna, nunca compartilhada com cliente.
     "mandalog": {"rotulo": "Mandalog", "cafe": True,
-                 "viagens": ["Arcor", "Supley"], "interno": True},
+                 "viagens": ["Arcor", "Supley"], "interno": True,
+                 "selo": "Torre de controle · todas as operações"},
 }
 
 
@@ -114,6 +121,7 @@ def main() -> None:
         payload: dict = {
             "gerado_em": cafe.get("gerado_em") or viagens.get("gerado_em"),
             "cliente": cfg["rotulo"],
+            "selo": cfg["selo"],
             "retencao_dias": cafe.get("retencao_dias") or viagens.get("retencao_dias"),
         }
 
