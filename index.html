@@ -582,6 +582,30 @@ let cliFiltro = 'TODOS';
 // Situações em que o veículo está parado num ponto, e portanto o apontamento
 // diz onde ele está. Em trânsito não entra: sem rastreador, marcar um ponto no
 // meio da estrada seria inventar posição.
+// Pontos das operações, para o mapa mostrar o veículo parado mesmo sem
+// rastreador. Não é inventar posição: quando o apontamento diz
+// "AG CARREGAMENTO" em Matão, o veículo **está** em Matão, e isso é informação
+// de quem apontou. Veículo em trânsito fica de fora — aí sim seria chutar um
+// ponto no meio da estrada.
+const PONTOS = {
+  'MATAO': [-21.6031, -48.3661],
+  'JUNDIAI': [-23.1857, -46.8978],
+  'CAMPINAS': [-22.9099, -47.0626],
+  'EXTREMA': [-22.8553, -46.3178],
+  'BRAGANCA': [-22.9522, -46.5419],
+  'BRAGANCA PAULISTA': [-22.9522, -46.5419],
+  'SUMARE': [-22.8219, -47.2669],
+  'SAO JOSE DOS CAMPOS': [-23.1896, -45.8841],
+  'GUARULHOS': [-23.4538, -46.5333],
+  // A base MANDALOG do Supley é a matriz, em Guarulhos.
+  'MANDALOG': [-23.4538, -46.5333],
+  'BAURU': [-22.3145, -49.0587],
+  'MARILIA': [-22.2139, -49.9457]
+};
+const semAcento = s => (s || '').normalize('NFD')
+  .replace(/[̀-ͯ]/g, '').toUpperCase().trim();
+const pontoDe = nome => PONTOS[semAcento(nome)] || null;
+
 const NO_PONTO = {disponivel: 'origem', carregando: 'origem',
                   descarga: 'destino', livre: 'destino'};
 
@@ -734,19 +758,49 @@ function idadeCor(h){
        :          {c:'#98A2B1', r:'desatualizada'};
 }
 
+// Veículos que o apontamento coloca num ponto conhecido. Duas fontes de posição
+// convivem no mapa e precisam ser distinguíveis: o rastreador diz onde o
+// veículo está; o apontamento diz onde alguém afirmou que ele está. Misturar as
+// duas com o mesmo símbolo faria o painel prometer precisão que não tem.
+function veiculosEmPonto(){
+  const lista = frotaUnificada()
+    .filter(v => cliFiltro === 'TODOS' || v.cliente === cliFiltro)
+    .map(v => ({...v, ponto: pontoDe(v.local)}))
+    .filter(v => v.ponto);
+  // Vários veículos no mesmo pátio empilhariam no mesmo pixel. Um leque curto
+  // em volta do ponto separa sem sugerir que a posição é exata.
+  const usados = {};
+  return lista.map(v => {
+    const k = v.local.toUpperCase();
+    const i = (usados[k] = (usados[k] || 0) + 1) - 1;
+    const ang = i * 1.1, raio = i ? 0.012 + 0.004 * i : 0;
+    return {...v, lat: v.ponto[0] + raio * Math.cos(ang),
+                  lon: v.ponto[1] + raio * Math.sin(ang)};
+  });
+}
+
 function secaoMapa(){
   const gm = BASE.greenmile;
-  if(!gm || !gm.disponivel || !(gm.posicoes || []).length) return '';
-  const n = gm.posicoes.length;
+  const rastreados = (gm && gm.disponivel) ? (gm.posicoes || []) : [];
+  const apontados = ehQuadro() ? veiculosEmPonto() : [];
+  if(!rastreados.length && !apontados.length) return '';
+
+  const notas = [];
+  if(rastreados.length) notas.push(`${rastreados.length} pelo rastreador`);
+  if(apontados.length) notas.push(`${apontados.length} pelo apontamento`);
+
   return `<section class="mapasec">
-    <div class="recorte"><h2>Última posição conhecida</h2>
-      <span class="obs">${n} veículo${n > 1 ? 's' : ''} com posição no GreenMile</span></div>
+    <div class="recorte"><h2>Onde estão os veículos</h2>
+      <span class="obs">${notas.join(' · ')}</span></div>
     <div id="mapa"></div>
     <div class="mapalegend">
-      <span><i style="background:#1B6B4A"></i>últimas 2h</span>
-      <span><i style="background:#EE7623"></i>entre 2h e 12h</span>
-      <span><i style="background:#98A2B1"></i>mais de 12h</span>
-      <span>posição do rastreador no GreenMile, não é tempo real</span>
+      ${rastreados.length ? `
+        <span><i style="background:#1B6B4A"></i>rastreador, últimas 2h</span>
+        <span><i style="background:#EE7623"></i>entre 2h e 12h</span>
+        <span><i style="background:#98A2B1"></i>mais de 12h</span>` : ''}
+      ${apontados.length ? `
+        <span><i style="background:#16233F;border-radius:2px"></i>parado no ponto, pelo apontamento</span>` : ''}
+      <span>veículo em trânsito sem rastreador não aparece no mapa</span>
     </div>
   </section>`;
 }
@@ -759,9 +813,13 @@ function renderMapa(){
   if(typeof L === 'undefined'){ alvo.closest('.mapasec').hidden = true; return; }
 
   if(MAPA){ MAPA.remove(); MAPA = null; }
-  const pts = (BASE.greenmile.posicoes || [])
+  const gm = BASE.greenmile;
+  const pts = ((gm && gm.disponivel && gm.posicoes) || [])
     .filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lon));
-  if(!pts.length){ alvo.closest('.mapasec').hidden = true; return; }
+  const apontados = ehQuadro() ? veiculosEmPonto() : [];
+  if(!pts.length && !apontados.length){
+    alvo.closest('.mapasec').hidden = true; return;
+  }
 
   MAPA = L.map(alvo, {scrollWheelZoom:false}).setView([-23.2, -45.9], 8);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -779,13 +837,26 @@ function renderMapa(){
         `<span style="color:${c}">${r}</span>`);
   });
 
+  // Quadrado, e não círculo: a forma diferente é o que avisa que esta posição
+  // vem do apontamento, e não do rastreador. Sem isso o mapa prometeria uma
+  // precisão que não existe — o veículo está no pátio, não naquele metro.
+  apontados.forEach(v => {
+    L.rectangle([[v.lat - 0.028, v.lon - 0.028], [v.lat + 0.028, v.lon + 0.028]],
+      {color:'#fff', weight:2, fillColor:'#16233F', fillOpacity:.92})
+      .addTo(MAPA)
+      .bindPopup(`<b>${v.placa}</b> · ${v.cliente}<br>${v.rotulo}<br>` +
+        `<span style="color:#8A94A5">em ${v.local} · posição pelo apontamento,` +
+        ` não pelo rastreador</span>`);
+  });
+
   // O Leaflet calcula o enquadramento a partir do tamanho do container, e o
   // container acabou de entrar no DOM. Enquanto ele mede 0, o fitBounds cai no
   // zoom mínimo e o mapa abre no mundo inteiro — foi o que aconteceu com um
   // setTimeout fixo de 120 ms, cedo demais dependendo da máquina. Em vez de
   // apostar num prazo, o ajuste reage ao layout: dois quadros e, se ainda não
   // houver altura, um observador que dispara assim que ela existir.
-  const limites = L.latLngBounds(pts.map(p => [p.lat, p.lon]));
+  const limites = L.latLngBounds(
+    [...pts, ...apontados].map(p => [p.lat, p.lon]));
   // Assim que o usuário arrasta ou dá zoom, o enquadramento passa a ser dele:
   // reenquadrar por baixo seria roubar o controle no meio da consulta.
   let tocado = false;
