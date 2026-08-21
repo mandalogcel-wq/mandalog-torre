@@ -405,6 +405,12 @@ def montar_frota(viagens: list[dict], hoje: str) -> list[dict]:
         placa = v["placa"]
         if not placa or len(placa) < 6 or not v["data"] or v["data"] < corte:
             continue
+        # Data no futuro é erro de digitação, não operação. Quatro linhas do
+        # Supley com 27/04/2029 colocaram quatro veículos fantasma na frota
+        # ativa, todos exibidos como livres — a torre dizia que havia carreta
+        # disponível que não existe. Veículo não termina viagem amanhã.
+        if v["data"] > hoje:
+            continue
         porPlaca.setdefault((v["cliente"], placa), []).append(v)
 
     frota = []
@@ -450,6 +456,10 @@ def montar_frota(viagens: list[dict], hoje: str) -> list[dict]:
             "dias_desde": (hoje_d - datetime.fromisoformat(atual["data"]).date()).days,
         })
     return frota
+
+
+def hoje_iso() -> str:
+    return datetime.now(timezone(timedelta(hours=-3))).date().isoformat()
 
 
 def classificar_viagem(status: str) -> str:
@@ -590,6 +600,12 @@ def ler_viagens(caminho: Path) -> tuple[list[dict], list[str]]:
             "rastreada": sem_acento(get("rastreada")).startswith("SIM")
             if "rastreada" in campos and "rastreada" not in ausentes else None,
         })
+
+    futuras = [v for v in viagens if v["data"] and v["data"] > hoje_iso()]
+    if futuras:
+        avisos.append(f"{caminho.name}: {len(futuras)} linhas com data no futuro "
+                      f"(ex.: linha {futuras[0]['linha']}, {futuras[0]['data']}) — "
+                      "fora da frota ativa, provável erro de digitação")
 
     if vocabulario:
         avisos.append(f"{caminho.name}: STATUS ENTREGA não mapeado, tratado como "

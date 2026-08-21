@@ -20,7 +20,9 @@ from __future__ import annotations
 import csv
 import json
 import os
+import re
 import sys
+import unicodedata
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -52,6 +54,20 @@ ABAS_POR_GID = {
 ESCOPO = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 
 
+def achatar(nome: str) -> str:
+    """Nome da aba sem acento, sem pontuação e sem espaço, em maiúsculas.
+
+    Em 21/08/2026 alguém renomeou 'CAFÉ - GRU.' para 'CAFÉ-GRU' — só tirou os
+    espaços e o ponto. O robô não achou a aba, avisou no log e publicou o painel
+    sem a operação de Guarulhos, que é a maior. Casar por nome achatado
+    sobrevive a esse tipo de edição, que numa planilha usada por muita gente é
+    questão de tempo.
+    """
+    s = unicodedata.normalize("NFD", nome or "")
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^A-Z0-9]", "", s.upper())
+
+
 def salvar(ws, arquivo: str, rotulo: str) -> None:
     linhas = ws.get_all_values()
     caminho = DESTINO / arquivo
@@ -81,15 +97,32 @@ def main() -> None:
 
     DESTINO.mkdir(parents=True, exist_ok=True)
     disponiveis = {w.title: w for w in planilha.worksheets()}
+    por_nome = {achatar(t): w for t, w in disponiveis.items()}
 
+    faltando = []
     for aba, arquivo in ABAS.items():
-        ws = disponiveis.get(aba)
+        ws = disponiveis.get(aba) or por_nome.get(achatar(aba))
         if ws is None:
-            print(f"  aviso: aba {aba!r} não encontrada. "
-                  f"Abas disponíveis: {', '.join(sorted(disponiveis))}")
+            faltando.append(aba)
             continue
+        if ws.title != aba:
+            print(f"  nota: aba {aba!r} está como {ws.title!r} na planilha — "
+                  "casada pelo nome achatado.")
+        salvar(ws, arquivo, ws.title)
 
-        salvar(ws, arquivo, aba)
+    # Aba faltando derruba o robô, e isso é deliberado.
+    #
+    # Antes era só um aviso, e o resultado foi um painel publicado sem a
+    # operação inteira de Guarulhos: o cliente via zero veículo e acreditava.
+    # Parar de atualizar é ruim, mas o selo de frescor na tela mostra que o
+    # dado envelheceu. Publicar dado incompleto com cara de completo não
+    # mostra nada.
+    if faltando:
+        sys.exit(
+            f"Aba nao encontrada: {', '.join(repr(a) for a in faltando)}.\n"
+            f"Abas disponiveis: {', '.join(sorted(disponiveis))}\n"
+            "Se foi renomeada, ajuste ABAS em scripts/baixar_planilha.py."
+        )
 
     por_gid = {w.id: w for w in disponiveis.values()}
     for gid, arquivo in ABAS_POR_GID.items():
