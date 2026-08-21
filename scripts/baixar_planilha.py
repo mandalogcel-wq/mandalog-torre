@@ -31,13 +31,19 @@ DESTINO = RAIZ / "data" / "raw"
 # aba na planilha -> nome do arquivo em data/raw
 ABAS = {
     "CAFÉ - SJC": "cafe-sjc.csv",
-    # A aba de Guarulhos guarda o ano inteiro, ~15 mil linhas. Baixa tudo e o
-    # corte por data acontece no build_data.py (RETENCAO_DIAS).
-    "CAFÉ - GRU.": "cafe-gru.csv",
     # Layout próprio, com 27 colunas e a coluna MESO separando três praças.
     # Ver COL_SUMARE e MESOS em build_data.py.
     "CAFÉ - SUMARÉ": "cafe-sumare.csv",
     # Descomente conforme for incluindo operações no painel.
+}
+
+# Café · Guarulhos por gid, e não por nome — mesmo depois do casamento por nome
+# achatado (achatar()), um nome inteiramente novo ainda quebraria a busca. Gid
+# não muda nem com o nome reescrito por completo. É a maior operação do
+# payload da 3C, então falta dela é crítica: ver ABAS_CAFE_POR_GID abaixo, que
+# derruba o robô, diferente de ABAS_POR_GID (Arcor/Supley), que só avisa.
+ABAS_CAFE_POR_GID = {
+    564645926: ("cafe-gru.csv", "CAFÉ - GRU."),
 }
 
 # Abas identificadas pelo gid, e não pelo título.
@@ -108,6 +114,17 @@ def main() -> None:
         if ws.title != aba:
             print(f"  nota: aba {aba!r} está como {ws.title!r} na planilha — "
                   "casada pelo nome achatado.")
+        salvar(ws, arquivo, ws.title)
+
+    por_gid_todas = {w.id: w for w in disponiveis.values()}
+    for gid, (arquivo, rotulo_antigo) in ABAS_CAFE_POR_GID.items():
+        ws = por_gid_todas.get(gid)
+        if ws is None:
+            faltando.append(f"{rotulo_antigo} (gid {gid})")
+            continue
+        if ws.title != rotulo_antigo:
+            print(f"  nota: aba de gid {gid} está como {ws.title!r} "
+                  f"(era {rotulo_antigo!r}) — casada por gid.")
         salvar(ws, arquivo, ws.title)
 
     # Aba faltando derruba o robô, e isso é deliberado.
