@@ -50,6 +50,12 @@ h1 em{font-style:normal;color:var(--laranja)}
 .frescor.velho::before{background:var(--laranja)}
 .frescor.parado{color:#FFB4A8}
 .frescor.parado::before{background:#F2585F}
+.saude{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:6px}
+.saude::before{content:"";width:7px;height:7px;border-radius:50%;background:#3FBF8A;flex:none}
+.saude.amarelo{color:#FFC98A}
+.saude.amarelo::before{background:var(--laranja)}
+.saude.vermelho{color:#FFB4A8}
+.saude.vermelho::before{background:#F2585F}
 .andamento{margin:0;padding:11px 22px;background:#FFF4E8;border-bottom:1px solid #F0D6B8;color:#7A4A12;font-size:13px}
 .andamento b{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 .recorte{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:13px 22px;background:var(--surface);border-bottom:1px solid var(--rule)}
@@ -333,6 +339,7 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
     <button class="recarregar" id="recarregar" type="button"
             title="Baixa a versão mais recente publicada pelo robô">Atualizar</button>
     <span class="frescor" id="frescor" role="status" aria-live="polite" hidden></span>
+    <span class="saude" id="saude" role="status" aria-live="polite" hidden></span>
     <span class="recarga-aviso" id="recarga-aviso" role="status" aria-live="polite"></span>
   </div>
   <nav class="opbar" id="opbar" aria-label="Selecionar operação" hidden></nav>
@@ -534,6 +541,47 @@ function renderFrescor(){
     : `em ${new Date(BASE.gerado_em).toLocaleDateString('pt-BR')}`;
   el.textContent = min >= 240 ? `sem atualizar ${quando}` : `atualizado ${quando}`;
   el.title = 'Dados gerados em ' + new Date(BASE.gerado_em).toLocaleString('pt-BR');
+}
+
+// Sinal verde/amarelo/vermelho da automação. Não vem do payload: um robô
+// parado nunca consegue avisar sobre si mesmo, então quem julga é a tela,
+// pelos mesmos dois sinais que o resto do painel já expõe — idade do dado
+// (renderFrescor, acima) e disponibilidade do GreenMile (mesclar_greenmile.py).
+// Os limiares de 120/240 min são os mesmos do frescor, de propósito: dois
+// números diferentes para a mesma "idade" só confundiria quem olha os dois
+// selos lado a lado.
+//
+// Fora do expediente (roteirização roda das 5h às 21h de Brasília) o painel
+// não teria mesmo dado novo — não é o vermelho de "automação parada", é
+// apenas hora de fechamento. Só vira vermelho ali se nem o expediente
+// anterior atualizou (1200 min ~ 20h), sinal de que o robô já está parado
+// há mais de um ciclo inteiro.
+function calcularSaude(base){
+  if(!base || !base.gerado_em) return null;
+  const min = Math.max(0, Math.round((Date.now() - new Date(base.gerado_em)) / 60000));
+  const horaBR = Number(new Intl.DateTimeFormat('pt-BR', {
+    timeZone: 'America/Sao_Paulo', hour: 'numeric', hour12: false,
+  }).format(Date.now()));
+  const dentroJanela = horaBR >= 5 && horaBR < 21;
+  const gmOk = !base.greenmile || base.greenmile.disponivel !== false;
+
+  if(dentroJanela){
+    if(min >= 240) return {cor: 'vermelho', texto: 'sem acesso — automação parada há ' + Math.floor(min/60) + 'h'};
+    if(min >= 120 || !gmOk) return {cor: 'amarelo', texto: !gmOk ? 'parcial — GreenMile indisponível' : 'parcial — dado desatualizando'};
+    return {cor: 'verde', texto: 'tudo funcionando'};
+  }
+  if(min >= 1200) return {cor: 'vermelho', texto: 'sem acesso — sem atualizar desde o expediente anterior'};
+  return {cor: 'verde', texto: 'tudo funcionando — fora do horário de atualização'};
+}
+
+function renderSaude(){
+  const el = document.getElementById('saude');
+  const s = calcularSaude(BASE);
+  if(!s){ el.hidden = true; return; }
+  el.hidden = false;
+  el.className = 'saude' + (s.cor === 'verde' ? '' : ' ' + s.cor);
+  el.textContent = s.cor === 'verde' ? 'operando' : s.cor === 'amarelo' ? 'parcial' : 'sem acesso';
+  el.title = s.texto;
 }
 
 // O desfecho exibido tem de ser o mesmo que contou no indicador. Enquanto esta
@@ -1021,6 +1069,7 @@ function tabelaDias(){
   // a 3 Corações. As divergências também deixaram de ir no payload cifrado —
   // ficam no log do robô, em build_data.py.
   renderFrescor();
+  renderSaude();
 
   // Arcor e Supley não têm café, e a Mandalog tem os dois. A frota vem antes:
   // é a pergunta que o cliente faz primeiro ao abrir a tela.
@@ -1228,6 +1277,7 @@ function abrirPainel(){
   render();
   // O selo envelhece sozinho enquanto a tela fica aberta na torre.
   setInterval(renderFrescor, 60000);
+  setInterval(renderSaude, 60000);
 
   // Recarregar a página pede a senha de novo — e é isso que incomoda quem
   // acompanha o dia inteiro. Buscando o dado sozinho, a aba fica aberta e o

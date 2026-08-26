@@ -215,6 +215,13 @@ def sem_acento(v: str) -> str:
     ).upper()
 
 
+# Status SAC que caem em "andamento" de propósito, e por isso não entram no
+# aviso de vocabulário novo abaixo. PERNOITE é de Itapeva (26/08/2026): o
+# motorista pernoita no caminho e a entrega ainda não aconteceu — confirmado
+# com a operação, não suposição.
+EM_TRANSITO_SAC = {"EM ROTA", "ROTA DE ENTREGA", "EM TRANSITO", "A CAMINHO", "PERNOITE"}
+
+
 def classificar(sac: str) -> str:
     """Traduz a coluna STATUS SAC nas cinco classes exibidas no painel."""
     s = sem_acento(limpar(sac))
@@ -246,6 +253,12 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
     notas: list[dict] = []
     avisos: list[str] = []
     sem_meso: list[int] = []
+    # Sem isto, um Status SAC novo (como "PERNOITE" em Itapeva) cai em
+    # "andamento" sem ninguém notar — e uma entrega já feita, mas apontada com
+    # um texto que o classificar() não reconhece, some do % de finalizadas em
+    # silêncio. ler_viagens() já faz esse rastreio para STATUS ENTREGA; isto é
+    # o equivalente para STATUS SAC.
+    vocabulario: set[str] = set()
     col = LAYOUTS.get(caminho.stem, COL_PADRAO)
     operacao_fixa = OPERACOES.get(caminho.stem, caminho.stem)
     largura = max(col.values())
@@ -291,6 +304,11 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
         tipo = ("TRANSFERENCIA" if sem_acento(get("status")).startswith("TRANSFER")
                 else "ENTREGA")
 
+        bruto_sac = get("status_sac")
+        classe = classificar(bruto_sac)
+        if classe == "andamento" and bruto_sac and sem_acento(bruto_sac) not in EM_TRANSITO_SAC:
+            vocabulario.add(bruto_sac.upper())
+
         notas.append({
             "operacao": operacao,
             "linha": i,
@@ -306,8 +324,8 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
             "motorista": titulo(get("motorista")),
             "placa": get("placa").upper(),
             "perfil": get("perfil_cobranca").upper(),
-            "sac": get("status_sac"),
-            "classe": classificar(get("status_sac")),
+            "sac": bruto_sac,
+            "classe": classe,
             "gm": get("greenmile"),
             "gm_ok": "ELETR" in sem_acento(get("greenmile")),
             "emitido": sem_acento(get("emissao")) == "EMITIDO",
@@ -317,6 +335,10 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
     if sem_meso:
         avisos.append(f"{caminho.name}: {len(sem_meso)} notas sem MESO "
                       "(aguardando roteirização) ficaram fora do painel")
+
+    if vocabulario:
+        avisos.append(f"{caminho.name}: STATUS SAC não mapeado, tratado como "
+                      f"andamento: {', '.join(sorted(vocabulario)[:8])}")
 
     return notas, avisos
 
