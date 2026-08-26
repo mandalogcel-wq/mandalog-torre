@@ -8,6 +8,8 @@ name: Atualizar dados da operação
 #   PAINEL_SENHA        senha de acesso ao painel, usada para cifrar os dados
 #   N8N_WEBHOOK_URL     URL de produção do workflow "Torre 3C · API GreenMile"
 #   N8N_WEBHOOK_TOKEN   valor do header X-Torre-Token dessa credencial
+#   N8N_ALERTA_URL      URL de produção do workflow "Torre · Alerta de Falha"
+#                       (mesmo header X-Torre-Token acima — credencial reaproveitada)
 #
 # Compartilhe a planilha com o e-mail da conta de serviço como Leitor.
 # Assim a planilha permanece privada — não é preciso publicá-la na web.
@@ -115,3 +117,25 @@ jobs:
           ZAPI_GRUPO:        ${{ secrets.ZAPI_GRUPO }}
           JANELA: "6-20"
         run: python3 scripts/avisar_whatsapp.py
+
+      # Só roda se algum passo acima falhou. É o outro lado da falha silenciosa
+      # de Guarulhos em 21/08: aba não encontrada, credencial vencida ou
+      # cifragem quebrada agora chegam por e-mail em vez de só aparecerem no
+      # selo de frescor da tela, dias depois. curl -sf: se o próprio alerta
+      # falhar, não trava o job — ele já falhou, não há mais o que proteger.
+      - name: Avisar falha da automação por e-mail
+        if: failure()
+        env:
+          N8N_ALERTA_URL:   ${{ secrets.N8N_ALERTA_URL }}
+          N8N_WEBHOOK_TOKEN: ${{ secrets.N8N_WEBHOOK_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          curl -sf -X POST "$N8N_ALERTA_URL" \
+            -H "X-Torre-Token: $N8N_WEBHOOK_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "$(python3 -c 'import json, os; print(json.dumps({
+              "job": "Atualizar dados da operação",
+              "mensagem": "Um passo do robo falhou. Veja o log da execucao para o detalhe.",
+              "run_url": os.environ["RUN_URL"],
+            }))')" \
+          || echo "aviso: não consegui notificar o n8n (a falha original segue valendo)"
