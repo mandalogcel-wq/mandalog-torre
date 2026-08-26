@@ -34,6 +34,11 @@ SAIDA_VIAGENS = RAIZ / "data" / "viagens.json"
 OPERACOES = {
     "cafe-sjc": "Café · SJC",
     "cafe-gru": "Café · Guarulhos",
+    # Antes misturada dentro da aba de Guarulhos; virou aba própria em 26/08/2026
+    # (gid 1726352493). O layout NÃO é cópia do de Guarulhos — sondado direto na
+    # planilha via n8n antes de escrever COL_ITAPEVA, porque assumir teria
+    # publicado plano/nf errados sem ninguém perceber.
+    "cafe-itapeva": "Café · Itapeva",
 }
 
 # A aba de Sumaré não tem uma operação só: a coluna MESO separa três praças.
@@ -81,6 +86,31 @@ COL_PADRAO = {
     "canhoto": 23,
 }
 
+# Sondada em 26/08/2026 (gid 1726352493, 97 linhas de amostra). Não é o layout
+# de Guarulhos deslocado por acaso — é outra aba, com outras colunas: sem
+# ORIGEM nem Nº SAÍDA, um único "CARREGAMENTO" no lugar dos dois. Por isso
+# "origem" fica de fora daqui: preencher com CARREGAMENTO (que guarda algo como
+# "1ª SAÍDA", não um nome de base) inventaria dado que a aba não tem.
+COL_ITAPEVA = {
+    "emissao": 0,
+    "manifesto": 1,
+    "faixa": 2,
+    "data_saida": 3,
+    "status": 5,
+    "cod_cliente": 7,
+    "plano": 8,
+    "cliente": 9,
+    "nf": 10,
+    "peso": 11,
+    "cidade": 12,
+    "motorista": 13,
+    "placa": 14,
+    "perfil_cobranca": 15,
+    "status_sac": 18,
+    "greenmile": 19,
+    "canhoto": 22,
+}
+
 COL_SUMARE = {
     "data_saida": 2,
     "meso": 3,
@@ -104,6 +134,7 @@ LAYOUTS = {
     "cafe-sjc": COL_PADRAO,
     "cafe-gru": COL_PADRAO,
     "cafe-sumare": COL_SUMARE,
+    "cafe-itapeva": COL_ITAPEVA,
 }
 
 # ---------------------------------------------------------------------------

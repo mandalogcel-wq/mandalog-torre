@@ -44,6 +44,10 @@ ABAS = {
 # derruba o robô, diferente de ABAS_POR_GID (Arcor/Supley), que só avisa.
 ABAS_CAFE_POR_GID = {
     564645926: ("cafe-gru.csv", "CAFÉ - GRU."),
+    # Aba nova em 26/08/2026: antes as entregas de Itapeva vinham misturadas
+    # dentro da aba de Guarulhos, e a operação separou numa aba própria. Mesmo
+    # tratamento crítico de Guarulhos: falta dela derruba o robô.
+    1726352493: ("cafe-itapeva.csv", "CAFÉ - ITAPEVA"),
 }
 
 # Abas identificadas pelo gid, e não pelo título.
