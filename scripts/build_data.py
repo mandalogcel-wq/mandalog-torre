@@ -86,29 +86,40 @@ COL_PADRAO = {
     "canhoto": 23,
 }
 
-# Sondada em 26/08/2026 (gid 1726352493, 97 linhas de amostra). Não é o layout
-# de Guarulhos deslocado por acaso — é outra aba, com outras colunas: sem
-# ORIGEM nem Nº SAÍDA, um único "CARREGAMENTO" no lugar dos dois. Por isso
-# "origem" fica de fora daqui: preencher com CARREGAMENTO (que guarda algo como
-# "1ª SAÍDA", não um nome de base) inventaria dado que a aba não tem.
+# Sondada em 26/08/2026 (gid 1726352493) e RESSONDADA em 27/08/2026 depois de
+# um bug real: a primeira sondagem leu a aba por nome de cabeçalho via n8n, e
+# essa leitura colapsa cabeçalho duplicado numa chave só — exatamente como
+# CARREGAMENTO e PAGAMENTO se duplicam no layout padrão (ver COL_PADRAO). A
+# aba de Itapeva TAMBÉM tem "CARREGAMENTO" duas vezes (colunas 4 e 5), e a
+# sondagem por nome escondeu a segunda, deslocando tudo a partir de "status"
+# uma posição para trás. Resultado em produção: "plano" lia na verdade
+# "Cod cliente" (quase único por cliente — daí ~56 "veículos" na torre para
+# 3-4 caminhões reais) e "status_sac" lia "TIPO DE PAGAMENTO" em vez do
+# status de verdade. Ressondado com leitura posicional crua (values.get da
+# API do Sheets, sem mapear por nome) para não repetir o erro. Sem ORIGEM
+# nem Nº SAÍDA nesta aba — "origem" fica de fora de propósito, ver nota
+# original abaixo.
+#
+# "origem" fica de fora daqui: preencher com CARREGAMENTO (que guarda algo
+# como "1ª SAÍDA", não um nome de base) inventaria dado que a aba não tem.
 COL_ITAPEVA = {
     "emissao": 0,
     "manifesto": 1,
     "faixa": 2,
     "data_saida": 3,
-    "status": 5,
-    "cod_cliente": 7,
-    "plano": 8,
-    "cliente": 9,
-    "nf": 10,
-    "peso": 11,
-    "cidade": 12,
-    "motorista": 13,
-    "placa": 14,
-    "perfil_cobranca": 15,
-    "status_sac": 18,
-    "greenmile": 19,
-    "canhoto": 22,
+    "status": 6,
+    "cod_cliente": 8,
+    "plano": 9,
+    "cliente": 10,
+    "nf": 11,
+    "peso": 12,
+    "cidade": 13,
+    "motorista": 14,
+    "placa": 15,
+    "perfil_cobranca": 16,
+    "status_sac": 19,
+    "greenmile": 20,
+    "canhoto": 23,
 }
 
 COL_SUMARE = {
