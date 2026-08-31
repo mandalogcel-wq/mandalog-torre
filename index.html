@@ -298,6 +298,91 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
   .clibar{padding-left:15px;padding-right:15px}
 }
 
+/* ---- torre por unidade e corredor ----------------------------------------
+   O quadro por colunas mostrava o ciclo do veículo, mas não a malha: quem olha
+   a operação da Arcor pergunta "quanto tem parado em Extrema" e "quantos estão
+   vindo de Campinas", e nenhuma das duas se lia ali. Aqui a tela é a rede —
+   as unidades onde o veículo para e os corredores por onde ele anda. */
+/* Nome `malha`, e não `torre`: já existe um `.torre` neste arquivo, do layout
+   de duas colunas com mapa fixo. Reaproveitar o nome fazia o `align-items:start`
+   daquele bloco vazar para cá e as unidades ficarem espremidas numa coluna só. */
+.malha{padding:16px 22px 20px;display:flex;flex-direction:column;gap:18px;
+  align-items:stretch}
+.tsec > h3{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:13px;
+  text-transform:uppercase;letter-spacing:.11em;color:var(--ink-3);margin:0 0 9px;
+  display:flex;align-items:baseline;gap:9px}
+.tsec > h3 small{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.06em;color:var(--ink-3);text-transform:none}
+
+/* Unidades */
+.unis{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.uni{background:var(--surface);border:1px solid var(--rule);display:flex;
+  flex-direction:column;min-width:0}
+.uni-h{background:var(--navy);color:#fff;padding:10px 13px;display:flex;
+  align-items:center;justify-content:space-between;gap:10px}
+.uni-h .nome{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:17px;
+  text-transform:uppercase;letter-spacing:.03em;line-height:1.1}
+.uni-h .uf{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;
+  color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.28);padding:1px 5px}
+.uni-papel{display:flex;gap:5px;padding:7px 13px;border-bottom:1px solid var(--rule);
+  background:var(--paper)}
+.papel{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.1em;
+  text-transform:uppercase;padding:2px 6px;border:1px solid var(--rule);
+  color:var(--ink-2);background:var(--surface)}
+.papel.carrega{border-color:#B9D4C6;color:var(--ok);background:#F1F8F4}
+.papel.descarrega{border-color:#E6C9A8;color:#8A5A12;background:#FFF8EF}
+/* Os números são a leitura de dois segundos: quantos estão em cada etapa
+   naquele pátio. O detalhe vem abaixo, para quem quiser. */
+.uni-n{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule)}
+.uni-n div{background:var(--surface);padding:9px 6px;text-align:center}
+.uni-n dt{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-3);line-height:1.25;min-height:22px;
+  display:flex;align-items:center;justify-content:center}
+.uni-n dd{margin:2px 0 0;font-family:"Barlow Condensed",sans-serif;font-weight:600;
+  font-size:23px;line-height:1;color:var(--ink)}
+.uni-n dd.zero{color:var(--ink-3);opacity:.45}
+.uni-body{padding:9px 10px;display:flex;flex-direction:column;gap:7px;
+  max-height:290px;overflow-y:auto}
+.uni-vazio{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);padding:3px 2px}
+
+/* Corredores: cada faixa é um trecho origem → destino */
+.corrs{display:flex;flex-direction:column;gap:10px}
+.corr{background:var(--surface);border:1px solid var(--rule);
+  border-left:3px solid var(--laranja)}
+.corr.vazio-retorno{border-left-color:var(--neutro)}
+.corr-h{display:flex;align-items:center;gap:10px;padding:9px 13px;
+  border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.corr-rota{display:flex;align-items:center;gap:9px;font-family:"Barlow Condensed",sans-serif;
+  font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.03em}
+.corr-rota .seta{color:var(--laranja);font-size:15px}
+.corr.vazio-retorno .corr-rota .seta{color:var(--neutro)}
+.corr-tag{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);border:1px solid var(--rule);padding:1px 6px}
+.corr-n{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  color:var(--ink-2)}
+.corr-body{padding:9px 10px;display:flex;gap:8px;flex-wrap:wrap}
+
+/* Cartão compacto do veículo, usado nas unidades e nos corredores */
+.vcard{background:var(--paper);border:1px solid var(--rule);padding:7px 9px;
+  display:flex;flex-direction:column;gap:2px;min-width:172px;flex:1 1 172px}
+.vcard .l1{display:flex;align-items:center;justify-content:space-between;gap:7px}
+.vcard .placa{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+  letter-spacing:.03em}
+.vcard .mot{font-size:11.5px;color:var(--ink-2);line-height:1.25;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vcard .met{font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-3);line-height:1.4}
+.vcard.alerta{border-left:3px solid var(--reent);background:#FBF7F7}
+.vcard .qpos{font-size:10.5px}
+
+/* Fora de operação: manutenção e situação não reconhecida */
+.fora{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:700px){
+  .malha{padding:14px 15px 18px}
+  .corr-body,.unis{gap:8px}
+}
+
 /* ---- última posição conhecida ---- */
 .mapasec{background:var(--surface);border-bottom:1px solid var(--rule)}
 .mapasec .recorte{border-bottom:0}
@@ -683,7 +768,11 @@ function frotaUnificada(){
     posicao: v.posicao,
     dias: v.dias_desde,
     local: NO_PONTO[v.situacao] === 'origem' ? v.origem
-         : NO_PONTO[v.situacao] === 'destino' ? v.destino : ''
+         : NO_PONTO[v.situacao] === 'destino' ? v.destino : '',
+    // O registro cru segue junto porque a visão por unidade precisa de origem,
+    // destino e retorno vazio separados — `trecho` já vem concatenado para o
+    // cartão e não dá para desmontar sem adivinhar onde a seta separava.
+    bruto: v
   }));
 
   // O café entra pelo plano do dia selecionado: um plano é o dia de um veículo.
@@ -750,10 +839,204 @@ function cartaoQuadro(v){
   </article>`;
 }
 
+/* ---------- torre por unidade e corredor ---------- */
+
+// A malha de cada operação, informada por quem opera — não deduzida da
+// planilha. Deduzir daria "Bragança" como origem e destino sem dizer que ela é
+// as duas coisas, e a unidade sem movimento no dia sumiria da tela justamente
+// no dia em que a ausência é a notícia.
+//
+// Arcor: carrega em Campinas e Bragança Paulista, descarrega em Bragança
+// Paulista e Extrema-MG. Bragança é o entreposto — carrega e descarrega.
+const UNIDADES = {
+  'Arcor': [
+    {nome:'Campinas',          uf:'SP', carrega:true,  descarrega:false,
+     apelidos:['CAMPINAS']},
+    {nome:'Bragança Paulista', uf:'SP', carrega:true,  descarrega:true,
+     apelidos:['BRAGANCA', 'BRAGANCA PAULISTA']},
+    {nome:'Extrema',           uf:'MG', carrega:false, descarrega:true,
+     apelidos:['EXTREMA']},
+  ],
+  'Supley': [
+    {nome:'Matão',    uf:'SP', carrega:true,  descarrega:false, apelidos:['MATAO']},
+    {nome:'Mandalog', uf:'SP', carrega:true,  descarrega:true,  apelidos:['MANDALOG']},
+    {nome:'Jundiaí',  uf:'SP', carrega:false, descarrega:true,
+     apelidos:['JUNDIAI', 'JUNDIAÍ']},
+  ],
+};
+
+// Qual unidade é este texto da planilha. A planilha escreve "BRAGANÇA", a
+// operação chama de "Bragança Paulista": o apelido casa os dois sem exigir que
+// alguém padronize a digitação de 1.298 linhas.
+function unidadeDe(cliente, texto){
+  const alvo = semAcento(texto);
+  if(!alvo) return null;
+  return (UNIDADES[cliente] || []).find(u =>
+    u.apelidos.includes(alvo) || semAcento(u.nome) === alvo) || null;
+}
+
+// A visão por unidade só faz sentido para quem tem malha declarada. Na visão
+// da Mandalog com todos os clientes o café entra junto, e café não tem
+// unidade de carga e descarga — ali o quadro por colunas continua sendo o
+// certo.
+function clienteComMalha(){
+  if(cliFiltro !== 'TODOS') return UNIDADES[cliFiltro] ? cliFiltro : null;
+  const clientes = [...new Set(frotaUnificada().map(v => v.cliente))];
+  return clientes.length === 1 && UNIDADES[clientes[0]] ? clientes[0] : null;
+}
+
+// Onde cada veículo está na malha: parado num pátio ou andando num corredor.
+//
+// `disponivel` e `carregando` acontecem na origem; `descarga` e `livre`, no
+// destino — é o que NO_PONTO já dizia para o mapa, e aqui vale a mesma regra.
+// `em_viagem` é corredor origem→destino. `chegando` é retorno vazio, e o
+// destino dele é a próxima origem, não o destino da viagem que acabou.
+const ETAPA_NA_UNIDADE = {
+  disponivel: {campo:'origem',  chave:'aguardando', rotulo:'aguardando carregamento'},
+  carregando: {campo:'origem',  chave:'carregando', rotulo:'em carregamento'},
+  descarga:   {campo:'destino', chave:'descarga',   rotulo:'em descarga'},
+  livre:      {campo:'destino', chave:'encerrado',  rotulo:'encerrado no pátio'},
+};
+
+function distribuirNaMalha(cliente, lista){
+  const unidades = (UNIDADES[cliente] || []).map(u => ({
+    ...u, aguardando:[], carregando:[], descarga:[], encerrado:[]
+  }));
+  const achar = nome => {
+    const u = unidadeDe(cliente, nome);
+    return u ? unidades.find(x => x.nome === u.nome) : null;
+  };
+
+  const corredores = new Map();
+  const fora = [];
+  const semLugar = [];
+
+  for(const v of lista){
+    const etapa = ETAPA_NA_UNIDADE[v.situacao];
+    if(etapa){
+      const u = achar(v.bruto[etapa.campo]);
+      if(u){ u[etapa.chave].push(v); continue; }
+      semLugar.push(v); continue;
+    }
+    if(v.situacao === 'em_viagem' || v.situacao === 'chegando'){
+      const vazio = v.situacao === 'chegando';
+      const de = vazio ? v.bruto.destino : v.bruto.origem;
+      // No retorno vazio o destino é a próxima origem: é para lá que a carreta
+      // está indo carregar. Sem isso o corredor apontaria para o lado contrário.
+      const para = vazio ? (v.bruto.destino_vazio || v.bruto.proxima_origem) : v.bruto.destino;
+      const chave = `${vazio ? 'V' : 'C'}|${semAcento(de)}|${semAcento(para)}`;
+      if(!corredores.has(chave)){
+        corredores.set(chave, {
+          vazio,
+          de: (achar(de) || {}).nome || (de || 'origem não informada'),
+          para: (achar(para) || {}).nome || (para || 'destino não informado'),
+          veiculos: []
+        });
+      }
+      corredores.get(chave).veiculos.push(v);
+      continue;
+    }
+    fora.push(v);
+  }
+
+  return {unidades, corredores:[...corredores.values()], fora, semLugar};
+}
+
+function cartaoVeiculo(v, opts = {}){
+  const f = frescorApontamento(v.dias);
+  const met = [];
+  if(opts.trecho && v.trecho) met.push(v.trecho);
+  if(v.bruto && v.bruto.carreta) met.push(`carreta ${v.bruto.carreta}`);
+  if(v.bruto && v.bruto.oc) met.push(`OC ${v.bruto.oc}`);
+  else if(v.bruto && v.bruto.manifesto) met.push(`manif. ${v.bruto.manifesto}`);
+  if(f.txt) met.push(f.txt);
+  return `<article class="vcard ${f.cls === 'parado' ? 'alerta' : ''}">
+    <span class="l1"><span class="placa">${escapar(v.placa)}</span>
+      ${v.rotulo ? `<span class="met">${escapar(v.rotulo)}</span>` : ''}</span>
+    <span class="mot">${escapar(v.motorista || 'Motorista a definir')}</span>
+    ${met.length ? `<span class="met">${met.map(escapar).join(' · ')}</span>` : ''}
+    ${linhaPosicao(v.posicao)}
+  </article>`;
+}
+
+function secaoTorre(cliente, lista){
+  const {unidades, corredores, fora, semLugar} = distribuirNaMalha(cliente, lista);
+
+  const cardsUni = unidades.map(u => {
+    // "00" e "—" dizem coisas diferentes: zero é "nenhum agora", travessão é
+    // "aqui não acontece". Extrema só descarrega, então contar carregamento
+    // ali seria oferecer um número que nunca vai sair de zero.
+    const n = (arr, rot, aplica) => `<div><dt>${rot}</dt>
+      <dd class="${aplica ? (arr.length ? '' : 'zero') : 'zero'}">${
+        aplica ? String(arr.length).padStart(2, '0') : '—'}</dd></div>`;
+    // O pátio mostra o que está ali agora. "Encerrado" fica de fora da contagem
+    // de três porque é o veículo que já terminou e não pede ação.
+    const noPatio = [...u.aguardando, ...u.carregando, ...u.descarga, ...u.encerrado];
+    return `<section class="uni">
+      <header class="uni-h"><span class="nome">${u.nome}</span>
+        <span class="uf">${u.uf}</span></header>
+      <div class="uni-papel">
+        ${u.carrega ? '<span class="papel carrega">carregamento</span>' : ''}
+        ${u.descarrega ? '<span class="papel descarrega">descarga</span>' : ''}
+      </div>
+      <dl class="uni-n">
+        ${n(u.aguardando, 'aguard. carreg.', u.carrega)}
+        ${n(u.carregando, 'carregando', u.carrega)}
+        ${n(u.descarga, 'em descarga', u.descarrega)}
+      </dl>
+      <div class="uni-body">
+        ${noPatio.length
+          ? noPatio.map(v => cartaoVeiculo(v, {trecho:true})).join('')
+          : '<p class="uni-vazio">pátio sem veículo</p>'}
+      </div>
+    </section>`;
+  }).join('');
+
+  // Corredor com carga antes do retorno vazio: é o que a operação acompanha.
+  const ordem = corredores.sort((a, b) =>
+    (a.vazio - b.vazio) || (b.veiculos.length - a.veiculos.length));
+  const faixas = ordem.map(c => `
+    <article class="corr ${c.vazio ? 'vazio-retorno' : ''}">
+      <header class="corr-h">
+        <span class="corr-rota">${escapar(c.de)}
+          <span class="seta">${c.vazio ? '⇢' : '⟶'}</span>
+          ${escapar(c.para)}</span>
+        <span class="corr-tag">${c.vazio ? 'retorno vazio' : 'carregado'}</span>
+        <span class="corr-n">${c.veiculos.length} ${
+          c.veiculos.length === 1 ? 'veículo' : 'veículos'}</span>
+      </header>
+      <div class="corr-body">${c.veiculos.map(v => cartaoVeiculo(v)).join('')}</div>
+    </article>`).join('');
+
+  const soltos = [...fora, ...semLugar];
+  return `<div class="malha">
+    <section class="tsec">
+      <h3>Unidades <small>onde o veículo para</small></h3>
+      <div class="unis">${cardsUni}</div>
+    </section>
+
+    <section class="tsec">
+      <h3>Em trânsito <small>${ordem.length
+        ? `${ordem.reduce((s,c) => s + c.veiculos.length, 0)} veículos em ${ordem.length} corredores`
+        : 'nenhum veículo na estrada'}</small></h3>
+      ${faixas || '<p class="uni-vazio">nenhum veículo em trânsito neste momento</p>'}
+    </section>
+
+    ${soltos.length ? `<section class="tsec">
+      <h3>Fora da malha <small>manutenção, situação não reconhecida ou unidade não mapeada</small></h3>
+      <div class="fora">${soltos.map(v => cartaoVeiculo(v, {trecho:true})).join('')}</div>
+    </section>` : ''}
+  </div>`;
+}
+
 // Quadro por colunas: cada coluna é uma etapa do ciclo, e ler da esquerda para
 // a direita é acompanhar o caminho do veículo. Coluna vazia continua na tela —
 // "nenhum disponível" é notícia, e escondê-la faria as colunas trocarem de
 // lugar a cada atualização, que é o que mais atrapalha quem olha o dia inteiro.
+//
+// Continua valendo para a visão da Mandalog com café junto, que não tem malha
+// de unidades. Onde há malha declarada, `secaoTorre` mostra a rede em vez do
+// ciclo — ver UNIDADES.
 function secaoQuadro(){
   const todos = frotaUnificada();
   if(!todos.length) return '';
@@ -770,6 +1053,9 @@ function secaoQuadro(){
                              : todos.filter(v => v.cliente === c).length}</b>
         </button>`).join('')}
     </nav>` : '';
+
+  const comMalha = clienteComMalha();
+  if(comMalha) return `${barra}${secaoTorre(comMalha, lista)}`;
 
   const colunas = GRUPOS_FROTA.map(([k, rot]) => {
     const doGrupo = lista.filter(v => v.situacao === k);
