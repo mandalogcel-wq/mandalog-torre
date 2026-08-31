@@ -70,9 +70,25 @@ jobs:
           N8N_WEBHOOK_TOKEN: ${{ secrets.N8N_WEBHOOK_TOKEN }}
         run: python3 scripts/mesclar_greenmile.py
 
+      # Posição do rastreador nas viagens de Arcor e Supley. Chama a Krona
+      # direto, sem n8n no meio: é uma chamada SOAP só, e um workflow
+      # intermediário seria mais uma peça para quebrar. Se a Krona cair, o
+      # script avisa e segue — o painel publica sem posição, como antes.
+      #
+      # Depois do build_data.py, que é quem cria o viagens.json, e antes do
+      # fatiar.py, que recorta a posição por cliente.
+      - name: Mesclar posição do rastreador (Krona)
+        env:
+          KRONA_EMPRESA: ${{ secrets.KRONA_EMPRESA }}
+          KRONA_USUARIO: ${{ secrets.KRONA_USUARIO }}
+          KRONA_SENHA:   ${{ secrets.KRONA_SENHA }}
+        run: python3 scripts/mesclar_krona.py
+
       # Um payload por cliente, e a prova de que não vazou nada entre eles.
       # O script confere o arquivo pronto e derruba esta execução se encontrar
       # dado de um cliente no payload de outro — antes de cifrar e publicar.
+      # Desde 31/08/2026 confere também a posição do rastreador: placa que não
+      # está na frota nem nas viagens do cliente não pode ter ponto no mapa dele.
       - name: Fatiar por cliente
         run: python3 scripts/fatiar.py
 

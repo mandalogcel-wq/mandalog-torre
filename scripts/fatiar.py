@@ -32,7 +32,9 @@ Uso:
 from __future__ import annotations
 
 import json
+import re
 import sys
+import unicodedata
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -71,6 +73,31 @@ def ler(caminho: Path) -> dict:
     return json.loads(caminho.read_text(encoding="utf-8"))
 
 
+def norm_placa(v) -> str:
+    """Placa comparável: só letra e número. Mesma regra do mesclar_krona.py."""
+    s = "".join(c for c in unicodedata.normalize("NFD", str(v or ""))
+                if unicodedata.category(c) != "Mn").upper()
+    return re.sub(r"[^A-Z0-9]", "", s)
+
+
+def placas_do(payload: dict) -> set[str]:
+    """Placas que este payload já expõe, por viagem ou por frota.
+
+    É o conjunto do que o cliente pode ver. A posição do rastreador só entra
+    para placa que já está aqui — quinze veículos rodam para Arcor e para
+    Supley, e sem esse recorte a Arcor veria o caminhão dela parado em Matão,
+    que é rota do Supley.
+    """
+    out = set()
+    for campo in ("viagens", "frota"):
+        for v in payload.get(campo, []):
+            for chave in ("placa", "carreta"):
+                p = norm_placa(v.get(chave))
+                if p:
+                    out.add(p)
+    return out
+
+
 def conferir(slug: str, cfg: dict, payload: dict) -> None:
     """Falha se o payload contiver algo que este cliente não pode ver.
 
@@ -102,6 +129,19 @@ def conferir(slug: str, cfg: dict, payload: dict) -> None:
     if fora:
         sys.exit(f"VAZAMENTO em painel-{slug}: operações inesperadas "
                  f"({', '.join(map(str, fora))}).")
+
+    # A posição do rastreador é o dado mais sensível que entrou depois: diz onde
+    # o veículo está agora. Placa que não aparece na frota nem nas viagens deste
+    # payload não pode ter ponto no mapa dele — nem para veículo compartilhado
+    # entre dois clientes, que é o caso de quinze placas.
+    minhas = placas_do(payload)
+    intrusas = sorted({norm_placa(p.get("placa"))
+                       for p in (payload.get("rastreamento") or {}).get("posicoes", [])}
+                      - minhas)
+    if intrusas:
+        sys.exit(f"VAZAMENTO em painel-{slug}: posição de rastreador das placas "
+                 f"{', '.join(intrusas)}, que não estão na frota nem nas "
+                 "viagens deste cliente.")
 
 
 def main() -> None:
@@ -142,6 +182,18 @@ def main() -> None:
             payload["frota"] = [f for f in viagens.get("frota", [])
                                 if f.get("cliente") in cfg["viagens"]]
             payload["frota_dias"] = viagens.get("frota_dias")
+
+            # Posição do rastreador, recortada pelas placas que este cliente já
+            # vê. O recorte é feito aqui, e não no mesclar_krona.py, porque é
+            # aqui que existe a noção de cliente — e é aqui que o `conferir`
+            # confere o resultado logo abaixo.
+            rastro = viagens.get("rastreamento") or {}
+            if rastro.get("disponivel"):
+                minhas = placas_do(payload)
+                payload["rastreamento"] = dict(
+                    rastro,
+                    posicoes=[p for p in rastro.get("posicoes", [])
+                              if norm_placa(p.get("placa")) in minhas])
         else:
             payload["viagens"] = []
             payload["frota"] = []

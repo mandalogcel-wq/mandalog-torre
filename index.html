@@ -285,6 +285,11 @@ td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:
 .qmeta{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.04em;
   text-transform:uppercase;color:var(--ink-3);line-height:1.5}
 .qidade{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#8A5A12}
+/* Posição do rastreador. O ponto colorido repete a escala de idade do mapa,
+   para a mesma cor querer dizer a mesma coisa nos dois lugares. */
+.qpos{font-size:11px;color:var(--ink-2);display:flex;align-items:center;gap:5px;
+  line-height:1.35}
+.qpos i{width:7px;height:7px;border-radius:50%;flex:none}
 .qcard.velho{border-left-color:var(--laranja);background:#FFFCF5}
 .qcard.parado{border-left-color:var(--alerta);background:#FBF7F7}
 .qcard.parado .qidade{color:#9A3A3A}
@@ -671,7 +676,11 @@ function frotaUnificada(){
     extra: [v.carreta && `carreta ${v.carreta}`,
             v.oc ? `OC ${v.oc}` : (v.manifesto && `manifesto ${v.manifesto}`),
             v.proxima_oc && `depois: OC ${v.proxima_oc} em ${v.proxima_origem}`,
+            // Só quem tem SM aberta na Krona traz valor de carga e
+            // gerenciadora — é enriquecimento, não a base da torre.
+            v.sm && v.sm.gerenciadora && `GR ${v.sm.gerenciadora}`,
             v.rastreada === false && 'sem rastreamento'].filter(Boolean),
+    posicao: v.posicao,
     dias: v.dias_desde,
     local: NO_PONTO[v.situacao] === 'origem' ? v.origem
          : NO_PONTO[v.situacao] === 'destino' ? v.destino : ''
@@ -703,6 +712,31 @@ function frotaUnificada(){
   return lista;
 }
 
+// O endereço é o único texto da tela que vem de fora da planilha — quem escreve
+// é o geocodificador da Krona, não a operação. Um `&` numa esquina já bastaria
+// para quebrar a marcação, então este campo é escapado mesmo que o resto do
+// arquivo insira texto direto.
+const escapar = s => String(s == null ? '' : s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// A linha de posição só aparece onde o rastreador respondeu. Veículo sem
+// rastreador — são 14 na frota da Krona, com equipamento NENHUM — fica sem a
+// linha, em vez de exibir "sem posição": ausência de linha já diz isso, e uma
+// frase negativa em todo cartão poluiria a torre sem informar nada.
+function linhaPosicao(p){
+  if(!p || !p.data) return '';
+  const h = (Date.now() - new Date(p.data).getTime()) / 3600e3;
+  const {c, r} = idadeCor(isFinite(h) ? h : 999);
+  // Parado com ignição ligada é diferente de parado com o motor desligado:
+  // o primeiro é espera, o segundo é pernoite ou fim de jornada.
+  const mov = p.velocidade_kmh > 0
+    ? `${Math.round(p.velocidade_kmh)} km/h`
+    : (p.ignicao ? 'parado, ligado' : 'parado');
+  const onde = escapar(p.endereco) || 'sem endereço';
+  return `<span class="qpos" title="Rastreador · ${new Date(p.data).toLocaleString('pt-BR')} · ${r}">
+    <i style="background:${c}"></i>${mov} · ${onde}</span>`;
+}
+
 function cartaoQuadro(v){
   const f = frescorApontamento(v.dias);
   return `<article class="qcard ${f.cls}">
@@ -711,6 +745,7 @@ function cartaoQuadro(v){
     <span class="qmot">${v.motorista || 'Motorista a definir'}</span>
     <span class="qtrecho">${v.trecho || '—'}</span>
     ${v.extra.length ? `<span class="qmeta">${v.extra.join(' · ')}</span>` : ''}
+    ${linhaPosicao(v.posicao)}
     ${f.txt ? `<span class="qidade">${f.txt}</span>` : ''}
   </article>`;
 }
@@ -827,9 +862,21 @@ function veiculosEmPonto(){
   });
 }
 
-function secaoMapa(){
+// Duas fontes de posição, um formato só. O café vem do GreenMile (baixa do
+// motorista no aplicativo); a transferência vem da Krona (rastreador do
+// veículo). O mapa não precisa saber de qual veio — o payload já chega com a
+// mesma forma, montada por mesclar_greenmile.py e mesclar_krona.py.
+function pontosRastreados(){
   const gm = BASE.greenmile;
-  const rastreados = (gm && gm.disponivel) ? (gm.posicoes || []) : [];
+  const kr = BASE.rastreamento;
+  return [
+    ...((gm && gm.disponivel && gm.posicoes) || []),
+    ...((kr && kr.disponivel && kr.posicoes) || []),
+  ];
+}
+
+function secaoMapa(){
+  const rastreados = pontosRastreados();
   const apontados = ehQuadro() ? veiculosEmPonto() : [];
   if(!rastreados.length && !apontados.length) return '';
 
@@ -861,8 +908,7 @@ function renderMapa(){
   if(typeof L === 'undefined'){ alvo.closest('.mapasec').hidden = true; return; }
 
   if(MAPA){ MAPA.remove(); MAPA = null; }
-  const gm = BASE.greenmile;
-  const pts = ((gm && gm.disponivel && gm.posicoes) || [])
+  const pts = pontosRastreados()
     .filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lon));
   const apontados = ehQuadro() ? veiculosEmPonto() : [];
   if(!pts.length && !apontados.length){
@@ -880,7 +926,7 @@ function renderMapa(){
     L.circleMarker([p.lat, p.lon],
       {radius:7, color:'#fff', weight:2, fillColor:c, fillOpacity:1})
       .addTo(MAPA)
-      .bindPopup(`<b>${p.placa}</b><br>${p.velocidade_kmh} km/h · ${p.origem}<br>` +
+      .bindPopup(`<b>${escapar(p.placa)}</b><br>${p.velocidade_kmh} km/h · ${escapar(p.origem)}<br>` +
         `<span style="color:#8A94A5">${new Date(p.data_posicao).toLocaleString('pt-BR')}</span><br>` +
         `<span style="color:${c}">${r}</span>`);
   });
