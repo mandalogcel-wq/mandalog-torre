@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-02T16:05:23-03:00",
+ "gerado_em": "2026-09-02T16:16:53-03:00",
  "dia": "2026-09-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -18,9 +18,8 @@
    "ok": 26,
    "semapont": 0,
    "gm": 26,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103257494",
@@ -32,9 +31,8 @@
    "ok": 18,
    "semapont": 0,
    "gm": 18,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103264718",
@@ -46,9 +44,8 @@
    "ok": 16,
    "semapont": 0,
    "gm": 16,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103264717",
@@ -60,9 +57,8 @@
    "ok": 16,
    "semapont": 0,
    "gm": 16,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103247731",
@@ -74,9 +70,8 @@
    "ok": 14,
    "semapont": 0,
    "gm": 14,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103264720",
@@ -88,9 +83,8 @@
    "ok": 8,
    "semapont": 0,
    "gm": 8,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "11:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257180",
@@ -102,9 +96,8 @@
    "ok": 14,
    "semapont": 0,
    "gm": 14,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103257182",
@@ -116,9 +109,8 @@
    "ok": 9,
    "semapont": 0,
    "gm": 9,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103259608",
@@ -130,9 +122,8 @@
    "ok": 12,
    "semapont": 0,
    "gm": 12,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257179",
@@ -144,9 +135,8 @@
    "ok": 10,
    "semapont": 0,
    "gm": 10,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103260897",
@@ -158,9 +148,8 @@
    "ok": 8,
    "semapont": 0,
    "gm": 8,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103264719",
@@ -172,9 +161,8 @@
    "ok": 9,
    "semapont": 0,
    "gm": 9,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257178",
@@ -186,9 +174,8 @@
    "ok": 7,
    "semapont": 0,
    "gm": 7,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103262797",
@@ -200,9 +187,8 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103262556",
@@ -214,9 +200,8 @@
    "ok": 4,
    "semapont": 0,
    "gm": 4,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257496",
@@ -228,9 +213,8 @@
    "ok": 4,
    "semapont": 0,
    "gm": 4,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103258139",
@@ -242,9 +226,8 @@
    "ok": 4,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "11:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103262423",
@@ -256,9 +239,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103262415",
@@ -270,9 +252,8 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257488",
@@ -284,9 +265,8 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103261007",
@@ -298,9 +278,8 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103262411",
@@ -312,9 +291,8 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257497",
@@ -326,9 +304,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103257719",
@@ -340,9 +317,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103262331",
@@ -354,9 +330,8 @@
    "ok": 2,
    "semapont": 0,
    "gm": 2,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103262329",
@@ -368,9 +343,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257491",
@@ -382,9 +356,8 @@
    "ok": 2,
    "semapont": 0,
    "gm": 2,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103260935",
@@ -396,9 +369,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103260923",
@@ -410,9 +382,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103260938",
@@ -424,9 +395,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103202591",
@@ -439,8 +409,7 @@
    "semapont": 1,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": ""
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103208738",
@@ -453,8 +422,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": ""
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103248426",
@@ -466,9 +434,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103260986",
@@ -480,9 +447,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103260936",
@@ -494,9 +460,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103257487",
@@ -508,9 +473,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103257489",
@@ -522,9 +486,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103257490",
@@ -536,9 +499,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103260937",
@@ -550,9 +512,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103264722",
@@ -564,9 +525,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103264724",
@@ -578,9 +538,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103260931",
@@ -592,9 +551,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103261454",
@@ -606,9 +564,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103260972",
@@ -620,9 +577,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103253813",
@@ -634,9 +590,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103257486",
@@ -648,9 +603,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01"
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103260998",
@@ -662,9 +616,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103250730",
@@ -676,9 +629,8 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00"
+   "saida": "08:00",
+   "saida_fonte": "onda"
   },
   {
    "plano": "6103258275",
@@ -690,9 +642,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:01",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "padrao"
   },
   {
    "plano": "6103260930",
@@ -704,9 +655,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "16:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": ""
+   "saida": "08:00",
+   "saida_fonte": "onda"
   }
  ],
  "pracas": [
@@ -757,12 +707,6 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0
-  }
- ],
- "baixas_por_hora": [
-  {
-   "h": "16",
-   "n": 215
   }
  ]
 }
