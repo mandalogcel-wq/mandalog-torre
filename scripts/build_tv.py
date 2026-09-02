@@ -49,10 +49,19 @@ reescrito — que é o desejado.
 O RITMO NÃO É CALCULADO AQUI
 
 Este script publica fatos: quantas entregas o veículo tem, quantas já saíram,
-que horas ele começou. O aperto — quantas vezes mais rápido ele precisa ir do
-que o planejado — depende do relógio, e é calculado no navegador a cada
+em que turno ele começou. O aperto — quantas vezes mais rápido ele precisa ir
+do que o planejado — depende do relógio, e é calculado no navegador a cada
 recarga. Calcular aqui congelaria o risco no instante da coleta e a tela
-mentiria pelos 15 minutos seguintes.
+mentiria até a rodada seguinte.
+
+O QUE ESTA TORRE AINDA NÃO SABE
+
+A hora de cada baixa. O coletor do GreenMile no n8n pede uma projeção fixa de
+11 campos e nenhum deles é horário de serviço; o `atualizado_em` que ele grava
+é `new Date()` da execução. Sem isso não há "intervalo médio entre baixas",
+não há "última baixa às 14:23" e a hora de saída fica no turno da planilha.
+Para ter: acrescentar os campos de horário ao array `filtros` do nó
+"Montar consulta" nos coletores 0GUyiqtaNTHadd67 e PrnRQSyVxQsKchn2.
 """
 
 from __future__ import annotations
@@ -82,9 +91,9 @@ FECHA = "18:00"
 # acima do planejado é o que um motorista consegue absorver num dia ruim.
 LIMITE_APERTO = 1.5
 
-# Onda de saída -> hora estimada. Só as abas de SJC e Guarulhos têm a coluna,
-# e ela é grosseira: serve de rede quando o GreenMile ainda não registrou
-# nenhuma baixa do veículo e não há nada melhor para usar.
+# Onda de saída -> hora estimada. É a ÚNICA fonte de hora de saída hoje, e é
+# grosseira: diz o turno, não o minuto. Só as abas de SJC e Guarulhos têm a
+# coluna; nas outras todo veículo entra como 08:00. Ver saida_do_veiculo().
 ONDAS = {
     "1ª SAÍDA": "08:00",
     "2ª SAÍDA": "11:00",
@@ -94,30 +103,23 @@ ONDAS = {
 }
 
 
-def hora(iso: str) -> str:
-    """'2026-09-02T14:23:11-03:00' -> '14:23'. Vazio se não der para ler."""
-    if not iso:
-        return ""
-    try:
-        return datetime.fromisoformat(iso).astimezone(FUSO).strftime("%H:%M")
-    except (ValueError, TypeError):
-        return ""
-
-
 def saida_do_veiculo(notas: list[dict]) -> tuple[str, str]:
     """Hora de saída do veículo e de onde ela veio.
 
-    A planilha não tem coluna de hora — conferido nas 27 colunas de Sumaré e
-    nas 30 de SJC. Então a melhor fonte disponível é a primeira baixa que o
-    GreenMile registrou para o veículo: ele já estava em rota antes dela, o
-    que torna a estimativa conservadora (nunca tarde demais), e é exatamente
-    o erro que se prefere ter aqui — superestimar a janela é dar ao veículo
-    mais crédito do que ele tem, e não menos.
-    """
-    baixas = sorted(h for h in (hora(n.get("gm_atualizado_em", "")) for n in notas) if h)
-    if baixas:
-        return baixas[0], "greenmile"
+    NÃO USAR gm_atualizado_em AQUI.
 
+    Esse campo parece a hora da entrega e não é: o coletor no n8n faz
+    `const agora = new Date().toISOString()` uma vez por execução e carimba
+    todas as linhas com ele. Medido em 02/09/2026 no dado de produção: as 215
+    entregas do dia vieram todas com 16:00 ou 16:01, que foi quando o robô
+    rodou. Usá-lo dava saída de 16:00 para 48 dos 50 veículos, o que encolhe a
+    janela de todo mundo para duas horas e faz o aperto virar ruído.
+
+    O consumo do GreenMile é uma projeção explícita de campos (o array
+    `filtros` do nó "Montar consulta"), e nenhum campo de horário de serviço
+    é pedido. Enquanto não for, a melhor fonte é a onda de saída da planilha,
+    grosseira mas verdadeira, com 08:00 como piso.
+    """
     ondas = [ONDAS[n["onda"]] for n in notas if n.get("onda") in ONDAS]
     if ondas:
         return min(ondas), "onda"
@@ -125,15 +127,13 @@ def saida_do_veiculo(notas: list[dict]) -> tuple[str, str]:
     return ABRE, "padrao"
 
 
-def cidade_atual(notas: list[dict]) -> str:
-    """Onde o veículo está: a cidade da baixa mais recente.
+def cidade_regiao(notas: list[dict]) -> str:
+    """A região da rota: a cidade que mais aparece nas notas do veículo.
 
-    Sem nenhuma baixa, a cidade mais frequente da rota — é para onde ele vai,
-    que na tela de ação responde a mesma pergunta ('onde procurar esse cara').
+    Não é "onde ele está agora" — para isso seria preciso a posição do
+    rastreador, que para o café só existe no GreenMile e não entra aqui.
+    Serve para a tela de ação responder "onde procurar esse cara".
     """
-    baixadas = [n for n in notas if n.get("gm_atualizado_em") and n.get("cidade")]
-    if baixadas:
-        return max(baixadas, key=lambda n: n["gm_atualizado_em"])["cidade"]
     cidades = collections.Counter(n["cidade"] for n in notas if n.get("cidade"))
     return cidades.most_common(1)[0][0] if cidades else ""
 
@@ -163,13 +163,12 @@ def main() -> None:
         meta = planos_meta.get(plano, {})
         feitas = [n for n in notas if n["classe"] == "entregue"]
         saida, fonte_saida = saida_do_veiculo(notas)
-        ultimas = sorted(h for h in (hora(n.get("gm_atualizado_em", "")) for n in feitas) if h)
         veiculos.append({
             "plano": plano,
             "op": meta.get("operacao") or notas[0]["operacao"],
             "placa": meta.get("placa") or notas[0]["placa"],
             "motorista": meta.get("motorista") or notas[0]["motorista"],
-            "cidade": cidade_atual(notas),
+            "cidade": cidade_regiao(notas),
             "total": len(notas),
             "ok": len(feitas),
             # Sem apontamento não é pendente: é desfecho não informado. A tela
@@ -178,7 +177,6 @@ def main() -> None:
             "gm": sum(1 for n in feitas if n["gm_ok"]),
             "saida": saida,
             "saida_fonte": fonte_saida,
-            "ultima_baixa": ultimas[-1] if ultimas else "",
         })
 
     # Do mais carregado ao menos: a ordenação por risco é do navegador, que é
@@ -193,12 +191,6 @@ def main() -> None:
         for c in ("total", "ok", "semapont", "gm"):
             p[c] += v[c]
 
-    baixas_por_hora = collections.Counter(
-        hora(n.get("gm_atualizado_em", ""))[:2]
-        for n in entregas if n["classe"] == "entregue" and n.get("gm_atualizado_em")
-    )
-    baixas_por_hora.pop("", None)
-
     payload = {
         "gerado_em": agora.isoformat(timespec="seconds"),
         "dia": hoje,
@@ -207,7 +199,6 @@ def main() -> None:
         "limite_aperto": LIMITE_APERTO,
         "veiculos": veiculos,
         "pracas": sorted(pracas.values(), key=lambda p: -p["total"]),
-        "baixas_por_hora": [{"h": h, "n": n} for h, n in sorted(baixas_por_hora.items())],
     }
 
     # Comparação sem gerado_em: só o conteúdo decide se vale reescrever.

@@ -394,18 +394,8 @@ body.velho .kpi{border-bottom-color:var(--navy-3)!important}
         </table>
       </section>
       <section class="bloco">
-        <h2>Baixas por hora <em>hoje</em></h2>
-        <div class="medias">
-          <div class="media" style="flex:2">
-            <div class="rot">Entregas baixadas no GreenMile</div>
-            <div class="hoje" id="hoje"></div><div class="horas" id="horas"></div>
-          </div>
-          <div class="media">
-            <div class="rot">Última baixa</div>
-            <div class="val" id="ultimaBaixa">--:--</div>
-            <div class="comp" id="ultimaOnde"></div>
-          </div>
-        </div>
+        <h2>O que falta apontar</h2>
+        <div class="focos" id="falta"></div>
       </section>
     </div>
   </section>
@@ -751,24 +741,23 @@ function render(){
     tq.appendChild(tr);
   });
 
-  var hs = dados.baixas_por_hora || [];
-  var pico = hs.reduce(function(m, h){ return Math.max(m, h.n); }, 1);
-  var gh = $("hoje"), gr = $("horas");
-  gh.textContent = ""; gr.textContent = "";
-  hs.forEach(function(h){
-    var i = el("i"); i.style.height = (h.n / pico * 100) + "%"; gh.appendChild(i);
-    gr.appendChild(el("span", null, h.h));
-  });
-  var ultimas = vs.map(function(v){ return v.ultima_baixa; }).filter(Boolean).sort();
-  var ult = ultimas[ultimas.length - 1] || "";
-  $("ultimaBaixa").textContent = ult || "--:--";
-  var quem = vs.filter(function(v){ return v.ultima_baixa === ult; })[0];
-  $("ultimaOnde").textContent = ult && quem
-    ? quem.op.replace(/^Café · /, "") + " · " + quem.placa : "sem baixa registrada hoje";
+  var fa = $("falta"); fa.textContent = "";
+  foco(fa, ok - gm > 0 ? "at" : "ok", ok - gm, "Entregue sem baixa no GreenMile",
+       (porOp(vs, function(v){ return v.ok - v.gm > 0; }) || "nenhuma")
+       + " — motorista não baixou no aplicativo");
+  foco(fa, sap > 0 ? "at" : "ok", sap, "Notas sem apontamento do SAC",
+       (porOp(vs, function(v){ return v.semapont > 0; }) || "nenhuma")
+       + " — desfecho não lançado na planilha");
+  var semMot = vs.filter(function(v){ return !v.motorista; });
+  foco(fa, semMot.length ? "at" : "ok", semMot.length, "Planos sem motorista atribuído",
+       (porOp(semMot, function(){ return true; }) || "nenhum") + " — alocar");
+  var porOnda = vs.filter(function(v){ return v.saida_fonte === "padrao"; });
+  foco(fa, "ok", porOnda.length, "Veículos sem hora de saída conhecida",
+       "tratados como 08:00 — a planilha não tem a coluna de onda nessas praças");
 
   telas[0].dataset.sub = Object.keys(praca).map(function(o){
     return o.replace(/^Café · /, ""); }).sort().join(", ");
-  telas[3].dataset.sub = "Adesão e apontamento por praça";
+  telas[3].dataset.sub = "Adesão ao GreenMile e apontamento — por praça";
   if (telas[iTela]) $("sub").textContent = telas[iTela].dataset.sub;
 }
 
