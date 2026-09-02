@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-02T17:16:41-03:00",
+ "gerado_em": "2026-09-02T17:31:41-03:00",
  "dia": "2026-09-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -35,8 +35,8 @@
    "gm": 22,
    "saida": "11:01",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:59",
-   "ritmo_real": 19
+   "ultima_baixa": "17:11",
+   "ritmo_real": 18
   },
   {
    "plano": "6103264718",
@@ -95,7 +95,7 @@
    "gm": 12,
    "saida": "13:41",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:32",
+   "ultima_baixa": "16:35",
    "ritmo_real": 16
   },
   {
@@ -395,8 +395,8 @@
    "gm": 2,
    "saida": "08:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:01",
-   "ritmo_real": 15
+   "ultima_baixa": "17:28",
+   "ritmo_real": 342
   },
   {
    "plano": "6103257491",
@@ -456,21 +456,6 @@
    "saida": "07:10",
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:46",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103202591",
-   "op": "Café · Meso Marília",
-   "placa": "BXJ0135",
-   "motorista": "Luciano Donizetti Dos Santos",
-   "cidade": "Candido Mota",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -650,7 +635,7 @@
    "gm": 1,
    "saida": "10:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:57",
+   "ultima_baixa": "17:07",
    "ritmo_real": 0
   },
   {
@@ -735,7 +720,7 @@
    "motorista": "Ricardo Edson",
    "cidade": "Sorocaba",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -794,8 +779,8 @@
   },
   {
    "op": "Café · Meso Marília",
-   "veic": 8,
-   "total": 12,
+   "veic": 7,
+   "total": 11,
    "ok": 11,
    "semapont": 0,
    "gm": 11
@@ -804,7 +789,7 @@
    "op": "Café · CD Sumaré",
    "veic": 1,
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0
   }
@@ -828,7 +813,7 @@
   },
   {
    "h": "10",
-   "n": 24
+   "n": 23
   },
   {
    "h": "11",
@@ -836,7 +821,7 @@
   },
   {
    "h": "12",
-   "n": 23
+   "n": 22
   },
   {
    "h": "13",
@@ -853,6 +838,10 @@
   {
    "h": "16",
    "n": 11
+  },
+  {
+   "h": "17",
+   "n": 3
   }
  ]
 }
