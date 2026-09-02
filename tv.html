@@ -15,6 +15,10 @@
      Complementa o painel (index.html), nao o substitui: o painel e consulta,
      com historico e mapa; esta tela e decisao, e mostra SO O DIA VIGENTE.
 
+     Le data/tv.json, que scripts/build_tv.py publica a cada rodada do robo.
+     O arquivo tem fatos; o risco e calculado aqui, contra o relogio, porque
+     congelado na coleta ele envelheceria antes de chegar na parede.
+
      RITMO E POR VEICULO, E A JANELA ENCOLHE COM A SAIDA.
        janela = 18:00 - hora de saida (nunca antes das 08:00)
        plano  = janela / entregas do veiculo
@@ -30,9 +34,7 @@
        aperto <= 1            em dia
 
      Quatro telas giram a cada 30 s. Sem interacao: ninguem opera esta tela.
-
-     ATENCAO: OS NUMEROS SAO ILUSTRATIVOS. Esta pagina nao le dado real ainda.
-     Ver o bloco no fim do arquivo para o que falta.
+     Escala de parede: leitura a 3-5 m, nada abaixo de ~18px em 1080p.
 ========================================================================= -->
 <style>
 :root{
@@ -58,7 +60,7 @@
 html,body{margin:0;padding:0}
 body{height:100vh; overflow:hidden; background:var(--paper); color:var(--ink);
   font-family:var(--sans); font-variant-numeric:tabular-nums;
-  display:grid; grid-template-rows:auto auto 1fr}
+  display:flex; flex-direction:column}
 
 /* ---- barra de marca: igual à do painel, com as duas marcas ---- */
 .marcas{display:flex; align-items:center; gap:calc(var(--u)*1.5); background:var(--surface);
@@ -92,7 +94,7 @@ body{height:100vh; overflow:hidden; background:var(--paper); color:var(--ink);
 .dots i.on{background:var(--laranja)}
 
 /* ---- telas ---- */
-.telas{position:relative; min-height:0}
+.telas{position:relative; flex:1; min-height:0}
 .tela{position:absolute; inset:0; display:none; grid-template-rows:auto 1fr;
   padding:calc(var(--u)*.9) calc(var(--u)*1.5) calc(var(--u)*1.1); gap:calc(var(--u)*.9)}
 .tela.on{display:grid}
@@ -233,6 +235,9 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
   display:flex; flex-direction:column; justify-content:center; gap:calc(var(--u)*.45);
   min-width:0}
 .alvo.critico{border-top-color:var(--acao)}
+.alvo.mais{border-top-color:var(--rule); align-items:center; text-align:center;
+  justify-content:center}
+.alvo.mais .nome{font-size:calc(var(--u)*4.5); color:var(--ink-3)}
 .alvo .cab{display:flex; align-items:baseline}
 .alvo .sel{font-family:var(--cond); font-weight:700; text-transform:uppercase;
   font-size:calc(var(--u)*2); letter-spacing:.05em; color:var(--atencao)}
@@ -259,6 +264,51 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
   font-family:var(--mono); font-size:calc(var(--u)*.75); letter-spacing:.1em;
   color:var(--ink-3); text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* --- blocos de leitura da tela 4 --- */
+.medias{display:flex; flex-direction:column; gap:calc(var(--u)*.7); flex:1; min-height:0}
+.media{flex:1; display:flex; flex-direction:column; justify-content:center;
+  background:var(--paper); padding:calc(var(--u)*.7) calc(var(--u)*1)}
+.media .rot{font-family:var(--mono); font-size:calc(var(--u)*.88); letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink-3)}
+.media .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*4);
+  line-height:1; margin-top:calc(var(--u)*.15)}
+.media .comp{font-family:var(--mono); font-size:calc(var(--u)*.9); color:var(--ink-2)}
+.hoje{display:flex; align-items:flex-end; gap:calc(var(--u)*.35); flex:1;
+  min-height:calc(var(--u)*4); margin-top:calc(var(--u)*.6)}
+.hoje i{flex:1; background:var(--navy-2); opacity:.85; min-height:1px}
+.hoje i:last-child{background:var(--laranja); opacity:1}
+.horas{display:flex; gap:calc(var(--u)*.35); font-family:var(--mono);
+  font-size:calc(var(--u)*.85); color:var(--ink-3); margin-top:calc(var(--u)*.3)}
+.horas span{flex:1; text-align:center}
+
+/* --- faixa de dado velho ---------------------------------------------------
+   O aperto é calculado contra o relógio. Com dado de duas horas atrás a tela
+   pintaria de vermelho quem já entregou tudo, e em uma semana a sala aprende
+   a ignorar a cor. Então, passado o limite, ela diz que está velha e desliga
+   o semáforo — cinza em tudo que era vermelho, amarelo ou verde. Mostrar o
+   número velho é honesto; pintá-lo de urgência não é. */
+.alerta{background:var(--acao); color:#fff; font-family:var(--mono);
+  font-size:calc(var(--u)*1.05); letter-spacing:.06em; text-transform:uppercase;
+  padding:calc(var(--u)*.55) calc(var(--u)*1.5)}
+body.velho .kpi .val, body.velho .foco .qtd, body.velho .alvo .ap,
+body.velho .alvo .sel, body.velho .alvo .acao, body.velho td.c-cr,
+body.velho td.c-at{color:var(--ink-3)!important}
+body.velho .veic, body.velho .alvo{border-color:var(--rule)!important}
+body.velho .ponto, body.velho .avanco i, body.velho .barra i,
+body.velho .veic .op b{background:var(--ink-3)!important; color:var(--ink-3)!important}
+body.velho .kpi{border-bottom-color:var(--navy-3)!important}
+
+/* Estado vazio: sem veículo hoje, ou sem conseguir ler o arquivo. Melhor
+   dizer o que houve do que deixar a tela anterior congelada na parede. */
+.nada{flex:1; display:flex; align-items:center; justify-content:center;
+  text-align:center; font-family:var(--cond); font-weight:600;
+  font-size:calc(var(--u)*2.2); color:var(--ink-3); padding:calc(var(--u)*2)}
+
+.rodape-fixo{position:fixed; right:calc(var(--u)*1.5); bottom:calc(var(--u)*.2);
+  font-family:var(--mono); font-size:calc(var(--u)*.75); letter-spacing:.08em;
+  text-transform:uppercase; color:var(--ink-3)}
+
 </style>
 </head>
 <body>
@@ -272,96 +322,41 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
 <div class="faixa">
   <div>
     <h1 id="titulo">Ritmo <em>da operação</em></h1>
-    <div class="sub" id="sub">Café · CD Sumaré, Guarulhos, Itapeva, Meso Bauru, Meso Marília e SJC</div>
+    <div class="sub" id="sub">Carregando…</div>
   </div>
   <div class="regra">
-    Somente o dia de hoje · janela 08:00–18:00<br>
+    Somente o dia de hoje · janela <span id="janela">08:00–18:00</span><br>
     Ritmo do veículo = janela desde a saída ÷ entregas dele
   </div>
-  <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></div>
-  <div class="relogio">14:30<span>Quarta, 02 set</span></div>
+  <div class="dots" id="dots"></div>
+  <div class="relogio" id="relogio">--:--<span id="data">—</span></div>
 </div>
 
-<div class="telas">
+<!-- Faixa de dado velho. O aperto é calculado contra o relógio: com dado de
+     duas horas atrás a tela pintaria de vermelho quem já entregou tudo. Em vez
+     de mentir com confiança, ela avisa e apaga as cores. -->
+<div class="alerta" id="alerta" hidden></div>
 
-  <!-- ============ 1 - o dia de relance ============ -->
-  <section class="tela on" data-titulo="Ritmo|da operação"
-           data-sub="Café · CD Sumaré, Guarulhos, Itapeva, Meso Bauru, Meso Marília e SJC">
-    <div class="numeros">
-      <div class="kpi"><div class="rot">Notas de hoje</div><div class="val">218</div>
-        <div class="nota">27 veículos · 6 praças</div></div>
-      <div class="kpi k-ok"><div class="rot">Entregues</div><div class="val">156</div>
-        <div class="nota">71.6% · última 14:23</div></div>
-      <div class="kpi"><div class="rot">Pendentes</div><div class="val">62</div>
-        <div class="nota">em 17 veículos</div></div>
-      <div class="kpi k-acao"><div class="rot">Ação — vermelho</div><div class="val">3</div>
-        <div class="nota">veículos · 22 entregas</div></div>
-      <div class="kpi k-at"><div class="rot">Atenção — amarelo</div><div class="val">4</div>
-        <div class="nota">veículos · 17 entregas</div></div>
-      <div class="kpi"><div class="rot">Adesão GreenMile</div><div class="val">85%</div>
-        <div class="nota">133 de 156 entregas</div></div>
-    </div>
+<div class="telas" id="telas">
+
+  <section class="tela" data-titulo="Ritmo|da operação" data-sub="">
+    <div class="numeros" id="kpis"></div>
     <div class="corpo c2">
       <section class="bloco">
         <h2>Onde focar agora <em>por entregas travadas</em></h2>
-        <div class="focos">
-          <div class="foco cr"><div class="qtd">22</div><div>
-            <div class="titulo">Entregas em veículo que não fecha as 18h</div>
-            <div class="onde">Itapeva 1 · Meso Bauru 1 · CD Sumaré 1 — reforço ou avisar o cliente</div></div></div>
-          <div class="foco at"><div class="qtd">17</div><div>
-            <div class="titulo">Entregas que só fecham se o veículo apertar</div>
-            <div class="onde">Guarulhos 2 · SJC 1 · Meso Marília 1 — cobrar baixa agora</div></div></div>
-          <div class="foco at"><div class="qtd">15</div><div>
-            <div class="titulo">Notas sem apontamento do SAC</div>
-            <div class="onde">Itapeva 6 · Guarulhos 4 · SJC 2 — desfecho não lançado</div></div></div>
-          <div class="foco at"><div class="qtd">23</div><div>
-            <div class="titulo">Entregue na planilha, sem baixa no GreenMile</div>
-            <div class="onde">Itapeva 7 · Guarulhos 6 · SJC 4 — adesão do motorista</div></div></div>
-        </div>
+        <div class="focos" id="focos"></div>
       </section>
       <section class="bloco">
         <h2>Praças <em>hoje</em></h2>
         <table>
           <thead><tr><th>Praça</th><th>Veíc.</th><th>Notas</th><th>Entr.</th><th>Pend.</th>
             <th>Ação</th><th>Atenç.</th></tr></thead>
-          <tbody>
-        <tr class="cr">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Itapeva</span></td>
-          <td>5</td><td>41</td><td>22</td><td>19</td>
-          <td class="c-cr">1</td><td class="c-at">—</td>
-        </tr>
-        <tr class="cr">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Bauru</span></td>
-          <td>3</td><td>29</td><td>20</td><td>9</td>
-          <td class="c-cr">1</td><td class="c-at">—</td>
-        </tr>
-        <tr class="cr">
-          <td class="praca"><span class="pr"><i class="ponto"></i>CD Sumaré</span></td>
-          <td>4</td><td>33</td><td>26</td><td>7</td>
-          <td class="c-cr">1</td><td class="c-at">—</td>
-        </tr>
-        <tr class="at">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Guarulhos</span></td>
-          <td>7</td><td>43</td><td>33</td><td>10</td>
-          <td class="c-cr">—</td><td class="c-at">2</td>
-        </tr>
-        <tr class="at">
-          <td class="praca"><span class="pr"><i class="ponto"></i>SJC</span></td>
-          <td>6</td><td>50</td><td>39</td><td>11</td>
-          <td class="c-cr">—</td><td class="c-at">1</td>
-        </tr>
-        <tr class="at">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Marília</span></td>
-          <td>2</td><td>22</td><td>16</td><td>6</td>
-          <td class="c-cr">—</td><td class="c-at">1</td>
-        </tr>
-          </tbody>
+          <tbody id="tbPracas"></tbody>
         </table>
       </section>
     </div>
   </section>
 
-  <!-- ============ 2 - quem precisa de acao, com nome ============ -->
   <section class="tela" data-titulo="Ação|agora"
            data-sub="Veículos que não fecham o dia sem intervenção — do mais apertado ao menos">
     <div class="legenda">
@@ -369,341 +364,47 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
       <span class="l-at"><i></i>Atenção — fecha, mas só apertando</span>
       <span style="margin-left:auto">O número grande é o aperto: quantas vezes mais rápido do que o plano dele</span>
     </div>
-    <div class="alvos">
-      <div class="alvo critico">
-        <div class="cab"><span class="sel">Ação</span><span class="ap">2.9×</span></div>
-        <div class="nome">Adriano Souza</div>
-        <div class="meta">RTA·4C19 · Itapeva · Itararé</div>
-        <div class="numeros2">
-          <span><b>0/11</b>entregue</span>
-          <span><b>11</b>pendente</span>
-          <span><b>19<u>min</u></b>exige</span>
-          <span><b>55<u>min</u></b>plano</span>
-        </div>
-        <div class="acao">Mandar reforço ou avisar o cliente</div>
-      </div>
-      <div class="alvo critico">
-        <div class="cab"><span class="sel">Ação</span><span class="ap">1.9×</span></div>
-        <div class="nome">Cleber Antunes</div>
-        <div class="meta">FQK·2H88 · Meso Bauru · Jaú</div>
-        <div class="numeros2">
-          <span><b>3/9</b>entregue</span>
-          <span><b>6</b>pendente</span>
-          <span><b>35<u>min</u></b>exige</span>
-          <span><b>67<u>min</u></b>plano</span>
-        </div>
-        <div class="acao">Mandar reforço ou avisar o cliente</div>
-      </div>
-      <div class="alvo critico">
-        <div class="cab"><span class="sel">Ação</span><span class="ap">1.6×</span></div>
-        <div class="nome">Wesley Marinho</div>
-        <div class="meta">BXD·7J05 · CD Sumaré · Americana</div>
-        <div class="numeros2">
-          <span><b>3/8</b>entregue</span>
-          <span><b>5</b>pendente</span>
-          <span><b>42<u>min</u></b>exige</span>
-          <span><b>68<u>min</u></b>plano</span>
-        </div>
-        <div class="acao">Mandar reforço ou avisar o cliente</div>
-      </div>
-      <div class="alvo atencao">
-        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.4×</span></div>
-        <div class="nome">Rogério Bastos</div>
-        <div class="meta">MPL·1A34 · Guarulhos · Arujá</div>
-        <div class="numeros2">
-          <span><b>4/8</b>entregue</span>
-          <span><b>4</b>pendente</span>
-          <span><b>52<u>min</u></b>exige</span>
-          <span><b>75<u>min</u></b>plano</span>
-        </div>
-        <div class="acao">Cobrar baixa — liga para o motorista</div>
-      </div>
-      <div class="alvo atencao">
-        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.1×</span></div>
-        <div class="nome">Tiago Ferrari</div>
-        <div class="meta">JCV·9B72 · SJC · Jacareí</div>
-        <div class="numeros2">
-          <span><b>6/10</b>entregue</span>
-          <span><b>4</b>pendente</span>
-          <span><b>52<u>min</u></b>exige</span>
-          <span><b>60<u>min</u></b>plano</span>
-        </div>
-        <div class="acao">Cobrar baixa — liga para o motorista</div>
-      </div>
-      <div class="alvo atencao">
-        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.1×</span></div>
-        <div class="nome">Marcos Vinícius</div>
-        <div class="meta">KHT·5D61 · Guarulhos · Mairiporã</div>
-        <div class="numeros2">
-          <span><b>3/6</b>entregue</span>
-          <span><b>3</b>pendente</span>
-          <span><b>70<u>min</u></b>exige</span>
-          <span><b>75<u>min</u></b>plano</span>
-        </div>
-        <div class="acao">Cobrar baixa — liga para o motorista</div>
-      </div>
-      <div class="alvo atencao">
-        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.0×</span></div>
-        <div class="nome">Elias Prado</div>
-        <div class="meta">GBS·3M27 · Meso Marília · Garça</div>
-        <div class="numeros2">
-          <span><b>4/10</b>entregue</span>
-          <span><b>6</b>pendente</span>
-          <span><b>35<u>min</u></b>exige</span>
-          <span><b>36<u>min</u></b>plano</span>
-        </div>
-        <div class="acao">Cobrar baixa — liga para o motorista</div>
-      </div>
-    </div>
+    <div class="alvos" id="alvos"></div>
   </section>
 
-  <!-- ============ 3 - onde esta cada veiculo ============ -->
-  <section class="tela" data-titulo="Frota|de hoje"
-           data-sub="27 veículos · do mais urgente ao menos · finalizados no fim">
+  <section class="tela" data-titulo="Frota|de hoje" data-sub="">
     <div class="legenda">
       <span class="l-cr"><i></i>Ação</span>
       <span class="l-at"><i></i>Atenção</span>
       <span class="l-ok"><i></i>Em dia</span>
       <span style="margin-left:auto">Barra = entregue · traço = onde deveria estar agora, no plano dele</span>
     </div>
-    <div class="frota">
-      <div class="veic critico">
-        <div class="op">Itapeva · 08:00<b>Ação</b></div>
-        <div class="l1"><span class="placa">RTA·4C19</span><span class="prog">0<u>/11</u></span></div>
-        <div class="avanco"><i style="width:0%"></i><b style="left:64%"></b></div>
-        <div class="quem">11 pend · exige 1 a cada 19 min</div>
-      </div>
-      <div class="veic critico">
-        <div class="op">Meso Bauru · 08:00<b>Ação</b></div>
-        <div class="l1"><span class="placa">FQK·2H88</span><span class="prog">3<u>/9</u></span></div>
-        <div class="avanco"><i style="width:33%"></i><b style="left:56%"></b></div>
-        <div class="quem">6 pend · exige 1 a cada 35 min</div>
-      </div>
-      <div class="veic critico">
-        <div class="op">CD Sumaré · 09:00<b>Ação</b></div>
-        <div class="l1"><span class="placa">BXD·7J05</span><span class="prog">3<u>/8</u></span></div>
-        <div class="avanco"><i style="width:38%"></i><b style="left:50%"></b></div>
-        <div class="quem">5 pend · exige 1 a cada 42 min</div>
-      </div>
-      <div class="veic atencao">
-        <div class="op">Guarulhos · 08:00<b>Atenção</b></div>
-        <div class="l1"><span class="placa">MPL·1A34</span><span class="prog">4<u>/8</u></span></div>
-        <div class="avanco"><i style="width:50%"></i><b style="left:62%"></b></div>
-        <div class="quem">4 pend · exige 1 a cada 52 min</div>
-      </div>
-      <div class="veic atencao">
-        <div class="op">SJC · 08:00<b>Atenção</b></div>
-        <div class="l1"><span class="placa">JCV·9B72</span><span class="prog">6<u>/10</u></span></div>
-        <div class="avanco"><i style="width:60%"></i><b style="left:60%"></b></div>
-        <div class="quem">4 pend · exige 1 a cada 52 min</div>
-      </div>
-      <div class="veic atencao">
-        <div class="op">Guarulhos · 10:30<b>Atenção</b></div>
-        <div class="l1"><span class="placa">KHT·5D61</span><span class="prog">3<u>/6</u></span></div>
-        <div class="avanco"><i style="width:50%"></i><b style="left:50%"></b></div>
-        <div class="quem">3 pend · exige 1 a cada 70 min</div>
-      </div>
-      <div class="veic atencao">
-        <div class="op">Meso Marília · 12:00<b>Atenção</b></div>
-        <div class="l1"><span class="placa">GBS·3M27</span><span class="prog">4<u>/10</u></span></div>
-        <div class="avanco"><i style="width:40%"></i><b style="left:40%"></b></div>
-        <div class="quem">6 pend · exige 1 a cada 35 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">SJC · 11:00</div>
-        <div class="l1"><span class="placa">CGP·5R89</span><span class="prog">5<u>/10</u></span></div>
-        <div class="avanco"><i style="width:50%"></i><b style="left:50%"></b></div>
-        <div class="quem">5 pend · exige 1 a cada 42 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">Itapeva · 11:30</div>
-        <div class="l1"><span class="placa">MJT·1V66</span><span class="prog">3<u>/6</u></span></div>
-        <div class="avanco"><i style="width:50%"></i><b style="left:33%"></b></div>
-        <div class="quem">3 pend · exige 1 a cada 70 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">Meso Bauru · 08:00</div>
-        <div class="l1"><span class="placa">PDR·8K14</span><span class="prog">7<u>/10</u></span></div>
-        <div class="avanco"><i style="width:70%"></i><b style="left:60%"></b></div>
-        <div class="quem">3 pend · exige 1 a cada 70 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">SJC · 10:00</div>
-        <div class="l1"><span class="placa">HFD·4G47</span><span class="prog">4<u>/6</u></span></div>
-        <div class="avanco"><i style="width:67%"></i><b style="left:50%"></b></div>
-        <div class="quem">2 pend · exige 1 a cada 105 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">Itapeva · 09:00</div>
-        <div class="l1"><span class="placa">LCK·7B03</span><span class="prog">5<u>/7</u></span></div>
-        <div class="avanco"><i style="width:71%"></i><b style="left:57%"></b></div>
-        <div class="quem">2 pend · exige 1 a cada 105 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">Itapeva · 08:00</div>
-        <div class="l1"><span class="placa">ZRM·2P58</span><span class="prog">6<u>/8</u></span></div>
-        <div class="avanco"><i style="width:75%"></i><b style="left:62%"></b></div>
-        <div class="quem">2 pend · exige 1 a cada 105 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">Guarulhos · 09:30</div>
-        <div class="l1"><span class="placa">XSB·9L20</span><span class="prog">5<u>/7</u></span></div>
-        <div class="avanco"><i style="width:71%"></i><b style="left:57%"></b></div>
-        <div class="quem">2 pend · exige 1 a cada 105 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">CD Sumaré · 08:30</div>
-        <div class="l1"><span class="placa">TVL·6F92</span><span class="prog">6<u>/8</u></span></div>
-        <div class="avanco"><i style="width:75%"></i><b style="left:62%"></b></div>
-        <div class="quem">2 pend · exige 1 a cada 105 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">Guarulhos · 13:00</div>
-        <div class="l1"><span class="placa">VNB·8T41</span><span class="prog">3<u>/4</u></span></div>
-        <div class="avanco"><i style="width:75%"></i><b style="left:25%"></b></div>
-        <div class="quem">1 pend · exige 1 a cada 210 min</div>
-      </div>
-      <div class="veic rota">
-        <div class="op">Itapeva · 08:00</div>
-        <div class="l1"><span class="placa">DKS·3H72</span><span class="prog">8<u>/9</u></span></div>
-        <div class="avanco"><i style="width:89%"></i><b style="left:56%"></b></div>
-        <div class="quem">1 pend · exige 1 a cada 210 min</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">CD Sumaré · 08:00</div>
-        <div class="l1"><span class="placa">QLF·2X15</span><span class="prog">9<u>/9</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:56%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">CD Sumaré · 08:00</div>
-        <div class="l1"><span class="placa">BTM·6C38</span><span class="prog">8<u>/8</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:62%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">Meso Bauru · 08:00</div>
-        <div class="l1"><span class="placa">JRV·4N90</span><span class="prog">10<u>/10</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:60%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">Meso Marília · 08:00</div>
-        <div class="l1"><span class="placa">SHK·7D23</span><span class="prog">12<u>/12</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:58%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">SJC · 08:00</div>
-        <div class="l1"><span class="placa">PZC·1M54</span><span class="prog">9<u>/9</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:56%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">SJC · 08:00</div>
-        <div class="l1"><span class="placa">GDL·9F07</span><span class="prog">8<u>/8</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:62%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">SJC · 08:00</div>
-        <div class="l1"><span class="placa">KBR·3S61</span><span class="prog">7<u>/7</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:57%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">Guarulhos · 08:00</div>
-        <div class="l1"><span class="placa">TXW·5J28</span><span class="prog">7<u>/7</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:57%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">Guarulhos · 08:00</div>
-        <div class="l1"><span class="placa">MCN·8V13</span><span class="prog">6<u>/6</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:50%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-      <div class="veic ok">
-        <div class="op">Guarulhos · 08:00</div>
-        <div class="l1"><span class="placa">FSD·2K76</span><span class="prog">5<u>/5</u></span></div>
-        <div class="avanco"><i style="width:100%"></i><b style="left:60%"></b></div>
-        <div class="quem">finalizado</div>
-      </div>
-    </div>
+    <div class="frota" id="frota"></div>
   </section>
 
-  <!-- ============ 4 - qualidade do apontamento (uso interno) ============ -->
-  <section class="tela" data-titulo="Apontamento|e GreenMile"
-           data-sub="Uso interno da equipe Mandalog — não expor ao cliente">
-    <div class="numeros">
-      <div class="kpi"><div class="rot">Entregas de hoje</div><div class="val">156</div>
-        <div class="nota">de 218 notas</div></div>
-      <div class="kpi k-at"><div class="rot">Sem apontamento</div><div class="val">15</div>
-        <div class="nota">desfecho não lançado</div></div>
-      <div class="kpi k-acao"><div class="rot">Divergência SAC × GM</div><div class="val">12</div>
-        <div class="nota">GM baixou, planilha não</div></div>
-      <div class="kpi k-at"><div class="rot">Sem baixa no GreenMile</div><div class="val">23</div>
-        <div class="nota">entregue só na planilha</div></div>
-      <div class="kpi k-ok"><div class="rot">Adesão GreenMile</div><div class="val">85%</div>
-        <div class="nota">133 de 156 entregas</div></div>
-      <div class="kpi"><div class="rot">Notas sem peso</div><div class="val">31</div>
-        <div class="nota">cadastro incompleto</div></div>
-    </div>
+  <!-- Adesão ao GreenMile e notas sem apontamento, os dois por praça. Ambos já
+       são indicadores do painel do cliente. As divergências de apontamento
+       (GreenMile baixou e o SAC não, nota sem peso) NÃO entram aqui: o
+       invariante 6 as tirou do painel em 05/08/2026, e este arquivo é público
+       sem senha, então valeria o mesmo furo. -->
+  <section class="tela" data-titulo="Adesão|GreenMile" data-sub="">
+    <div class="numeros" id="kpis4"></div>
     <div class="corpo c2">
       <section class="bloco">
-        <h2>Qualidade por praça <em>pior adesão primeiro</em></h2>
+        <h2>Por praça <em>pior adesão primeiro</em></h2>
         <table>
-          <thead><tr><th>Praça</th><th>Entregas</th><th>S/ apont.</th><th>Diverg.</th>
+          <thead><tr><th>Praça</th><th>Entregas</th><th>Com baixa</th><th>S/ apont.</th>
             <th>Adesão GreenMile</th></tr></thead>
-          <tbody>
-        <tr class="cr">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Itapeva</span></td>
-          <td>22</td><td class="c-at">6</td><td class="c-cr">4</td>
-          <td class="comBarra"><span class="env"><span class="barra"><i class="g-cr" style="width:68%"></i></span>68%</span></td>
-        </tr>
-        <tr class="cr">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Guarulhos</span></td>
-          <td>33</td><td class="c-at">4</td><td class="c-cr">3</td>
-          <td class="comBarra"><span class="env"><span class="barra"><i class="g-at" style="width:82%"></i></span>82%</span></td>
-        </tr>
-        <tr class="ok">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Marília</span></td>
-          <td>16</td><td class="c-at">—</td><td class="c-cr">1</td>
-          <td class="comBarra"><span class="env"><span class="barra"><i class="g-at" style="width:88%"></i></span>88%</span></td>
-        </tr>
-        <tr class="at">
-          <td class="praca"><span class="pr"><i class="ponto"></i>SJC</span></td>
-          <td>39</td><td class="c-at">2</td><td class="c-cr">2</td>
-          <td class="comBarra"><span class="env"><span class="barra"><i class="g-ok" style="width:90%"></i></span>90%</span></td>
-        </tr>
-        <tr class="at">
-          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Bauru</span></td>
-          <td>20</td><td class="c-at">2</td><td class="c-cr">1</td>
-          <td class="comBarra"><span class="env"><span class="barra"><i class="g-ok" style="width:90%"></i></span>90%</span></td>
-        </tr>
-        <tr class="at">
-          <td class="praca"><span class="pr"><i class="ponto"></i>CD Sumaré</span></td>
-          <td>26</td><td class="c-at">1</td><td class="c-cr">1</td>
-          <td class="comBarra"><span class="env"><span class="barra"><i class="g-ok" style="width:92%"></i></span>92%</span></td>
-        </tr>
-          </tbody>
+          <tbody id="tbQual"></tbody>
         </table>
       </section>
       <section class="bloco">
-        <h2>O que fazer</h2>
-        <div class="focos">
-          <div class="foco cr"><div class="qtd">6</div><div>
-            <div class="titulo">Itapeva concentra o problema</div>
-            <div class="onde">68% de adesão · 6 notas sem apontamento</div></div></div>
-          <div class="foco at"><div class="qtd">12</div><div>
-            <div class="titulo">GreenMile entregou, planilha não</div>
-            <div class="onde">Conferir canhoto antes de fechar o dia</div></div></div>
-          <div class="foco at"><div class="qtd">23</div><div>
-            <div class="titulo">Planilha entregou, GreenMile não</div>
-            <div class="onde">Motorista não baixou no aplicativo</div></div></div>
-          <div class="foco ok"><div class="qtd">3</div><div>
-            <div class="titulo">Praças com adesão acima de 90%</div>
-            <div class="onde">CD Sumaré · Meso Bauru · SJC — padrão a manter</div></div></div>
+        <h2>Baixas por hora <em>hoje</em></h2>
+        <div class="medias">
+          <div class="media" style="flex:2">
+            <div class="rot">Entregas baixadas no GreenMile</div>
+            <div class="hoje" id="hoje"></div><div class="horas" id="horas"></div>
+          </div>
+          <div class="media">
+            <div class="rot">Última baixa</div>
+            <div class="val" id="ultimaBaixa">--:--</div>
+            <div class="comp" id="ultimaOnde"></div>
+          </div>
         </div>
       </section>
     </div>
@@ -711,40 +412,417 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
 
 </div>
 
-<div class="maquete">Maquete · números ilustrativos · não lê dado real</div>
+<div class="rodape-fixo" id="rodape"></div>
 
 <script>
-(function(){
-  var telas = document.querySelectorAll('.tela');
-  var dots  = document.querySelectorAll('#dots i');
-  var h1    = document.getElementById('titulo');
-  var sub   = document.getElementById('sub');
-  var i = 0;
+"use strict";
+/* ===========================================================================
+   A torre lê data/tv.json e calcula o ritmo aqui, no navegador.
 
-  function mostrar(n){
-    telas[i].classList.remove('on'); dots[i].classList.remove('on');
-    i = n;
-    telas[i].classList.add('on');   dots[i].classList.add('on');
-    var t = telas[i].dataset.titulo.split('|');
-    h1.innerHTML = t[0] + ' <em>' + t[1] + '</em>';
-    sub.textContent = telas[i].dataset.sub;
+   O cálculo é do cliente de propósito. O aperto depende do relógio, e o robô
+   publica de hora em hora: congelado na coleta, o risco ficaria velho antes de
+   aparecer na parede. Aqui ele é refeito a cada 20 s contra a hora corrente,
+   sobre os fatos que o robô publicou (quantas entregas, quantas já saíram, que
+   horas o veículo começou).
+=========================================================================== */
+
+var FONTE = "data/tv.json";
+var MS_FETCH = 5 * 60 * 1000;   // buscar dado novo
+var MS_TICK  = 20 * 1000;       // recalcular o aperto contra o relógio
+var MS_TELA  = 30 * 1000;       // girar as telas
+var VELHO_MIN = 30;             // acima disso o dado não sustenta o semáforo
+
+var dados = null, iTela = 0, telas, dots;
+
+function $(id){ return document.getElementById(id); }
+function el(tag, cls, txt){
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (txt !== undefined) e.textContent = txt;
+  return e;
+}
+function min2hm(m){
+  m = Math.max(0, Math.round(m));
+  return Math.floor(m / 60) + "h" + String(m % 60).padStart(2, "0");
+}
+function hm2min(s){
+  var p = String(s || "").split(":");
+  return p.length === 2 ? (+p[0]) * 60 + (+p[1]) : 0;
+}
+function agoraMin(){
+  var d = new Date();
+  return d.getHours() * 60 + d.getMinutes() + d.getSeconds() / 60;
+}
+
+/* ---------------------------------------------------------------------------
+   O cálculo de ritmo. Um veículo, um instante.
+
+     janela = fecha - saída (nunca antes da abertura)
+     plano  = janela / entregas do veículo
+     exige  = tempo que resta / entregas pendentes
+     aperto = plano / exige
+
+   Quem saiu 12:00 tem janela menor e plano mais apertado, e é comparado com o
+   próprio plano — não com o de quem saiu 08:00.
+--------------------------------------------------------------------------- */
+function avaliar(v, agora, jan){
+  var saida = Math.max(jan.abre, hm2min(v.saida));
+  var janela = Math.max(1, jan.fecha - saida);
+  var plano = janela / v.total;
+  var resta = jan.fecha - agora;
+  var pend = v.total - v.ok;
+
+  var r = {
+    saida: saida, janela: janela, plano: plano, pend: pend, resta: resta,
+    esperado: Math.max(0, Math.min(v.total, Math.floor((agora - saida) / plano)))
+  };
+
+  if (pend <= 0){
+    r.estado = "ok"; r.aperto = 0; r.exige = 0; r.urg = "";
+    return r;
   }
-  setInterval(function(){ mostrar((i + 1) % telas.length); }, 30000);
-}());
+  if (resta <= 0){
+    // Passou das 18h com nota em aberto: não há ritmo que resolva.
+    r.estado = "critico"; r.aperto = Infinity; r.exige = 0; r.urg = "Ação";
+    return r;
+  }
+  r.exige = resta / pend;
+  r.aperto = plano / r.exige;
+  r.estado = r.aperto > dados.limite_aperto ? "critico"
+           : r.aperto > 1 ? "atencao" : "rota";
+  r.urg = r.estado === "critico" ? "Ação" : r.estado === "atencao" ? "Atenção" : "";
+  return r;
+}
+
+function ordenar(a, b){
+  // Finalizados no fim; entre os demais, do mais apertado ao menos.
+  if (!a.c.pend !== !b.c.pend) return a.c.pend ? -1 : 1;
+  if (b.c.aperto !== a.c.aperto) return b.c.aperto - a.c.aperto;
+  return b.c.pend - a.c.pend;
+}
+
+function idadeMin(){
+  if (!dados || !dados.gerado_em) return Infinity;
+  return (Date.now() - new Date(dados.gerado_em).getTime()) / 60000;
+}
+
+/* --------------------------------- telas --------------------------------- */
+
+function cardVeiculo(v){
+  var c = v.c, d = el("div", "veic " + c.estado);
+  var op = el("div", "op");
+  op.appendChild(document.createTextNode(v.op.replace(/^Café · /, "") + " · " + v.saida));
+  if (c.urg) op.appendChild(el("b", null, c.urg));
+  d.appendChild(op);
+
+  var l1 = el("div", "l1");
+  l1.appendChild(el("span", "placa", v.placa));
+  var pr = el("span", "prog", String(v.ok));
+  pr.appendChild(el("u", null, "/" + v.total));
+  l1.appendChild(pr);
+  d.appendChild(l1);
+
+  var av = el("div", "avanco");
+  var i = el("i"); i.style.width = (v.ok / v.total * 100) + "%";
+  var b = el("b"); b.style.left = (c.esperado / v.total * 100) + "%";
+  av.appendChild(i); av.appendChild(b);
+  d.appendChild(av);
+
+  d.appendChild(el("div", "quem", !c.pend ? "finalizado"
+    : c.aperto === Infinity ? c.pend + " pend · fora da janela"
+    : c.pend + " pend · exige 1 a cada " + Math.round(c.exige) + " min"));
+  return d;
+}
+
+function cardAlvo(v){
+  var c = v.c, d = el("div", "alvo " + c.estado);
+  var cab = el("div", "cab");
+  cab.appendChild(el("span", "sel", c.urg));
+  cab.appendChild(el("span", "ap", c.aperto === Infinity ? "—" : c.aperto.toFixed(1) + "×"));
+  d.appendChild(cab);
+  d.appendChild(el("div", "nome", v.motorista || "sem motorista atribuído"));
+  d.appendChild(el("div", "meta",
+    v.placa + " · " + v.op.replace(/^Café · /, "") + (v.cidade ? " · " + v.cidade : "")));
+
+  var n = el("div", "numeros2");
+  [[v.ok + "/" + v.total, "entregue", ""],
+   [String(c.pend), "pendente", ""],
+   [c.exige ? String(Math.round(c.exige)) : "—", "exige", c.exige ? "min" : ""],
+   [String(Math.round(c.plano)), "plano", "min"]].forEach(function(x){
+    var s = el("span");
+    var bb = el("b", null, x[0]);
+    if (x[2]) bb.appendChild(el("u", null, x[2]));
+    s.appendChild(bb);
+    s.appendChild(document.createTextNode(x[1]));
+    n.appendChild(s);
+  });
+  d.appendChild(n);
+  d.appendChild(el("div", "acao", c.estado === "critico"
+    ? "Mandar reforço ou avisar o cliente"
+    : "Cobrar baixa — liga para o motorista"));
+  return d;
+}
+
+function kpi(pai, cls, rot, val, nota){
+  var d = el("div", "kpi" + (cls ? " " + cls : ""));
+  d.appendChild(el("div", "rot", rot));
+  d.appendChild(el("div", "val", val));
+  d.appendChild(el("div", "nota", nota));
+  pai.appendChild(d);
+}
+
+function foco(pai, cls, qtd, titulo, onde){
+  var d = el("div", "foco " + cls);
+  d.appendChild(el("div", "qtd", String(qtd)));
+  var t = el("div");
+  t.appendChild(el("div", "titulo", titulo));
+  t.appendChild(el("div", "onde", onde));
+  d.appendChild(t);
+  pai.appendChild(d);
+}
+
+function porOp(lista, filtro){
+  var c = {};
+  lista.forEach(function(v){ if (filtro(v)) c[v.op] = (c[v.op] || 0) + 1; });
+  return Object.keys(c).sort(function(a, b){ return c[b] - c[a]; })
+    .map(function(k){ return k.replace(/^Café · /, "") + " " + c[k]; }).join(" · ");
+}
+
+function vazio(msg){
+  ["kpis", "focos", "alvos", "frota", "kpis4"].forEach(function(id){ $(id).textContent = ""; });
+  ["tbPracas", "tbQual"].forEach(function(id){ $(id).textContent = ""; });
+  var d = el("div", "nada", msg);
+  $("focos").appendChild(d);
+}
+
+function render(){
+  if (!dados) return;
+  var jan = { abre: hm2min(dados.janela.abre), fecha: hm2min(dados.janela.fecha) };
+  var agora = agoraMin();
+  var vs = dados.veiculos.map(function(v){
+    var o = Object.assign({}, v); o.c = avaliar(v, agora, jan); return o;
+  });
+  vs.sort(ordenar);
+
+  var velho = idadeMin() > VELHO_MIN;
+  document.body.classList.toggle("velho", velho);
+  var al = $("alerta");
+  al.hidden = !velho;
+  if (velho){
+    al.textContent = "Dado de " + new Date(dados.gerado_em)
+      .toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })
+      + " — há " + min2hm(idadeMin()) + ". O semáforo está desligado até o robô atualizar.";
+  }
+
+  $("janela").textContent = dados.janela.abre + "–" + dados.janela.fecha;
+  $("rodape").textContent = "Atualizado " + new Date(dados.gerado_em)
+    .toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })
+    + " · o robô publica de hora em hora · a tela recalcula o ritmo a cada 20 s";
+
+  if (!vs.length){
+    vazio("Nenhum veículo com saída hoje.");
+    telas[0].dataset.sub = "Sem operação para acompanhar";
+    if (iTela === 0) $("sub").textContent = telas[0].dataset.sub;
+    return;
+  }
+
+  var tot = 0, ok = 0, gm = 0, sap = 0;
+  vs.forEach(function(v){ tot += v.total; ok += v.ok; gm += v.gm; sap += v.semapont; });
+  var verm = vs.filter(function(v){ return v.c.estado === "critico"; });
+  var amar = vs.filter(function(v){ return v.c.estado === "atencao"; });
+  var pv = verm.reduce(function(s, v){ return s + v.c.pend; }, 0);
+  var pa = amar.reduce(function(s, v){ return s + v.c.pend; }, 0);
+  var emRota = vs.filter(function(v){ return v.c.pend; }).length;
+  var pracasN = {}; vs.forEach(function(v){ pracasN[v.op] = 1; });
+
+  /* ---- tela 1 ---- */
+  var k = $("kpis"); k.textContent = "";
+  kpi(k, "", "Notas de hoje", String(tot),
+      vs.length + " veículos · " + Object.keys(pracasN).length + " praças");
+  kpi(k, "bom k-ok", "Entregues", String(ok),
+      (tot ? (ok / tot * 100).toFixed(1) : "0") + "%");
+  kpi(k, "", "Pendentes", String(tot - ok), "em " + emRota + " veículos");
+  kpi(k, "k-acao", "Ação — vermelho", String(verm.length), "veículos · " + pv + " entregas");
+  kpi(k, "k-at", "Atenção — amarelo", String(amar.length), "veículos · " + pa + " entregas");
+  kpi(k, "", "Adesão GreenMile", (ok ? Math.round(gm / ok * 100) : 0) + "%",
+      gm + " de " + ok + " entregas");
+
+  var f = $("focos"); f.textContent = "";
+  foco(f, "cr", pv, "Entregas em veículo que não fecha as 18h",
+       (porOp(vs, function(v){ return v.c.estado === "critico"; }) || "nenhum")
+       + " — reforço ou avisar o cliente");
+  foco(f, "at", pa, "Entregas que só fecham se o veículo apertar",
+       (porOp(vs, function(v){ return v.c.estado === "atencao"; }) || "nenhum")
+       + " — cobrar baixa agora");
+  foco(f, "at", sap, "Notas sem apontamento do SAC",
+       (porOp(vs, function(v){ return v.semapont > 0; }) || "nenhuma")
+       + " — desfecho não lançado");
+  foco(f, ok - gm > 0 ? "at" : "ok", ok - gm, "Entregue sem baixa no GreenMile",
+       (porOp(vs, function(v){ return v.ok - v.gm > 0; }) || "nenhuma")
+       + " — adesão do motorista");
+
+  /* ---- praças ---- */
+  var praca = {};
+  vs.forEach(function(v){
+    var p = praca[v.op] || (praca[v.op] = { op: v.op, veic: 0, total: 0, ok: 0,
+                                            gm: 0, sap: 0, cr: 0, at: 0 });
+    p.veic++; p.total += v.total; p.ok += v.ok; p.gm += v.gm; p.sap += v.semapont;
+    if (v.c.estado === "critico") p.cr++;
+    if (v.c.estado === "atencao") p.at++;
+  });
+  var lp = Object.keys(praca).map(function(x){ return praca[x]; });
+
+  var tb = $("tbPracas"); tb.textContent = "";
+  lp.slice().sort(function(a, b){ return b.cr - a.cr || b.at - a.at || b.total - a.total; })
+    .forEach(function(p){
+      var tr = el("tr", p.cr ? "cr" : p.at ? "at" : "ok");
+      var td = el("td", "praca");
+      var sp = el("span", "pr"); sp.appendChild(el("i", "ponto"));
+      sp.appendChild(document.createTextNode(p.op.replace(/^Café · /, "")));
+      td.appendChild(sp); tr.appendChild(td);
+      [p.veic, p.total, p.ok, p.total - p.ok].forEach(function(n){
+        tr.appendChild(el("td", null, String(n)));
+      });
+      tr.appendChild(el("td", "c-cr", p.cr || "—"));
+      tr.appendChild(el("td", "c-at", p.at || "—"));
+      tb.appendChild(tr);
+    });
+
+  /* ---- tela 2 ---- */
+  var av = $("alvos"); av.textContent = "";
+  var pedem = vs.filter(function(v){ return v.c.estado === "critico" || v.c.estado === "atencao"; });
+  if (!pedem.length){
+    av.appendChild(el("div", "nada", "Nenhum veículo em risco. Todos no ritmo do próprio plano."));
+  } else {
+    var CABEM = 12;
+    pedem.slice(0, CABEM).forEach(function(v){ av.appendChild(cardAlvo(v)); });
+    if (pedem.length > CABEM){
+      var m = el("div", "alvo mais");
+      m.appendChild(el("div", "nome", "+" + (pedem.length - CABEM)));
+      m.appendChild(el("div", "meta", "veículos também precisam de atenção"));
+      av.appendChild(m);
+    }
+  }
+  telas[1].dataset.sub = pedem.length
+    ? pedem.length + " veículos precisam de intervenção — do mais apertado ao menos"
+    : "Nenhum veículo em risco";
+
+  /* ---- tela 3 ---- */
+  var fr = $("frota"); fr.textContent = "";
+  vs.forEach(function(v){ fr.appendChild(cardVeiculo(v)); });
+  fr.style.gridTemplateColumns = "repeat(" +
+    Math.min(9, Math.max(5, Math.ceil(vs.length / 4))) + ",1fr)";
+  telas[2].dataset.sub = vs.length + " veículos · do mais urgente ao menos · finalizados no fim";
+
+  /* ---- tela 4 ---- */
+  var k4 = $("kpis4"); k4.textContent = "";
+  kpi(k4, "", "Entregas de hoje", String(ok), "de " + tot + " notas");
+  kpi(k4, "k-ok", "Adesão GreenMile", (ok ? Math.round(gm / ok * 100) : 0) + "%",
+      gm + " de " + ok + " entregas");
+  kpi(k4, ok - gm > 0 ? "k-at" : "", "Sem baixa no GreenMile", String(ok - gm),
+      "entregue só na planilha");
+  kpi(k4, sap > 0 ? "k-at" : "", "Sem apontamento", String(sap), "desfecho não lançado");
+  kpi(k4, "", "Veículos", String(vs.length),
+      vs.length - emRota + " finalizados · " + emRota + " em rota");
+  kpi(k4, "", "Praças", String(Object.keys(pracasN).length), "com saída hoje");
+
+  var tq = $("tbQual"); tq.textContent = "";
+  lp.slice().sort(function(a, b){
+    return (a.ok ? a.gm / a.ok : 1) - (b.ok ? b.gm / b.ok : 1);
+  }).forEach(function(p){
+    var pc = p.ok ? Math.round(p.gm / p.ok * 100) : 0;
+    var tr = el("tr", pc >= 90 ? "ok" : pc >= 80 ? "at" : "cr");
+    var td = el("td", "praca");
+    var sp = el("span", "pr"); sp.appendChild(el("i", "ponto"));
+    sp.appendChild(document.createTextNode(p.op.replace(/^Café · /, "")));
+    td.appendChild(sp); tr.appendChild(td);
+    tr.appendChild(el("td", null, String(p.ok)));
+    tr.appendChild(el("td", null, String(p.gm)));
+    tr.appendChild(el("td", "c-at", p.sap || "—"));
+
+    var tdb = el("td", "comBarra");
+    var env = el("span", "env");
+    var barra = el("span", "barra");
+    var ii = el("i", pc >= 90 ? "g-ok" : pc >= 80 ? "g-at" : "g-cr");
+    ii.style.width = pc + "%";
+    barra.appendChild(ii); env.appendChild(barra);
+    env.appendChild(document.createTextNode(p.ok ? pc + "%" : "—"));
+    tdb.appendChild(env); tr.appendChild(tdb);
+    tq.appendChild(tr);
+  });
+
+  var hs = dados.baixas_por_hora || [];
+  var pico = hs.reduce(function(m, h){ return Math.max(m, h.n); }, 1);
+  var gh = $("hoje"), gr = $("horas");
+  gh.textContent = ""; gr.textContent = "";
+  hs.forEach(function(h){
+    var i = el("i"); i.style.height = (h.n / pico * 100) + "%"; gh.appendChild(i);
+    gr.appendChild(el("span", null, h.h));
+  });
+  var ultimas = vs.map(function(v){ return v.ultima_baixa; }).filter(Boolean).sort();
+  var ult = ultimas[ultimas.length - 1] || "";
+  $("ultimaBaixa").textContent = ult || "--:--";
+  var quem = vs.filter(function(v){ return v.ultima_baixa === ult; })[0];
+  $("ultimaOnde").textContent = ult && quem
+    ? quem.op.replace(/^Café · /, "") + " · " + quem.placa : "sem baixa registrada hoje";
+
+  telas[0].dataset.sub = Object.keys(praca).map(function(o){
+    return o.replace(/^Café · /, ""); }).sort().join(", ");
+  telas[3].dataset.sub = "Adesão e apontamento por praça";
+  if (telas[iTela]) $("sub").textContent = telas[iTela].dataset.sub;
+}
+
+/* -------------------------------- rodízio -------------------------------- */
+
+function mostrar(n){
+  if (telas[iTela]){ telas[iTela].classList.remove("on"); dots[iTela].classList.remove("on"); }
+  iTela = n;
+  telas[iTela].classList.add("on"); dots[iTela].classList.add("on");
+  var t = telas[iTela].dataset.titulo.split("|");
+  $("titulo").innerHTML = "";
+  $("titulo").appendChild(document.createTextNode(t[0] + " "));
+  $("titulo").appendChild(el("em", null, t[1]));
+  $("sub").textContent = telas[iTela].dataset.sub || "";
+}
+
+function relogio(){
+  var d = new Date();
+  $("relogio").firstChild.nodeValue = d.toLocaleTimeString("pt-BR",
+    { hour: "2-digit", minute: "2-digit" });
+  $("data").textContent = d.toLocaleDateString("pt-BR",
+    { weekday: "long", day: "2-digit", month: "short" });
+}
+
+function buscar(){
+  // Cache-buster: a TV fica semanas sem recarregar, e um proxy no meio do
+  // caminho serviria o mesmo arquivo o dia inteiro.
+  fetch(FONTE + "?t=" + Date.now(), { cache: "no-store" })
+    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(j){ dados = j; render(); })
+    .catch(function(e){
+      // Sem dado, a tela diz que está sem dado. Deixar o quadro anterior
+      // congelado seria pior: ninguém saberia que parou.
+      if (!dados){
+        $("sub").textContent = "Sem dado — " + e.message;
+        vazio("Não foi possível carregar data/tv.json.");
+      }
+    });
+}
+
+telas = document.querySelectorAll(".tela");
+dots = [];
+for (var i = 0; i < telas.length; i++){
+  var d = el("i"); $("dots").appendChild(d); dots.push(d);
+}
+mostrar(0);
+relogio();
+buscar();
+
+setInterval(relogio, 10 * 1000);
+setInterval(render, MS_TICK);
+setInterval(buscar, MS_FETCH);
+setInterval(function(){ mostrar((iTela + 1) % telas.length); }, MS_TELA);
 </script>
 
-<!-- =========================================================================
-     PARA LIGAR NO DADO REAL
-
-     Nada aqui exige coleta nova. O operacao.enc que o painel ja publica traz,
-     por nota: operacao (as 6 pracas ja separadas por MESO), plano, placa,
-     motorista, classe e gm_ok. Agrupando por placa da total e entregues, que
-     e tudo que o calculo de aperto precisa - ele nao depende de horario de
-     baixa, so da contagem e do relogio.
-
-     Falta UM campo que a planilha ainda nao expoe: a HORA da saida. Hoje o
-     build_data.py guarda so a data. Sem ela, todo veiculo e tratado como
-     saida as 08:00, o que pune injustamente quem saiu depois.
-========================================================================= -->
 </body>
 </html>
