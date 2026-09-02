@@ -115,6 +115,12 @@ def main() -> None:
         nota["gm_status"] = g["status"]
         nota["gm_placa"] = g.get("placa") or nota.get("placa")
         nota["gm_atualizado_em"] = g.get("atualizado_em")
+        # Horário real da parada, vindo do GreenMile em UTC. Diferente de
+        # gm_atualizado_em, que é só o carimbo de quando o coletor rodou.
+        # Sondado em 02/09/2026: os atributos válidos são stop.actualArrival e
+        # stop.actualDeparture — as variantes com sufixo "Time" dão erro 500.
+        nota["gm_chegada"] = g.get("chegada") or ""
+        nota["gm_partida"] = g.get("partida") or ""
 
         # Desfecho não fechado no GreenMile só vale onde a planilha também não
         # tem nada. Nunca rebaixa uma nota já apontada.

@@ -80,6 +80,8 @@ HASH = RAIZ / "data" / "tv.hash"
 
 FUSO = timezone(timedelta(hours=-3))
 
+hm = lambda s: int(s[:2]) * 60 + int(s[3:])   # 'HH:MM' -> minutos
+
 # Janela de entrega combinada com a operação. O ritmo de cada veículo sai de
 # quanto sobra dela a partir da saída dele — quem sai mais tarde tem menos
 # tempo para as mesmas notas, e é cobrado por isso, não apesar disso.
@@ -103,23 +105,41 @@ ONDAS = {
 }
 
 
+def hora(iso: str) -> str:
+    """UTC do GreenMile -> 'HH:MM' de Brasília. Vazio se não der para ler.
+
+    O GreenMile devolve "2026-08-26T14:59:42+0000". Sem a conversão, uma
+    entrega das 11:59 apareceria como 14:59 e todo o cálculo de ritmo andaria
+    três horas para a frente.
+    """
+    if not iso:
+        return ""
+    try:
+        return datetime.fromisoformat(iso.replace("+0000", "+00:00")) \
+            .astimezone(FUSO).strftime("%H:%M")
+    except (ValueError, TypeError):
+        return ""
+
+
 def saida_do_veiculo(notas: list[dict]) -> tuple[str, str]:
     """Hora de saída do veículo e de onde ela veio.
 
-    NÃO USAR gm_atualizado_em AQUI.
+    A chegada à primeira parada do GreenMile é a melhor âncora que existe: o
+    veículo já estava em rota antes dela, então a janela sai subestimada, e é
+    esse o erro que se prefere — cobrar um pouco mais, nunca menos.
 
-    Esse campo parece a hora da entrega e não é: o coletor no n8n faz
-    `const agora = new Date().toISOString()` uma vez por execução e carimba
-    todas as linhas com ele. Medido em 02/09/2026 no dado de produção: as 215
-    entregas do dia vieram todas com 16:00 ou 16:01, que foi quando o robô
-    rodou. Usá-lo dava saída de 16:00 para 48 dos 50 veículos, o que encolhe a
-    janela de todo mundo para duas horas e faz o aperto virar ruído.
+    NÃO CONFUNDIR COM gm_atualizado_em. Aquele é o carimbo do coletor: o nó
+    "Achatar por nota" faz `new Date()` uma vez por execução e marca todas as
+    linhas igual. Em 02/09/2026 ele dava 16:00 para 48 dos 50 veículos.
+    O horário de verdade é gm_chegada, de `stop.actualArrival`.
 
-    O consumo do GreenMile é uma projeção explícita de campos (o array
-    `filtros` do nó "Montar consulta"), e nenhum campo de horário de serviço
-    é pedido. Enquanto não for, a melhor fonte é a onda de saída da planilha,
-    grosseira mas verdadeira, com 08:00 como piso.
+    Sem GreenMile na rota, sobra a onda da planilha (1ª/2ª/3ª SAÍDA), que diz
+    o turno e não o minuto, e por fim 08:00.
     """
+    chegadas = sorted(h for h in (hora(n.get("gm_chegada", "")) for n in notas) if h)
+    if chegadas:
+        return chegadas[0], "greenmile"
+
     ondas = [ONDAS[n["onda"]] for n in notas if n.get("onda") in ONDAS]
     if ondas:
         return min(ondas), "onda"
@@ -163,6 +183,9 @@ def main() -> None:
         meta = planos_meta.get(plano, {})
         feitas = [n for n in notas if n["classe"] == "entregue"]
         saida, fonte_saida = saida_do_veiculo(notas)
+        baixas = sorted(h for h in
+                        (hora(n.get("gm_partida") or n.get("gm_chegada", "")) for n in feitas)
+                        if h)
         veiculos.append({
             "plano": plano,
             "op": meta.get("operacao") or notas[0]["operacao"],
@@ -177,6 +200,12 @@ def main() -> None:
             "gm": sum(1 for n in feitas if n["gm_ok"]),
             "saida": saida,
             "saida_fonte": fonte_saida,
+            "ultima_baixa": baixas[-1] if baixas else "",
+            # Ritmo observado: minutos por entrega entre a primeira e a última
+            # baixa. Só existe com duas baixas ou mais — com uma só não há
+            # intervalo para medir, e inventar um seria pior que não ter.
+            "ritmo_real": round((hm(baixas[-1]) - hm(baixas[0])) / (len(baixas) - 1))
+                          if len(baixas) > 1 else 0,
         })
 
     # Do mais carregado ao menos: a ordenação por risco é do navegador, que é
@@ -199,6 +228,11 @@ def main() -> None:
         "limite_aperto": LIMITE_APERTO,
         "veiculos": veiculos,
         "pracas": sorted(pracas.values(), key=lambda p: -p["total"]),
+        "baixas_por_hora": [{"h": h, "n": n} for h, n in sorted(collections.Counter(
+            hora(n.get("gm_partida") or n.get("gm_chegada", ""))[:2]
+            for n in entregas
+            if n["classe"] == "entregue" and (n.get("gm_partida") or n.get("gm_chegada"))
+        ).items()) if h],
     }
 
     # Comparação sem gerado_em: só o conteúdo decide se vale reescrever.

@@ -63,30 +63,30 @@ body{height:100vh; overflow:hidden; background:var(--paper); color:var(--ink);
   display:flex; flex-direction:column}
 
 /* ---- barra de marca: igual à do painel, com as duas marcas ---- */
-.marcas{display:flex; align-items:center; gap:calc(var(--u)*1.5); background:var(--surface);
-  padding:calc(var(--u)*.7) calc(var(--u)*1.5); border-bottom:calc(var(--u)*.32) solid var(--laranja)}
-.marcas img{display:block; height:calc(var(--u)*4); width:auto}
+.marcas{display:flex; align-items:center; gap:calc(var(--u)*1.2); background:var(--surface);
+  padding:calc(var(--u)*.4) calc(var(--u)*1.2); border-bottom:calc(var(--u)*.3) solid var(--laranja)}
+.marcas img{display:block; height:calc(var(--u)*3.2); width:auto}
 .marcas .div{width:1px; height:calc(var(--u)*3.2); background:var(--rule); flex:none}
 .marcas .tag{margin-left:auto; text-align:right; font-family:var(--mono);
-  font-size:calc(var(--u)*.95); letter-spacing:.14em; text-transform:uppercase;
+  font-size:calc(var(--u)*1.66); letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-3); line-height:1.7}
 
 /* ---- faixa navy: a assinatura da torre ---- */
 .faixa{background:var(--navy); color:#fff;
-  padding:calc(var(--u)*1) calc(var(--u)*1.5) calc(var(--u)*1.05);
+  padding:calc(var(--u)*.6) calc(var(--u)*1.2) calc(var(--u)*.7);
   display:flex; align-items:flex-end; gap:calc(var(--u)*1.8)}
 .faixa h1{margin:0; font-family:var(--cond); font-weight:700; text-transform:uppercase;
-  font-size:calc(var(--u)*5); line-height:.92; letter-spacing:-.005em; white-space:nowrap}
+  font-size:calc(var(--u)*5.5); line-height:.92; letter-spacing:-.005em; white-space:nowrap}
 .faixa h1 em{font-style:normal; color:var(--laranja)}
-.faixa .sub{font-family:var(--mono); font-size:calc(var(--u)*.95); letter-spacing:.14em;
+.faixa .sub{font-family:var(--mono); font-size:calc(var(--u)*1.66); letter-spacing:.14em;
   text-transform:uppercase; color:rgba(255,255,255,.66); margin-top:calc(var(--u)*.4)}
 .faixa .regra{margin-left:auto; text-align:right; font-family:var(--mono);
-  font-size:calc(var(--u)*.92); letter-spacing:.1em; text-transform:uppercase;
+  font-size:calc(var(--u)*1.61); letter-spacing:.1em; text-transform:uppercase;
   color:rgba(255,255,255,.58); line-height:1.8}
-.faixa .relogio{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*5.2);
+.faixa .relogio{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*5.72);
   line-height:.88; text-align:right}
 .faixa .relogio span{display:block; font-family:var(--mono); font-weight:400;
-  font-size:calc(var(--u)*.92); letter-spacing:.12em; text-transform:uppercase;
+  font-size:calc(var(--u)*1.61); letter-spacing:.12em; text-transform:uppercase;
   color:rgba(255,255,255,.58); margin-top:calc(var(--u)*.25)}
 .dots{display:flex; gap:calc(var(--u)*.5); align-items:center}
 .dots i{width:calc(var(--u)*.7); height:calc(var(--u)*.7); border-radius:50%;
@@ -96,20 +96,22 @@ body{height:100vh; overflow:hidden; background:var(--paper); color:var(--ink);
 /* ---- telas ---- */
 .telas{position:relative; flex:1; min-height:0}
 .tela{position:absolute; inset:0; display:none; grid-template-rows:auto 1fr;
-  padding:calc(var(--u)*.9) calc(var(--u)*1.5) calc(var(--u)*1.1); gap:calc(var(--u)*.9)}
+  padding:calc(var(--u)*.7) calc(var(--u)*1.2) calc(var(--u)*.9); gap:calc(var(--u)*.7)}
 .tela.on{display:grid}
 .tela.simples{grid-template-rows:auto 1fr}
+/* Numa tela de bloco unico a tabela ocupa tudo que sobra. */
+.tela > .bloco{min-height:0}
 
 /* ---- KPIs: cartões navy, como a faixa de percentuais do painel ---- */
 .numeros{display:grid; grid-template-columns:repeat(6,1fr); gap:calc(var(--u)*.8)}
 .kpi{background:var(--navy); color:#fff;
   padding:calc(var(--u)*.75) calc(var(--u)*1) calc(var(--u)*.85);
   border-bottom:calc(var(--u)*.28) solid var(--navy-3)}
-.kpi .rot{font-family:var(--mono); font-size:calc(var(--u)*.92); letter-spacing:.12em;
+.kpi .rot{font-family:var(--mono); font-size:calc(var(--u)*1.61); letter-spacing:.12em;
   text-transform:uppercase; color:rgba(255,255,255,.66)}
-.kpi .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*6.4);
+.kpi .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*7.04);
   line-height:.92; margin-top:calc(var(--u)*.1)}
-.kpi .nota{font-family:var(--mono); font-size:calc(var(--u)*.95);
+.kpi .nota{font-family:var(--mono); font-size:calc(var(--u)*1.66);
   color:rgba(255,255,255,.66); margin-top:calc(var(--u)*.1)}
 .kpi.k-acao{border-bottom-color:var(--acao)} .kpi.k-acao .val{color:#FF6B60}
 .kpi.k-at{border-bottom-color:var(--atencao)} .kpi.k-at .val{color:#F2A93B}
@@ -119,11 +121,11 @@ body{height:100vh; overflow:hidden; background:var(--paper); color:var(--ink);
 .corpo{display:grid; gap:calc(var(--u)*.9); min-height:0}
 .c2{grid-template-columns:1.25fr 1fr}
 .bloco{background:var(--surface); border:1px solid var(--rule); display:flex; flex-direction:column;
-  min-height:0; padding:calc(var(--u)*.9) calc(var(--u)*1.2) calc(var(--u)*1)}
+  min-height:0; padding:calc(var(--u)*.7) calc(var(--u)*1) calc(var(--u)*.8)}
 .bloco > h2{margin:0 0 calc(var(--u)*.8); font-family:var(--cond); font-weight:700;
-  text-transform:uppercase; font-size:calc(var(--u)*2.2); letter-spacing:.03em;
+  text-transform:uppercase; font-size:calc(var(--u)*2.82); letter-spacing:.03em;
   display:flex; align-items:baseline; gap:calc(var(--u)*.8)}
-.bloco > h2 em{font-style:normal; font-family:var(--mono); font-size:calc(var(--u)*.92);
+.bloco > h2 em{font-style:normal; font-family:var(--mono); font-size:calc(var(--u)*1.61);
   letter-spacing:.1em; color:var(--ink-3); margin-left:auto; text-transform:none}
 
 .focos{display:flex; flex-direction:column; gap:calc(var(--u)*.6); flex:1; min-height:0}
@@ -132,28 +134,28 @@ body{height:100vh; overflow:hidden; background:var(--paper); color:var(--ink);
   padding:calc(var(--u)*.5) calc(var(--u)*1)}
 .foco.cr{border-left-color:var(--acao)} .foco.at{border-left-color:var(--atencao)}
 .foco.ok{border-left-color:var(--ok)}
-.foco .qtd{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*5);
+.foco .qtd{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*5.5);
   line-height:1; text-align:right}
 .foco.cr .qtd{color:var(--acao)} .foco.at .qtd{color:var(--atencao)} .foco.ok .qtd{color:var(--ok)}
-.foco .titulo{font-family:var(--cond); font-weight:600; font-size:calc(var(--u)*2.4); line-height:1.08}
-.foco .onde{font-family:var(--mono); font-size:calc(var(--u)*1.05); color:var(--ink-2);
+.foco .titulo{font-family:var(--cond); font-weight:600; font-size:calc(var(--u)*3.07); line-height:1.08}
+.foco .onde{font-family:var(--mono); font-size:calc(var(--u)*1.58); color:var(--ink-2);
   margin-top:calc(var(--u)*.2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 
 /* ---- tabelas ---- */
 table{width:100%; height:100%; border-collapse:collapse}
-th{font-family:var(--mono); font-size:calc(var(--u)*.88); letter-spacing:.08em;
+th{font-family:var(--mono); font-size:calc(var(--u)*1.54); letter-spacing:.08em;
   text-transform:uppercase; color:var(--ink-3); font-weight:400; text-align:right;
   padding:0 0 calc(var(--u)*.5); border-bottom:1px solid var(--rule)}
 th:first-child{text-align:left}
 td{padding:calc(var(--u)*.45) 0; border-bottom:1px solid var(--paper); text-align:right;
-  font-family:var(--cond); font-weight:600; font-size:calc(var(--u)*3); line-height:1;
+  font-family:var(--cond); font-weight:600; font-size:calc(var(--u)*3.84); line-height:1;
   vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 /* O nome da praça é um span dentro da célula: pôr display:flex no próprio td
    tira a célula do modelo de tabela e desalinha o nome dos números. */
 td.praca{text-align:left}
 td.praca .pr{display:flex; align-items:center; gap:calc(var(--u)*.6);
-  font-family:var(--sans); font-weight:600; font-size:calc(var(--u)*1.6)}
+  font-family:var(--sans); font-weight:600; font-size:calc(var(--u)*2.4)}
 td.c-cr{color:var(--acao)} td.c-at{color:var(--atencao)}
 tr.ok td.c-cr, tr.ok td.c-at, tr.at td.c-cr{color:var(--ink-3)}
 .ponto{width:calc(var(--u)*.9); height:calc(var(--u)*.9); border-radius:50%; flex:none;
@@ -172,23 +174,23 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
 .ritmo{display:grid; grid-template-columns:auto auto 1fr; gap:calc(var(--u)*2);
   align-items:center; background:var(--surface); border:1px solid var(--rule);
   padding:calc(var(--u)*.6) calc(var(--u)*1.2)}
-.ritmo .item .rot{font-family:var(--mono); font-size:calc(var(--u)*.88); letter-spacing:.12em;
+.ritmo .item .rot{font-family:var(--mono); font-size:calc(var(--u)*1.54); letter-spacing:.12em;
   text-transform:uppercase; color:var(--ink-3)}
-.ritmo .item .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*2.8);
+.ritmo .item .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*3.58);
   line-height:1}
-.ritmo .item .val u{text-decoration:none; font-size:calc(var(--u)*1.2); color:var(--ink-3)}
+.ritmo .item .val u{text-decoration:none; font-size:calc(var(--u)*1.8); color:var(--ink-3)}
 .ritmo .grafico{display:flex; align-items:flex-end; gap:calc(var(--u)*.35);
   height:calc(var(--u)*3.4)}
 .ritmo .grafico div{flex:1; display:flex; flex-direction:column; justify-content:flex-end;
   height:100%}
 .ritmo .grafico i{display:block; background:var(--navy-2); opacity:.8}
 .ritmo .grafico div:last-child i{background:var(--laranja); opacity:1}
-.ritmo .grafico b{font-family:var(--mono); font-weight:400; font-size:calc(var(--u)*.8);
+.ritmo .grafico b{font-family:var(--mono); font-weight:400; font-size:calc(var(--u)*1.4);
   color:var(--ink-3); text-align:center; margin-top:calc(var(--u)*.2)}
 
 /* ---- frota: sete por linha para caber tipo de parede ---- */
 .legenda{display:flex; align-items:baseline; gap:calc(var(--u)*1.4); font-family:var(--mono);
-  font-size:calc(var(--u)*.95); letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3)}
+  font-size:calc(var(--u)*1.66); letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3)}
 .legenda i{display:inline-block; width:calc(var(--u)*.75); height:calc(var(--u)*.75);
   margin-right:calc(var(--u)*.4)}
 .legenda .l-cr i{background:var(--acao)} .legenda .l-at i{background:var(--atencao)}
@@ -204,17 +206,17 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
 .veic.rota{border-left-color:var(--navy-2)}
 .veic.ok{opacity:.5}
 .veic .op{display:flex; align-items:baseline; gap:calc(var(--u)*.4); font-family:var(--mono);
-  font-size:calc(var(--u)*.92); letter-spacing:.07em; text-transform:uppercase;
+  font-size:calc(var(--u)*1.61); letter-spacing:.07em; text-transform:uppercase;
   color:var(--ink-3); white-space:nowrap; overflow:hidden}
 .veic .op b{margin-left:auto; font-family:var(--cond); font-weight:700; letter-spacing:.04em;
-  font-size:calc(var(--u)*1.5); flex:none}
+  font-size:calc(var(--u)*2.25); flex:none}
 .veic.critico .op b{color:var(--acao)} .veic.atencao .op b{color:var(--atencao)}
 .veic .l1{display:flex; align-items:baseline; gap:calc(var(--u)*.5)}
-.veic .placa{font-family:var(--mono); font-weight:600; font-size:calc(var(--u)*1.5);
+.veic .placa{font-family:var(--mono); font-weight:600; font-size:calc(var(--u)*2.25);
   letter-spacing:.02em}
 .veic .prog{margin-left:auto; font-family:var(--cond); font-weight:700;
-  font-size:calc(var(--u)*2.6); line-height:1}
-.veic .prog u{text-decoration:none; color:var(--ink-3); font-size:calc(var(--u)*1.6)}
+  font-size:calc(var(--u)*3.33); line-height:1}
+.veic .prog u{text-decoration:none; color:var(--ink-3); font-size:calc(var(--u)*2.4)}
 /* Barra = entregue. Traço = onde ele deveria estar agora, no plano dele. */
 .avanco{position:relative; height:calc(var(--u)*.6); background:var(--paper)}
 .avanco i{position:absolute; inset:0 auto 0 0; display:block; background:var(--ok)}
@@ -223,7 +225,7 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
 .veic.critico .avanco i{background:var(--acao)}
 .veic.atencao .avanco i{background:var(--atencao)}
 .veic.rota .avanco i{background:var(--navy-2)}
-.veic .quem{font-family:var(--mono); font-size:calc(var(--u)*.95); color:var(--ink-2);
+.veic .quem{font-family:var(--mono); font-size:calc(var(--u)*1.66); color:var(--ink-2);
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 
 /* ---- tela de ação: quem precisa de intervenção, com nome e telefone ---- */
@@ -231,37 +233,37 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
   gap:calc(var(--u)*.9); min-height:0}
 .alvo{background:var(--surface); border:1px solid var(--rule);
   border-top:calc(var(--u)*.55) solid var(--atencao);
-  padding:calc(var(--u)*.9) calc(var(--u)*1.2) calc(var(--u)*1);
+  padding:calc(var(--u)*.7) calc(var(--u)*1) calc(var(--u)*.8);
   display:flex; flex-direction:column; justify-content:center; gap:calc(var(--u)*.45);
   min-width:0}
 .alvo.critico{border-top-color:var(--acao)}
 .alvo.mais{border-top-color:var(--rule); align-items:center; text-align:center;
   justify-content:center}
-.alvo.mais .nome{font-size:calc(var(--u)*4.5); color:var(--ink-3)}
+.alvo.mais .nome{font-size:calc(var(--u)*4.95); color:var(--ink-3)}
 .alvo .cab{display:flex; align-items:baseline}
 .alvo .sel{font-family:var(--cond); font-weight:700; text-transform:uppercase;
-  font-size:calc(var(--u)*2); letter-spacing:.05em; color:var(--atencao)}
+  font-size:calc(var(--u)*2.56); letter-spacing:.05em; color:var(--atencao)}
 .alvo.critico .sel{color:var(--acao)}
 .alvo .ap{margin-left:auto; font-family:var(--cond); font-weight:700;
-  font-size:calc(var(--u)*3.6); line-height:1; color:var(--atencao)}
+  font-size:calc(var(--u)*4.61); line-height:1; color:var(--atencao)}
 .alvo.critico .ap{color:var(--acao)}
-.alvo .nome{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*3.2);
+.alvo .nome{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*4.1);
   line-height:1.02; letter-spacing:.01em}
-.alvo .meta{font-family:var(--mono); font-size:calc(var(--u)*1.05); color:var(--ink-2);
+.alvo .meta{font-family:var(--mono); font-size:calc(var(--u)*1.58); color:var(--ink-2);
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .numeros2{display:grid; grid-template-columns:repeat(4,1fr); gap:calc(var(--u)*.5);
   padding-top:calc(var(--u)*.6); border-top:1px solid var(--paper)}
 .numeros2 span{display:flex; flex-direction:column; font-family:var(--mono);
-  font-size:calc(var(--u)*.8); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
-.numeros2 b{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*2.8);
+  font-size:calc(var(--u)*1.4); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
+.numeros2 b{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*3.58);
   line-height:1; color:var(--ink)}
-.numeros2 u{text-decoration:none; font-size:calc(var(--u)*1.2); color:var(--ink-3)}
-.alvo .acao{font-family:var(--sans); font-weight:600; font-size:calc(var(--u)*1.25);
+.numeros2 u{text-decoration:none; font-size:calc(var(--u)*1.8); color:var(--ink-3)}
+.alvo .acao{font-family:var(--sans); font-weight:600; font-size:calc(var(--u)*1.88);
   line-height:1.2; color:var(--atencao)}
 .alvo.critico .acao{color:var(--acao)}
 
 .maquete{position:fixed; right:calc(var(--u)*1.5); bottom:calc(var(--u)*.2);
-  font-family:var(--mono); font-size:calc(var(--u)*.75); letter-spacing:.1em;
+  font-family:var(--mono); font-size:calc(var(--u)*1.31); letter-spacing:.1em;
   color:var(--ink-3); text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
@@ -269,17 +271,17 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
 .medias{display:flex; flex-direction:column; gap:calc(var(--u)*.7); flex:1; min-height:0}
 .media{flex:1; display:flex; flex-direction:column; justify-content:center;
   background:var(--paper); padding:calc(var(--u)*.7) calc(var(--u)*1)}
-.media .rot{font-family:var(--mono); font-size:calc(var(--u)*.88); letter-spacing:.12em;
+.media .rot{font-family:var(--mono); font-size:calc(var(--u)*1.54); letter-spacing:.12em;
   text-transform:uppercase; color:var(--ink-3)}
-.media .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*4);
+.media .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*4.4);
   line-height:1; margin-top:calc(var(--u)*.15)}
-.media .comp{font-family:var(--mono); font-size:calc(var(--u)*.9); color:var(--ink-2)}
+.media .comp{font-family:var(--mono); font-size:calc(var(--u)*1.57); color:var(--ink-2)}
 .hoje{display:flex; align-items:flex-end; gap:calc(var(--u)*.35); flex:1;
   min-height:calc(var(--u)*4); margin-top:calc(var(--u)*.6)}
 .hoje i{flex:1; background:var(--navy-2); opacity:.85; min-height:1px}
 .hoje i:last-child{background:var(--laranja); opacity:1}
 .horas{display:flex; gap:calc(var(--u)*.35); font-family:var(--mono);
-  font-size:calc(var(--u)*.85); color:var(--ink-3); margin-top:calc(var(--u)*.3)}
+  font-size:calc(var(--u)*1.49); color:var(--ink-3); margin-top:calc(var(--u)*.3)}
 .horas span{flex:1; text-align:center}
 
 /* --- faixa de dado velho ---------------------------------------------------
@@ -289,7 +291,7 @@ td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)
    o semáforo — cinza em tudo que era vermelho, amarelo ou verde. Mostrar o
    número velho é honesto; pintá-lo de urgência não é. */
 .alerta{background:var(--acao); color:#fff; font-family:var(--mono);
-  font-size:calc(var(--u)*1.05); letter-spacing:.06em; text-transform:uppercase;
+  font-size:calc(var(--u)*1.58); letter-spacing:.06em; text-transform:uppercase;
   padding:calc(var(--u)*.55) calc(var(--u)*1.5)}
 body.velho .kpi .val, body.velho .foco .qtd, body.velho .alvo .ap,
 body.velho .alvo .sel, body.velho .alvo .acao, body.velho td.c-cr,
@@ -303,10 +305,10 @@ body.velho .kpi{border-bottom-color:var(--navy-3)!important}
    dizer o que houve do que deixar a tela anterior congelada na parede. */
 .nada{flex:1; display:flex; align-items:center; justify-content:center;
   text-align:center; font-family:var(--cond); font-weight:600;
-  font-size:calc(var(--u)*2.2); color:var(--ink-3); padding:calc(var(--u)*2)}
+  font-size:calc(var(--u)*2.82); color:var(--ink-3); padding:calc(var(--u)*2)}
 
 .rodape-fixo{position:fixed; right:calc(var(--u)*1.5); bottom:calc(var(--u)*.2);
-  font-family:var(--mono); font-size:calc(var(--u)*.75); letter-spacing:.08em;
+  font-family:var(--mono); font-size:calc(var(--u)*1.31); letter-spacing:.08em;
   text-transform:uppercase; color:var(--ink-3)}
 
 </style>
@@ -341,20 +343,26 @@ body.velho .kpi{border-bottom-color:var(--navy-3)!important}
 
   <section class="tela" data-titulo="Ritmo|da operação" data-sub="">
     <div class="numeros" id="kpis"></div>
-    <div class="corpo c2">
-      <section class="bloco">
-        <h2>Onde focar agora <em>por entregas travadas</em></h2>
-        <div class="focos" id="focos"></div>
-      </section>
-      <section class="bloco">
-        <h2>Praças <em>hoje</em></h2>
-        <table>
-          <thead><tr><th>Praça</th><th>Veíc.</th><th>Notas</th><th>Entr.</th><th>Pend.</th>
-            <th>Ação</th><th>Atenç.</th></tr></thead>
-          <tbody id="tbPracas"></tbody>
-        </table>
-      </section>
+    <section class="bloco">
+      <h2>Onde focar agora <em>por entregas travadas</em></h2>
+      <div class="focos" id="focos"></div>
+    </section>
+  </section>
+
+  <section class="tela" data-titulo="Praças|hoje" data-sub="">
+    <div class="legenda">
+      <span class="l-cr"><i></i>Ação</span>
+      <span class="l-at"><i></i>Atenção</span>
+      <span class="l-ok"><i></i>Em dia</span>
+      <span style="margin-left:auto">Ordenado pela praça que mais precisa de intervenção</span>
     </div>
+    <section class="bloco">
+      <table>
+        <thead><tr><th>Praça</th><th>Veíc.</th><th>Notas</th><th>Entregues</th>
+          <th>Pendentes</th><th>Ação</th><th>Atenção</th></tr></thead>
+        <tbody id="tbPracas"></tbody>
+      </table>
+    </section>
   </section>
 
   <section class="tela" data-titulo="Ação|agora"
@@ -693,7 +701,7 @@ function render(){
       av.appendChild(m);
     }
   }
-  telas[1].dataset.sub = pedem.length
+  telas[2].dataset.sub = pedem.length
     ? pedem.length + " veículos precisam de intervenção — do mais apertado ao menos"
     : "Nenhum veículo em risco";
 
@@ -702,7 +710,7 @@ function render(){
   vs.forEach(function(v){ fr.appendChild(cardVeiculo(v)); });
   fr.style.gridTemplateColumns = "repeat(" +
     Math.min(9, Math.max(5, Math.ceil(vs.length / 4))) + ",1fr)";
-  telas[2].dataset.sub = vs.length + " veículos · do mais urgente ao menos · finalizados no fim";
+  telas[3].dataset.sub = vs.length + " veículos · do mais urgente ao menos · finalizados no fim";
 
   /* ---- tela 4 ---- */
   var k4 = $("kpis4"); k4.textContent = "";
@@ -755,9 +763,11 @@ function render(){
   foco(fa, "ok", porOnda.length, "Veículos sem hora de saída conhecida",
        "tratados como 08:00 — a planilha não tem a coluna de onda nessas praças");
 
-  telas[0].dataset.sub = Object.keys(praca).map(function(o){
-    return o.replace(/^Café · /, ""); }).sort().join(", ");
-  telas[3].dataset.sub = "Adesão ao GreenMile e apontamento — por praça";
+  telas[0].dataset.sub = tot + " notas · " + vs.length + " veículos · "
+    + Object.keys(praca).length + " praças";
+  telas[1].dataset.sub = Object.keys(praca).map(function(o){
+    return o.replace(/^Café · /, ""); }).sort().join(" · ");
+  telas[4].dataset.sub = "Adesão ao GreenMile e apontamento — por praça";
   if (telas[iTela]) $("sub").textContent = telas[iTela].dataset.sub;
 }
 
