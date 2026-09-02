@@ -328,6 +328,11 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
             "manifesto": get("manifesto"),
             "data": iso,
             "origem": get("origem"),
+            # Onda de saída ("1ª SAÍDA", "2ª SAÍDA"...). Só as abas de SJC e
+            # Guarulhos têm a coluna; nas outras sai vazio. A torre de parede
+            # usa isso para estimar a hora de saída quando o GreenMile ainda
+            # não registrou nenhuma baixa do veículo.
+            "onda": get("saida_num"),
             "nf": get("nf"),
             "cliente": get("cliente"),
             "cidade": cidade(get("cidade")),

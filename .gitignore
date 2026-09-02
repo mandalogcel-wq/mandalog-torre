@@ -16,6 +16,19 @@ data/*
 !data/*.enc
 !data/*.hash
 
+# A torre de parede (tv.html) fica ligada sozinha numa TV da operação e não tem
+# como digitar senha. Este arquivo sai EM CLARO, de propósito — decisão de
+# 02/09/2026, público é a equipe Mandalog.
+#
+# Embutir a senha do painel na página seria pior: ela decifra o operacao.enc,
+# que carrega 3 Corações, Arcor e Supley juntos, e publicá-la abriria os três.
+#
+# Por sair em claro, scripts/build_tv.py omite NF e razão social do
+# destinatário, e NÃO inclui divergência de apontamento — invariante 6.
+# Publica-se o que a tela mostra, e nada além.
+!data/tv.json
+!data/tv.hash
+
 # Segredos
 *.json.key
 conta-servico*.json
