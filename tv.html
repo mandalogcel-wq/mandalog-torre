@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Torre operacional · Ritmo da operação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- =========================================================================
+     TORRE OPERACIONAL - tela de parede do departamento de operacoes.
+
+     Complementa o painel (index.html), nao o substitui: o painel e consulta,
+     com historico e mapa; esta tela e decisao, e mostra SO O DIA VIGENTE.
+
+     RITMO E POR VEICULO, E A JANELA ENCOLHE COM A SAIDA.
+       janela = 18:00 - hora de saida (nunca antes das 08:00)
+       plano  = janela / entregas do veiculo
+       exige  = tempo que resta ate as 18:00 / entregas pendentes
+       aperto = plano / exige
+
+     O aperto diz quantas vezes mais rapido o veiculo precisa ir do que foi
+     planejado para ele. Quem saiu 12:00 e julgado contra o proprio plano
+     apertado, e nao contra o de quem saiu 08:00.
+
+       aperto > 1,5  ACAO     vermelho - nao fecha as 18h sem reforco
+       aperto > 1    ATENCAO  amarelo  - fecha, mas so apertando
+       aperto <= 1            em dia
+
+     Quatro telas giram a cada 30 s. Sem interacao: ninguem opera esta tela.
+
+     ATENCAO: OS NUMEROS SAO ILUSTRATIVOS. Esta pagina nao le dado real ainda.
+     Ver o bloco no fim do arquivo para o que falta.
+========================================================================= -->
+<style>
+:root{
+  --navy:#16233F; --navy-2:#22334F; --navy-3:#2C3E60;
+  --laranja:#EE7623; --laranja-esc:#C85C12;
+  --paper:#EEF0F3; --surface:#FFF; --rule:#D6DAE1;
+  --ink:#16233F; --ink-2:#4E5A70; --ink-3:#8A94A5;
+  --ok:#1B6B4A; --acao:#C1272D; --atencao:#B26A00;
+
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",monospace;
+  --sans:"IBM Plex Sans",system-ui,sans-serif;
+
+  /* ESCALA DE PAREDE, não de mesa. A tela é lida de 3 a 5 metros, então o
+     menor texto da página não desce de ~18px em 1080p e os números que
+     importam passam de 60px. É por isso que cada tela carrega pouca coisa:
+     a densidade que cabe num monitor não se lê numa parede. O rodízio
+     compensa mostrando o resto. Escala pela menor dimensão — serve 1080p,
+     1440p e 4K sem tocar em nada. */
+  --u:min(calc(100vw/192), calc(100vh/108));
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{height:100vh; overflow:hidden; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-variant-numeric:tabular-nums;
+  display:grid; grid-template-rows:auto auto 1fr}
+
+/* ---- barra de marca: igual à do painel, com as duas marcas ---- */
+.marcas{display:flex; align-items:center; gap:calc(var(--u)*1.5); background:var(--surface);
+  padding:calc(var(--u)*.7) calc(var(--u)*1.5); border-bottom:calc(var(--u)*.32) solid var(--laranja)}
+.marcas img{display:block; height:calc(var(--u)*4); width:auto}
+.marcas .div{width:1px; height:calc(var(--u)*3.2); background:var(--rule); flex:none}
+.marcas .tag{margin-left:auto; text-align:right; font-family:var(--mono);
+  font-size:calc(var(--u)*.95); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-3); line-height:1.7}
+
+/* ---- faixa navy: a assinatura da torre ---- */
+.faixa{background:var(--navy); color:#fff;
+  padding:calc(var(--u)*1) calc(var(--u)*1.5) calc(var(--u)*1.05);
+  display:flex; align-items:flex-end; gap:calc(var(--u)*1.8)}
+.faixa h1{margin:0; font-family:var(--cond); font-weight:700; text-transform:uppercase;
+  font-size:calc(var(--u)*5); line-height:.92; letter-spacing:-.005em; white-space:nowrap}
+.faixa h1 em{font-style:normal; color:var(--laranja)}
+.faixa .sub{font-family:var(--mono); font-size:calc(var(--u)*.95); letter-spacing:.14em;
+  text-transform:uppercase; color:rgba(255,255,255,.66); margin-top:calc(var(--u)*.4)}
+.faixa .regra{margin-left:auto; text-align:right; font-family:var(--mono);
+  font-size:calc(var(--u)*.92); letter-spacing:.1em; text-transform:uppercase;
+  color:rgba(255,255,255,.58); line-height:1.8}
+.faixa .relogio{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*5.2);
+  line-height:.88; text-align:right}
+.faixa .relogio span{display:block; font-family:var(--mono); font-weight:400;
+  font-size:calc(var(--u)*.92); letter-spacing:.12em; text-transform:uppercase;
+  color:rgba(255,255,255,.58); margin-top:calc(var(--u)*.25)}
+.dots{display:flex; gap:calc(var(--u)*.5); align-items:center}
+.dots i{width:calc(var(--u)*.7); height:calc(var(--u)*.7); border-radius:50%;
+  background:rgba(255,255,255,.3)}
+.dots i.on{background:var(--laranja)}
+
+/* ---- telas ---- */
+.telas{position:relative; min-height:0}
+.tela{position:absolute; inset:0; display:none; grid-template-rows:auto 1fr;
+  padding:calc(var(--u)*.9) calc(var(--u)*1.5) calc(var(--u)*1.1); gap:calc(var(--u)*.9)}
+.tela.on{display:grid}
+.tela.simples{grid-template-rows:auto 1fr}
+
+/* ---- KPIs: cartões navy, como a faixa de percentuais do painel ---- */
+.numeros{display:grid; grid-template-columns:repeat(6,1fr); gap:calc(var(--u)*.8)}
+.kpi{background:var(--navy); color:#fff;
+  padding:calc(var(--u)*.75) calc(var(--u)*1) calc(var(--u)*.85);
+  border-bottom:calc(var(--u)*.28) solid var(--navy-3)}
+.kpi .rot{font-family:var(--mono); font-size:calc(var(--u)*.92); letter-spacing:.12em;
+  text-transform:uppercase; color:rgba(255,255,255,.66)}
+.kpi .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*6.4);
+  line-height:.92; margin-top:calc(var(--u)*.1)}
+.kpi .nota{font-family:var(--mono); font-size:calc(var(--u)*.95);
+  color:rgba(255,255,255,.66); margin-top:calc(var(--u)*.1)}
+.kpi.k-acao{border-bottom-color:var(--acao)} .kpi.k-acao .val{color:#FF6B60}
+.kpi.k-at{border-bottom-color:var(--atencao)} .kpi.k-at .val{color:#F2A93B}
+.kpi.k-ok{border-bottom-color:var(--ok)} .kpi.k-ok .val{color:#4FD19B}
+
+/* ---- blocos ---- */
+.corpo{display:grid; gap:calc(var(--u)*.9); min-height:0}
+.c2{grid-template-columns:1.25fr 1fr}
+.bloco{background:var(--surface); border:1px solid var(--rule); display:flex; flex-direction:column;
+  min-height:0; padding:calc(var(--u)*.9) calc(var(--u)*1.2) calc(var(--u)*1)}
+.bloco > h2{margin:0 0 calc(var(--u)*.8); font-family:var(--cond); font-weight:700;
+  text-transform:uppercase; font-size:calc(var(--u)*2.2); letter-spacing:.03em;
+  display:flex; align-items:baseline; gap:calc(var(--u)*.8)}
+.bloco > h2 em{font-style:normal; font-family:var(--mono); font-size:calc(var(--u)*.92);
+  letter-spacing:.1em; color:var(--ink-3); margin-left:auto; text-transform:none}
+
+.focos{display:flex; flex-direction:column; gap:calc(var(--u)*.6); flex:1; min-height:0}
+.foco{flex:1; display:grid; grid-template-columns:calc(var(--u)*6) 1fr; align-items:center;
+  gap:calc(var(--u)*1); background:var(--paper); border-left:calc(var(--u)*.42) solid var(--ink-3);
+  padding:calc(var(--u)*.5) calc(var(--u)*1)}
+.foco.cr{border-left-color:var(--acao)} .foco.at{border-left-color:var(--atencao)}
+.foco.ok{border-left-color:var(--ok)}
+.foco .qtd{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*5);
+  line-height:1; text-align:right}
+.foco.cr .qtd{color:var(--acao)} .foco.at .qtd{color:var(--atencao)} .foco.ok .qtd{color:var(--ok)}
+.foco .titulo{font-family:var(--cond); font-weight:600; font-size:calc(var(--u)*2.4); line-height:1.08}
+.foco .onde{font-family:var(--mono); font-size:calc(var(--u)*1.05); color:var(--ink-2);
+  margin-top:calc(var(--u)*.2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+
+/* ---- tabelas ---- */
+table{width:100%; height:100%; border-collapse:collapse}
+th{font-family:var(--mono); font-size:calc(var(--u)*.88); letter-spacing:.08em;
+  text-transform:uppercase; color:var(--ink-3); font-weight:400; text-align:right;
+  padding:0 0 calc(var(--u)*.5); border-bottom:1px solid var(--rule)}
+th:first-child{text-align:left}
+td{padding:calc(var(--u)*.45) 0; border-bottom:1px solid var(--paper); text-align:right;
+  font-family:var(--cond); font-weight:600; font-size:calc(var(--u)*3); line-height:1;
+  vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+/* O nome da praça é um span dentro da célula: pôr display:flex no próprio td
+   tira a célula do modelo de tabela e desalinha o nome dos números. */
+td.praca{text-align:left}
+td.praca .pr{display:flex; align-items:center; gap:calc(var(--u)*.6);
+  font-family:var(--sans); font-weight:600; font-size:calc(var(--u)*1.6)}
+td.c-cr{color:var(--acao)} td.c-at{color:var(--atencao)}
+tr.ok td.c-cr, tr.ok td.c-at, tr.at td.c-cr{color:var(--ink-3)}
+.ponto{width:calc(var(--u)*.9); height:calc(var(--u)*.9); border-radius:50%; flex:none;
+  background:var(--ok)}
+tr.at .ponto{background:var(--atencao)} tr.cr .ponto{background:var(--acao)}
+.barra{position:relative; display:block; height:calc(var(--u)*.85); background:var(--paper);
+  min-width:calc(var(--u)*6)}
+.barra i{position:absolute; inset:0 auto 0 0; display:block; background:var(--ok)}
+td.comBarra .env{display:grid; grid-template-columns:1fr auto; gap:calc(var(--u)*.7);
+  align-items:center}
+.barra i.g-ok{background:var(--ok)}
+.barra i.g-at{background:var(--atencao)}
+.barra i.g-cr{background:var(--acao)}
+
+/* ---- faixa de ritmo do dia, no pé da tela 1 ---- */
+.ritmo{display:grid; grid-template-columns:auto auto 1fr; gap:calc(var(--u)*2);
+  align-items:center; background:var(--surface); border:1px solid var(--rule);
+  padding:calc(var(--u)*.6) calc(var(--u)*1.2)}
+.ritmo .item .rot{font-family:var(--mono); font-size:calc(var(--u)*.88); letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink-3)}
+.ritmo .item .val{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*2.8);
+  line-height:1}
+.ritmo .item .val u{text-decoration:none; font-size:calc(var(--u)*1.2); color:var(--ink-3)}
+.ritmo .grafico{display:flex; align-items:flex-end; gap:calc(var(--u)*.35);
+  height:calc(var(--u)*3.4)}
+.ritmo .grafico div{flex:1; display:flex; flex-direction:column; justify-content:flex-end;
+  height:100%}
+.ritmo .grafico i{display:block; background:var(--navy-2); opacity:.8}
+.ritmo .grafico div:last-child i{background:var(--laranja); opacity:1}
+.ritmo .grafico b{font-family:var(--mono); font-weight:400; font-size:calc(var(--u)*.8);
+  color:var(--ink-3); text-align:center; margin-top:calc(var(--u)*.2)}
+
+/* ---- frota: sete por linha para caber tipo de parede ---- */
+.legenda{display:flex; align-items:baseline; gap:calc(var(--u)*1.4); font-family:var(--mono);
+  font-size:calc(var(--u)*.95); letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3)}
+.legenda i{display:inline-block; width:calc(var(--u)*.75); height:calc(var(--u)*.75);
+  margin-right:calc(var(--u)*.4)}
+.legenda .l-cr i{background:var(--acao)} .legenda .l-at i{background:var(--atencao)}
+.legenda .l-ok i{background:var(--ok)}
+.frota{display:grid; grid-template-columns:repeat(7,1fr); grid-auto-rows:1fr;
+  gap:calc(var(--u)*.6); min-height:0}
+.veic{background:var(--surface); border:1px solid var(--rule);
+  border-left:calc(var(--u)*.42) solid var(--ok); padding:calc(var(--u)*.6) calc(var(--u)*.8);
+  display:flex; flex-direction:column; justify-content:center; gap:calc(var(--u)*.35);
+  min-width:0}
+.veic.critico{border-left-color:var(--acao)}
+.veic.atencao{border-left-color:var(--atencao)}
+.veic.rota{border-left-color:var(--navy-2)}
+.veic.ok{opacity:.5}
+.veic .op{display:flex; align-items:baseline; gap:calc(var(--u)*.4); font-family:var(--mono);
+  font-size:calc(var(--u)*.92); letter-spacing:.07em; text-transform:uppercase;
+  color:var(--ink-3); white-space:nowrap; overflow:hidden}
+.veic .op b{margin-left:auto; font-family:var(--cond); font-weight:700; letter-spacing:.04em;
+  font-size:calc(var(--u)*1.5); flex:none}
+.veic.critico .op b{color:var(--acao)} .veic.atencao .op b{color:var(--atencao)}
+.veic .l1{display:flex; align-items:baseline; gap:calc(var(--u)*.5)}
+.veic .placa{font-family:var(--mono); font-weight:600; font-size:calc(var(--u)*1.5);
+  letter-spacing:.02em}
+.veic .prog{margin-left:auto; font-family:var(--cond); font-weight:700;
+  font-size:calc(var(--u)*2.6); line-height:1}
+.veic .prog u{text-decoration:none; color:var(--ink-3); font-size:calc(var(--u)*1.6)}
+/* Barra = entregue. Traço = onde ele deveria estar agora, no plano dele. */
+.avanco{position:relative; height:calc(var(--u)*.6); background:var(--paper)}
+.avanco i{position:absolute; inset:0 auto 0 0; display:block; background:var(--ok)}
+.avanco b{position:absolute; top:calc(var(--u)*-.15); bottom:calc(var(--u)*-.15);
+  width:calc(var(--u)*.22); background:var(--navy); transform:translateX(-50%)}
+.veic.critico .avanco i{background:var(--acao)}
+.veic.atencao .avanco i{background:var(--atencao)}
+.veic.rota .avanco i{background:var(--navy-2)}
+.veic .quem{font-family:var(--mono); font-size:calc(var(--u)*.95); color:var(--ink-2);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+
+/* ---- tela de ação: quem precisa de intervenção, com nome e telefone ---- */
+.alvos{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr;
+  gap:calc(var(--u)*.9); min-height:0}
+.alvo{background:var(--surface); border:1px solid var(--rule);
+  border-top:calc(var(--u)*.55) solid var(--atencao);
+  padding:calc(var(--u)*.9) calc(var(--u)*1.2) calc(var(--u)*1);
+  display:flex; flex-direction:column; justify-content:center; gap:calc(var(--u)*.45);
+  min-width:0}
+.alvo.critico{border-top-color:var(--acao)}
+.alvo .cab{display:flex; align-items:baseline}
+.alvo .sel{font-family:var(--cond); font-weight:700; text-transform:uppercase;
+  font-size:calc(var(--u)*2); letter-spacing:.05em; color:var(--atencao)}
+.alvo.critico .sel{color:var(--acao)}
+.alvo .ap{margin-left:auto; font-family:var(--cond); font-weight:700;
+  font-size:calc(var(--u)*3.6); line-height:1; color:var(--atencao)}
+.alvo.critico .ap{color:var(--acao)}
+.alvo .nome{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*3.2);
+  line-height:1.02; letter-spacing:.01em}
+.alvo .meta{font-family:var(--mono); font-size:calc(var(--u)*1.05); color:var(--ink-2);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.numeros2{display:grid; grid-template-columns:repeat(4,1fr); gap:calc(var(--u)*.5);
+  padding-top:calc(var(--u)*.6); border-top:1px solid var(--paper)}
+.numeros2 span{display:flex; flex-direction:column; font-family:var(--mono);
+  font-size:calc(var(--u)*.8); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
+.numeros2 b{font-family:var(--cond); font-weight:700; font-size:calc(var(--u)*2.8);
+  line-height:1; color:var(--ink)}
+.numeros2 u{text-decoration:none; font-size:calc(var(--u)*1.2); color:var(--ink-3)}
+.alvo .acao{font-family:var(--sans); font-weight:600; font-size:calc(var(--u)*1.25);
+  line-height:1.2; color:var(--atencao)}
+.alvo.critico .acao{color:var(--acao)}
+
+.maquete{position:fixed; right:calc(var(--u)*1.5); bottom:calc(var(--u)*.2);
+  font-family:var(--mono); font-size:calc(var(--u)*.75); letter-spacing:.1em;
+  color:var(--ink-3); text-transform:uppercase}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="marcas">
+  <img src="assets/mandalog.png" alt="Mandalog Operações Logísticas">
+  <i class="div"></i>
+  <img src="assets/3coracoes.png" alt="3 Corações">
+  <div class="tag">Parceria que move todo o Brasil<br>Operação de distribuição · Vale do Paraíba</div>
+</header>
+
+<div class="faixa">
+  <div>
+    <h1 id="titulo">Ritmo <em>da operação</em></h1>
+    <div class="sub" id="sub">Café · CD Sumaré, Guarulhos, Itapeva, Meso Bauru, Meso Marília e SJC</div>
+  </div>
+  <div class="regra">
+    Somente o dia de hoje · janela 08:00–18:00<br>
+    Ritmo do veículo = janela desde a saída ÷ entregas dele
+  </div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></div>
+  <div class="relogio">14:30<span>Quarta, 02 set</span></div>
+</div>
+
+<div class="telas">
+
+  <!-- ============ 1 - o dia de relance ============ -->
+  <section class="tela on" data-titulo="Ritmo|da operação"
+           data-sub="Café · CD Sumaré, Guarulhos, Itapeva, Meso Bauru, Meso Marília e SJC">
+    <div class="numeros">
+      <div class="kpi"><div class="rot">Notas de hoje</div><div class="val">218</div>
+        <div class="nota">27 veículos · 6 praças</div></div>
+      <div class="kpi k-ok"><div class="rot">Entregues</div><div class="val">156</div>
+        <div class="nota">71.6% · última 14:23</div></div>
+      <div class="kpi"><div class="rot">Pendentes</div><div class="val">62</div>
+        <div class="nota">em 17 veículos</div></div>
+      <div class="kpi k-acao"><div class="rot">Ação — vermelho</div><div class="val">3</div>
+        <div class="nota">veículos · 22 entregas</div></div>
+      <div class="kpi k-at"><div class="rot">Atenção — amarelo</div><div class="val">4</div>
+        <div class="nota">veículos · 17 entregas</div></div>
+      <div class="kpi"><div class="rot">Adesão GreenMile</div><div class="val">85%</div>
+        <div class="nota">133 de 156 entregas</div></div>
+    </div>
+    <div class="corpo c2">
+      <section class="bloco">
+        <h2>Onde focar agora <em>por entregas travadas</em></h2>
+        <div class="focos">
+          <div class="foco cr"><div class="qtd">22</div><div>
+            <div class="titulo">Entregas em veículo que não fecha as 18h</div>
+            <div class="onde">Itapeva 1 · Meso Bauru 1 · CD Sumaré 1 — reforço ou avisar o cliente</div></div></div>
+          <div class="foco at"><div class="qtd">17</div><div>
+            <div class="titulo">Entregas que só fecham se o veículo apertar</div>
+            <div class="onde">Guarulhos 2 · SJC 1 · Meso Marília 1 — cobrar baixa agora</div></div></div>
+          <div class="foco at"><div class="qtd">15</div><div>
+            <div class="titulo">Notas sem apontamento do SAC</div>
+            <div class="onde">Itapeva 6 · Guarulhos 4 · SJC 2 — desfecho não lançado</div></div></div>
+          <div class="foco at"><div class="qtd">23</div><div>
+            <div class="titulo">Entregue na planilha, sem baixa no GreenMile</div>
+            <div class="onde">Itapeva 7 · Guarulhos 6 · SJC 4 — adesão do motorista</div></div></div>
+        </div>
+      </section>
+      <section class="bloco">
+        <h2>Praças <em>hoje</em></h2>
+        <table>
+          <thead><tr><th>Praça</th><th>Veíc.</th><th>Notas</th><th>Entr.</th><th>Pend.</th>
+            <th>Ação</th><th>Atenç.</th></tr></thead>
+          <tbody>
+        <tr class="cr">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Itapeva</span></td>
+          <td>5</td><td>41</td><td>22</td><td>19</td>
+          <td class="c-cr">1</td><td class="c-at">—</td>
+        </tr>
+        <tr class="cr">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Bauru</span></td>
+          <td>3</td><td>29</td><td>20</td><td>9</td>
+          <td class="c-cr">1</td><td class="c-at">—</td>
+        </tr>
+        <tr class="cr">
+          <td class="praca"><span class="pr"><i class="ponto"></i>CD Sumaré</span></td>
+          <td>4</td><td>33</td><td>26</td><td>7</td>
+          <td class="c-cr">1</td><td class="c-at">—</td>
+        </tr>
+        <tr class="at">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Guarulhos</span></td>
+          <td>7</td><td>43</td><td>33</td><td>10</td>
+          <td class="c-cr">—</td><td class="c-at">2</td>
+        </tr>
+        <tr class="at">
+          <td class="praca"><span class="pr"><i class="ponto"></i>SJC</span></td>
+          <td>6</td><td>50</td><td>39</td><td>11</td>
+          <td class="c-cr">—</td><td class="c-at">1</td>
+        </tr>
+        <tr class="at">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Marília</span></td>
+          <td>2</td><td>22</td><td>16</td><td>6</td>
+          <td class="c-cr">—</td><td class="c-at">1</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ 2 - quem precisa de acao, com nome ============ -->
+  <section class="tela" data-titulo="Ação|agora"
+           data-sub="Veículos que não fecham o dia sem intervenção — do mais apertado ao menos">
+    <div class="legenda">
+      <span class="l-cr"><i></i>Ação — não fecha as 18h sem reforço</span>
+      <span class="l-at"><i></i>Atenção — fecha, mas só apertando</span>
+      <span style="margin-left:auto">O número grande é o aperto: quantas vezes mais rápido do que o plano dele</span>
+    </div>
+    <div class="alvos">
+      <div class="alvo critico">
+        <div class="cab"><span class="sel">Ação</span><span class="ap">2.9×</span></div>
+        <div class="nome">Adriano Souza</div>
+        <div class="meta">RTA·4C19 · Itapeva · Itararé</div>
+        <div class="numeros2">
+          <span><b>0/11</b>entregue</span>
+          <span><b>11</b>pendente</span>
+          <span><b>19<u>min</u></b>exige</span>
+          <span><b>55<u>min</u></b>plano</span>
+        </div>
+        <div class="acao">Mandar reforço ou avisar o cliente</div>
+      </div>
+      <div class="alvo critico">
+        <div class="cab"><span class="sel">Ação</span><span class="ap">1.9×</span></div>
+        <div class="nome">Cleber Antunes</div>
+        <div class="meta">FQK·2H88 · Meso Bauru · Jaú</div>
+        <div class="numeros2">
+          <span><b>3/9</b>entregue</span>
+          <span><b>6</b>pendente</span>
+          <span><b>35<u>min</u></b>exige</span>
+          <span><b>67<u>min</u></b>plano</span>
+        </div>
+        <div class="acao">Mandar reforço ou avisar o cliente</div>
+      </div>
+      <div class="alvo critico">
+        <div class="cab"><span class="sel">Ação</span><span class="ap">1.6×</span></div>
+        <div class="nome">Wesley Marinho</div>
+        <div class="meta">BXD·7J05 · CD Sumaré · Americana</div>
+        <div class="numeros2">
+          <span><b>3/8</b>entregue</span>
+          <span><b>5</b>pendente</span>
+          <span><b>42<u>min</u></b>exige</span>
+          <span><b>68<u>min</u></b>plano</span>
+        </div>
+        <div class="acao">Mandar reforço ou avisar o cliente</div>
+      </div>
+      <div class="alvo atencao">
+        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.4×</span></div>
+        <div class="nome">Rogério Bastos</div>
+        <div class="meta">MPL·1A34 · Guarulhos · Arujá</div>
+        <div class="numeros2">
+          <span><b>4/8</b>entregue</span>
+          <span><b>4</b>pendente</span>
+          <span><b>52<u>min</u></b>exige</span>
+          <span><b>75<u>min</u></b>plano</span>
+        </div>
+        <div class="acao">Cobrar baixa — liga para o motorista</div>
+      </div>
+      <div class="alvo atencao">
+        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.1×</span></div>
+        <div class="nome">Tiago Ferrari</div>
+        <div class="meta">JCV·9B72 · SJC · Jacareí</div>
+        <div class="numeros2">
+          <span><b>6/10</b>entregue</span>
+          <span><b>4</b>pendente</span>
+          <span><b>52<u>min</u></b>exige</span>
+          <span><b>60<u>min</u></b>plano</span>
+        </div>
+        <div class="acao">Cobrar baixa — liga para o motorista</div>
+      </div>
+      <div class="alvo atencao">
+        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.1×</span></div>
+        <div class="nome">Marcos Vinícius</div>
+        <div class="meta">KHT·5D61 · Guarulhos · Mairiporã</div>
+        <div class="numeros2">
+          <span><b>3/6</b>entregue</span>
+          <span><b>3</b>pendente</span>
+          <span><b>70<u>min</u></b>exige</span>
+          <span><b>75<u>min</u></b>plano</span>
+        </div>
+        <div class="acao">Cobrar baixa — liga para o motorista</div>
+      </div>
+      <div class="alvo atencao">
+        <div class="cab"><span class="sel">Atenção</span><span class="ap">1.0×</span></div>
+        <div class="nome">Elias Prado</div>
+        <div class="meta">GBS·3M27 · Meso Marília · Garça</div>
+        <div class="numeros2">
+          <span><b>4/10</b>entregue</span>
+          <span><b>6</b>pendente</span>
+          <span><b>35<u>min</u></b>exige</span>
+          <span><b>36<u>min</u></b>plano</span>
+        </div>
+        <div class="acao">Cobrar baixa — liga para o motorista</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 - onde esta cada veiculo ============ -->
+  <section class="tela" data-titulo="Frota|de hoje"
+           data-sub="27 veículos · do mais urgente ao menos · finalizados no fim">
+    <div class="legenda">
+      <span class="l-cr"><i></i>Ação</span>
+      <span class="l-at"><i></i>Atenção</span>
+      <span class="l-ok"><i></i>Em dia</span>
+      <span style="margin-left:auto">Barra = entregue · traço = onde deveria estar agora, no plano dele</span>
+    </div>
+    <div class="frota">
+      <div class="veic critico">
+        <div class="op">Itapeva · 08:00<b>Ação</b></div>
+        <div class="l1"><span class="placa">RTA·4C19</span><span class="prog">0<u>/11</u></span></div>
+        <div class="avanco"><i style="width:0%"></i><b style="left:64%"></b></div>
+        <div class="quem">11 pend · exige 1 a cada 19 min</div>
+      </div>
+      <div class="veic critico">
+        <div class="op">Meso Bauru · 08:00<b>Ação</b></div>
+        <div class="l1"><span class="placa">FQK·2H88</span><span class="prog">3<u>/9</u></span></div>
+        <div class="avanco"><i style="width:33%"></i><b style="left:56%"></b></div>
+        <div class="quem">6 pend · exige 1 a cada 35 min</div>
+      </div>
+      <div class="veic critico">
+        <div class="op">CD Sumaré · 09:00<b>Ação</b></div>
+        <div class="l1"><span class="placa">BXD·7J05</span><span class="prog">3<u>/8</u></span></div>
+        <div class="avanco"><i style="width:38%"></i><b style="left:50%"></b></div>
+        <div class="quem">5 pend · exige 1 a cada 42 min</div>
+      </div>
+      <div class="veic atencao">
+        <div class="op">Guarulhos · 08:00<b>Atenção</b></div>
+        <div class="l1"><span class="placa">MPL·1A34</span><span class="prog">4<u>/8</u></span></div>
+        <div class="avanco"><i style="width:50%"></i><b style="left:62%"></b></div>
+        <div class="quem">4 pend · exige 1 a cada 52 min</div>
+      </div>
+      <div class="veic atencao">
+        <div class="op">SJC · 08:00<b>Atenção</b></div>
+        <div class="l1"><span class="placa">JCV·9B72</span><span class="prog">6<u>/10</u></span></div>
+        <div class="avanco"><i style="width:60%"></i><b style="left:60%"></b></div>
+        <div class="quem">4 pend · exige 1 a cada 52 min</div>
+      </div>
+      <div class="veic atencao">
+        <div class="op">Guarulhos · 10:30<b>Atenção</b></div>
+        <div class="l1"><span class="placa">KHT·5D61</span><span class="prog">3<u>/6</u></span></div>
+        <div class="avanco"><i style="width:50%"></i><b style="left:50%"></b></div>
+        <div class="quem">3 pend · exige 1 a cada 70 min</div>
+      </div>
+      <div class="veic atencao">
+        <div class="op">Meso Marília · 12:00<b>Atenção</b></div>
+        <div class="l1"><span class="placa">GBS·3M27</span><span class="prog">4<u>/10</u></span></div>
+        <div class="avanco"><i style="width:40%"></i><b style="left:40%"></b></div>
+        <div class="quem">6 pend · exige 1 a cada 35 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">SJC · 11:00</div>
+        <div class="l1"><span class="placa">CGP·5R89</span><span class="prog">5<u>/10</u></span></div>
+        <div class="avanco"><i style="width:50%"></i><b style="left:50%"></b></div>
+        <div class="quem">5 pend · exige 1 a cada 42 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">Itapeva · 11:30</div>
+        <div class="l1"><span class="placa">MJT·1V66</span><span class="prog">3<u>/6</u></span></div>
+        <div class="avanco"><i style="width:50%"></i><b style="left:33%"></b></div>
+        <div class="quem">3 pend · exige 1 a cada 70 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">Meso Bauru · 08:00</div>
+        <div class="l1"><span class="placa">PDR·8K14</span><span class="prog">7<u>/10</u></span></div>
+        <div class="avanco"><i style="width:70%"></i><b style="left:60%"></b></div>
+        <div class="quem">3 pend · exige 1 a cada 70 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">SJC · 10:00</div>
+        <div class="l1"><span class="placa">HFD·4G47</span><span class="prog">4<u>/6</u></span></div>
+        <div class="avanco"><i style="width:67%"></i><b style="left:50%"></b></div>
+        <div class="quem">2 pend · exige 1 a cada 105 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">Itapeva · 09:00</div>
+        <div class="l1"><span class="placa">LCK·7B03</span><span class="prog">5<u>/7</u></span></div>
+        <div class="avanco"><i style="width:71%"></i><b style="left:57%"></b></div>
+        <div class="quem">2 pend · exige 1 a cada 105 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">Itapeva · 08:00</div>
+        <div class="l1"><span class="placa">ZRM·2P58</span><span class="prog">6<u>/8</u></span></div>
+        <div class="avanco"><i style="width:75%"></i><b style="left:62%"></b></div>
+        <div class="quem">2 pend · exige 1 a cada 105 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">Guarulhos · 09:30</div>
+        <div class="l1"><span class="placa">XSB·9L20</span><span class="prog">5<u>/7</u></span></div>
+        <div class="avanco"><i style="width:71%"></i><b style="left:57%"></b></div>
+        <div class="quem">2 pend · exige 1 a cada 105 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">CD Sumaré · 08:30</div>
+        <div class="l1"><span class="placa">TVL·6F92</span><span class="prog">6<u>/8</u></span></div>
+        <div class="avanco"><i style="width:75%"></i><b style="left:62%"></b></div>
+        <div class="quem">2 pend · exige 1 a cada 105 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">Guarulhos · 13:00</div>
+        <div class="l1"><span class="placa">VNB·8T41</span><span class="prog">3<u>/4</u></span></div>
+        <div class="avanco"><i style="width:75%"></i><b style="left:25%"></b></div>
+        <div class="quem">1 pend · exige 1 a cada 210 min</div>
+      </div>
+      <div class="veic rota">
+        <div class="op">Itapeva · 08:00</div>
+        <div class="l1"><span class="placa">DKS·3H72</span><span class="prog">8<u>/9</u></span></div>
+        <div class="avanco"><i style="width:89%"></i><b style="left:56%"></b></div>
+        <div class="quem">1 pend · exige 1 a cada 210 min</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">CD Sumaré · 08:00</div>
+        <div class="l1"><span class="placa">QLF·2X15</span><span class="prog">9<u>/9</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:56%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">CD Sumaré · 08:00</div>
+        <div class="l1"><span class="placa">BTM·6C38</span><span class="prog">8<u>/8</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:62%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">Meso Bauru · 08:00</div>
+        <div class="l1"><span class="placa">JRV·4N90</span><span class="prog">10<u>/10</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:60%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">Meso Marília · 08:00</div>
+        <div class="l1"><span class="placa">SHK·7D23</span><span class="prog">12<u>/12</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:58%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">SJC · 08:00</div>
+        <div class="l1"><span class="placa">PZC·1M54</span><span class="prog">9<u>/9</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:56%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">SJC · 08:00</div>
+        <div class="l1"><span class="placa">GDL·9F07</span><span class="prog">8<u>/8</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:62%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">SJC · 08:00</div>
+        <div class="l1"><span class="placa">KBR·3S61</span><span class="prog">7<u>/7</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:57%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">Guarulhos · 08:00</div>
+        <div class="l1"><span class="placa">TXW·5J28</span><span class="prog">7<u>/7</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:57%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">Guarulhos · 08:00</div>
+        <div class="l1"><span class="placa">MCN·8V13</span><span class="prog">6<u>/6</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:50%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+      <div class="veic ok">
+        <div class="op">Guarulhos · 08:00</div>
+        <div class="l1"><span class="placa">FSD·2K76</span><span class="prog">5<u>/5</u></span></div>
+        <div class="avanco"><i style="width:100%"></i><b style="left:60%"></b></div>
+        <div class="quem">finalizado</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 - qualidade do apontamento (uso interno) ============ -->
+  <section class="tela" data-titulo="Apontamento|e GreenMile"
+           data-sub="Uso interno da equipe Mandalog — não expor ao cliente">
+    <div class="numeros">
+      <div class="kpi"><div class="rot">Entregas de hoje</div><div class="val">156</div>
+        <div class="nota">de 218 notas</div></div>
+      <div class="kpi k-at"><div class="rot">Sem apontamento</div><div class="val">15</div>
+        <div class="nota">desfecho não lançado</div></div>
+      <div class="kpi k-acao"><div class="rot">Divergência SAC × GM</div><div class="val">12</div>
+        <div class="nota">GM baixou, planilha não</div></div>
+      <div class="kpi k-at"><div class="rot">Sem baixa no GreenMile</div><div class="val">23</div>
+        <div class="nota">entregue só na planilha</div></div>
+      <div class="kpi k-ok"><div class="rot">Adesão GreenMile</div><div class="val">85%</div>
+        <div class="nota">133 de 156 entregas</div></div>
+      <div class="kpi"><div class="rot">Notas sem peso</div><div class="val">31</div>
+        <div class="nota">cadastro incompleto</div></div>
+    </div>
+    <div class="corpo c2">
+      <section class="bloco">
+        <h2>Qualidade por praça <em>pior adesão primeiro</em></h2>
+        <table>
+          <thead><tr><th>Praça</th><th>Entregas</th><th>S/ apont.</th><th>Diverg.</th>
+            <th>Adesão GreenMile</th></tr></thead>
+          <tbody>
+        <tr class="cr">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Itapeva</span></td>
+          <td>22</td><td class="c-at">6</td><td class="c-cr">4</td>
+          <td class="comBarra"><span class="env"><span class="barra"><i class="g-cr" style="width:68%"></i></span>68%</span></td>
+        </tr>
+        <tr class="cr">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Guarulhos</span></td>
+          <td>33</td><td class="c-at">4</td><td class="c-cr">3</td>
+          <td class="comBarra"><span class="env"><span class="barra"><i class="g-at" style="width:82%"></i></span>82%</span></td>
+        </tr>
+        <tr class="ok">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Marília</span></td>
+          <td>16</td><td class="c-at">—</td><td class="c-cr">1</td>
+          <td class="comBarra"><span class="env"><span class="barra"><i class="g-at" style="width:88%"></i></span>88%</span></td>
+        </tr>
+        <tr class="at">
+          <td class="praca"><span class="pr"><i class="ponto"></i>SJC</span></td>
+          <td>39</td><td class="c-at">2</td><td class="c-cr">2</td>
+          <td class="comBarra"><span class="env"><span class="barra"><i class="g-ok" style="width:90%"></i></span>90%</span></td>
+        </tr>
+        <tr class="at">
+          <td class="praca"><span class="pr"><i class="ponto"></i>Meso Bauru</span></td>
+          <td>20</td><td class="c-at">2</td><td class="c-cr">1</td>
+          <td class="comBarra"><span class="env"><span class="barra"><i class="g-ok" style="width:90%"></i></span>90%</span></td>
+        </tr>
+        <tr class="at">
+          <td class="praca"><span class="pr"><i class="ponto"></i>CD Sumaré</span></td>
+          <td>26</td><td class="c-at">1</td><td class="c-cr">1</td>
+          <td class="comBarra"><span class="env"><span class="barra"><i class="g-ok" style="width:92%"></i></span>92%</span></td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="bloco">
+        <h2>O que fazer</h2>
+        <div class="focos">
+          <div class="foco cr"><div class="qtd">6</div><div>
+            <div class="titulo">Itapeva concentra o problema</div>
+            <div class="onde">68% de adesão · 6 notas sem apontamento</div></div></div>
+          <div class="foco at"><div class="qtd">12</div><div>
+            <div class="titulo">GreenMile entregou, planilha não</div>
+            <div class="onde">Conferir canhoto antes de fechar o dia</div></div></div>
+          <div class="foco at"><div class="qtd">23</div><div>
+            <div class="titulo">Planilha entregou, GreenMile não</div>
+            <div class="onde">Motorista não baixou no aplicativo</div></div></div>
+          <div class="foco ok"><div class="qtd">3</div><div>
+            <div class="titulo">Praças com adesão acima de 90%</div>
+            <div class="onde">CD Sumaré · Meso Bauru · SJC — padrão a manter</div></div></div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+</div>
+
+<div class="maquete">Maquete · números ilustrativos · não lê dado real</div>
+
+<script>
+(function(){
+  var telas = document.querySelectorAll('.tela');
+  var dots  = document.querySelectorAll('#dots i');
+  var h1    = document.getElementById('titulo');
+  var sub   = document.getElementById('sub');
+  var i = 0;
+
+  function mostrar(n){
+    telas[i].classList.remove('on'); dots[i].classList.remove('on');
+    i = n;
+    telas[i].classList.add('on');   dots[i].classList.add('on');
+    var t = telas[i].dataset.titulo.split('|');
+    h1.innerHTML = t[0] + ' <em>' + t[1] + '</em>';
+    sub.textContent = telas[i].dataset.sub;
+  }
+  setInterval(function(){ mostrar((i + 1) % telas.length); }, 30000);
+}());
+</script>
+
+<!-- =========================================================================
+     PARA LIGAR NO DADO REAL
+
+     Nada aqui exige coleta nova. O operacao.enc que o painel ja publica traz,
+     por nota: operacao (as 6 pracas ja separadas por MESO), plano, placa,
+     motorista, classe e gm_ok. Agrupando por placa da total e entregues, que
+     e tudo que o calculo de aperto precisa - ele nao depende de horario de
+     baixa, so da contagem e do relogio.
+
+     Falta UM campo que a planilha ainda nao expoe: a HORA da saida. Hoje o
+     build_data.py guarda so a data. Sem ela, todo veiculo e tratado como
+     saida as 08:00, o que pune injustamente quem saiu depois.
+========================================================================= -->
+</body>
+</html>
