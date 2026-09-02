@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-02T17:31:41-03:00",
+ "gerado_em": "2026-09-02T17:47:20-03:00",
  "dia": "2026-09-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -735,12 +735,12 @@
    "motorista": "Wellington Costa Dos Santos",
    "cidade": "Guarulhos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "09:51",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:51",
    "ritmo_real": 0
   }
  ],
@@ -749,7 +749,7 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 82,
-   "ok": 70,
+   "ok": 71,
    "semapont": 0,
    "gm": 66
   },
@@ -809,7 +809,7 @@
   },
   {
    "h": "09",
-   "n": 15
+   "n": 16
   },
   {
    "h": "10",
