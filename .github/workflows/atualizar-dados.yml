@@ -83,7 +83,8 @@ jobs:
           KRONA_USUARIO: ${{ secrets.KRONA_USUARIO }}
           KRONA_SENHA:   ${{ secrets.KRONA_SENHA }}
         run: python3 scripts/mesclar_krona.py
-
+      - name: Gerar o payload da torre de parede
+        run: python3 scripts/build_tv.py
       # Um payload por cliente, e a prova de que não vazou nada entre eles.
       # O script confere o arquivo pronto e derruba esta execução se encontrar
       # dado de um cliente no payload de outro — antes de cifrar e publicar.
