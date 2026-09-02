@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-02T17:01:42-03:00",
+ "gerado_em": "2026-09-02T17:16:41-03:00",
  "dia": "2026-09-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,9 +30,9 @@
    "motorista": "Luis Antonio Dos Santos",
    "cidade": "Botucatu",
    "total": 25,
-   "ok": 21,
+   "ok": 22,
    "semapont": 0,
-   "gm": 21,
+   "gm": 22,
    "saida": "11:01",
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:59",
@@ -645,12 +645,12 @@
    "motorista": "Thales De Jesus Santos",
    "cidade": "Barueri",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:57",
    "ritmo_real": 0
   },
   {
@@ -764,9 +764,9 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 82,
-   "ok": 69,
+   "ok": 70,
    "semapont": 0,
-   "gm": 65
+   "gm": 66
   },
   {
    "op": "Café · SJC",
@@ -788,9 +788,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 33,
-   "ok": 29,
+   "ok": 30,
    "semapont": 0,
-   "gm": 29
+   "gm": 30
   },
   {
    "op": "Café · Meso Marília",
@@ -828,7 +828,7 @@
   },
   {
    "h": "10",
-   "n": 23
+   "n": 24
   },
   {
    "h": "11",
