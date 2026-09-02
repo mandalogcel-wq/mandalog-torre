@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-02T17:47:20-03:00",
+ "gerado_em": "2026-09-02T18:02:21-03:00",
  "dia": "2026-09-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -35,8 +35,8 @@
    "gm": 22,
    "saida": "11:01",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "17:11",
-   "ritmo_real": 18
+   "ultima_baixa": "17:43",
+   "ritmo_real": 19
   },
   {
    "plano": "6103264718",
@@ -191,8 +191,8 @@
   {
    "plano": "6103257178",
    "op": "Café · Itapeva",
-   "placa": "EMF9E75",
-   "motorista": "Joao Batista Geraldo",
+   "placa": "FOY8J69",
+   "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itapeva",
    "total": 7,
    "ok": 7,
@@ -737,10 +737,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:51",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:51",
+   "ultima_baixa": "17:31",
    "ritmo_real": 0
   }
  ],
@@ -751,7 +751,7 @@
    "total": 82,
    "ok": 71,
    "semapont": 0,
-   "gm": 66
+   "gm": 67
   },
   {
    "op": "Café · SJC",
@@ -809,7 +809,7 @@
   },
   {
    "h": "09",
-   "n": 16
+   "n": 15
   },
   {
    "h": "10",
@@ -841,7 +841,7 @@
   },
   {
    "h": "17",
-   "n": 3
+   "n": 5
   }
  ]
 }
