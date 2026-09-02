@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-02T16:16:53-03:00",
+ "gerado_em": "2026-09-02T16:31:40-03:00",
  "dia": "2026-09-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -28,7 +28,7 @@
    "motorista": "Luis Antonio Dos Santos",
    "cidade": "Botucatu",
    "total": 25,
-   "ok": 18,
+   "ok": 19,
    "semapont": 0,
    "gm": 18,
    "saida": "08:00",
@@ -80,9 +80,9 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Jacarei",
    "total": 14,
-   "ok": 8,
+   "ok": 10,
    "semapont": 0,
-   "gm": 8,
+   "gm": 10,
    "saida": "11:00",
    "saida_fonte": "onda"
   },
@@ -106,9 +106,9 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Capao Bonito",
    "total": 13,
-   "ok": 9,
+   "ok": 13,
    "semapont": 0,
-   "gm": 9,
+   "gm": 13,
    "saida": "08:00",
    "saida_fonte": "padrao"
   },
@@ -301,9 +301,9 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Jau",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "padrao"
   },
@@ -406,7 +406,7 @@
    "cidade": "Candido Mota",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao"
@@ -672,32 +672,32 @@
    "op": "Café · SJC",
    "veic": 7,
    "total": 69,
-   "ok": 63,
+   "ok": 65,
    "semapont": 0,
-   "gm": 63
+   "gm": 65
   },
   {
    "op": "Café · Itapeva",
    "veic": 5,
    "total": 58,
-   "ok": 54,
+   "ok": 58,
    "semapont": 0,
-   "gm": 54
+   "gm": 58
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 33,
-   "ok": 23,
+   "ok": 27,
    "semapont": 0,
-   "gm": 23
+   "gm": 24
   },
   {
    "op": "Café · Meso Marília",
    "veic": 8,
    "total": 12,
    "ok": 9,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 9
   },
   {
