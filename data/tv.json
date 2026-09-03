@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T15:16:42-03:00",
+ "gerado_em": "2026-09-03T15:31:40-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Apiai",
    "total": 29,
-   "ok": 17,
+   "ok": 22,
    "semapont": 0,
-   "gm": 17,
+   "gm": 22,
    "saida": "09:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:46",
-   "ritmo_real": 20
+   "ultima_baixa": "15:29",
+   "ritmo_real": 17
   },
   {
    "plano": "6103266202",
@@ -60,12 +60,12 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Campos Do Jordao",
    "total": 24,
-   "ok": 15,
+   "ok": 17,
    "semapont": 0,
-   "gm": 15,
+   "gm": 17,
    "saida": "10:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:49",
+   "ultima_baixa": "15:22",
    "ritmo_real": 18
   },
   {
@@ -420,13 +420,13 @@
    "motorista": "Fabio De Arruda Pinto",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "07:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:54",
-   "ritmo_real": 0
+   "ultima_baixa": "13:16",
+   "ritmo_real": 22
   },
   {
    "plano": "6103265070",
@@ -510,12 +510,12 @@
    "motorista": "Gilberto Jose De Lima",
    "cidade": "Taubate",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:34",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:11",
    "ritmo_real": 0
   },
   {
@@ -560,7 +560,7 @@
    "gm": 1,
    "saida": "14:15",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:15",
+   "ultima_baixa": "15:01",
    "ritmo_real": 0
   },
   {
@@ -734,25 +734,25 @@
    "op": "Café · Guarulhos",
    "veic": 26,
    "total": 103,
-   "ok": 85,
+   "ok": 87,
    "semapont": 0,
-   "gm": 85
+   "gm": 87
   },
   {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 76,
-   "ok": 64,
+   "ok": 69,
    "semapont": 0,
-   "gm": 64
+   "gm": 69
   },
   {
    "op": "Café · SJC",
    "veic": 9,
    "total": 68,
-   "ok": 45,
+   "ok": 47,
    "semapont": 0,
-   "gm": 45
+   "gm": 47
   },
   {
    "op": "Café · Meso Bauru",
@@ -802,11 +802,15 @@
   },
   {
    "h": "13",
-   "n": 10
+   "n": 11
   },
   {
    "h": "14",
-   "n": 16
+   "n": 15
+  },
+  {
+   "h": "15",
+   "n": 9
   }
  ],
  "gm_sem_sac": 0
