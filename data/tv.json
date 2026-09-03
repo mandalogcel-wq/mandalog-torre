@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T06:02:02-03:00",
+ "gerado_em": "2026-09-03T06:46:43-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -33,10 +33,10 @@
    "ok": 9,
    "semapont": 0,
    "gm": 9,
-   "saida": "15:37",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "17:48",
-   "ritmo_real": 16
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103257182",
@@ -78,10 +78,10 @@
    "ok": 17,
    "semapont": 0,
    "gm": 17,
-   "saida": "06:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:22",
-   "ritmo_real": 22
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103262558",
@@ -108,8 +108,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "18:02",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -408,8 +408,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "11:04",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -478,30 +478,5 @@
    "gm": 0
   }
  ],
- "baixas_por_hora": [
-  {
-   "h": "06",
-   "n": 13
-  },
-  {
-   "h": "10",
-   "n": 3
-  },
-  {
-   "h": "12",
-   "n": 1
-  },
-  {
-   "h": "15",
-   "n": 2
-  },
-  {
-   "h": "16",
-   "n": 4
-  },
-  {
-   "h": "17",
-   "n": 3
-  }
- ]
+ "baixas_por_hora": []
 }
