@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T12:01:51-03:00",
+ "gerado_em": "2026-09-03T12:16:45-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -549,6 +549,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103261002",
+   "op": "Café · Guarulhos",
+   "placa": "ETA3E32",
+   "motorista": "Valdir Da Silva Nery",
+   "cidade": "Osasco",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "07:55",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:53",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103262556",
    "op": "Café · Guarulhos",
    "placa": "EZC5B87",
@@ -672,11 +687,11 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 24,
-   "total": 100,
-   "ok": 6,
+   "veic": 25,
+   "total": 101,
+   "ok": 7,
    "semapont": 3,
-   "gm": 6
+   "gm": 7
   },
   {
    "op": "Café · Itapeva",
@@ -726,7 +741,7 @@
   },
   {
    "h": "09",
-   "n": 9
+   "n": 10
   },
   {
    "h": "10",
