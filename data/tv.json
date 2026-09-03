@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T15:46:48-03:00",
+ "gerado_em": "2026-09-03T16:01:49-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Apiai",
    "total": 29,
-   "ok": 22,
+   "ok": 27,
    "semapont": 0,
-   "gm": 22,
+   "gm": 27,
    "saida": "09:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:29",
-   "ritmo_real": 17
+   "ultima_baixa": "15:51",
+   "ritmo_real": 15
   },
   {
    "plano": "6103266202",
@@ -60,12 +60,12 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Campos Do Jordao",
    "total": 24,
-   "ok": 17,
+   "ok": 18,
    "semapont": 0,
-   "gm": 17,
+   "gm": 18,
    "saida": "10:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:22",
+   "ultima_baixa": "15:38",
    "ritmo_real": 18
   },
   {
@@ -90,13 +90,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 17,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "10:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:52",
-   "ritmo_real": 50
+   "ultima_baixa": "15:36",
+   "ritmo_real": 49
   },
   {
    "plano": "6103247732",
@@ -425,8 +425,8 @@
    "gm": 2,
    "saida": "07:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:16",
-   "ritmo_real": 22
+   "ultima_baixa": "15:54",
+   "ritmo_real": 180
   },
   {
    "plano": "6103265070",
@@ -742,17 +742,17 @@
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 76,
-   "ok": 69,
+   "ok": 74,
    "semapont": 0,
-   "gm": 69
+   "gm": 74
   },
   {
    "op": "Café · SJC",
    "veic": 9,
    "total": 68,
-   "ok": 47,
+   "ok": 49,
    "semapont": 0,
-   "gm": 47
+   "gm": 49
   },
   {
    "op": "Café · Meso Bauru",
@@ -802,7 +802,7 @@
   },
   {
    "h": "13",
-   "n": 11
+   "n": 10
   },
   {
    "h": "14",
@@ -810,7 +810,7 @@
   },
   {
    "h": "15",
-   "n": 9
+   "n": 17
   }
  ],
  "gm_sem_sac": 0
