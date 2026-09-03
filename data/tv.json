@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T10:16:55-03:00",
+ "gerado_em": "2026-09-03T10:31:49-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -63,8 +63,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:28",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -90,12 +90,12 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 17,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:00",
    "ritmo_real": 0
   },
   {
@@ -120,13 +120,13 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Paraibuna",
    "total": 11,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ultima_baixa": "10:25",
+   "ritmo_real": 12
   },
   {
    "plano": "6103264896",
@@ -165,13 +165,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "09:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:58",
-   "ritmo_real": 28
+   "ultima_baixa": "10:23",
+   "ritmo_real": 26
   },
   {
    "plano": "6103257850",
@@ -675,9 +675,9 @@
    "op": "Café · SJC",
    "veic": 7,
    "total": 66,
-   "ok": 2,
+   "ok": 7,
    "semapont": 0,
-   "gm": 2
+   "gm": 7
   },
   {
    "op": "Café · Meso Bauru",
@@ -712,6 +712,10 @@
   {
    "h": "09",
    "n": 8
+  },
+  {
+   "h": "10",
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
