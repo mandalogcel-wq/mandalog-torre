@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T16:16:49-03:00",
+ "gerado_em": "2026-09-03T16:31:45-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Campos Do Jordao",
    "total": 24,
-   "ok": 18,
+   "ok": 22,
    "semapont": 0,
-   "gm": 18,
+   "gm": 22,
    "saida": "10:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:38",
-   "ritmo_real": 18
+   "ultima_baixa": "16:27",
+   "ritmo_real": 17
   },
   {
    "plano": "6103264731",
@@ -90,12 +90,12 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 17,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "10:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:36",
+   "ultima_baixa": "16:23",
    "ritmo_real": 49
   },
   {
@@ -180,8 +180,8 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Garca",
    "total": 9,
-   "ok": 2,
-   "semapont": 7,
+   "ok": 3,
+   "semapont": 6,
    "gm": 2,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -750,16 +750,16 @@
    "op": "Café · SJC",
    "veic": 9,
    "total": 68,
-   "ok": 49,
+   "ok": 54,
    "semapont": 0,
-   "gm": 49
+   "gm": 54
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 32,
-   "ok": 17,
-   "semapont": 7,
+   "ok": 18,
+   "semapont": 6,
    "gm": 17
   },
   {
@@ -811,6 +811,10 @@
   {
    "h": "15",
    "n": 17
+  },
+  {
+   "h": "16",
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
