@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T17:01:41-03:00",
+ "gerado_em": "2026-09-03T17:31:42-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -318,9 +318,9 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "07:29",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:29",
    "ritmo_real": 0
   },
   {
@@ -480,12 +480,12 @@
    "motorista": "Wellington Pedro",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:34",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "17:13",
    "ritmo_real": 0
   },
   {
@@ -734,9 +734,9 @@
    "op": "Café · Guarulhos",
    "veic": 26,
    "total": 103,
-   "ok": 91,
+   "ok": 92,
    "semapont": 0,
-   "gm": 91
+   "gm": 92
   },
   {
    "op": "Café · Itapeva",
@@ -786,7 +786,7 @@
   },
   {
    "h": "09",
-   "n": 10
+   "n": 11
   },
   {
    "h": "10",
@@ -815,6 +815,10 @@
   {
    "h": "16",
    "n": 12
+  },
+  {
+   "h": "17",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
