@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T12:16:45-03:00",
+ "gerado_em": "2026-09-03T12:31:45-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itapeva",
    "total": 30,
-   "ok": 26,
+   "ok": 30,
    "semapont": 0,
-   "gm": 26,
+   "gm": 30,
    "saida": "08:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:00",
-   "ritmo_real": 13
+   "ultima_baixa": "12:14",
+   "ritmo_real": 11
   },
   {
    "plano": "6103257182",
@@ -120,13 +120,13 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Paraibuna",
    "total": 11,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:59",
-   "ritmo_real": 14
+   "ultima_baixa": "11:22",
+   "ritmo_real": 16
   },
   {
    "plano": "6103264896",
@@ -165,13 +165,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "09:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:44",
-   "ritmo_real": 27
+   "ultima_baixa": "12:15",
+   "ritmo_real": 28
   },
   {
    "plano": "6103264899",
@@ -300,13 +300,13 @@
    "motorista": "Marcio Cavalcante Da Silva",
    "cidade": "Carapicuiba",
    "total": 3,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:48",
-   "ritmo_real": 0
+   "ultima_baixa": "11:54",
+   "ritmo_real": 126
   },
   {
    "plano": "6103265097",
@@ -375,12 +375,12 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Taubate",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:59",
+   "gm": 2,
+   "saida": "12:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:08",
    "ritmo_real": 0
   },
   {
@@ -425,7 +425,7 @@
    "gm": 1,
    "saida": "08:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:29",
+   "ultima_baixa": "12:03",
    "ritmo_real": 0
   },
   {
@@ -525,12 +525,12 @@
    "motorista": "John Lucas Dos Santos",
    "cidade": "Guaratingueta",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:08",
    "ritmo_real": 0
   },
   {
@@ -540,12 +540,12 @@
    "motorista": "Alex Junior Brunelo",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "07:11",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:28",
    "ritmo_real": 0
   },
   {
@@ -689,25 +689,25 @@
    "op": "Café · Guarulhos",
    "veic": 25,
    "total": 101,
-   "ok": 7,
+   "ok": 10,
    "semapont": 3,
-   "gm": 7
+   "gm": 10
   },
   {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 76,
-   "ok": 49,
+   "ok": 53,
    "semapont": 0,
-   "gm": 49
+   "gm": 53
   },
   {
    "op": "Café · SJC",
    "veic": 7,
    "total": 66,
-   "ok": 20,
+   "ok": 24,
    "semapont": 0,
-   "gm": 20
+   "gm": 24
   },
   {
    "op": "Café · Meso Bauru",
@@ -737,7 +737,7 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 6
+   "n": 5
   },
   {
    "h": "09",
@@ -749,11 +749,11 @@
   },
   {
    "h": "11",
-   "n": 13
+   "n": 15
   },
   {
    "h": "12",
-   "n": 2
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
