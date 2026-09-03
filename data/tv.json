@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T12:46:40-03:00",
+ "gerado_em": "2026-09-03T13:01:48-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Apiai",
    "total": 29,
-   "ok": 6,
+   "ok": 11,
    "semapont": 0,
-   "gm": 6,
+   "gm": 11,
    "saida": "09:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:59",
-   "ritmo_real": 18
+   "ultima_baixa": "12:56",
+   "ritmo_real": 21
   },
   {
    "plano": "6103266202",
@@ -60,13 +60,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Campos Do Jordao",
    "total": 24,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "10:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:56",
-   "ritmo_real": 20
+   "ultima_baixa": "12:49",
+   "ritmo_real": 27
   },
   {
    "plano": "6103264731",
@@ -120,13 +120,13 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Paraibuna",
    "total": 11,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:22",
-   "ritmo_real": 16
+   "ultima_baixa": "12:51",
+   "ritmo_real": 24
   },
   {
    "plano": "6103264896",
@@ -150,13 +150,13 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Sao Paulo",
    "total": 9,
-   "ok": 2,
+   "ok": 6,
    "semapont": 0,
-   "gm": 2,
+   "gm": 6,
    "saida": "07:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:50",
-   "ritmo_real": 119
+   "ultima_baixa": "12:35",
+   "ritmo_real": 45
   },
   {
    "plano": "6103266217",
@@ -165,13 +165,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "09:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:15",
-   "ritmo_real": 28
+   "ultima_baixa": "12:41",
+   "ritmo_real": 27
   },
   {
    "plano": "6103264899",
@@ -405,12 +405,12 @@
    "motorista": "Fabio De Arruda Pinto",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "07:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:54",
    "ritmo_real": 0
   },
   {
@@ -689,25 +689,25 @@
    "op": "Café · Guarulhos",
    "veic": 25,
    "total": 101,
-   "ok": 10,
+   "ok": 15,
    "semapont": 3,
-   "gm": 10
+   "gm": 15
   },
   {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 76,
-   "ok": 53,
+   "ok": 58,
    "semapont": 0,
-   "gm": 53
+   "gm": 58
   },
   {
    "op": "Café · SJC",
    "veic": 7,
    "total": 66,
-   "ok": 24,
+   "ok": 28,
    "semapont": 0,
-   "gm": 24
+   "gm": 28
   },
   {
    "op": "Café · Meso Bauru",
@@ -753,7 +753,7 @@
   },
   {
    "h": "12",
-   "n": 12
+   "n": 26
   }
  ],
  "gm_sem_sac": 0
