@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T17:46:49-03:00",
+ "gerado_em": "2026-09-03T18:01:43-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,12 +90,12 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 17,
-   "ok": 9,
+   "ok": 10,
    "semapont": 0,
-   "gm": 9,
+   "gm": 10,
    "saida": "10:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:51",
+   "ultima_baixa": "17:41",
    "ritmo_real": 46
   },
   {
@@ -125,8 +125,8 @@
    "gm": 10,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:09",
-   "ritmo_real": 27
+   "ultima_baixa": "14:46",
+   "ritmo_real": 32
   },
   {
    "plano": "6103264896",
@@ -320,8 +320,8 @@
    "gm": 3,
    "saida": "07:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:29",
-   "ritmo_real": 0
+   "ultima_baixa": "17:42",
+   "ritmo_real": 246
   },
   {
    "plano": "6103231003",
@@ -498,9 +498,9 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "17:57",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:58",
    "ritmo_real": 0
   },
   {
@@ -750,9 +750,9 @@
    "op": "Café · SJC",
    "veic": 9,
    "total": 68,
-   "ok": 56,
+   "ok": 57,
    "semapont": 0,
-   "gm": 56
+   "gm": 57
   },
   {
    "op": "Café · Meso Bauru",
@@ -798,7 +798,7 @@
   },
   {
    "h": "12",
-   "n": 27
+   "n": 28
   },
   {
    "h": "13",
@@ -818,7 +818,7 @@
   },
   {
    "h": "17",
-   "n": 1
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
