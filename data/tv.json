@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T11:32:00-03:00",
+ "gerado_em": "2026-09-03T12:01:51-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itapeva",
    "total": 30,
-   "ok": 22,
+   "ok": 26,
    "semapont": 0,
-   "gm": 22,
+   "gm": 26,
    "saida": "08:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:22",
-   "ritmo_real": 14
+   "ultima_baixa": "12:00",
+   "ritmo_real": 13
   },
   {
    "plano": "6103257182",
@@ -60,18 +60,18 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Campos Do Jordao",
    "total": 24,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "10:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:06",
-   "ritmo_real": 10
+   "ultima_baixa": "11:56",
+   "ritmo_real": 20
   },
   {
    "plano": "6103264731",
    "op": "Café · Guarulhos",
-   "placa": "SVL4J89",
+   "placa": "VSVL4J89",
    "motorista": "Wellington Costa Dos Santos",
    "cidade": "Caraguatatuba",
    "total": 22,
@@ -90,13 +90,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 17,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "10:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:43",
-   "ritmo_real": 0
+   "ultima_baixa": "11:44",
+   "ritmo_real": 30
   },
   {
    "plano": "6103247732",
@@ -165,13 +165,28 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "09:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:19",
+   "ultima_baixa": "11:44",
    "ritmo_real": 27
+  },
+  {
+   "plano": "6103264899",
+   "op": "Café · Meso Bauru",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Garca",
+   "total": 9,
+   "ok": 0,
+   "semapont": 9,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103257850",
@@ -285,12 +300,12 @@
    "motorista": "Marcio Cavalcante Da Silva",
    "cidade": "Carapicuiba",
    "total": 3,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:48",
    "ritmo_real": 0
   },
   {
@@ -394,6 +409,36 @@
    "semapont": 0,
    "gm": 0,
    "saida": "07:04",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103265070",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "Edilson Da Silva Bento",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "08:29",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:29",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103262371",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "Atibaia",
+   "cidade": "Guarulhos",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:23",
    "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
@@ -504,21 +549,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103265070",
-   "op": "Café · Guarulhos",
-   "placa": "EZC5B87",
-   "motorista": "Edilson Da Silva Bento",
-   "cidade": "Sao Paulo",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:29",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103262556",
    "op": "Café · Guarulhos",
    "placa": "EZC5B87",
@@ -624,21 +654,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103262371",
-   "op": "Café · Guarulhos",
-   "placa": "SWU0J23",
-   "motorista": "Gilmario Domingos",
-   "cidade": "Guarulhos",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:23",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103262685",
    "op": "Café · Guarulhos",
    "placa": "SWU0J23",
@@ -659,32 +674,32 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 100,
-   "ok": 4,
+   "ok": 6,
    "semapont": 3,
-   "gm": 4
+   "gm": 6
   },
   {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 76,
-   "ok": 45,
+   "ok": 49,
    "semapont": 0,
-   "gm": 45
+   "gm": 49
   },
   {
    "op": "Café · SJC",
    "veic": 7,
    "total": 66,
-   "ok": 16,
+   "ok": 20,
    "semapont": 0,
-   "gm": 16
+   "gm": 20
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 6,
-   "total": 23,
+   "veic": 7,
+   "total": 32,
    "ok": 1,
-   "semapont": 0,
+   "semapont": 9,
    "gm": 1
   },
   {
@@ -707,11 +722,11 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 5
+   "n": 6
   },
   {
    "h": "09",
-   "n": 8
+   "n": 9
   },
   {
    "h": "10",
@@ -719,7 +734,11 @@
   },
   {
    "h": "11",
-   "n": 7
+   "n": 13
+  },
+  {
+   "h": "12",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
