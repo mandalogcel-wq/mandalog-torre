@@ -253,6 +253,12 @@ def main() -> None:
             for n in entregas
             if n["classe"] == "entregue" and (n.get("gm_partida") or n.get("gm_chegada"))
         ).items()) if h],
+        # O GreenMile registrou a entrega e o SAC não lançou nada. A entrega
+        # aconteceu, o cliente recebeu, e a planilha não sabe — alguém precisa
+        # lançar antes de fechar o dia. Sai daqui por decisão de 02/09/2026:
+        # a torre de parede é tela da Mandalog.
+        "gm_sem_sac": sum(1 for n in entregas
+                          if n["gm_ok"] and n["classe"] == "semapont"),
     }
 
     # Comparação sem gerado_em: só o conteúdo decide se vale reescrever.
