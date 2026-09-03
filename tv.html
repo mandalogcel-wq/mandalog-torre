@@ -723,9 +723,11 @@ function render(){
   kpi(k4, ok - gm > 0 ? "k-at" : "", "Sem baixa no GreenMile", String(ok - gm),
       "entregue só na planilha");
   kpi(k4, sap > 0 ? "k-at" : "", "Sem apontamento", String(sap), "desfecho não lançado");
+  var gmSemSac = dados.gm_sem_sac || 0;
+  kpi(k4, gmSemSac > 0 ? "k-acao" : "", "GreenMile sem SAC", String(gmSemSac),
+      "entregue e não lançado");
   kpi(k4, "", "Veículos", String(vs.length),
       vs.length - emRota + " finalizados · " + emRota + " em rota");
-  kpi(k4, "", "Praças", String(Object.keys(pracasN).length), "com saída hoje");
 
   var tq = $("tbQual"); tq.textContent = "";
   lp.slice().sort(function(a, b){
@@ -753,6 +755,9 @@ function render(){
   });
 
   var fa = $("falta"); fa.textContent = "";
+  foco(fa, gmSemSac > 0 ? "cr" : "ok", gmSemSac, "GreenMile entregou, planilha não sabe",
+       gmSemSac ? "o cliente já recebeu — lançar antes de fechar o dia"
+                : "nenhuma — apontamento em dia");
   foco(fa, ok - gm > 0 ? "at" : "ok", ok - gm, "Entregue sem baixa no GreenMile",
        (porOp(vs, function(v){ return v.ok - v.gm > 0; }) || "nenhuma")
        + " — motorista não baixou no aplicativo");
