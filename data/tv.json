@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T14:01:48-03:00",
+ "gerado_em": "2026-09-03T14:16:41-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -71,7 +71,7 @@
   {
    "plano": "6103264731",
    "op": "Café · Guarulhos",
-   "placa": "VSVL4J89",
+   "placa": "DBB7I31 BYC6H37",
    "motorista": "Wellington Costa Dos Santos",
    "cidade": "Caraguatatuba",
    "total": 22,
@@ -315,7 +315,7 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Barueri",
    "total": 3,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
    "gm": 1,
    "saida": "08:00",
@@ -426,21 +426,6 @@
    "saida": "08:29",
    "saida_fonte": "greenmile",
    "ultima_baixa": "12:03",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103262371",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Guarulhos",
-   "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "08:23",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:29",
    "ritmo_real": 0
   },
   {
@@ -669,6 +654,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103262371",
+   "op": "Café · Guarulhos",
+   "placa": "SWU0J23",
+   "motorista": "Gilmario Domingos",
+   "cidade": "Guarulhos",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "08:23",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:29",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103262685",
    "op": "Café · Guarulhos",
    "placa": "SWU0J23",
@@ -689,7 +689,7 @@
    "op": "Café · Guarulhos",
    "veic": 25,
    "total": 101,
-   "ok": 22,
+   "ok": 23,
    "semapont": 0,
    "gm": 22
   },
