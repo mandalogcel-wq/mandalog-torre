@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T16:01:49-03:00",
+ "gerado_em": "2026-09-03T16:16:49-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -71,7 +71,7 @@
   {
    "plano": "6103264731",
    "op": "Café · Guarulhos",
-   "placa": "DBB7I31 BYC6H37",
+   "placa": "ORF6F39",
    "motorista": "Wellington Costa Dos Santos",
    "cidade": "Caraguatatuba",
    "total": 22,
@@ -104,10 +104,10 @@
    "placa": "FWY5H52",
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Itapeva",
-   "total": 17,
-   "ok": 17,
+   "total": 15,
+   "ok": 15,
    "semapont": 0,
-   "gm": 17,
+   "gm": 15,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -444,6 +444,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103262371",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Guarulhos",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "08:23",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:29",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103262421",
    "op": "Café · Guarulhos",
    "placa": "",
@@ -699,21 +714,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103262371",
-   "op": "Café · Guarulhos",
-   "placa": "SWU0J23",
-   "motorista": "Gilmario Domingos",
-   "cidade": "Guarulhos",
-   "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "08:23",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:29",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103262685",
    "op": "Café · Guarulhos",
    "placa": "SWU0J23",
@@ -741,10 +741,10 @@
   {
    "op": "Café · Itapeva",
    "veic": 3,
-   "total": 76,
-   "ok": 74,
+   "total": 74,
+   "ok": 72,
    "semapont": 0,
-   "gm": 74
+   "gm": 72
   },
   {
    "op": "Café · SJC",
