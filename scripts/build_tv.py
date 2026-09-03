@@ -38,13 +38,20 @@ publicado no painel do cliente.
 Liberar data/tv.json exigiu uma linha explícita no .gitignore, que bloqueia
 data/* por lista positiva. Isso é de propósito — ver o comentário de lá.
 
-POR QUE EXISTE UM tv.hash
+POR QUE EXISTEM UM tv.hash E UM tv-ping.json
 
-Mesma razão do cifrar.py: gerado_em muda a cada rodada, e o workflow comita a
-pasta inteira. Sem comparar o conteúdo sem esse campo, o robô comitaria um
-arquivo por hora para sempre, inclusive de madrugada, quando nada acontece.
-Durante a operação o dado muda de verdade quase toda rodada e o arquivo é
-reescrito — que é o desejado.
+O tv.hash repete a trava do cifrar.py: gerado_em muda a cada rodada e o
+workflow comita a pasta inteira, então sem comparar o conteúdo sem esse campo
+o robô comitaria um arquivo a cada 15 min para sempre, inclusive de
+madrugada, quando nada acontece.
+
+Só que isso cria um segundo problema: parado o dado, o gerado_em envelhece, e
+a torre — que apaga o semáforo com dado de mais de 30 min — desligava as cores
+mesmo tendo o robô olhado dois minutos antes. "Não mudou" não é "está velho".
+
+Daí o tv-ping.json: sessenta bytes reescritos toda rodada, dizendo só quando o
+robô olhou pela última vez. A torre usa ele para a trava de frescor e o
+gerado_em para dizer quando o quadro mudou.
 
 O RITMO NÃO É CALCULADO AQUI
 
@@ -54,14 +61,13 @@ do que o planejado — depende do relógio, e é calculado no navegador a cada
 recarga. Calcular aqui congelaria o risco no instante da coleta e a tela
 mentiria até a rodada seguinte.
 
-O QUE ESTA TORRE AINDA NÃO SABE
+DE ONDE VEM O HORÁRIO
 
-A hora de cada baixa. O coletor do GreenMile no n8n pede uma projeção fixa de
-11 campos e nenhum deles é horário de serviço; o `atualizado_em` que ele grava
-é `new Date()` da execução. Sem isso não há "intervalo médio entre baixas",
-não há "última baixa às 14:23" e a hora de saída fica no turno da planilha.
-Para ter: acrescentar os campos de horário ao array `filtros` do nó
-"Montar consulta" nos coletores 0GUyiqtaNTHadd67 e PrnRQSyVxQsKchn2.
+De `stop.actualArrival` e `stop.actualDeparture` do GreenMile, pedidos na
+projeção do nó "Montar consulta" dos dois coletores desde 02/09/2026 e
+gravados como `chegada` e `partida`. Vêm em UTC. As variantes com sufixo
+"Time" — actualArrivalTime, servicedTime, statusDate — não existem na API e
+devolvem 500; foram sondadas antes de mexer na produção.
 """
 
 from __future__ import annotations
@@ -77,6 +83,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 ENTRADA = RAIZ / "data" / "operacao.json"
 SAIDA = RAIZ / "data" / "tv.json"
 HASH = RAIZ / "data" / "tv.hash"
+PING = RAIZ / "data" / "tv-ping.json"
 
 FUSO = timezone(timedelta(hours=-3))
 
@@ -105,23 +112,35 @@ ONDAS = {
 }
 
 
-def hora(iso: str) -> str:
-    """UTC do GreenMile -> 'HH:MM' de Brasília. Vazio se não der para ler.
+def em_brasilia(iso: str) -> tuple[str, str]:
+    """UTC do GreenMile -> (data ISO, 'HH:MM') de Brasília. ("","") se ilegível.
 
-    O GreenMile devolve "2026-08-26T14:59:42+0000". Sem a conversão, uma
-    entrega das 11:59 apareceria como 14:59 e todo o cálculo de ritmo andaria
-    três horas para a frente.
+    O GreenMile devolve "2026-08-26T14:59:42+0000". Sem converter, uma entrega
+    das 11:59 apareceria como 14:59 e o ritmo andaria três horas para a frente.
+    A data volta junto porque o horário só serve se for do dia — ver hora_hoje.
     """
     if not iso:
-        return ""
+        return "", ""
     try:
-        return datetime.fromisoformat(iso.replace("+0000", "+00:00")) \
-            .astimezone(FUSO).strftime("%H:%M")
+        d = datetime.fromisoformat(iso.replace("+0000", "+00:00")).astimezone(FUSO)
+        return d.date().isoformat(), d.strftime("%H:%M")
     except (ValueError, TypeError):
-        return ""
+        return "", ""
 
 
-def saida_do_veiculo(notas: list[dict]) -> tuple[str, str]:
+def hora_hoje(iso: str, hoje: str) -> str:
+    """'HH:MM' só se o carimbo for de hoje; senão vazio.
+
+    O número do plano sobrevive à reentrega: uma nota que sai hoje pode
+    carregar a chegada da tentativa de ontem. Sem este filtro, em 03/09 às
+    06:43 três veículos apareciam com saída às 15:37, 18:02 e 11:04 — horários
+    que ainda não tinham acontecido.
+    """
+    data, hm_ = em_brasilia(iso)
+    return hm_ if data == hoje else ""
+
+
+def saida_do_veiculo(notas: list[dict], hoje: str) -> tuple[str, str]:
     """Hora de saída do veículo e de onde ela veio.
 
     A chegada à primeira parada do GreenMile é a melhor âncora que existe: o
@@ -136,7 +155,8 @@ def saida_do_veiculo(notas: list[dict]) -> tuple[str, str]:
     Sem GreenMile na rota, sobra a onda da planilha (1ª/2ª/3ª SAÍDA), que diz
     o turno e não o minuto, e por fim 08:00.
     """
-    chegadas = sorted(h for h in (hora(n.get("gm_chegada", "")) for n in notas) if h)
+    chegadas = sorted(h for h in
+                      (hora_hoje(n.get("gm_chegada", ""), hoje) for n in notas) if h)
     if chegadas:
         return chegadas[0], "greenmile"
 
@@ -182,10 +202,10 @@ def main() -> None:
     for plano, notas in por_plano.items():
         meta = planos_meta.get(plano, {})
         feitas = [n for n in notas if n["classe"] == "entregue"]
-        saida, fonte_saida = saida_do_veiculo(notas)
+        saida, fonte_saida = saida_do_veiculo(notas, hoje)
         baixas = sorted(h for h in
-                        (hora(n.get("gm_partida") or n.get("gm_chegada", "")) for n in feitas)
-                        if h)
+                        (hora_hoje(n.get("gm_partida") or n.get("gm_chegada", ""), hoje)
+                         for n in feitas) if h)
         veiculos.append({
             "plano": plano,
             "op": meta.get("operacao") or notas[0]["operacao"],
@@ -229,7 +249,7 @@ def main() -> None:
         "veiculos": veiculos,
         "pracas": sorted(pracas.values(), key=lambda p: -p["total"]),
         "baixas_por_hora": [{"h": h, "n": n} for h, n in sorted(collections.Counter(
-            hora(n.get("gm_partida") or n.get("gm_chegada", ""))[:2]
+            hora_hoje(n.get("gm_partida") or n.get("gm_chegada", ""), hoje)[:2]
             for n in entregas
             if n["classe"] == "entregue" and (n.get("gm_partida") or n.get("gm_chegada"))
         ).items()) if h],
@@ -242,8 +262,13 @@ def main() -> None:
         json.dumps(corpo, ensure_ascii=False, sort_keys=True).encode("utf-8")
     ).hexdigest()
 
+    # O ping sai sempre, mudando o dado ou não: é o que diz à torre que o robô
+    # continua vivo.
+    PING.write_text(json.dumps({"visto_em": agora.isoformat(timespec="seconds")}) + "\n",
+                    encoding="utf-8")
+
     if HASH.exists() and HASH.read_text(encoding="utf-8").strip() == digest:
-        print(f"{SAIDA.relative_to(RAIZ)} inalterado — nada a regravar")
+        print(f"{SAIDA.relative_to(RAIZ)} inalterado — só o ping foi atualizado")
         return
 
     SAIDA.parent.mkdir(parents=True, exist_ok=True)

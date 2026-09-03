@@ -28,6 +28,10 @@ data/*
 # Publica-se o que a tela mostra, e nada além.
 !data/tv.json
 !data/tv.hash
+# Sessenta bytes por rodada dizendo quando o robô olhou pela última vez. A
+# torre usa isso para a trava de frescor: sem ele, dado parado de madrugada
+# passava por dado velho e o semáforo se apagava sozinho.
+!data/tv-ping.json
 
 # Segredos
 *.json.key

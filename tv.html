@@ -425,12 +425,13 @@ body.velho .kpi{border-bottom-color:var(--navy-3)!important}
 =========================================================================== */
 
 var FONTE = "data/tv.json";
+var PING  = "data/tv-ping.json";   // só o carimbo de quando o robô olhou
 var MS_FETCH = 5 * 60 * 1000;   // buscar dado novo
 var MS_TICK  = 20 * 1000;       // recalcular o aperto contra o relógio
 var MS_TELA  = 30 * 1000;       // girar as telas
 var VELHO_MIN = 30;             // acima disso o dado não sustenta o semáforo
 
-var dados = null, iTela = 0, telas, dots;
+var dados = null, visto = null, iTela = 0, telas, dots;
 
 function $(id){ return document.getElementById(id); }
 function el(tag, cls, txt){
@@ -500,8 +501,9 @@ function ordenar(a, b){
 }
 
 function idadeMin(){
-  if (!dados || !dados.gerado_em) return Infinity;
-  return (Date.now() - new Date(dados.gerado_em).getTime()) / 60000;
+  var ref = (visto && visto.visto_em) || (dados && dados.gerado_em);
+  if (!ref) return Infinity;
+  return (Date.now() - new Date(ref).getTime()) / 60000;
 }
 
 /* --------------------------------- telas --------------------------------- */
@@ -607,15 +609,16 @@ function render(){
   var al = $("alerta");
   al.hidden = !velho;
   if (velho){
-    al.textContent = "Dado de " + new Date(dados.gerado_em)
-      .toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })
-      + " — há " + min2hm(idadeMin()) + ". O semáforo está desligado até o robô atualizar.";
+    al.textContent = "O robô não atualiza há " + min2hm(idadeMin())
+      + ". O semáforo está desligado até voltar.";
   }
 
   $("janela").textContent = dados.janela.abre + "–" + dados.janela.fecha;
-  $("rodape").textContent = "Atualizado " + new Date(dados.gerado_em)
-    .toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })
-    + " · o robô publica de hora em hora · a tela recalcula o ritmo a cada 20 s";
+  var hhmm = function(t){ return new Date(t)
+    .toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }); };
+  $("rodape").textContent = "Quadro de " + hhmm(dados.gerado_em)
+    + (visto && visto.visto_em ? " · robô verificou " + hhmm(visto.visto_em) : "")
+    + " · a tela recalcula o ritmo a cada 20 s";
 
   if (!vs.length){
     vazio("Nenhum veículo com saída hoje.");
@@ -793,6 +796,13 @@ function relogio(){
 }
 
 function buscar(){
+  // O ping é lido junto e nunca derruba a tela: se ele faltar, a idade cai
+  // para o gerado_em, que é o comportamento antigo.
+  fetch(PING + "?t=" + Date.now(), { cache: "no-store" })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(j){ if (j) { visto = j; render(); } })
+    .catch(function(){});
+
   // Cache-buster: a TV fica semanas sem recarregar, e um proxy no meio do
   // caminho serviria o mesmo arquivo o dia inteiro.
   fetch(FONTE + "?t=" + Date.now(), { cache: "no-store" })
