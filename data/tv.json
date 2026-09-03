@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T16:46:42-03:00",
+ "gerado_em": "2026-09-03T17:01:41-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,12 +60,12 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Campos Do Jordao",
    "total": 24,
-   "ok": 22,
+   "ok": 23,
    "semapont": 0,
-   "gm": 22,
+   "gm": 23,
    "saida": "10:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:27",
+   "ultima_baixa": "16:56",
    "ritmo_real": 17
   },
   {
@@ -90,13 +90,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 17,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "10:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:23",
-   "ritmo_real": 49
+   "ultima_baixa": "16:51",
+   "ritmo_real": 46
   },
   {
    "plano": "6103247732",
@@ -285,12 +285,12 @@
    "motorista": "Thales De Jesus Santos",
    "cidade": "Mogi Das Cruzes",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "16:39",
    "ritmo_real": 0
   },
   {
@@ -408,9 +408,9 @@
    "ok": 2,
    "semapont": 0,
    "gm": 2,
-   "saida": "11:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "16:10",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:35",
    "ritmo_real": 0
   },
   {
@@ -734,9 +734,9 @@
    "op": "Café · Guarulhos",
    "veic": 26,
    "total": 103,
-   "ok": 88,
+   "ok": 91,
    "semapont": 0,
-   "gm": 88
+   "gm": 91
   },
   {
    "op": "Café · Itapeva",
@@ -750,9 +750,9 @@
    "op": "Café · SJC",
    "veic": 9,
    "total": 68,
-   "ok": 54,
+   "ok": 56,
    "semapont": 0,
-   "gm": 54
+   "gm": 56
   },
   {
    "op": "Café · Meso Bauru",
@@ -814,7 +814,7 @@
   },
   {
    "h": "16",
-   "n": 5
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
