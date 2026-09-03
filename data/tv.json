@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T08:31:45-03:00",
+ "gerado_em": "2026-09-03T08:46:59-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -339,21 +339,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103174989",
-   "op": "Café · Itapeva",
-   "placa": "BWA1A03",
-   "motorista": "Jose Afonso Da Cruz",
-   "cidade": "",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103260914",
    "op": "Café · Guarulhos",
    "placa": "BZC2490",
@@ -530,8 +515,8 @@
   },
   {
    "op": "Café · Itapeva",
-   "veic": 4,
-   "total": 77,
+   "veic": 3,
+   "total": 76,
    "ok": 26,
    "semapont": 0,
    "gm": 26
