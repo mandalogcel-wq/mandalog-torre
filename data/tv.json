@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T15:01:44-03:00",
+ "gerado_em": "2026-09-03T15:16:42-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -354,6 +354,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103219537",
+   "op": "Café · Guarulhos",
+   "placa": "BPG8H46",
+   "motorista": "Wellington Pedro",
+   "cidade": "Itapevi",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103261011",
    "op": "Café · Guarulhos",
    "placa": "CDL5A39",
@@ -474,21 +489,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103219537",
-   "op": "Café · Guarulhos",
-   "placa": "BPG8H46",
-   "motorista": "Wellington Pedro",
-   "cidade": "Itapevi",
-   "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103174989",
    "op": "Café · Guarulhos",
    "placa": "BWA1A03",
@@ -546,6 +546,21 @@
    "saida": "07:11",
    "saida_fonte": "greenmile",
    "ultima_baixa": "12:28",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103266210",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Jacarei",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "14:15",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:15",
    "ritmo_real": 0
   },
   {
@@ -621,6 +636,21 @@
    "saida": "09:28",
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:04",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103266214",
+   "op": "Café · SJC",
+   "placa": "FLF1G91",
+   "motorista": "Gabriel Felix Faysten Dos Santos",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "13:56",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -703,9 +733,9 @@
   {
    "op": "Café · Guarulhos",
    "veic": 26,
-   "total": 102,
+   "total": 103,
    "ok": 85,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 85
   },
   {
@@ -718,11 +748,11 @@
   },
   {
    "op": "Café · SJC",
-   "veic": 7,
-   "total": 66,
-   "ok": 44,
+   "veic": 9,
+   "total": 68,
+   "ok": 45,
    "semapont": 0,
-   "gm": 44
+   "gm": 45
   },
   {
    "op": "Café · Meso Bauru",
@@ -776,7 +806,7 @@
   },
   {
    "h": "14",
-   "n": 15
+   "n": 16
   }
  ],
  "gm_sem_sac": 0
