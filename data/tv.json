@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T05:01:47-03:00",
+ "gerado_em": "2026-09-03T06:02:02-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -61,7 +61,7 @@
    "cidade": "Caraguatatuba",
    "total": 22,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -450,7 +450,7 @@
    "veic": 22,
    "total": 98,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 3,
    "gm": 0
   },
   {
