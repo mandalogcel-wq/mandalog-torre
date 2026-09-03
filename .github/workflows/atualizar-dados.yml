@@ -120,7 +120,7 @@ jobs:
             echo "Nada mudou."
           else
             git commit -m "dados: atualização automática $(TZ=America/Sao_Paulo date '+%d/%m %H:%M')"
-            git push
+            git pull --rebase --autostash && git push
           fi
 
       # Depois do commit, de propósito: uma indisponibilidade da Z-API não pode
