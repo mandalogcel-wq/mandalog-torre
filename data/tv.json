@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T09:16:50-03:00",
+ "gerado_em": "2026-09-03T09:31:51-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,12 +45,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Apiai",
    "total": 29,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "09:29",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:30",
    "ritmo_real": 0
   },
   {
@@ -165,12 +165,12 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:21",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:30",
    "ritmo_real": 0
   },
   {
@@ -228,8 +228,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:03",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -243,8 +243,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:29",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -444,6 +444,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103260986",
+   "op": "Café · Guarulhos",
+   "placa": "CDL5A39",
+   "motorista": "John Lucas Dos Santos",
+   "cidade": "Guaratingueta",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103262417",
    "op": "Café · Guarulhos",
    "placa": "DBB3A54",
@@ -528,8 +543,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:28",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -612,8 +627,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 23,
-   "total": 99,
+   "veic": 24,
+   "total": 100,
    "ok": 1,
    "semapont": 4,
    "gm": 1
@@ -622,17 +637,17 @@
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 76,
-   "ok": 29,
+   "ok": 31,
    "semapont": 0,
-   "gm": 29
+   "gm": 31
   },
   {
    "op": "Café · SJC",
    "veic": 7,
    "total": 66,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   },
   {
    "op": "Café · Meso Bauru",
@@ -655,6 +670,10 @@
   {
    "h": "08",
    "n": 5
+  },
+  {
+   "h": "09",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
