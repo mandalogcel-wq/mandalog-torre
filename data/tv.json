@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-03T12:31:45-03:00",
+ "gerado_em": "2026-09-03T12:46:40-03:00",
  "dia": "2026-09-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -240,9 +240,9 @@
    "motorista": "Luis Antonio Dos Santos",
    "cidade": "Botucatu",
    "total": 3,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "08:59",
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:59",
@@ -585,9 +585,9 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Jau",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -713,9 +713,9 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 32,
-   "ok": 1,
+   "ok": 4,
    "semapont": 9,
-   "gm": 1
+   "gm": 4
   },
   {
    "op": "Café · CD Sumaré",
