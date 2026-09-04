@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T13:31:44-03:00",
+ "gerado_em": "2026-09-04T14:01:54-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -105,13 +105,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "07:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:03",
-   "ritmo_real": 45
+   "ultima_baixa": "13:58",
+   "ritmo_real": 47
   },
   {
    "plano": "6103267496",
@@ -569,9 +569,9 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 55,
-   "ok": 31,
+   "ok": 32,
    "semapont": 0,
-   "gm": 31
+   "gm": 32
   },
   {
    "op": "Café · Meso Marília",
@@ -637,7 +637,7 @@
   },
   {
    "h": "13",
-   "n": 1
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
