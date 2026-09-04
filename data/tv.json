@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T12:46:43-03:00",
+ "gerado_em": "2026-09-04T13:01:46-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -150,13 +150,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Areias",
    "total": 5,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 3,
+   "saida": "12:25",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:42",
+   "ritmo_real": 8
   },
   {
    "plano": "6103254283/6103265236",
@@ -593,9 +593,9 @@
    "op": "Café · SJC",
    "veic": 5,
    "total": 20,
-   "ok": 9,
+   "ok": 12,
    "semapont": 0,
-   "gm": 9
+   "gm": 12
   },
   {
    "op": "Café · CD Sumaré",
@@ -633,7 +633,7 @@
   },
   {
    "h": "12",
-   "n": 4
+   "n": 7
   }
  ],
  "gm_sem_sac": 0
