@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T10:31:41-03:00",
+ "gerado_em": "2026-09-04T11:01:42-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,13 +90,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 2,
+   "ok": 5,
    "semapont": 0,
-   "gm": 2,
+   "gm": 5,
    "saida": "09:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:28",
-   "ritmo_real": 1
+   "ultima_baixa": "10:49",
+   "ritmo_real": 20
   },
   {
    "plano": "6103267495",
@@ -105,13 +105,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 1,
+   "ok": 4,
    "semapont": 0,
-   "gm": 1,
+   "gm": 4,
    "saida": "07:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:32",
-   "ritmo_real": 0
+   "ultima_baixa": "10:43",
+   "ritmo_real": 44
   },
   {
    "plano": "6103267496",
@@ -225,12 +225,12 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:43",
    "ritmo_real": 0
   },
   {
@@ -300,12 +300,12 @@
    "motorista": "Orlando Vieira",
    "cidade": "Sao Bernardo Do Campo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "07:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:48",
    "ritmo_real": 0
   },
   {
@@ -510,12 +510,12 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Jose Dos Campos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:11",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:48",
    "ritmo_real": 0
   },
   {
@@ -569,9 +569,9 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 55,
-   "ok": 7,
+   "ok": 16,
    "semapont": 0,
-   "gm": 7
+   "gm": 16
   },
   {
    "op": "Café · Meso Marília",
@@ -593,9 +593,9 @@
    "op": "Café · SJC",
    "veic": 5,
    "total": 20,
-   "ok": 2,
+   "ok": 5,
    "semapont": 0,
-   "gm": 2
+   "gm": 5
   },
   {
    "op": "Café · CD Sumaré",
@@ -622,6 +622,10 @@
   {
    "h": "09",
    "n": 8
+  },
+  {
+   "h": "10",
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
