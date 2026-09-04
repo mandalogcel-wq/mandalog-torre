@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T14:31:44-03:00",
+ "gerado_em": "2026-09-04T14:46:48-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,8 +15,8 @@
    "motorista": "Aguinaldo Ribeiro Pinheiro",
    "cidade": "Bauru",
    "total": 16,
-   "ok": 0,
-   "semapont": 16,
+   "ok": 4,
+   "semapont": 12,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -60,9 +60,9 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Sao Manuel",
    "total": 13,
-   "ok": 0,
+   "ok": 13,
    "semapont": 0,
-   "gm": 0,
+   "gm": 13,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -570,9 +570,9 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 31,
-   "ok": 2,
-   "semapont": 16,
-   "gm": 2
+   "ok": 19,
+   "semapont": 12,
+   "gm": 15
   },
   {
    "op": "Café · SJC",
