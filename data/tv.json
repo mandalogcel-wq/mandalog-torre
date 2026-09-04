@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T15:01:42-03:00",
+ "gerado_em": "2026-09-04T15:16:44-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,9 +75,9 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Piraju",
    "total": 13,
-   "ok": 0,
-   "semapont": 13,
-   "gm": 0,
+   "ok": 4,
+   "semapont": 9,
+   "gm": 4,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -562,9 +562,9 @@
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 41,
-   "ok": 19,
-   "semapont": 20,
-   "gm": 19
+   "ok": 23,
+   "semapont": 16,
+   "gm": 23
   },
   {
    "op": "Café · Meso Bauru",
