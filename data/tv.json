@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T10:01:45-03:00",
+ "gerado_em": "2026-09-04T10:16:41-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -480,9 +480,9 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -495,9 +495,9 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Pederneiras",
    "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -585,9 +585,9 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 31,
-   "ok": 0,
-   "semapont": 18,
-   "gm": 0
+   "ok": 2,
+   "semapont": 16,
+   "gm": 2
   },
   {
    "op": "Café · SJC",
