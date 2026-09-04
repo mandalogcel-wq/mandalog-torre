@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T13:16:43-03:00",
+ "gerado_em": "2026-09-04T13:31:44-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -110,8 +110,8 @@
    "gm": 7,
    "saida": "07:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:25",
-   "ritmo_real": 39
+   "ultima_baixa": "13:03",
+   "ritmo_real": 45
   },
   {
    "plano": "6103267496",
@@ -633,7 +633,11 @@
   },
   {
    "h": "12",
-   "n": 8
+   "n": 7
+  },
+  {
+   "h": "13",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
