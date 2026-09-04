@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T16:01:45-03:00",
+ "gerado_em": "2026-09-04T16:31:42-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -320,7 +320,7 @@
    "gm": 2,
    "saida": "07:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:27",
+   "ultima_baixa": "16:20",
    "ritmo_real": 0
   },
   {
@@ -390,11 +390,26 @@
    "motorista": "Wellington Pedro",
    "cidade": "Itapevi",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "11:26",
    "saida_fonte": "greenmile",
+   "ultima_baixa": "16:12",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103174989",
+   "op": "Café · Guarulhos",
+   "placa": "BWA1A03",
+   "motorista": "Jose Afonso Da Cruz",
+   "cidade": "",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -552,11 +567,11 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 21,
-   "total": 55,
-   "ok": 42,
+   "veic": 22,
+   "total": 56,
+   "ok": 44,
    "semapont": 0,
-   "gm": 42
+   "gm": 44
   },
   {
    "op": "Café · Meso Marília",
@@ -601,10 +616,6 @@
  ],
  "baixas_por_hora": [
   {
-   "h": "07",
-   "n": 2
-  },
-  {
    "h": "08",
    "n": 1
   },
@@ -635,6 +646,10 @@
   {
    "h": "15",
    "n": 5
+  },
+  {
+   "h": "16",
+   "n": 3
   }
  ],
  "gm_sem_sac": 2
