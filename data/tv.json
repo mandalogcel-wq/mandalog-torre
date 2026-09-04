@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T15:31:46-03:00",
+ "gerado_em": "2026-09-04T16:01:45-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,9 +30,9 @@
    "motorista": "Luis Antonio Dos Santos",
    "cidade": "Tupa",
    "total": 14,
-   "ok": 7,
-   "semapont": 7,
-   "gm": 7,
+   "ok": 8,
+   "semapont": 6,
+   "gm": 8,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -135,13 +135,13 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Guarulhos",
    "total": 6,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "08:20",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:12",
-   "ritmo_real": 126
+   "ultima_baixa": "15:49",
+   "ritmo_real": 117
   },
   {
    "plano": "6103266201",
@@ -270,12 +270,12 @@
    "motorista": "",
    "cidade": "Atibaia",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:17",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:43",
    "ritmo_real": 0
   },
   {
@@ -315,12 +315,12 @@
    "motorista": "Guilherme Alves De Andrade",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "07:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "07:27",
    "ritmo_real": 0
   },
   {
@@ -554,17 +554,17 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 55,
-   "ok": 36,
+   "ok": 42,
    "semapont": 0,
-   "gm": 36
+   "gm": 42
   },
   {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 41,
-   "ok": 21,
-   "semapont": 16,
-   "gm": 21
+   "ok": 22,
+   "semapont": 15,
+   "gm": 22
   },
   {
    "op": "Café · Meso Bauru",
@@ -601,6 +601,10 @@
  ],
  "baixas_por_hora": [
   {
+   "h": "07",
+   "n": 2
+  },
+  {
    "h": "08",
    "n": 1
   },
@@ -630,7 +634,7 @@
   },
   {
    "h": "15",
-   "n": 1
+   "n": 5
   }
  ],
  "gm_sem_sac": 2
