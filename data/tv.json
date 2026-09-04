@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T17:31:39-03:00",
+ "gerado_em": "2026-09-04T18:31:45-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -300,12 +300,12 @@
    "motorista": "Gilberto Jose De Lima",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "10:17",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "18:25",
    "ritmo_real": 0
   },
   {
@@ -345,12 +345,12 @@
    "motorista": "Wellington Costa Dos Santos",
    "cidade": "Diadema",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "08:46",
    "ritmo_real": 0
   },
   {
@@ -435,9 +435,9 @@
    "motorista": "Claudio Felipe Fernandes",
    "cidade": "Santos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -569,9 +569,9 @@
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 56,
-   "ok": 46,
+   "ok": 51,
    "semapont": 0,
-   "gm": 46
+   "gm": 51
   },
   {
    "op": "Café · Meso Marília",
@@ -617,7 +617,7 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 1
+   "n": 3
   },
   {
    "h": "09",
@@ -653,6 +653,10 @@
   },
   {
    "h": "17",
+   "n": 2
+  },
+  {
+   "h": "18",
    "n": 2
   }
  ],
