@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T11:46:47-03:00",
+ "gerado_em": "2026-09-04T12:01:40-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,12 +90,12 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 5,
+   "ok": 8,
    "semapont": 0,
-   "gm": 5,
+   "gm": 8,
    "saida": "09:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:49",
+   "ultima_baixa": "11:50",
    "ritmo_real": 20
   },
   {
@@ -140,8 +140,8 @@
    "gm": 2,
    "saida": "08:20",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:29",
-   "ritmo_real": 30
+   "ultima_baixa": "11:33",
+   "ritmo_real": 94
   },
   {
    "plano": "6103266201",
@@ -219,6 +219,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103267473",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Sao Paulo",
+   "total": 3,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3,
+   "saida": "11:33",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "11:55",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103262558",
    "op": "Café · Guarulhos",
    "placa": "EMF0232",
@@ -240,27 +255,12 @@
    "motorista": "Miqueas",
    "cidade": "Guarulhos",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103267473",
-   "op": "Café · Guarulhos",
-   "placa": "FSC5D26",
-   "motorista": "Carlos Cesar",
-   "cidade": "Sao Paulo",
-   "total": 3,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:45",
    "ritmo_real": 0
   },
   {
@@ -528,8 +528,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "11:48",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -555,12 +555,12 @@
    "motorista": "Alex Carneiro Teixeira",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "11:48",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "11:51",
    "ritmo_real": 0
   }
  ],
@@ -569,9 +569,9 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 55,
-   "ok": 20,
+   "ok": 27,
    "semapont": 0,
-   "gm": 20
+   "gm": 27
   },
   {
    "op": "Café · Meso Marília",
@@ -593,9 +593,9 @@
    "op": "Café · SJC",
    "veic": 5,
    "total": 20,
-   "ok": 5,
+   "ok": 8,
    "semapont": 0,
-   "gm": 5
+   "gm": 8
   },
   {
    "op": "Café · CD Sumaré",
@@ -625,11 +625,11 @@
   },
   {
    "h": "10",
-   "n": 13
+   "n": 12
   },
   {
    "h": "11",
-   "n": 3
+   "n": 14
   }
  ],
  "gm_sem_sac": 0
