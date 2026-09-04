@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T09:31:44-03:00",
+ "gerado_em": "2026-09-04T09:46:44-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -153,7 +153,7 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "11:00",
+   "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
@@ -414,21 +414,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103266203",
-   "op": "Café · SJC",
-   "placa": "ENK7E30",
-   "motorista": "Joao Paulo Fausto Menezes",
-   "cidade": "Tremembe",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "11:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103267472",
    "op": "Café · Guarulhos",
    "placa": "ETO2A93",
@@ -591,8 +576,8 @@
   },
   {
    "op": "Café · SJC",
-   "veic": 6,
-   "total": 21,
+   "veic": 5,
+   "total": 20,
    "ok": 2,
    "semapont": 0,
    "gm": 2
