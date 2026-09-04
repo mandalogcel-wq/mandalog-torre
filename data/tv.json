@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-04T11:01:42-03:00",
+ "gerado_em": "2026-09-04T11:31:40-03:00",
  "dia": "2026-09-04",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -180,13 +180,13 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Sao Paulo",
    "total": 5,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "07:43",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:25",
-   "ritmo_real": 0
+   "ultima_baixa": "11:05",
+   "ritmo_real": 33
   },
   {
    "plano": "6103266219",
@@ -393,8 +393,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "11:26",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -435,12 +435,12 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Diadema",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "06:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:04",
    "ritmo_real": 0
   },
   {
@@ -569,9 +569,9 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 55,
-   "ok": 16,
+   "ok": 19,
    "semapont": 0,
-   "gm": 16
+   "gm": 19
   },
   {
    "op": "Café · Meso Marília",
@@ -626,6 +626,10 @@
   {
    "h": "10",
    "n": 12
+  },
+  {
+   "h": "11",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
