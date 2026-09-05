@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-05T09:01:40-03:00",
+ "gerado_em": "2026-09-05T09:31:47-03:00",
  "dia": "2026-09-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Caraguatatuba",
    "total": 22,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 22,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -31,7 +31,7 @@
    "cidade": "Sao Sebastiao",
    "total": 11,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 11,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -45,12 +45,12 @@
    "motorista": "",
    "cidade": "Sao Bernardo Do Campo",
    "total": 2,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2,
-   "saida": "06:55",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:09",
+   "ok": 0,
+   "semapont": 2,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -60,9 +60,9 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 2,
+   "ok": 1,
    "semapont": 0,
-   "gm": 2,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -106,7 +106,7 @@
    "cidade": "Sao Jose Dos Campos",
    "total": 1,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -121,7 +121,7 @@
    "cidade": "Sao Bernardo Do Campo",
    "total": 1,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -136,10 +136,10 @@
    "cidade": "Santo Andre",
    "total": 1,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0,
-   "saida": "08:47",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   }
@@ -149,9 +149,9 @@
    "op": "Café · Guarulhos",
    "veic": 6,
    "total": 39,
-   "ok": 4,
-   "semapont": 0,
-   "gm": 4
+   "ok": 1,
+   "semapont": 37,
+   "gm": 1
   },
   {
    "op": "Café · Meso Bauru",
@@ -166,15 +166,10 @@
    "veic": 1,
    "total": 1,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0
   }
  ],
- "baixas_por_hora": [
-  {
-   "h": "08",
-   "n": 2
-  }
- ],
+ "baixas_por_hora": [],
  "gm_sem_sac": 0
 }
