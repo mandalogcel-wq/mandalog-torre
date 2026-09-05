@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-05T05:01:42-03:00",
+ "gerado_em": "2026-09-05T05:31:41-03:00",
  "dia": "2026-09-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -54,6 +54,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103267496",
+   "op": "Café · Guarulhos",
+   "placa": "EZC5B87",
+   "motorista": "Edilson Da Silva Bento",
+   "cidade": "Sao Paulo",
+   "total": 2,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103266214",
    "op": "Café · SJC",
    "placa": "FLF1G91",
@@ -102,11 +117,11 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 5,
-   "total": 37,
-   "ok": 0,
+   "veic": 6,
+   "total": 39,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0
+   "gm": 2
   },
   {
    "op": "Café · SJC",
