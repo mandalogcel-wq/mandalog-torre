@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-05T05:31:41-03:00",
+ "gerado_em": "2026-09-05T07:01:46-03:00",
  "dia": "2026-09-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -48,8 +48,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "06:55",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -65,6 +65,36 @@
    "gm": 2,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103264884",
+   "op": "Café · Meso Bauru",
+   "placa": "DMQ3G22",
+   "motorista": "Luciano Donizeti De Melo",
+   "cidade": "Bauru",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103264889",
+   "op": "Café · Meso Bauru",
+   "placa": "DMQ3G22",
+   "motorista": "Luciano Donizeti De Melo",
+   "cidade": "Bauru",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -122,6 +152,14 @@
    "ok": 2,
    "semapont": 0,
    "gm": 2
+  },
+  {
+   "op": "Café · Meso Bauru",
+   "veic": 2,
+   "total": 2,
+   "ok": 0,
+   "semapont": 2,
+   "gm": 0
   },
   {
    "op": "Café · SJC",
