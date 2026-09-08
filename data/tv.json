@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T14:31:45-03:00",
+ "gerado_em": "2026-09-08T14:46:46-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 17,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "09:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:06",
-   "ritmo_real": 25
+   "ultima_baixa": "14:38",
+   "ritmo_real": 26
   },
   {
    "plano": "6103265051",
@@ -150,7 +150,7 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Piraju",
    "total": 7,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -384,21 +384,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103267628",
-   "op": "Café · Meso Bauru",
-   "placa": "EKK4493",
-   "motorista": "Luis Antonio Dos Santos",
-   "cidade": "Jau",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103261013",
    "op": "Café · Guarulhos",
    "placa": "HWD6886",
@@ -450,7 +435,7 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Guarulhos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -477,8 +462,8 @@
  "pracas": [
   {
    "op": "Café · Meso Bauru",
-   "veic": 8,
-   "total": 87,
+   "veic": 7,
+   "total": 86,
    "ok": 3,
    "semapont": 0,
    "gm": 0
@@ -487,15 +472,15 @@
    "op": "Café · SJC",
    "veic": 4,
    "total": 43,
-   "ok": 27,
+   "ok": 28,
    "semapont": 0,
-   "gm": 27
+   "gm": 28
   },
   {
    "op": "Café · Guarulhos",
    "veic": 15,
    "total": 43,
-   "ok": 27,
+   "ok": 28,
    "semapont": 0,
    "gm": 27
   },
@@ -503,7 +488,7 @@
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 11,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
    "gm": 0
   }
@@ -531,7 +516,7 @@
   },
   {
    "h": "14",
-   "n": 3
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
