@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T17:01:49-03:00",
+ "gerado_em": "2026-09-08T17:16:43-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -84,6 +84,21 @@
    "ritmo_real": 35
   },
   {
+   "plano": "6103269384",
+   "op": "Café · Guarulhos",
+   "placa": "FSC5D26",
+   "motorista": "Carlos Cesar",
+   "cidade": "Sao Paulo",
+   "total": 14,
+   "ok": 12,
+   "semapont": 0,
+   "gm": 12,
+   "saida": "10:36",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:43",
+   "ritmo_real": 33
+  },
+  {
    "plano": "6103269259",
    "op": "Café · SJC",
    "placa": "AHE8H87",
@@ -97,21 +112,6 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:44",
    "ritmo_real": 66
-  },
-  {
-   "plano": "6103269384",
-   "op": "Café · Guarulhos",
-   "placa": "FSC5D26",
-   "motorista": "Carlos Cesar",
-   "cidade": "Sao Paulo",
-   "total": 10,
-   "ok": 9,
-   "semapont": 0,
-   "gm": 9,
-   "saida": "10:36",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "15:29",
-   "ritmo_real": 36
   },
   {
    "plano": "6103269272",
@@ -150,7 +150,7 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Piraju",
    "total": 7,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
    "gm": 4,
    "saida": "13:43",
@@ -186,6 +186,21 @@
    "saida": "08:45",
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:05",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103269349",
+   "op": "Café · Guarulhos",
+   "placa": "BZC2490",
+   "motorista": "Gilberto Jose De Lima",
+   "cidade": "Sao Paulo",
+   "total": 3,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3,
+   "saida": "11:53",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:39",
    "ritmo_real": 0
   },
   {
@@ -478,17 +493,17 @@
   },
   {
    "op": "Café · Guarulhos",
-   "veic": 14,
-   "total": 36,
-   "ok": 30,
+   "veic": 15,
+   "total": 43,
+   "ok": 36,
    "semapont": 0,
-   "gm": 29
+   "gm": 35
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 11,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
    "gm": 8
   },
@@ -520,7 +535,7 @@
   },
   {
    "h": "12",
-   "n": 13
+   "n": 14
   },
   {
    "h": "13",
@@ -532,11 +547,11 @@
   },
   {
    "h": "15",
-   "n": 12
+   "n": 16
   },
   {
    "h": "16",
-   "n": 14
+   "n": 15
   }
  ],
  "gm_sem_sac": 0
