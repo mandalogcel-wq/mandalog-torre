@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T11:17:46-03:00",
+ "gerado_em": "2026-09-08T14:00:24-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -42,7 +42,7 @@
    "plano": "6103267621",
    "op": "Café · Meso Bauru",
    "placa": "EFQ7G95",
-   "motorista": "Jose Ailton Da Silva Lima",
+   "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Bauru",
    "total": 19,
    "ok": 0,
@@ -60,13 +60,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 17,
-   "ok": 4,
+   "ok": 8,
    "semapont": 0,
-   "gm": 4,
+   "gm": 8,
    "saida": "09:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:40",
-   "ritmo_real": 6
+   "ultima_baixa": "13:17",
+   "ritmo_real": 25
   },
   {
    "plano": "6103265051",
@@ -75,8 +75,8 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 16,
-   "ok": 0,
-   "semapont": 16,
+   "ok": 1,
+   "semapont": 15,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -90,13 +90,13 @@
    "motorista": "Carlos Cesar",
    "cidade": "Sao Paulo",
    "total": 14,
-   "ok": 1,
+   "ok": 7,
    "semapont": 0,
-   "gm": 1,
+   "gm": 7,
    "saida": "10:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:37",
-   "ritmo_real": 0
+   "ultima_baixa": "13:03",
+   "ritmo_real": 24
   },
   {
    "plano": "6103269259",
@@ -120,13 +120,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Guaratingueta",
    "total": 8,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 4,
+   "saida": "11:10",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:21",
+   "ritmo_real": 22
   },
   {
    "plano": "6103269269",
@@ -135,13 +135,13 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Campos Do Jordao",
    "total": 8,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "09:51",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:44",
-   "ritmo_real": 10
+   "ultima_baixa": "11:30",
+   "ritmo_real": 14
   },
   {
    "plano": "6103265054",
@@ -149,9 +149,9 @@
    "placa": "FCD7E39",
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Piraju",
-   "total": 6,
+   "total": 7,
    "ok": 0,
-   "semapont": 6,
+   "semapont": 7,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -165,12 +165,12 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Aruja",
    "total": 4,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
+   "gm": 4,
    "saida": "08:25",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:38",
    "ritmo_real": 0
   },
   {
@@ -180,12 +180,12 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Suzano",
    "total": 4,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
+   "gm": 4,
    "saida": "08:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:05",
    "ritmo_real": 0
   },
   {
@@ -230,7 +230,7 @@
    "gm": 3,
    "saida": "06:11",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "06:11",
+   "ultima_baixa": "12:09",
    "ritmo_real": 0
   },
   {
@@ -240,12 +240,12 @@
    "motorista": "John Lucas Dos Santos",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "05:58",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:08",
    "ritmo_real": 0
   },
   {
@@ -285,26 +285,11 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Avai",
    "total": 2,
-   "ok": 0,
-   "semapont": 2,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103267657",
-   "op": "Café · Guarulhos",
-   "placa": "QWS1C27",
-   "motorista": "Waldir Daniel",
-   "cidade": "Embu Das Artes",
-   "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -315,12 +300,12 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:58",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:46",
    "ritmo_real": 0
   },
   {
@@ -399,6 +384,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103267628",
+   "op": "Café · Meso Bauru",
+   "placa": "EKK4493",
+   "motorista": "Luis Antonio Dos Santos",
+   "cidade": "Jau",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103261013",
    "op": "Café · Guarulhos",
    "placa": "HWD6886",
@@ -429,6 +429,36 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103267657",
+   "op": "Café · Guarulhos",
+   "placa": "QWS1C27",
+   "motorista": "Waldir Daniel",
+   "cidade": "Taboao Da Serra",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "13:22",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:26",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103266272",
+   "op": "Café · Guarulhos",
+   "placa": "RNS4A88",
+   "motorista": "Gabriel Azevedo Medeiros",
+   "cidade": "Guarulhos",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103262421",
    "op": "Café · Guarulhos",
    "placa": "SVL4J89",
@@ -447,42 +477,38 @@
  "pracas": [
   {
    "op": "Café · Meso Bauru",
-   "veic": 7,
-   "total": 86,
-   "ok": 0,
-   "semapont": 86,
+   "veic": 8,
+   "total": 87,
+   "ok": 3,
+   "semapont": 84,
    "gm": 0
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 43,
-   "ok": 14,
+   "ok": 24,
    "semapont": 0,
-   "gm": 14
+   "gm": 24
   },
   {
    "op": "Café · Guarulhos",
-   "veic": 14,
+   "veic": 15,
    "total": 43,
-   "ok": 7,
+   "ok": 26,
    "semapont": 0,
-   "gm": 7
+   "gm": 26
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
-   "total": 10,
+   "total": 11,
    "ok": 0,
-   "semapont": 10,
+   "semapont": 11,
    "gm": 0
   }
  ],
  "baixas_por_hora": [
-  {
-   "h": "06",
-   "n": 3
-  },
   {
    "h": "09",
    "n": 1
@@ -490,6 +516,18 @@
   {
    "h": "10",
    "n": 17
+  },
+  {
+   "h": "11",
+   "n": 17
+  },
+  {
+   "h": "12",
+   "n": 10
+  },
+  {
+   "h": "13",
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
