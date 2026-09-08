@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T18:01:47-03:00",
+ "gerado_em": "2026-09-08T18:16:44-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,9 +60,9 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Bauru",
    "total": 19,
-   "ok": 19,
+   "ok": 18,
    "semapont": 0,
-   "gm": 19,
+   "gm": 18,
    "saida": "08:51",
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:02",
@@ -517,9 +517,9 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 86,
-   "ok": 84,
+   "ok": 83,
    "semapont": 0,
-   "gm": 84
+   "gm": 83
   },
   {
    "op": "Café · SJC",
