@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T17:16:43-03:00",
+ "gerado_em": "2026-09-08T17:31:52-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -9,6 +9,21 @@
  "limite_aperto": 1.5,
  "veiculos": [
   {
+   "plano": "6103267462",
+   "op": "Café · Guarulhos",
+   "placa": "DBB3A54",
+   "motorista": "Alex Junior Brunelo",
+   "cidade": "Itarare",
+   "total": 28,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103265052",
    "op": "Café · Meso Bauru",
    "placa": "AUR5G40",
@@ -17,11 +32,11 @@
    "total": 27,
    "ok": 25,
    "semapont": 0,
-   "gm": 22,
+   "gm": 25,
    "saida": "09:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:55",
-   "ritmo_real": 21
+   "ultima_baixa": "17:09",
+   "ritmo_real": 19
   },
   {
    "plano": "6103264898",
@@ -52,6 +67,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:02",
    "ritmo_real": 25
+  },
+  {
+   "plano": "6103267466",
+   "op": "Café · Guarulhos",
+   "placa": "DBB3A82",
+   "motorista": "Alex Junior Brunelo",
+   "cidade": "Itapirapua Paulista",
+   "total": 18,
+   "ok": 17,
+   "semapont": 0,
+   "gm": 17,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103269261",
@@ -120,13 +150,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Guaratingueta",
    "total": 8,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "11:10",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:57",
-   "ritmo_real": 47
+   "ultima_baixa": "17:16",
+   "ritmo_real": 52
   },
   {
    "plano": "6103269269",
@@ -452,7 +482,7 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -476,26 +506,26 @@
  ],
  "pracas": [
   {
+   "op": "Café · Guarulhos",
+   "veic": 17,
+   "total": 89,
+   "ok": 53,
+   "semapont": 0,
+   "gm": 53
+  },
+  {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 86,
    "ok": 84,
    "semapont": 0,
-   "gm": 78
+   "gm": 81
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 43,
-   "ok": 34,
-   "semapont": 0,
-   "gm": 34
-  },
-  {
-   "op": "Café · Guarulhos",
-   "veic": 15,
-   "total": 43,
-   "ok": 36,
+   "ok": 35,
    "semapont": 0,
    "gm": 35
   },
@@ -552,6 +582,10 @@
   {
    "h": "16",
    "n": 15
+  },
+  {
+   "h": "17",
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
