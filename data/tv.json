@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T16:02:01-03:00",
+ "gerado_em": "2026-09-08T16:16:43-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,7 +15,7 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Avare",
    "total": 27,
-   "ok": 18,
+   "ok": 23,
    "semapont": 0,
    "gm": 18,
    "saida": "09:27",
@@ -75,7 +75,7 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 16,
-   "ok": 12,
+   "ok": 16,
    "semapont": 0,
    "gm": 12,
    "saida": "09:47",
@@ -105,9 +105,9 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 10,
-   "ok": 4,
+   "ok": 7,
    "semapont": 0,
-   "gm": 4,
+   "gm": 7,
    "saida": "09:55",
    "saida_fonte": "greenmile",
    "ultima_baixa": "10:50",
@@ -479,7 +479,7 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 86,
-   "ok": 73,
+   "ok": 82,
    "semapont": 0,
    "gm": 73
   },
@@ -487,9 +487,9 @@
    "op": "Café · SJC",
    "veic": 4,
    "total": 43,
-   "ok": 31,
+   "ok": 34,
    "semapont": 0,
-   "gm": 31
+   "gm": 34
   },
   {
    "op": "Café · Guarulhos",
