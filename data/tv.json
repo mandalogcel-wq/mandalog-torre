@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T14:00:24-03:00",
+ "gerado_em": "2026-09-08T14:31:45-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Avare",
    "total": 27,
    "ok": 0,
-   "semapont": 27,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -31,7 +31,7 @@
    "cidade": "Jau",
    "total": 20,
    "ok": 0,
-   "semapont": 20,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -46,7 +46,7 @@
    "cidade": "Bauru",
    "total": 19,
    "ok": 0,
-   "semapont": 19,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -60,12 +60,12 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 17,
-   "ok": 8,
+   "ok": 10,
    "semapont": 0,
-   "gm": 8,
+   "gm": 10,
    "saida": "09:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:17",
+   "ultima_baixa": "14:06",
    "ritmo_real": 25
   },
   {
@@ -76,7 +76,7 @@
    "cidade": "Botucatu",
    "total": 16,
    "ok": 1,
-   "semapont": 15,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -90,13 +90,13 @@
    "motorista": "Carlos Cesar",
    "cidade": "Sao Paulo",
    "total": 14,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "10:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:03",
-   "ritmo_real": 24
+   "ultima_baixa": "14:18",
+   "ritmo_real": 32
   },
   {
    "plano": "6103269259",
@@ -120,13 +120,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Guaratingueta",
    "total": 8,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "11:10",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:21",
-   "ritmo_real": 22
+   "ultima_baixa": "13:27",
+   "ritmo_real": 33
   },
   {
    "plano": "6103269269",
@@ -151,7 +151,7 @@
    "cidade": "Piraju",
    "total": 7,
    "ok": 0,
-   "semapont": 7,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -256,7 +256,7 @@
    "cidade": "Marilia",
    "total": 2,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -331,7 +331,7 @@
    "cidade": "Marilia",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -346,7 +346,7 @@
    "cidade": "Marilia",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -361,7 +361,7 @@
    "cidade": "Marilia",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -376,7 +376,7 @@
    "cidade": "Bauru",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -391,7 +391,7 @@
    "cidade": "Jau",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -480,31 +480,31 @@
    "veic": 8,
    "total": 87,
    "ok": 3,
-   "semapont": 84,
+   "semapont": 0,
    "gm": 0
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 43,
-   "ok": 24,
+   "ok": 27,
    "semapont": 0,
-   "gm": 24
+   "gm": 27
   },
   {
    "op": "Café · Guarulhos",
    "veic": 15,
    "total": 43,
-   "ok": 26,
+   "ok": 27,
    "semapont": 0,
-   "gm": 26
+   "gm": 27
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 11,
    "ok": 0,
-   "semapont": 11,
+   "semapont": 0,
    "gm": 0
   }
  ],
@@ -527,7 +527,11 @@
   },
   {
    "h": "13",
-   "n": 5
+   "n": 6
+  },
+  {
+   "h": "14",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
