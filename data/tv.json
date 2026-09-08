@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-08T17:31:52-03:00",
+ "gerado_em": "2026-09-08T17:46:42-03:00",
  "dia": "2026-09-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -105,7 +105,7 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 16,
-   "ok": 16,
+   "ok": 15,
    "semapont": 0,
    "gm": 13,
    "saida": "09:47",
@@ -517,7 +517,7 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 86,
-   "ok": 84,
+   "ok": 83,
    "semapont": 0,
    "gm": 81
   },
