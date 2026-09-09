@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T05:01:54-03:00",
+ "gerado_em": "2026-09-09T05:46:44-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -41,8 +41,8 @@
   {
    "plano": "6103271592",
    "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
+   "placa": "RNS4A88",
+   "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Sao Bernardo Do Campo",
    "total": 13,
    "ok": 0,
@@ -146,8 +146,8 @@
   {
    "plano": "6103271660",
    "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
+   "placa": "ETO2A93",
+   "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Barueri",
    "total": 2,
    "ok": 0,
