@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T08:31:45-03:00",
+ "gerado_em": "2026-09-09T08:46:45-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -129,6 +129,36 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103261445",
+   "op": "Café · Guarulhos",
+   "placa": "EMF0232",
+   "motorista": "Ivan Albino Da Silva",
+   "cidade": "Cajamar",
+   "total": 5,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103267628",
+   "op": "Café · Meso Bauru",
+   "placa": "AUR5G40",
+   "motorista": "Bruno Sousa Rocha",
+   "cidade": "Jau",
+   "total": 4,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103269347",
    "op": "Café · Guarulhos",
    "placa": "EZC5B87",
@@ -162,7 +192,7 @@
    "plano": "6103269341",
    "op": "Café · Guarulhos",
    "placa": "UPG6H75",
-   "motorista": "Jefferson Araujo",
+   "motorista": "Josafá Araujo da Silva",
    "cidade": "Itaquaquecetuba",
    "total": 4,
    "ok": 0,
@@ -242,21 +272,6 @@
    "total": 2,
    "ok": 0,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103261445",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "",
-   "total": 1,
-   "ok": 0,
-   "semapont": 1,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -373,9 +388,9 @@
   {
    "op": "Café · Guarulhos",
    "veic": 16,
-   "total": 89,
+   "total": 93,
    "ok": 18,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 18
   },
   {
@@ -388,8 +403,8 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 3,
-   "total": 32,
+   "veic": 4,
+   "total": 36,
    "ok": 0,
    "semapont": 0,
    "gm": 0
