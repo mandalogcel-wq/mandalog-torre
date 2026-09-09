@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T09:16:44-03:00",
+ "gerado_em": "2026-09-09T09:31:55-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Alex Junior Brunelo",
    "cidade": "Itarare",
    "total": 28,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "07:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:54",
-   "ritmo_real": 9
+   "ultima_baixa": "09:19",
+   "ritmo_real": 10
   },
   {
    "plano": "6103265053",
@@ -30,13 +30,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Ourinhos",
    "total": 25,
-   "ok": 6,
+   "ok": 11,
    "semapont": 0,
-   "gm": 6,
+   "gm": 11,
    "saida": "08:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:33",
-   "ritmo_real": 0
+   "ultima_baixa": "09:02",
+   "ritmo_real": 3
   },
   {
    "plano": "6103267626",
@@ -45,28 +45,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Agudos",
    "total": 20,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103270962",
-   "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Aparecida",
-   "total": 18,
-   "ok": 0,
-   "semapont": 18,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 2,
+   "saida": "09:07",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:26",
+   "ritmo_real": 18
   },
   {
    "plano": "6103267466",
@@ -84,29 +69,14 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103267627",
-   "op": "Café · Meso Marília",
-   "placa": "MGS5I23",
-   "motorista": "Edwin Felipe De Oliveira Marques",
-   "cidade": "Marilia",
-   "total": 18,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "08:50",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:50",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103270961",
+   "plano": "6103270962",
    "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Sao Jose Dos Campos",
-   "total": 13,
+   "placa": "ENK7E30",
+   "motorista": "Joao Paulo Fausto Menezes",
+   "cidade": "Aparecida",
+   "total": 18,
    "ok": 0,
-   "semapont": 13,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -114,14 +84,44 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103267627",
+   "op": "Café · Meso Marília",
+   "placa": "MGS5I23",
+   "motorista": "Edwin Felipe De Oliveira Marques",
+   "cidade": "Marilia",
+   "total": 18,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3,
+   "saida": "08:50",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:26",
+   "ritmo_real": 18
+  },
+  {
    "plano": "6103271163",
    "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
+   "placa": "AHE8H87",
+   "motorista": "Renato Lopes Mendes",
    "cidade": "Cunha",
    "total": 13,
    "ok": 0,
-   "semapont": 13,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103270961",
+   "op": "Café · SJC",
+   "placa": "QOT3G41",
+   "motorista": "Edson Martins De Carvalho",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 13,
+   "ok": 0,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -138,25 +138,25 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:06",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
    "plano": "6103270960",
    "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Jacarei",
    "total": 12,
-   "ok": 0,
-   "semapont": 12,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "08:39",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:02",
+   "ritmo_real": 19
   },
   {
    "plano": "6103267623",
@@ -165,13 +165,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Mineiros Do Tiete",
    "total": 11,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 2,
+   "saida": "09:04",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:29",
+   "ritmo_real": 24
   },
   {
    "plano": "6103261040",
@@ -258,8 +258,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:16",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -303,8 +303,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:26",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -464,33 +464,33 @@
    "op": "Café · Guarulhos",
    "veic": 17,
    "total": 94,
-   "ok": 23,
+   "ok": 25,
    "semapont": 0,
-   "gm": 23
+   "gm": 25
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 56,
-   "ok": 0,
-   "semapont": 56,
-   "gm": 0
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2
   },
   {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 44,
-   "ok": 7,
+   "ok": 14,
    "semapont": 0,
-   "gm": 7
+   "gm": 14
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 36,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0
+   "gm": 4
   },
   {
    "op": "Café · CD Sumaré",
@@ -508,7 +508,11 @@
   },
   {
    "h": "08",
-   "n": 12
+   "n": 16
+  },
+  {
+   "h": "09",
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
