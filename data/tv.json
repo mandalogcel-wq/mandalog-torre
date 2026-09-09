@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T15:46:40-03:00",
+ "gerado_em": "2026-09-09T16:01:46-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,13 +75,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Ourinhos",
    "total": 18,
-   "ok": 13,
+   "ok": 15,
    "semapont": 0,
-   "gm": 13,
+   "gm": 15,
    "saida": "08:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:25",
-   "ritmo_real": 35
+   "ultima_baixa": "15:56",
+   "ritmo_real": 32
   },
   {
    "plano": "6103270962",
@@ -90,13 +90,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Aparecida",
    "total": 18,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "12:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:12",
-   "ritmo_real": 35
+   "ultima_baixa": "15:53",
+   "ritmo_real": 31
   },
   {
    "plano": "6103267627",
@@ -135,13 +135,13 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Sao Jose Dos Campos",
    "total": 13,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "09:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:52",
-   "ritmo_real": 24
+   "ultima_baixa": "15:51",
+   "ritmo_real": 32
   },
   {
    "plano": "6103271592",
@@ -155,7 +155,7 @@
    "gm": 13,
    "saida": "09:06",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:14",
+   "ultima_baixa": "15:40",
    "ritmo_real": 30
   },
   {
@@ -502,17 +502,17 @@
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 62,
-   "ok": 54,
+   "ok": 56,
    "semapont": 0,
-   "gm": 54
+   "gm": 56
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 56,
-   "ok": 39,
+   "ok": 42,
    "semapont": 0,
-   "gm": 39
+   "gm": 42
   },
   {
    "op": "Café · Meso Bauru",
@@ -574,7 +574,7 @@
   },
   {
    "h": "15",
-   "n": 12
+   "n": 18
   }
  ],
  "gm_sem_sac": 0
