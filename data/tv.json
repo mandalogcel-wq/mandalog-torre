@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T08:16:38-03:00",
+ "gerado_em": "2026-09-09T08:31:45-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -33,8 +33,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "08:30",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -46,7 +46,7 @@
    "cidade": "Agudos",
    "total": 20,
    "ok": 0,
-   "semapont": 20,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -106,7 +106,7 @@
    "cidade": "Mineiros Do Tiete",
    "total": 11,
    "ok": 0,
-   "semapont": 11,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -123,8 +123,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "08:12",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -198,8 +198,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:28",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -228,8 +228,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:30",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -249,6 +249,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103261445",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "",
+   "cidade": "",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103267621",
    "op": "Café · Meso Bauru",
    "placa": "EFQ7G95",
@@ -258,8 +273,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "08:26",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -271,7 +286,7 @@
    "cidade": "Marilia",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -357,10 +372,10 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 15,
-   "total": 88,
+   "veic": 16,
+   "total": 89,
    "ok": 18,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 18
   },
   {
@@ -368,7 +383,7 @@
    "veic": 3,
    "total": 44,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0
   },
   {
@@ -376,7 +391,7 @@
    "veic": 3,
    "total": 32,
    "ok": 0,
-   "semapont": 31,
+   "semapont": 0,
    "gm": 0
   },
   {
