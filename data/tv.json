@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T16:46:46-03:00",
+ "gerado_em": "2026-09-09T17:01:43-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,13 +75,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Ourinhos",
    "total": 18,
-   "ok": 18,
+   "ok": 16,
    "semapont": 0,
-   "gm": 18,
+   "gm": 16,
    "saida": "08:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:30",
-   "ritmo_real": 28
+   "ultima_baixa": "16:39",
+   "ritmo_real": 33
   },
   {
    "plano": "6103270962",
@@ -502,9 +502,9 @@
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 62,
-   "ok": 59,
+   "ok": 57,
    "semapont": 0,
-   "gm": 59
+   "gm": 57
   },
   {
    "op": "Café · SJC",
@@ -566,7 +566,7 @@
   },
   {
    "h": "13",
-   "n": 22
+   "n": 20
   },
   {
    "h": "14",
