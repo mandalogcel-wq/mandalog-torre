@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T15:31:43-03:00",
+ "gerado_em": "2026-09-09T15:46:40-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -150,9 +150,9 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Sao Bernardo Do Campo",
    "total": 13,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12,
+   "gm": 13,
    "saida": "09:06",
    "saida_fonte": "greenmile",
    "ultima_baixa": "15:14",
@@ -494,9 +494,9 @@
    "op": "Café · Guarulhos",
    "veic": 17,
    "total": 92,
-   "ok": 67,
+   "ok": 68,
    "semapont": 0,
-   "gm": 67
+   "gm": 68
   },
   {
    "op": "Café · Meso Marília",
