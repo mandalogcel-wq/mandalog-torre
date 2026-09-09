@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T14:31:42-03:00",
+ "gerado_em": "2026-09-09T15:01:48-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,13 +75,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Ourinhos",
    "total": 18,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "08:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:25",
-   "ritmo_real": 40
+   "ultima_baixa": "14:41",
+   "ritmo_real": 37
   },
   {
    "plano": "6103270962",
@@ -120,13 +120,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Cunha",
    "total": 13,
-   "ok": 7,
+   "ok": 9,
    "semapont": 0,
-   "gm": 7,
+   "gm": 9,
    "saida": "14:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:29",
-   "ritmo_real": 2
+   "ultima_baixa": "14:59",
+   "ritmo_real": 6
   },
   {
    "plano": "6103270961",
@@ -150,13 +150,13 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Sao Bernardo Do Campo",
    "total": 13,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "09:06",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:20",
-   "ritmo_real": 28
+   "ultima_baixa": "14:59",
+   "ritmo_real": 29
   },
   {
    "plano": "6103270960",
@@ -165,13 +165,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Jacarei",
    "total": 12,
-   "ok": 8,
+   "ok": 12,
    "semapont": 0,
-   "gm": 8,
+   "gm": 12,
    "saida": "08:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:04",
-   "ritmo_real": 37
+   "ultima_baixa": "14:35",
+   "ritmo_real": 32
   },
   {
    "plano": "6103267623",
@@ -483,8 +483,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "14:42",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   }
@@ -494,25 +494,25 @@
    "op": "Café · Guarulhos",
    "veic": 17,
    "total": 92,
-   "ok": 63,
+   "ok": 64,
    "semapont": 0,
-   "gm": 63
+   "gm": 64
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 62,
-   "ok": 49,
+   "ok": 50,
    "semapont": 0,
-   "gm": 49
+   "gm": 50
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 56,
-   "ok": 31,
+   "ok": 37,
    "semapont": 0,
-   "gm": 31
+   "gm": 37
   },
   {
    "op": "Café · Meso Bauru",
@@ -570,7 +570,7 @@
   },
   {
    "h": "14",
-   "n": 17
+   "n": 25
   }
  ],
  "gm_sem_sac": 0
