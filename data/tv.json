@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T17:01:43-03:00",
+ "gerado_em": "2026-09-09T17:16:42-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -315,9 +315,9 @@
    "motorista": "Miquéias Da Silva Santos Nery",
    "cidade": "Itapevi",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -494,9 +494,9 @@
    "op": "Café · Guarulhos",
    "veic": 17,
    "total": 92,
-   "ok": 73,
+   "ok": 75,
    "semapont": 0,
-   "gm": 73
+   "gm": 75
   },
   {
    "op": "Café · Meso Marília",
