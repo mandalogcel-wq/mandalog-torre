@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T07:01:49-03:00",
+ "gerado_em": "2026-09-09T07:16:44-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,6 +8,21 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
+  {
+   "plano": "6103267462",
+   "op": "Café · Guarulhos",
+   "placa": "DBB3A54",
+   "motorista": "Alex Junior Brunelo",
+   "cidade": "Itarare",
+   "total": 28,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
   {
    "plano": "6103265053",
    "op": "Café · Meso Marília",
@@ -18,6 +33,21 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103267466",
+   "op": "Café · Guarulhos",
+   "placa": "DBB3A82",
+   "motorista": "Alex Junior Brunelo",
+   "cidade": "Itapirapua Paulista",
+   "total": 18,
+   "ok": 17,
+   "semapont": 0,
+   "gm": 17,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -251,17 +281,17 @@
  ],
  "pracas": [
   {
+   "op": "Café · Guarulhos",
+   "veic": 14,
+   "total": 87,
+   "ok": 17,
+   "semapont": 0,
+   "gm": 17
+  },
+  {
    "op": "Café · Meso Marília",
    "veic": 2,
    "total": 43,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0
-  },
-  {
-   "op": "Café · Guarulhos",
-   "veic": 12,
-   "total": 41,
    "ok": 0,
    "semapont": 0,
    "gm": 0
