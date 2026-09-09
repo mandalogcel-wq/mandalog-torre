@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-09T16:31:48-03:00",
+ "gerado_em": "2026-09-09T16:46:46-03:00",
  "dia": "2026-09-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -196,7 +196,7 @@
    "cidade": "Sorocaba",
    "total": 6,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:12",
    "saida_fonte": "greenmile",
@@ -527,7 +527,7 @@
    "veic": 2,
    "total": 7,
    "ok": 1,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 1
   },
   {
