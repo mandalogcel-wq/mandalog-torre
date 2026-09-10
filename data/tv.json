@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T08:31:39-03:00",
+ "gerado_em": "2026-09-10T08:46:57-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -131,14 +131,14 @@
   {
    "plano": "6103273024",
    "op": "Café · Guarulhos",
-   "placa": "RNS4A88",
-   "motorista": "Gabriel Azevedo Medeiros",
+   "placa": "ORF6F39",
+   "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Mogi Das Cruzes",
    "total": 4,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
+   "saida": "11:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
