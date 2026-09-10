@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T16:31:39-03:00",
+ "gerado_em": "2026-09-10T17:01:42-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Marilia",
    "total": 20,
-   "ok": 12,
+   "ok": 20,
    "semapont": 0,
    "gm": 12,
    "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:31",
-   "ritmo_real": 40
+   "ultima_baixa": "16:45",
+   "ritmo_real": 36
   },
   {
    "plano": "6103273064",
@@ -45,12 +45,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 0,
+   "ok": 17,
    "semapont": 0,
    "gm": 0,
    "saida": "10:34",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:34",
    "ritmo_real": 0
   },
   {
@@ -60,7 +60,7 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 3,
+   "ok": 17,
    "semapont": 0,
    "gm": 3,
    "saida": "10:54",
@@ -75,28 +75,13 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Botucatu",
    "total": 16,
-   "ok": 14,
+   "ok": 16,
    "semapont": 0,
    "gm": 14,
    "saida": "16:07",
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:11",
    "ritmo_real": 0
-  },
-  {
-   "plano": "6103261040",
-   "op": "Café · CD Sumaré",
-   "placa": "FDL9D77",
-   "motorista": "Dione Soares Galego",
-   "cidade": "Sorocaba",
-   "total": 12,
-   "ok": 8,
-   "semapont": 0,
-   "gm": 8,
-   "saida": "07:28",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "15:03",
-   "ritmo_real": 64
   },
   {
    "plano": "6103267466",
@@ -142,6 +127,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "15:50",
    "ritmo_real": 34
+  },
+  {
+   "plano": "6103261040",
+   "op": "Café · CD Sumaré",
+   "placa": "FDL9D77",
+   "motorista": "Dione Soares Galego",
+   "cidade": "Sorocaba",
+   "total": 6,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "07:28",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:03",
+   "ritmo_real": 148
   },
   {
    "plano": "6103272297",
@@ -607,7 +607,7 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 52,
-   "ok": 17,
+   "ok": 50,
    "semapont": 0,
    "gm": 17
   },
@@ -623,17 +623,17 @@
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 22,
-   "ok": 14,
+   "ok": 22,
    "semapont": 0,
    "gm": 14
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 2,
-   "total": 13,
-   "ok": 9,
+   "total": 7,
+   "ok": 5,
    "semapont": 0,
-   "gm": 9
+   "gm": 5
   }
  ],
  "baixas_por_hora": [
@@ -643,7 +643,7 @@
   },
   {
    "h": "07",
-   "n": 2
+   "n": 1
   },
   {
    "h": "08",
@@ -655,7 +655,7 @@
   },
   {
    "h": "10",
-   "n": 16
+   "n": 17
   },
   {
    "h": "11",
@@ -671,15 +671,15 @@
   },
   {
    "h": "14",
-   "n": 10
+   "n": 8
   },
   {
    "h": "15",
-   "n": 12
+   "n": 11
   },
   {
    "h": "16",
-   "n": 17
+   "n": 20
   }
  ],
  "gm_sem_sac": 0
