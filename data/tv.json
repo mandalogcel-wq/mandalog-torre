@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T14:46:39-03:00",
+ "gerado_em": "2026-09-10T15:01:45-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Marilia",
    "total": 20,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:11",
-   "ritmo_real": 26
+   "ultima_baixa": "14:33",
+   "ritmo_real": 38
   },
   {
    "plano": "6103273064",
@@ -90,13 +90,13 @@
    "motorista": "Dione Soares Galego",
    "cidade": "Sorocaba",
    "total": 12,
-   "ok": 2,
+   "ok": 6,
    "semapont": 0,
-   "gm": 2,
+   "gm": 6,
    "saida": "07:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:38",
-   "ritmo_real": 0
+   "ultima_baixa": "14:41",
+   "ritmo_real": 85
   },
   {
    "plano": "6103267466",
@@ -120,13 +120,13 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Suzano",
    "total": 11,
-   "ok": 6,
+   "ok": 9,
    "semapont": 0,
-   "gm": 6,
+   "gm": 9,
    "saida": "06:47",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:45",
-   "ritmo_real": 38
+   "ultima_baixa": "14:32",
+   "ritmo_real": 30
   },
   {
    "plano": "6103270962",
@@ -180,13 +180,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Guarulhos",
    "total": 4,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "07:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:49",
-   "ritmo_real": 0
+   "ultima_baixa": "14:48",
+   "ritmo_real": 80
   },
   {
    "plano": "6103271626",
@@ -519,6 +519,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103260897",
+   "op": "Café · Guarulhos",
+   "placa": "RNS4A88",
+   "motorista": "Gabriel Azevedo Medeiros",
+   "cidade": "Pirapora Do Bom Jesus",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "00:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "00:01",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103244628",
    "op": "Café · CD Sumaré",
    "placa": "SUP9B16",
@@ -582,11 +597,11 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 23,
-   "total": 87,
-   "ok": 46,
+   "veic": 24,
+   "total": 88,
+   "ok": 52,
    "semapont": 0,
-   "gm": 46
+   "gm": 52
   },
   {
    "op": "Café · Meso Bauru",
@@ -608,20 +623,24 @@
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 22,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12
+   "gm": 13
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 2,
    "total": 13,
-   "ok": 3,
+   "ok": 7,
    "semapont": 0,
-   "gm": 3
+   "gm": 7
   }
  ],
  "baixas_por_hora": [
+  {
+   "h": "00",
+   "n": 1
+  },
   {
    "h": "07",
    "n": 2
@@ -649,6 +668,10 @@
   {
    "h": "13",
    "n": 1
+  },
+  {
+   "h": "14",
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
