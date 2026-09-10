@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T17:01:42-03:00",
+ "gerado_em": "2026-09-10T17:16:41-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -22,21 +22,6 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:45",
    "ritmo_real": 36
-  },
-  {
-   "plano": "6103273064",
-   "op": "Café · Guarulhos",
-   "placa": "EOF5J69",
-   "motorista": "Miquéias Da Silva Santos Nery",
-   "cidade": "Sao Paulo",
-   "total": 18,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
   },
   {
    "plano": "6103270988",
@@ -597,8 +582,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 24,
-   "total": 88,
+   "veic": 23,
+   "total": 70,
    "ok": 62,
    "semapont": 0,
    "gm": 62
