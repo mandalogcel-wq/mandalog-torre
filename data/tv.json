@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T10:01:43-03:00",
+ "gerado_em": "2026-09-10T10:17:06-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -92,6 +92,21 @@
    "total": 9,
    "ok": 0,
    "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103272297",
+   "op": "Café · SJC",
+   "placa": "QPF5G34",
+   "motorista": "Mario Donizeti De Giovanni",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 6,
+   "ok": 0,
+   "semapont": 6,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -501,10 +516,10 @@
   },
   {
    "op": "Café · SJC",
-   "veic": 3,
-   "total": 13,
+   "veic": 4,
+   "total": 19,
    "ok": 1,
-   "semapont": 0,
+   "semapont": 6,
    "gm": 1
   },
   {
