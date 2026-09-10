@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T09:31:44-03:00",
+ "gerado_em": "2026-09-10T09:46:40-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -185,6 +185,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103269261",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 3,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:24",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -463,8 +478,8 @@
   },
   {
    "op": "Café · SJC",
-   "veic": 2,
-   "total": 10,
+   "veic": 3,
+   "total": 13,
    "ok": 1,
    "semapont": 0,
    "gm": 1
