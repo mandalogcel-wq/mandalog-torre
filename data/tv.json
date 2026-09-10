@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T13:01:44-03:00",
+ "gerado_em": "2026-09-10T13:17:06-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -504,6 +504,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103262685",
+   "op": "Café · Guarulhos",
+   "placa": "SWU0J23",
+   "motorista": "Alex Carneiro Teixeira",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103266217",
    "op": "Café · SJC",
    "placa": "SYM6A40",
@@ -537,10 +552,10 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 22,
-   "total": 86,
+   "veic": 23,
+   "total": 87,
    "ok": 45,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 45
   },
   {
