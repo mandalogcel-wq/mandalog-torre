@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T10:31:47-03:00",
+ "gerado_em": "2026-09-10T10:47:00-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -40,6 +40,21 @@
   },
   {
    "plano": "6103270988",
+   "op": "Café · Meso Bauru",
+   "placa": "AUR5G40",
+   "motorista": "Bruno Sousa Rocha",
+   "cidade": "Bauru",
+   "total": 17,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103270990",
    "op": "Café · Meso Bauru",
    "placa": "AUR5G40",
    "motorista": "Bruno Sousa Rocha",
@@ -414,21 +429,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103266217",
-   "op": "Café · SJC",
-   "placa": "ENK7E30",
-   "motorista": "Joao Paulo Fausto Menezes",
-   "cidade": "Sao Jose Dos Campos",
-   "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103272851",
    "op": "Café · Guarulhos",
    "placa": "FKW7E56",
@@ -489,6 +489,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103266217",
+   "op": "Café · SJC",
+   "placa": "SYM6A40",
+   "motorista": "Otavio Carvalho Da Silva",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103271650",
    "op": "Café · Guarulhos",
    "placa": "UPG6H75",
@@ -515,8 +530,8 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 3,
-   "total": 35,
+   "veic": 4,
+   "total": 52,
    "ok": 0,
    "semapont": 0,
    "gm": 0
