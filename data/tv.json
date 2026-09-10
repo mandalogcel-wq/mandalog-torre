@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T10:47:00-03:00",
+ "gerado_em": "2026-09-10T11:01:42-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Marilia",
    "total": 20,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:14",
-   "ritmo_real": 30
+   "ultima_baixa": "10:53",
+   "ritmo_real": 32
   },
   {
    "plano": "6103273064",
@@ -48,8 +48,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "10:34",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -60,12 +60,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "10:54",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:55",
    "ritmo_real": 0
   },
   {
@@ -105,12 +105,12 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Suzano",
    "total": 11,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "06:47",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:36",
    "ritmo_real": 0
   },
   {
@@ -153,8 +153,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:34",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -165,12 +165,12 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Guarulhos",
    "total": 4,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "07:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:49",
    "ritmo_real": 0
   },
   {
@@ -185,7 +185,7 @@
    "gm": 4,
    "saida": "09:16",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:16",
+   "ultima_baixa": "10:59",
    "ritmo_real": 0
   },
   {
@@ -210,13 +210,13 @@
    "motorista": "Orlando Vieira",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "07:37",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:12",
-   "ritmo_real": 45
+   "ultima_baixa": "10:45",
+   "ritmo_real": 39
   },
   {
    "plano": "6103265267",
@@ -255,12 +255,12 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 3,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "08:24",
    "ritmo_real": 0
   },
   {
@@ -330,12 +330,12 @@
    "motorista": "Jessica Morgania",
    "cidade": "Guarulhos",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "10:54",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:54",
    "ritmo_real": 0
   },
   {
@@ -375,12 +375,12 @@
    "motorista": "Wellington Pedro Da Silva",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:38",
    "ritmo_real": 0
   },
   {
@@ -420,12 +420,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Ourinhos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "10:33",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:33",
    "ritmo_real": 0
   },
   {
@@ -453,8 +453,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "11:00",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -524,33 +524,33 @@
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 86,
-   "ok": 23,
+   "ok": 30,
    "semapont": 0,
-   "gm": 23
+   "gm": 30
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 52,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   },
   {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 22,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6
+   "gm": 8
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 19,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6
+   "gm": 8
   },
   {
    "op": "Café · CD Sumaré",
@@ -564,15 +564,15 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 3
+   "n": 5
   },
   {
    "h": "09",
-   "n": 17
+   "n": 13
   },
   {
    "h": "10",
-   "n": 3
+   "n": 17
   }
  ],
  "gm_sem_sac": 0
