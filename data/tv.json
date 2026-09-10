@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T17:31:45-03:00",
+ "gerado_em": "2026-09-10T18:02:28-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,12 +30,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 17,
+   "ok": 0,
    "semapont": 0,
-   "gm": 17,
+   "gm": 0,
    "saida": "10:34",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:34",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -45,9 +45,9 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 17,
+   "ok": 3,
    "semapont": 0,
-   "gm": 17,
+   "gm": 3,
    "saida": "10:54",
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:48",
@@ -592,9 +592,9 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 52,
-   "ok": 50,
+   "ok": 19,
    "semapont": 0,
-   "gm": 50
+   "gm": 19
   },
   {
    "op": "Café · SJC",
@@ -640,7 +640,7 @@
   },
   {
    "h": "10",
-   "n": 17
+   "n": 16
   },
   {
    "h": "11",
