@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T17:16:41-03:00",
+ "gerado_em": "2026-09-10T17:31:45-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -17,11 +17,11 @@
    "total": 20,
    "ok": 20,
    "semapont": 0,
-   "gm": 12,
+   "gm": 20,
    "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:45",
-   "ritmo_real": 36
+   "ultima_baixa": "17:26",
+   "ritmo_real": 29
   },
   {
    "plano": "6103270988",
@@ -32,7 +32,7 @@
    "total": 17,
    "ok": 17,
    "semapont": 0,
-   "gm": 0,
+   "gm": 17,
    "saida": "10:34",
    "saida_fonte": "greenmile",
    "ultima_baixa": "10:34",
@@ -47,7 +47,7 @@
    "total": 17,
    "ok": 17,
    "semapont": 0,
-   "gm": 3,
+   "gm": 17,
    "saida": "10:54",
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:48",
@@ -62,7 +62,7 @@
    "total": 16,
    "ok": 16,
    "semapont": 0,
-   "gm": 14,
+   "gm": 16,
    "saida": "16:07",
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:11",
@@ -393,9 +393,9 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "17:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:26",
    "ritmo_real": 0
   },
   {
@@ -594,7 +594,7 @@
    "total": 52,
    "ok": 50,
    "semapont": 0,
-   "gm": 17
+   "gm": 50
   },
   {
    "op": "Café · SJC",
@@ -610,7 +610,7 @@
    "total": 22,
    "ok": 22,
    "semapont": 0,
-   "gm": 14
+   "gm": 22
   },
   {
    "op": "Café · CD Sumaré",
@@ -664,7 +664,11 @@
   },
   {
    "h": "16",
-   "n": 20
+   "n": 17
+  },
+  {
+   "h": "17",
+   "n": 9
   }
  ],
  "gm_sem_sac": 0
