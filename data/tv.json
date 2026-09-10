@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T11:01:42-03:00",
+ "gerado_em": "2026-09-10T11:31:41-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Marilia",
    "total": 20,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:53",
+   "ultima_baixa": "11:24",
    "ritmo_real": 32
   },
   {
@@ -60,13 +60,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "10:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:55",
-   "ritmo_real": 0
+   "ultima_baixa": "11:07",
+   "ritmo_real": 12
   },
   {
    "plano": "6103270989",
@@ -105,9 +105,9 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Suzano",
    "total": 11,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "06:47",
    "saida_fonte": "greenmile",
    "ultima_baixa": "10:36",
@@ -120,13 +120,13 @@
    "motorista": "Joao Paulo Fausto Menezes",
    "cidade": "Aparecida",
    "total": 9,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 2,
+   "saida": "10:59",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "11:29",
+   "ritmo_real": 10
   },
   {
    "plano": "6103272297",
@@ -135,13 +135,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Sao Jose Dos Campos",
    "total": 6,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "08:52",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:48",
-   "ritmo_real": 11
+   "ultima_baixa": "11:17",
+   "ritmo_real": 27
   },
   {
    "plano": "6103271637",
@@ -260,7 +260,7 @@
    "gm": 2,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:24",
+   "ultima_baixa": "11:07",
    "ritmo_real": 0
   },
   {
@@ -300,12 +300,12 @@
    "motorista": "Gilmario Domingos",
    "cidade": "Poa",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "08:06",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:18",
    "ritmo_real": 0
   },
   {
@@ -483,8 +483,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "11:15",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -524,33 +524,33 @@
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 86,
-   "ok": 30,
+   "ok": 34,
    "semapont": 0,
-   "gm": 30
+   "gm": 34
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 52,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1
+   "gm": 2
   },
   {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 22,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8
+   "gm": 9
   },
   {
    "op": "Café · SJC",
    "veic": 4,
    "total": 19,
-   "ok": 8,
+   "ok": 11,
    "semapont": 0,
-   "gm": 8
+   "gm": 11
   },
   {
    "op": "Café · CD Sumaré",
@@ -564,7 +564,7 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 5
+   "n": 3
   },
   {
    "h": "09",
@@ -573,6 +573,10 @@
   {
    "h": "10",
    "n": 17
+  },
+  {
+   "h": "11",
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
