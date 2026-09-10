@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-10T14:31:44-03:00",
+ "gerado_em": "2026-09-10T14:46:39-03:00",
  "dia": "2026-09-10",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -215,6 +215,21 @@
    "gm": 0,
    "saida": "13:47",
    "saida_fonte": "greenmile",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103269259",
+   "op": "Café · SJC",
+   "placa": "AHE8H87",
+   "motorista": "Renato Lopes Mendes",
+   "cidade": "Santo Antonio Do Pinhal",
+   "total": 3,
+   "ok": 0,
+   "semapont": 3,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -582,20 +597,20 @@
    "gm": 3
   },
   {
+   "op": "Café · SJC",
+   "veic": 6,
+   "total": 23,
+   "ok": 15,
+   "semapont": 3,
+   "gm": 15
+  },
+  {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 22,
    "ok": 12,
    "semapont": 0,
    "gm": 12
-  },
-  {
-   "op": "Café · SJC",
-   "veic": 5,
-   "total": 20,
-   "ok": 15,
-   "semapont": 0,
-   "gm": 15
   },
   {
    "op": "Café · CD Sumaré",
