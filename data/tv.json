@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T15:46:43-03:00",
+ "gerado_em": "2026-09-11T16:01:42-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -32,11 +32,11 @@
    "total": 17,
    "ok": 16,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "08:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:19",
-   "ritmo_real": 32
+   "ultima_baixa": "15:39",
+   "ritmo_real": 31
   },
   {
    "plano": "6103270991",
@@ -285,12 +285,12 @@
    "motorista": "Marcio Cavalcante Da Silva",
    "cidade": "Guarulhos",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "14:15",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "14:15",
    "ritmo_real": 0
   },
   {
@@ -494,9 +494,9 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 97,
-   "ok": 58,
+   "ok": 61,
    "semapont": 0,
-   "gm": 58
+   "gm": 61
   },
   {
    "op": "Café · Meso Marília",
@@ -504,7 +504,7 @@
    "total": 49,
    "ok": 40,
    "semapont": 0,
-   "gm": 38
+   "gm": 39
   },
   {
    "op": "Café · SJC",
@@ -558,11 +558,11 @@
   },
   {
    "h": "14",
-   "n": 12
+   "n": 15
   },
   {
    "h": "15",
-   "n": 8
+   "n": 9
   }
  ],
  "gm_sem_sac": 0
