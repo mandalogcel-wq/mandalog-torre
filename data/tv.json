@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T15:16:39-03:00",
+ "gerado_em": "2026-09-11T15:31:42-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Marilia",
    "total": 17,
-   "ok": 13,
+   "ok": 14,
    "semapont": 0,
-   "gm": 13,
+   "gm": 14,
    "saida": "08:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:54",
-   "ritmo_real": 33
+   "ultima_baixa": "15:19",
+   "ritmo_real": 32
   },
   {
    "plano": "6103270991",
@@ -45,12 +45,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Piraju",
    "total": 15,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "10:10",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:33",
+   "ultima_baixa": "15:04",
    "ritmo_real": 37
   },
   {
@@ -195,9 +195,9 @@
    "motorista": "Guilherme",
    "cidade": "Diadema",
    "total": 4,
-   "ok": 3,
-   "semapont": 1,
-   "gm": 3,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
    "saida": "07:19",
    "saida_fonte": "greenmile",
    "ultima_baixa": "12:38",
@@ -245,7 +245,7 @@
    "gm": 4,
    "saida": "10:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:31",
+   "ultima_baixa": "15:01",
    "ritmo_real": 0
   },
   {
@@ -390,12 +390,12 @@
    "motorista": "Wellington Pedro",
    "cidade": "Santana De Parnaiba",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "05:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:02",
    "ritmo_real": 0
   },
   {
@@ -450,12 +450,12 @@
    "motorista": "Ivan Albino",
    "cidade": "Osasco",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "11:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:24",
    "ritmo_real": 0
   },
   {
@@ -494,17 +494,17 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 97,
-   "ok": 55,
-   "semapont": 1,
-   "gm": 55
+   "ok": 58,
+   "semapont": 0,
+   "gm": 58
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 49,
-   "ok": 36,
+   "ok": 38,
    "semapont": 0,
-   "gm": 36
+   "gm": 38
   },
   {
    "op": "Café · SJC",
@@ -542,7 +542,7 @@
   },
   {
    "h": "10",
-   "n": 15
+   "n": 11
   },
   {
    "h": "11",
@@ -559,6 +559,10 @@
   {
    "h": "14",
    "n": 12
+  },
+  {
+   "h": "15",
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
