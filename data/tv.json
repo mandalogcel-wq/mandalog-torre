@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T08:01:49-03:00",
+ "gerado_em": "2026-09-11T08:31:45-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,27 +30,12 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Marilia",
    "total": 17,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103272289",
-   "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Pindamonhangaba",
-   "total": 15,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "08:21",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:22",
    "ritmo_real": 0
   },
   {
@@ -84,6 +69,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103272289",
+   "op": "Café · SJC",
+   "placa": "QPF5G34",
+   "motorista": "Mario Donizeti De Giovanni",
+   "cidade": "Pindamonhangaba",
+   "total": 15,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103272820",
    "op": "Café · Guarulhos",
    "placa": "RNS4A88",
@@ -105,12 +105,12 @@
    "motorista": "Waldir",
    "cidade": "Sao Paulo",
    "total": 7,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "08:09",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:12",
    "ritmo_real": 0
   },
   {
@@ -174,6 +174,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103270990",
+   "op": "Café · Meso Bauru",
+   "placa": "AUR5G40",
+   "motorista": "Bruno Sousa Rocha",
+   "cidade": "Barra Bonita",
+   "total": 4,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103272689",
    "op": "Café · Guarulhos",
    "placa": "FKW7E56",
@@ -213,8 +228,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:24",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -258,8 +273,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:13",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -333,8 +348,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:28",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -464,17 +479,17 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 97,
-   "ok": 2,
+   "ok": 3,
    "semapont": 1,
-   "gm": 2
+   "gm": 3
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 49,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0
+   "gm": 2
   },
   {
    "op": "Café · SJC",
@@ -486,13 +501,18 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 1,
-   "total": 1,
+   "veic": 2,
+   "total": 5,
    "ok": 0,
    "semapont": 0,
    "gm": 0
   }
  ],
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "08",
+   "n": 3
+  }
+ ],
  "gm_sem_sac": 0
 }
