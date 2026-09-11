@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T16:31:44-03:00",
+ "gerado_em": "2026-09-11T16:46:38-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -405,12 +405,12 @@
    "motorista": "Gilberto",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:22",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:22",
    "ritmo_real": 0
   },
   {
@@ -494,9 +494,9 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 97,
-   "ok": 64,
+   "ok": 65,
    "semapont": 0,
-   "gm": 64
+   "gm": 65
   },
   {
    "op": "Café · Meso Marília",
@@ -542,7 +542,7 @@
   },
   {
    "h": "10",
-   "n": 11
+   "n": 12
   },
   {
    "h": "11",
