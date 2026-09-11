@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T15:31:42-03:00",
+ "gerado_em": "2026-09-11T15:46:43-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,7 +30,7 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Marilia",
    "total": 17,
-   "ok": 14,
+   "ok": 16,
    "semapont": 0,
    "gm": 14,
    "saida": "08:21",
@@ -502,7 +502,7 @@
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 49,
-   "ok": 38,
+   "ok": 40,
    "semapont": 0,
    "gm": 38
   },
