@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T14:31:39-03:00",
+ "gerado_em": "2026-09-11T15:01:40-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Miquéias Da Silva Santos Nery",
    "cidade": "Sao Paulo",
    "total": 18,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "10:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:52",
-   "ritmo_real": 40
+   "ultima_baixa": "14:48",
+   "ritmo_real": 47
   },
   {
    "plano": "6103270993",
@@ -30,13 +30,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Marilia",
    "total": 17,
-   "ok": 11,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11,
+   "gm": 13,
    "saida": "08:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:17",
-   "ritmo_real": 36
+   "ultima_baixa": "14:54",
+   "ritmo_real": 33
   },
   {
    "plano": "6103270991",
@@ -45,13 +45,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Piraju",
    "total": 15,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "10:10",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:59",
-   "ritmo_real": 38
+   "ultima_baixa": "14:33",
+   "ritmo_real": 37
   },
   {
    "plano": "6103270992",
@@ -60,13 +60,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Assis",
    "total": 15,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "08:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:28",
-   "ritmo_real": 22
+   "ultima_baixa": "14:55",
+   "ritmo_real": 27
   },
   {
    "plano": "6103272289",
@@ -120,13 +120,13 @@
    "motorista": "Odimar",
    "cidade": "Sao Vicente",
    "total": 6,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "08:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:31",
-   "ritmo_real": 0
+   "ultima_baixa": "14:38",
+   "ritmo_real": 42
   },
   {
    "plano": "6103274460",
@@ -135,13 +135,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Itaquaquecetuba",
    "total": 6,
-   "ok": 3,
+   "ok": 6,
    "semapont": 0,
-   "gm": 3,
+   "gm": 6,
    "saida": "08:40",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:45",
-   "ritmo_real": 0
+   "ultima_baixa": "14:47",
+   "ritmo_real": 36
   },
   {
    "plano": "6103274466",
@@ -180,7 +180,7 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Barra Bonita",
    "total": 4,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -240,12 +240,12 @@
    "motorista": "Josafa Araujo Da Silva",
    "cidade": "Taubate",
    "total": 4,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
+   "gm": 4,
    "saida": "10:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:31",
    "ritmo_real": 0
   },
   {
@@ -494,17 +494,17 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 97,
-   "ok": 45,
+   "ok": 55,
    "semapont": 1,
-   "gm": 45
+   "gm": 55
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 49,
-   "ok": 32,
+   "ok": 36,
    "semapont": 0,
-   "gm": 32
+   "gm": 36
   },
   {
    "op": "Café · SJC",
@@ -518,7 +518,7 @@
    "op": "Café · Meso Bauru",
    "veic": 2,
    "total": 5,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0
   },
@@ -542,7 +542,7 @@
   },
   {
    "h": "10",
-   "n": 11
+   "n": 15
   },
   {
    "h": "11",
@@ -558,7 +558,7 @@
   },
   {
    "h": "14",
-   "n": 2
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
