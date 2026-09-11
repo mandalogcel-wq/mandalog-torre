@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T18:01:47-03:00",
+ "gerado_em": "2026-09-11T20:01:39-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -165,12 +165,12 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Guarulhos",
    "total": 6,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "13:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "19:33",
    "ritmo_real": 0
   },
   {
@@ -494,9 +494,9 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 97,
-   "ok": 74,
+   "ok": 77,
    "semapont": 0,
-   "gm": 74
+   "gm": 77
   },
   {
    "op": "Café · Meso Marília",
@@ -571,6 +571,10 @@
   {
    "h": "17",
    "n": 10
+  },
+  {
+   "h": "19",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
