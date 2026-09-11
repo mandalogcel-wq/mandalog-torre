@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T15:01:40-03:00",
+ "gerado_em": "2026-09-11T15:16:39-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -180,7 +180,7 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Barra Bonita",
    "total": 4,
-   "ok": 1,
+   "ok": 4,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -518,7 +518,7 @@
    "op": "Café · Meso Bauru",
    "veic": 2,
    "total": 5,
-   "ok": 1,
+   "ok": 4,
    "semapont": 0,
    "gm": 0
   },
