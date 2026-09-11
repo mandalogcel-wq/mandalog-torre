@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T12:01:54-03:00",
+ "gerado_em": "2026-09-11T12:16:44-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -114,21 +114,6 @@
    "ritmo_real": 13
   },
   {
-   "plano": "6103274465",
-   "op": "Café · Guarulhos",
-   "placa": "EKO9I19",
-   "motorista": "Claudio Douglas",
-   "cidade": "Guarulhos",
-   "total": 6,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103272804",
    "op": "Café · Guarulhos",
    "placa": "ETO2A93",
@@ -156,6 +141,21 @@
    "saida": "08:40",
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:45",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103274465",
+   "op": "Café · Guarulhos",
+   "placa": "ORF6F39",
+   "motorista": "Ronualdo Dos Reis Carvalho",
+   "cidade": "Guarulhos",
+   "total": 6,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "11:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -282,7 +282,7 @@
    "plano": "6103274600",
    "op": "Café · Guarulhos",
    "placa": "EUP9J14",
-   "motorista": "Kaua",
+   "motorista": "Marcio Cavalcante Da Silva",
    "cidade": "Guarulhos",
    "total": 3,
    "ok": 0,
