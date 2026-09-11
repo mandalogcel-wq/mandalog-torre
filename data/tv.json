@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-11T16:01:42-03:00",
+ "gerado_em": "2026-09-11T16:16:54-03:00",
  "dia": "2026-09-11",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -474,6 +474,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103271663",
+   "op": "Café · Guarulhos",
+   "placa": "ORF6F39",
+   "motorista": "Ronualdo Dos Reis Carvalho",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103274672",
    "op": "Café · Guarulhos",
    "placa": "QUE2G29",
@@ -492,8 +507,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 24,
-   "total": 97,
+   "veic": 25,
+   "total": 98,
    "ok": 61,
    "semapont": 0,
    "gm": 61
