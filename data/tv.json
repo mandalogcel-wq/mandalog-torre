@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-12T09:31:43-03:00",
+ "gerado_em": "2026-09-12T09:46:42-03:00",
  "dia": "2026-09-12",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -24,6 +24,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103274466",
+   "op": "Café · Guarulhos",
+   "placa": "FDA1F72",
+   "motorista": "Celso Santos Silva",
+   "cidade": "Guarulhos",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103271663",
    "op": "Café · Guarulhos",
    "placa": "ORF6F39",
@@ -42,8 +57,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 2,
-   "total": 7,
+   "veic": 3,
+   "total": 9,
    "ok": 0,
    "semapont": 0,
    "gm": 0
