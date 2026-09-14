@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T09:46:45-03:00",
+ "gerado_em": "2026-09-14T10:01:45-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -18,8 +18,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "09:58",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -75,12 +75,12 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Itapevi",
    "total": 14,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:38",
    "ritmo_real": 0
   },
   {
@@ -91,7 +91,7 @@
    "cidade": "Botucatu",
    "total": 13,
    "ok": 0,
-   "semapont": 13,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -105,13 +105,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Manduri",
    "total": 12,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "08:44",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:14",
-   "ritmo_real": 0
+   "ultima_baixa": "09:54",
+   "ritmo_real": 20
   },
   {
    "plano": "6103276991",
@@ -135,12 +135,12 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Carapicuiba",
    "total": 9,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "09:01",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:56",
    "ritmo_real": 0
   },
   {
@@ -153,8 +153,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:59",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -264,21 +264,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103274529",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Osasco",
-   "total": 2,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103276979",
    "op": "Café · Guarulhos",
    "placa": "",
@@ -300,12 +285,12 @@
    "motorista": "Odimar",
    "cidade": "Santos",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "09:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:42",
    "ritmo_real": 0
   },
   {
@@ -354,10 +339,25 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103274529",
+   "op": "Café · Guarulhos",
+   "placa": "SVL4J89",
+   "motorista": "Wellington Costa Dos Santos",
+   "cidade": "Osasco",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103274522",
    "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
+   "placa": "AMS9753",
+   "motorista": "Orlando Vieira",
    "cidade": "Sao Paulo",
    "total": 1,
    "ok": 1,
@@ -483,8 +483,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:44",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   }
@@ -494,25 +494,25 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 89,
-   "ok": 1,
+   "ok": 8,
    "semapont": 0,
-   "gm": 1
+   "gm": 8
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 65,
    "ok": 2,
-   "semapont": 13,
+   "semapont": 0,
    "gm": 2
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 15,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3
+   "gm": 4
   },
   {
    "op": "Café · CD Sumaré",
@@ -530,7 +530,7 @@
   },
   {
    "h": "09",
-   "n": 2
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
