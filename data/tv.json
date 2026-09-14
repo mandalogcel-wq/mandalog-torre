@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T17:01:52-03:00",
+ "gerado_em": "2026-09-14T17:16:43-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -474,6 +474,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103272671",
+   "op": "Café · Guarulhos",
+   "placa": "DBB7I31",
+   "motorista": "Claudio Felipe",
+   "cidade": "Aruja",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103274322",
    "op": "Café · Meso Marília",
    "placa": "DJM6I11",
@@ -597,8 +612,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 22,
-   "total": 91,
+   "veic": 23,
+   "total": 92,
    "ok": 62,
    "semapont": 0,
    "gm": 62
