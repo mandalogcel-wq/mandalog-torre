@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T16:31:44-03:00",
+ "gerado_em": "2026-09-14T17:01:52-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,13 +90,13 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 15,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "11:37",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:27",
-   "ritmo_real": 13
+   "ultima_baixa": "16:53",
+   "ritmo_real": 17
   },
   {
    "plano": "6103276995",
@@ -120,13 +120,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Botucatu",
    "total": 13,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "10:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:46",
-   "ritmo_real": 29
+   "ultima_baixa": "16:52",
+   "ritmo_real": 32
   },
   {
    "plano": "6103274330",
@@ -135,13 +135,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Manduri",
    "total": 12,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "08:44",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:00",
-   "ritmo_real": 68
+   "ultima_baixa": "16:32",
+   "ritmo_real": 63
   },
   {
    "plano": "6103275892",
@@ -599,17 +599,17 @@
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 91,
-   "ok": 61,
+   "ok": 62,
    "semapont": 0,
-   "gm": 61
+   "gm": 62
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 65,
-   "ok": 62,
+   "ok": 63,
    "semapont": 0,
-   "gm": 62
+   "gm": 63
   },
   {
    "op": "Café · SJC",
@@ -623,9 +623,9 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 17,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 10
+   "gm": 11
   },
   {
    "op": "Café · CD Sumaré",
@@ -675,7 +675,7 @@
   },
   {
    "h": "16",
-   "n": 9
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
