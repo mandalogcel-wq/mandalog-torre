@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T17:16:43-03:00",
+ "gerado_em": "2026-09-14T17:31:44-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,9 +15,9 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Sao Jose Dos Campos",
    "total": 23,
-   "ok": 0,
+   "ok": 14,
    "semapont": 0,
-   "gm": 0,
+   "gm": 14,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -30,9 +30,9 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Taubate",
    "total": 17,
-   "ok": 0,
+   "ok": 13,
    "semapont": 0,
-   "gm": 0,
+   "gm": 13,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -135,13 +135,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Manduri",
    "total": 12,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "08:44",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:32",
-   "ritmo_real": 63
+   "ultima_baixa": "17:08",
+   "ritmo_real": 59
   },
   {
    "plano": "6103275892",
@@ -320,6 +320,21 @@
    "gm": 0,
    "saida": "11:48",
    "saida_fonte": "greenmile",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103276053",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Jacarei",
+   "total": 2,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -585,9 +600,9 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Sao Jose Dos Campos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -628,19 +643,19 @@
   },
   {
    "op": "Café · SJC",
-   "veic": 5,
-   "total": 58,
-   "ok": 17,
+   "veic": 6,
+   "total": 60,
+   "ok": 47,
    "semapont": 0,
-   "gm": 17
+   "gm": 47
   },
   {
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 17,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11
+   "gm": 12
   },
   {
    "op": "Café · CD Sumaré",
@@ -691,6 +706,10 @@
   {
    "h": "16",
    "n": 12
+  },
+  {
+   "h": "17",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
