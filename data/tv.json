@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T17:31:44-03:00",
+ "gerado_em": "2026-09-14T17:46:42-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -120,7 +120,7 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Botucatu",
    "total": 13,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
    "gm": 12,
    "saida": "10:57",
@@ -135,7 +135,7 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Manduri",
    "total": 12,
-   "ok": 9,
+   "ok": 12,
    "semapont": 0,
    "gm": 9,
    "saida": "08:44",
@@ -345,7 +345,7 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Lupercio",
    "total": 2,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
    "gm": 1,
    "saida": "07:50",
@@ -637,7 +637,7 @@
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 65,
-   "ok": 63,
+   "ok": 64,
    "semapont": 0,
    "gm": 63
   },
@@ -653,7 +653,7 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 17,
-   "ok": 13,
+   "ok": 17,
    "semapont": 0,
    "gm": 12
   },
