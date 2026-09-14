@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T19:01:40-03:00",
+ "gerado_em": "2026-09-14T20:01:39-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -435,12 +435,12 @@
    "motorista": "Gilmario",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:00",
    "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "ultima_baixa": "19:32",
    "ritmo_real": 0
   },
   {
@@ -629,9 +629,9 @@
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 92,
-   "ok": 63,
+   "ok": 65,
    "semapont": 0,
-   "gm": 63
+   "gm": 65
   },
   {
    "op": "Café · Meso Bauru",
@@ -710,6 +710,10 @@
   {
    "h": "17",
    "n": 1
+  },
+  {
+   "h": "19",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
