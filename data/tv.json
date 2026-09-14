@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T12:01:42-03:00",
+ "gerado_em": "2026-09-14T12:16:45-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -390,12 +390,12 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Bauru",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0,
    "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:30",
    "ritmo_real": 0
   },
   {
@@ -577,7 +577,7 @@
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 65,
-   "ok": 34,
+   "ok": 36,
    "semapont": 0,
    "gm": 34
   },
@@ -613,7 +613,7 @@
   },
   {
    "h": "09",
-   "n": 10
+   "n": 12
   },
   {
    "h": "10",
