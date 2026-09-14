@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T10:31:44-03:00",
+ "gerado_em": "2026-09-14T11:01:46-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 0,
+   "ok": 7,
    "semapont": 0,
-   "gm": 0,
+   "gm": 7,
    "saida": "09:58",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ultima_baixa": "10:38",
+   "ritmo_real": 1
   },
   {
    "plano": "6103274332",
@@ -30,13 +30,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Ourinhos",
    "total": 16,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "10:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:15",
-   "ritmo_real": 0
+   "ultima_baixa": "11:00",
+   "ritmo_real": 7
   },
   {
    "plano": "6103274327",
@@ -45,13 +45,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Pirajui",
    "total": 15,
-   "ok": 0,
+   "ok": 8,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 8,
+   "saida": "10:52",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:59",
+   "ritmo_real": 1
   },
   {
    "plano": "6103275057",
@@ -75,13 +75,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Itapevi",
    "total": 14,
-   "ok": 3,
+   "ok": 5,
    "semapont": 0,
-   "gm": 3,
+   "gm": 5,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:38",
-   "ritmo_real": 0
+   "ultima_baixa": "10:52",
+   "ritmo_real": 18
   },
   {
    "plano": "6103274329",
@@ -90,12 +90,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Botucatu",
    "total": 13,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "10:57",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:58",
    "ritmo_real": 0
   },
   {
@@ -135,13 +135,13 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Carapicuiba",
    "total": 9,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "09:01",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:56",
-   "ritmo_real": 0
+   "ultima_baixa": "10:39",
+   "ritmo_real": 14
   },
   {
    "plano": "6103276990",
@@ -468,8 +468,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "10:42",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -494,17 +494,17 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 89,
-   "ok": 8,
+   "ok": 12,
    "semapont": 0,
-   "gm": 8
+   "gm": 12
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 65,
-   "ok": 8,
+   "ok": 26,
    "semapont": 0,
-   "gm": 8
+   "gm": 26
   },
   {
    "op": "Café · Meso Marília",
@@ -534,7 +534,11 @@
   },
   {
    "h": "10",
-   "n": 7
+   "n": 28
+  },
+  {
+   "h": "11",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
