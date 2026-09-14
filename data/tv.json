@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T05:16:39-03:00",
+ "gerado_em": "2026-09-14T05:32:01-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -26,8 +26,8 @@
   {
    "plano": "6103276995",
    "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
+   "placa": "ETA3E32",
+   "motorista": "Valdir Da Silva Nery",
    "cidade": "Itapevi",
    "total": 14,
    "ok": 0,
