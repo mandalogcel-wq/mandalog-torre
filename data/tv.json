@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-14T12:31:45-03:00",
+ "gerado_em": "2026-09-14T12:46:45-03:00",
  "dia": "2026-09-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -495,12 +495,12 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Itapecerica Da Serra",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "08:24",
    "ritmo_real": 0
   },
   {
@@ -510,9 +510,9 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Itapecerica Da Serra",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -569,9 +569,9 @@
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 91,
-   "ok": 19,
+   "ok": 21,
    "semapont": 0,
-   "gm": 19
+   "gm": 21
   },
   {
    "op": "Café · Meso Bauru",
@@ -609,7 +609,7 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 2
+   "n": 3
   },
   {
    "h": "09",
