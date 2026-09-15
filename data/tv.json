@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-15T16:31:48-03:00",
+ "gerado_em": "2026-09-15T16:46:44-03:00",
  "dia": "2026-09-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -187,6 +187,21 @@
    "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103276990",
+   "op": "Café · Guarulhos",
+   "placa": "EOF5J69",
+   "motorista": "Miquéias Da Silva Santos Nery",
+   "cidade": "Sao Paulo",
+   "total": 4,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3,
+   "saida": "11:33",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:07",
+   "ritmo_real": 128
   },
   {
    "plano": "6103276050",
@@ -469,20 +484,20 @@
    "gm": 53
   },
   {
+   "op": "Café · Guarulhos",
+   "veic": 10,
+   "total": 40,
+   "ok": 39,
+   "semapont": 0,
+   "gm": 39
+  },
+  {
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 37,
    "ok": 34,
    "semapont": 0,
    "gm": 33
-  },
-  {
-   "op": "Café · Guarulhos",
-   "veic": 9,
-   "total": 36,
-   "ok": 36,
-   "semapont": 0,
-   "gm": 36
   },
   {
    "op": "Café · SJC",
@@ -528,7 +543,7 @@
   },
   {
    "h": "11",
-   "n": 22
+   "n": 23
   },
   {
    "h": "12",
@@ -540,7 +555,7 @@
   },
   {
    "h": "14",
-   "n": 20
+   "n": 21
   },
   {
    "h": "15",
@@ -548,7 +563,7 @@
   },
   {
    "h": "16",
-   "n": 3
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
