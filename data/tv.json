@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-15T06:46:39-03:00",
+ "gerado_em": "2026-09-15T07:01:46-03:00",
  "dia": "2026-09-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,12 +75,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Tupa",
    "total": 13,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "06:57",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "07:00",
    "ritmo_real": 0
   },
   {
@@ -375,9 +375,9 @@
    "op": "Café · Meso Marília",
    "veic": 7,
    "total": 35,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   },
   {
    "op": "Café · Guarulhos",
@@ -396,6 +396,11 @@
    "gm": 0
   }
  ],
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "07",
+   "n": 1
+  }
+ ],
  "gm_sem_sac": 0
 }
