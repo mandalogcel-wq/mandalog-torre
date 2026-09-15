@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-15T10:01:40-03:00",
+ "gerado_em": "2026-09-15T10:16:41-03:00",
  "dia": "2026-09-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -120,6 +120,21 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103275896",
+   "op": "Café · SJC",
+   "placa": "ENK7E30",
+   "motorista": "Joao Paulo Fausto Menezes",
+   "cidade": "Campos Do Jordao",
+   "total": 6,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -448,8 +463,8 @@
   },
   {
    "op": "Café · SJC",
-   "veic": 4,
-   "total": 26,
+   "veic": 5,
+   "total": 32,
    "ok": 0,
    "semapont": 0,
    "gm": 0
