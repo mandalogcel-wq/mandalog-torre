@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-15T13:31:41-03:00",
+ "gerado_em": "2026-09-15T14:01:39-03:00",
  "dia": "2026-09-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Aguinaldo Ribeiro Pinheiro",
    "cidade": "Itapeva",
    "total": 30,
-   "ok": 17,
+   "ok": 19,
    "semapont": 0,
-   "gm": 17,
+   "gm": 19,
    "saida": "08:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:05",
+   "ultima_baixa": "13:33",
    "ritmo_real": 16
   },
   {
@@ -449,9 +449,9 @@
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 74,
-   "ok": 27,
+   "ok": 29,
    "semapont": 0,
-   "gm": 27
+   "gm": 29
   },
   {
    "op": "Café · Meso Marília",
@@ -521,7 +521,7 @@
   },
   {
    "h": "13",
-   "n": 4
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
