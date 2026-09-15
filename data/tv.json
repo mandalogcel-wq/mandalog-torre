@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-15T12:01:43-03:00",
+ "gerado_em": "2026-09-15T12:31:38-03:00",
  "dia": "2026-09-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Aguinaldo Ribeiro Pinheiro",
    "cidade": "Itapeva",
    "total": 30,
-   "ok": 11,
+   "ok": 15,
    "semapont": 0,
-   "gm": 11,
+   "gm": 15,
    "saida": "08:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:57",
-   "ritmo_real": 19
+   "ultima_baixa": "12:28",
+   "ritmo_real": 16
   },
   {
    "plano": "6103275151",
@@ -30,13 +30,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Ribeirao Branco",
    "total": 24,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "11:01",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:01",
-   "ritmo_real": 0
+   "ultima_baixa": "12:10",
+   "ritmo_real": 34
   },
   {
    "plano": "6103275153",
@@ -45,12 +45,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Itai",
    "total": 20,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "12:27",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:27",
    "ritmo_real": 0
   },
   {
@@ -90,12 +90,12 @@
    "motorista": "Josafa",
    "cidade": "Guarulhos",
    "total": 11,
-   "ok": 0,
+   "ok": 11,
    "semapont": 0,
-   "gm": 0,
+   "gm": 11,
    "saida": "06:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "06:21",
    "ritmo_real": 0
   },
   {
@@ -195,13 +195,13 @@
    "motorista": "Orlando",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "08:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:56",
-   "ritmo_real": 62
+   "ultima_baixa": "12:07",
+   "ritmo_real": 96
   },
   {
    "plano": "6103274330",
@@ -228,8 +228,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "12:02",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -240,12 +240,12 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "12:04",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:04",
    "ritmo_real": 0
   },
   {
@@ -270,12 +270,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Ourinhos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "12:04",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:04",
    "ritmo_real": 0
   },
   {
@@ -449,17 +449,17 @@
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 74,
-   "ok": 13,
+   "ok": 19,
    "semapont": 0,
-   "gm": 13
+   "gm": 19
   },
   {
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 37,
-   "ok": 21,
+   "ok": 22,
    "semapont": 0,
-   "gm": 21
+   "gm": 22
   },
   {
    "op": "Café · SJC",
@@ -473,9 +473,9 @@
    "op": "Café · Guarulhos",
    "veic": 8,
    "total": 24,
-   "ok": 4,
+   "ok": 18,
    "semapont": 0,
-   "gm": 4
+   "gm": 18
   },
   {
    "op": "Café · CD Sumaré",
@@ -496,6 +496,10 @@
  ],
  "baixas_por_hora": [
   {
+   "h": "06",
+   "n": 11
+  },
+  {
    "h": "07",
    "n": 1
   },
@@ -514,6 +518,10 @@
   {
    "h": "11",
    "n": 16
+  },
+  {
+   "h": "12",
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
