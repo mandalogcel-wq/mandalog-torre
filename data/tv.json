@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-15T09:01:38-03:00",
+ "gerado_em": "2026-09-15T09:16:42-03:00",
  "dia": "2026-09-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -129,14 +129,14 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103276919",
+   "plano": "6103276885",
    "op": "Café · CD Sumaré",
    "placa": "SUP9B16",
    "motorista": "Ricardo Edson",
    "cidade": "Jaguariuna",
    "total": 5,
    "ok": 0,
-   "semapont": 5,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -309,17 +309,17 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103276885",
+   "plano": "6103276919",
    "op": "Café · CD Sumaré",
    "placa": "FDL6D77",
    "motorista": "Dione Soares Galego",
    "cidade": "Santa Barbara Doeste",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "08:51",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -467,7 +467,7 @@
    "veic": 2,
    "total": 6,
    "ok": 0,
-   "semapont": 6,
+   "semapont": 0,
    "gm": 0
   },
   {
