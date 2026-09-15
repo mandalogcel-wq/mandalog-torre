@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-15T09:31:56-03:00",
+ "gerado_em": "2026-09-15T09:46:45-03:00",
  "dia": "2026-09-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -121,7 +121,7 @@
    "cidade": "Pindamonhangaba",
    "total": 9,
    "ok": 0,
-   "semapont": 9,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -458,7 +458,7 @@
    "veic": 5,
    "total": 44,
    "ok": 0,
-   "semapont": 9,
+   "semapont": 0,
    "gm": 0
   },
   {
