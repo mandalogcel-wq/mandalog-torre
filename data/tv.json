@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-16T11:01:46-03:00",
+ "gerado_em": "2026-09-16T11:31:45-03:00",
  "dia": "2026-09-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,12 +45,12 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 16,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:27",
    "ritmo_real": 0
   },
   {
@@ -120,13 +120,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Taquarituba",
    "total": 8,
-   "ok": 3,
+   "ok": 5,
    "semapont": 0,
-   "gm": 3,
+   "gm": 5,
    "saida": "09:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:52",
-   "ritmo_real": 42
+   "ultima_baixa": "11:29",
+   "ritmo_real": 30
   },
   {
    "plano": "6103278398",
@@ -150,12 +150,12 @@
    "motorista": "Carlos Cesar Cardoso Lima Junior",
    "cidade": "Guaratingueta",
    "total": 4,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "10:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:14",
    "ritmo_real": 0
   },
   {
@@ -427,17 +427,17 @@
    "op": "Café · Guarulhos",
    "veic": 12,
    "total": 44,
-   "ok": 5,
+   "ok": 8,
    "semapont": 0,
-   "gm": 5
+   "gm": 8
   },
   {
    "op": "Café · Itapeva",
    "veic": 2,
    "total": 22,
-   "ok": 13,
+   "ok": 15,
    "semapont": 0,
-   "gm": 13
+   "gm": 15
   },
   {
    "op": "Café · Meso Bauru",
@@ -476,6 +476,10 @@
   {
    "h": "10",
    "n": 12
+  },
+  {
+   "h": "11",
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
