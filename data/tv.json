@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-16T14:31:42-03:00",
+ "gerado_em": "2026-09-16T14:46:45-03:00",
  "dia": "2026-09-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,7 +75,7 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Barra Do Chapeu",
    "total": 14,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
    "gm": 10,
    "saida": "08:13",
@@ -435,7 +435,7 @@
    "op": "Café · Itapeva",
    "veic": 2,
    "total": 22,
-   "ok": 17,
+   "ok": 18,
    "semapont": 0,
    "gm": 17
   },
