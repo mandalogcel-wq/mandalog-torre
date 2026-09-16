@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-16T13:31:41-03:00",
+ "gerado_em": "2026-09-16T14:01:45-03:00",
  "dia": "2026-09-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Tabatinga",
    "total": 16,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "08:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:27",
-   "ritmo_real": 23
+   "ultima_baixa": "13:37",
+   "ritmo_real": 22
   },
   {
    "plano": "6103278375",
@@ -45,13 +45,13 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 16,
-   "ok": 7,
+   "ok": 9,
    "semapont": 0,
-   "gm": 7,
+   "gm": 9,
    "saida": "10:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:15",
-   "ritmo_real": 18
+   "ultima_baixa": "13:37",
+   "ritmo_real": 16
   },
   {
    "plano": "6103279561",
@@ -135,13 +135,13 @@
    "motorista": "Orlando Vieira",
    "cidade": "Embu Guacu",
    "total": 5,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "09:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:24",
-   "ritmo_real": 57
+   "ultima_baixa": "13:43",
+   "ritmo_real": 62
   },
   {
    "plano": "6103276479",
@@ -255,12 +255,12 @@
    "motorista": "Miquéias Da Silva Santos Nery",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "10:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:44",
    "ritmo_real": 0
   },
   {
@@ -330,12 +330,12 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:56",
    "ritmo_real": 0
   },
   {
@@ -427,9 +427,9 @@
    "op": "Café · Guarulhos",
    "veic": 12,
    "total": 44,
-   "ok": 22,
+   "ok": 28,
    "semapont": 0,
-   "gm": 22
+   "gm": 28
   },
   {
    "op": "Café · Itapeva",
@@ -443,9 +443,9 @@
    "op": "Café · Meso Bauru",
    "veic": 3,
    "total": 20,
-   "ok": 17,
+   "ok": 18,
    "semapont": 0,
-   "gm": 17
+   "gm": 18
   },
   {
    "op": "Café · Meso Marília",
@@ -487,7 +487,7 @@
   },
   {
    "h": "13",
-   "n": 4
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
