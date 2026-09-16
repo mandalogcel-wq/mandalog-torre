@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-16T11:31:45-03:00",
+ "gerado_em": "2026-09-16T12:01:46-03:00",
  "dia": "2026-09-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 16,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "10:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:27",
-   "ritmo_real": 0
+   "ultima_baixa": "12:00",
+   "ritmo_real": 33
   },
   {
    "plano": "6103279561",
@@ -165,12 +165,12 @@
    "motorista": "Alex Junior Brunelo",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:37",
    "ritmo_real": 0
   },
   {
@@ -195,12 +195,12 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Embu Guacu",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:53",
    "ritmo_real": 0
   },
   {
@@ -375,12 +375,12 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Cotia",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:41",
    "ritmo_real": 0
   },
   {
@@ -427,9 +427,9 @@
    "op": "Café · Guarulhos",
    "veic": 12,
    "total": 44,
-   "ok": 8,
+   "ok": 16,
    "semapont": 0,
-   "gm": 8
+   "gm": 16
   },
   {
    "op": "Café · Itapeva",
@@ -479,7 +479,11 @@
   },
   {
    "h": "11",
-   "n": 5
+   "n": 12
+  },
+  {
+   "h": "12",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
