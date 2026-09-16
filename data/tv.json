@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-16T07:46:49-03:00",
+ "gerado_em": "2026-09-16T08:01:47-03:00",
  "dia": "2026-09-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -26,8 +26,8 @@
   {
    "plano": "6103278375",
    "op": "Café · Guarulhos",
-   "placa": "PCC0H30",
-   "motorista": "Marcio Cavalcante Da Silva",
+   "placa": "FYH8F51",
+   "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 16,
    "ok": 0,
@@ -84,11 +84,11 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103277846",
+   "plano": "6103278378",
    "op": "Café · Guarulhos",
-   "placa": "ETO2A93",
-   "motorista": "Odimar Levino Lima De Paiva",
-   "cidade": "Embu Guacu",
+   "placa": "ETA3E32",
+   "motorista": "Valdir Da Silva Nery",
+   "cidade": "Sao Paulo",
    "total": 3,
    "ok": 0,
    "semapont": 0,
@@ -99,11 +99,11 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103278378",
+   "plano": "6103277846",
    "op": "Café · Guarulhos",
-   "placa": "FYH8F51",
-   "motorista": "Narciso Henrique Da Silva",
-   "cidade": "Sao Paulo",
+   "placa": "ETO2A93",
+   "motorista": "Odimar Levino Lima De Paiva",
+   "cidade": "Embu Guacu",
    "total": 3,
    "ok": 0,
    "semapont": 0,
@@ -155,6 +155,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103274696",
+   "op": "Café · CD Sumaré",
+   "placa": "FDL6D77",
+   "motorista": "Dione Soares Galego",
+   "cidade": "Araras",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -247,6 +262,21 @@
    "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103278179",
+   "op": "Café · CD Sumaré",
+   "placa": "SUP9B16",
+   "motorista": "Ricardo Edson Custodio",
+   "cidade": "Nova Odesa",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   }
  ],
  "pracas": [
@@ -270,6 +300,14 @@
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 4,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0
+  },
+  {
+   "op": "Café · CD Sumaré",
+   "veic": 2,
+   "total": 3,
    "ok": 0,
    "semapont": 0,
    "gm": 0
