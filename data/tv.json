@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-17T17:01:46-03:00",
+ "gerado_em": "2026-09-17T17:31:43-03:00",
  "dia": "2026-09-17",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,9 +90,9 @@
    "motorista": "Waldir",
    "cidade": "Taboao Da Serra",
    "total": 13,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "07:31",
    "saida_fonte": "greenmile",
    "ultima_baixa": "15:56",
@@ -494,9 +494,9 @@
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 81,
-   "ok": 67,
+   "ok": 68,
    "semapont": 0,
-   "gm": 67
+   "gm": 68
   },
   {
    "op": "Café · Meso Marília",
