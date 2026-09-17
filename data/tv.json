@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-17T10:31:48-03:00",
+ "gerado_em": "2026-09-17T10:46:55-03:00",
  "dia": "2026-09-17",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -429,6 +429,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103274331",
+   "op": "Café · Meso Bauru",
+   "placa": "EFQ7G95",
+   "motorista": "Jose Ailton Felix Da Silva",
+   "cidade": "Bocaina",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103280720",
    "op": "Café · Guarulhos",
    "placa": "EMF0232",
@@ -501,8 +516,8 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 1,
-   "total": 21,
+   "veic": 2,
+   "total": 22,
    "ok": 6,
    "semapont": 0,
    "gm": 6
