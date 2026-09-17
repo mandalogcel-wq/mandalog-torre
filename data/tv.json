@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-17T12:16:51-03:00",
+ "gerado_em": "2026-09-17T12:31:46-03:00",
  "dia": "2026-09-17",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "09:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:58",
-   "ritmo_real": 15
+   "ultima_baixa": "12:21",
+   "ritmo_real": 16
   },
   {
    "plano": "6103281112",
@@ -75,13 +75,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 13,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "10:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:19",
-   "ritmo_real": 16
+   "ultima_baixa": "12:11",
+   "ritmo_real": 20
   },
   {
    "plano": "6103280220",
@@ -285,12 +285,12 @@
    "motorista": "Claudio Douglas",
    "cidade": "Atibaia",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "12:16",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:16",
    "ritmo_real": 0
   },
   {
@@ -315,12 +315,12 @@
    "motorista": "Valdir",
    "cidade": "Poa",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "07:59",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:27",
    "ritmo_real": 0
   },
   {
@@ -509,17 +509,17 @@
    "op": "Café · Guarulhos",
    "veic": 25,
    "total": 93,
-   "ok": 37,
+   "ok": 43,
    "semapont": 0,
-   "gm": 37
+   "gm": 40
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 54,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4
+   "gm": 6
   },
   {
    "op": "Café · SJC",
@@ -533,9 +533,9 @@
    "op": "Café · Meso Bauru",
    "veic": 2,
    "total": 22,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11
+   "gm": 12
   }
  ],
  "baixas_por_hora": [
@@ -558,6 +558,10 @@
   {
    "h": "11",
    "n": 18
+  },
+  {
+   "h": "12",
+   "n": 9
   }
  ],
  "gm_sem_sac": 0
