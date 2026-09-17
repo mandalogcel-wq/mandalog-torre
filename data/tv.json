@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-17T15:31:45-03:00",
+ "gerado_em": "2026-09-17T16:01:41-03:00",
  "dia": "2026-09-17",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -14,7 +14,7 @@
    "placa": "DJM6I11",
    "motorista": "Aguinaldo Ribeiro Pinheiro",
    "cidade": "Marilia",
-   "total": 22,
+   "total": 21,
    "ok": 4,
    "semapont": 0,
    "gm": 4,
@@ -30,12 +30,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 18,
+   "ok": 21,
    "semapont": 0,
-   "gm": 18,
+   "gm": 19,
    "saida": "09:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:05",
+   "ultima_baixa": "15:31",
    "ritmo_real": 20
   },
   {
@@ -75,13 +75,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 13,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12,
+   "gm": 13,
    "saida": "10:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:00",
-   "ritmo_real": 19
+   "ultima_baixa": "15:43",
+   "ritmo_real": 26
   },
   {
    "plano": "6103280220",
@@ -95,8 +95,8 @@
    "gm": 8,
    "saida": "07:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:26",
-   "ritmo_real": 47
+   "ultima_baixa": "15:56",
+   "ritmo_real": 68
   },
   {
    "plano": "6103281117",
@@ -183,8 +183,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "15:57",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -390,12 +390,12 @@
    "motorista": "Thales De Jesus Santos",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "15:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:30",
    "ritmo_real": 0
   },
   {
@@ -420,12 +420,12 @@
    "motorista": "Wellington Pedro",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:58",
    "ritmo_real": 0
   },
   {
@@ -434,6 +434,21 @@
    "placa": "BWQ5135",
    "motorista": "Carlinhos Bernardine Silvinski",
    "cidade": "Nova Odessa",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "546811",
+   "op": "Café · Meso Marília",
+   "placa": "DJM6I11",
+   "motorista": "Aguinaldo Ribeiro Pinheiro",
+   "cidade": "Oriente",
    "total": 1,
    "ok": 0,
    "semapont": 1,
@@ -509,17 +524,17 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 89,
-   "ok": 63,
+   "ok": 67,
    "semapont": 0,
-   "gm": 63
+   "gm": 67
   },
   {
    "op": "Café · Meso Marília",
-   "veic": 4,
+   "veic": 5,
    "total": 54,
-   "ok": 19,
-   "semapont": 0,
-   "gm": 19
+   "ok": 20,
+   "semapont": 1,
+   "gm": 20
   },
   {
    "op": "Café · SJC",
@@ -533,9 +548,9 @@
    "op": "Café · Meso Bauru",
    "veic": 2,
    "total": 22,
-   "ok": 18,
+   "ok": 21,
    "semapont": 0,
-   "gm": 18
+   "gm": 19
   },
   {
    "op": "Café · CD Sumaré",
@@ -573,7 +588,7 @@
   },
   {
    "h": "13",
-   "n": 11
+   "n": 10
   },
   {
    "h": "14",
@@ -581,7 +596,7 @@
   },
   {
    "h": "15",
-   "n": 4
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
