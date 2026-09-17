@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-17T14:31:46-03:00",
+ "gerado_em": "2026-09-17T15:01:44-03:00",
  "dia": "2026-09-17",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,12 +30,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 16,
+   "ok": 17,
    "semapont": 0,
-   "gm": 16,
+   "gm": 17,
    "saida": "09:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:08",
+   "ultima_baixa": "14:36",
    "ritmo_real": 19
   },
   {
@@ -120,13 +120,13 @@
    "motorista": "Orlando Viera",
    "cidade": "Barueri",
    "total": 8,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "09:59",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:22",
-   "ritmo_real": 44
+   "ultima_baixa": "14:52",
+   "ritmo_real": 42
   },
   {
    "plano": "6103280213",
@@ -234,33 +234,18 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103280012",
-   "op": "Café · Guarulhos",
-   "placa": "GWR9A64",
-   "motorista": "Thales De Jesus Santos",
-   "cidade": "Sao Paulo",
-   "total": 4,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103279990",
    "op": "Café · Guarulhos",
    "placa": "PCC0H30",
    "motorista": "Marcio Cavalcante Da Silva",
    "cidade": "Atibaia",
    "total": 4,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
+   "gm": 4,
    "saida": "09:19",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "14:47",
    "ritmo_real": 0
   },
   {
@@ -420,12 +405,12 @@
    "motorista": "Rodrigo Gonçalves",
    "cidade": "Atibaia",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 3,
+   "saida": "14:57",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:58",
    "ritmo_real": 0
   },
   {
@@ -522,11 +507,11 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 25,
-   "total": 93,
-   "ok": 53,
+   "veic": 24,
+   "total": 89,
+   "ok": 61,
    "semapont": 0,
-   "gm": 53
+   "gm": 61
   },
   {
    "op": "Café · Meso Marília",
@@ -548,9 +533,9 @@
    "op": "Café · Meso Bauru",
    "veic": 2,
    "total": 22,
-   "ok": 16,
+   "ok": 17,
    "semapont": 0,
-   "gm": 16
+   "gm": 17
   },
   {
    "op": "Café · CD Sumaré",
@@ -592,7 +577,7 @@
   },
   {
    "h": "14",
-   "n": 11
+   "n": 20
   }
  ],
  "gm_sem_sac": 0
