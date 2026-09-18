@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-18T10:01:39-03:00",
+ "gerado_em": "2026-09-18T10:31:41-03:00",
  "dia": "2026-09-18",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Botucatu",
    "total": 25,
-   "ok": 13,
+   "ok": 16,
    "semapont": 0,
-   "gm": 13,
+   "gm": 16,
    "saida": "07:44",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:53",
-   "ritmo_real": 8
+   "ultima_baixa": "10:29",
+   "ritmo_real": 9
   },
   {
    "plano": "6103279957",
@@ -90,13 +90,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Tupa",
    "total": 17,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "07:25",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:40",
-   "ritmo_real": 31
+   "ultima_baixa": "10:16",
+   "ritmo_real": 32
   },
   {
    "plano": "6103279958",
@@ -105,13 +105,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Assis",
    "total": 17,
-   "ok": 13,
+   "ok": 14,
    "semapont": 0,
-   "gm": 13,
+   "gm": 14,
    "saida": "08:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:00",
-   "ritmo_real": 8
+   "ultima_baixa": "10:21",
+   "ritmo_real": 9
   },
   {
    "plano": "6103279955",
@@ -225,12 +225,12 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Sao Paulo",
    "total": 6,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:25",
    "ritmo_real": 0
   },
   {
@@ -240,13 +240,13 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Sao Paulo",
    "total": 5,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "07:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:32",
-   "ritmo_real": 20
+   "ultima_baixa": "10:19",
+   "ritmo_real": 27
   },
   {
    "plano": "6103281112",
@@ -305,7 +305,7 @@
    "gm": 4,
    "saida": "07:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:54",
+   "ultima_baixa": "10:25",
    "ritmo_real": 0
   },
   {
@@ -539,25 +539,25 @@
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 110,
-   "ok": 16,
+   "ok": 18,
    "semapont": 0,
-   "gm": 16
+   "gm": 18
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 86,
-   "ok": 33,
+   "ok": 36,
    "semapont": 0,
-   "gm": 33
+   "gm": 36
   },
   {
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 86,
-   "ok": 19,
+   "ok": 21,
    "semapont": 0,
-   "gm": 19
+   "gm": 21
   },
   {
    "op": "Café · SJC",
@@ -578,20 +578,16 @@
  ],
  "baixas_por_hora": [
   {
-   "h": "07",
-   "n": 4
-  },
-  {
    "h": "08",
    "n": 27
   },
   {
    "h": "09",
-   "n": 32
+   "n": 31
   },
   {
    "h": "10",
-   "n": 1
+   "n": 13
   }
  ],
  "gm_sem_sac": 0
