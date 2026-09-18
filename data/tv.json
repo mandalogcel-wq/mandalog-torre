@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-18T11:01:42-03:00",
+ "gerado_em": "2026-09-18T11:16:40-03:00",
  "dia": "2026-09-18",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -261,6 +261,21 @@
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103279969",
+   "op": "Café · Guarulhos",
+   "placa": "BZC2490",
+   "motorista": "Gilberto Jose De Lima",
+   "cidade": "Guarulhos",
+   "total": 4,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "10:57",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:58",
    "ritmo_real": 0
   },
   {
@@ -537,11 +552,11 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 22,
-   "total": 110,
-   "ok": 20,
+   "veic": 23,
+   "total": 114,
+   "ok": 24,
    "semapont": 0,
-   "gm": 18
+   "gm": 22
   },
   {
    "op": "Café · Meso Bauru",
@@ -587,7 +602,7 @@
   },
   {
    "h": "10",
-   "n": 19
+   "n": 23
   }
  ],
  "gm_sem_sac": 0
