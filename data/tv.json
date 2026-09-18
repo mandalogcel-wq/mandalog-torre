@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-18T19:16:52-03:00",
+ "gerado_em": "2026-09-18T19:31:41-03:00",
  "dia": "2026-09-18",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Marcio Cavalcante",
    "cidade": "Taboao Da Serra",
    "total": 21,
-   "ok": 4,
+   "ok": 11,
    "semapont": 0,
    "gm": 4,
    "saida": "12:43",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:42",
-   "ritmo_real": 59
+   "ultima_baixa": "15:46",
+   "ritmo_real": 36
   },
   {
    "plano": "6103279847",
@@ -230,8 +230,8 @@
    "gm": 4,
    "saida": "08:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:38",
-   "ritmo_real": 186
+   "ultima_baixa": "18:26",
+   "ritmo_real": 160
   },
   {
    "plano": "6103281376",
@@ -408,8 +408,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "19:05",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -554,7 +554,7 @@
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 114,
-   "ok": 72,
+   "ok": 79,
    "semapont": 0,
    "gm": 70
   },
@@ -622,7 +622,7 @@
   },
   {
    "h": "15",
-   "n": 24
+   "n": 26
   },
   {
    "h": "16",
@@ -630,7 +630,7 @@
   },
   {
    "h": "18",
-   "n": 2
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
