@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-18T12:01:39-03:00",
+ "gerado_em": "2026-09-18T12:16:44-03:00",
  "dia": "2026-09-18",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -512,7 +512,7 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -556,7 +556,7 @@
    "total": 114,
    "ok": 40,
    "semapont": 0,
-   "gm": 37
+   "gm": 38
   },
   {
    "op": "Café · Meso Bauru",
