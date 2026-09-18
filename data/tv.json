@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-18T18:31:45-03:00",
+ "gerado_em": "2026-09-18T19:01:47-03:00",
  "dia": "2026-09-18",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -465,9 +465,9 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "11:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -554,9 +554,9 @@
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 114,
-   "ok": 69,
+   "ok": 71,
    "semapont": 0,
-   "gm": 67
+   "gm": 69
   },
   {
    "op": "Café · Meso Bauru",
