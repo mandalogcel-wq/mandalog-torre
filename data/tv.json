@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-18T13:31:40-03:00",
+ "gerado_em": "2026-09-18T13:46:40-03:00",
  "dia": "2026-09-18",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -255,9 +255,9 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Sao Jose Dos Campos",
    "total": 5,
-   "ok": 0,
+   "ok": 5,
    "semapont": 0,
-   "gm": 0,
+   "gm": 5,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -300,9 +300,9 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 4,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
+   "gm": 4,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -578,9 +578,9 @@
    "op": "Café · SJC",
    "veic": 2,
    "total": 9,
-   "ok": 0,
+   "ok": 9,
    "semapont": 0,
-   "gm": 0
+   "gm": 9
   },
   {
    "op": "Café · CD Sumaré",
