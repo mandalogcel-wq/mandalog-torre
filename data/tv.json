@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-18T14:31:44-03:00",
+ "gerado_em": "2026-09-18T15:01:41-03:00",
  "dia": "2026-09-18",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Pirajui",
    "total": 20,
-   "ok": 13,
+   "ok": 17,
    "semapont": 0,
-   "gm": 13,
+   "gm": 17,
    "saida": "08:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:43",
-   "ritmo_real": 25
+   "ultima_baixa": "14:50",
+   "ritmo_real": 23
   },
   {
    "plano": "6103279849",
@@ -75,13 +75,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 16,
+   "ok": 17,
    "semapont": 0,
-   "gm": 16,
+   "gm": 17,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:17",
-   "ritmo_real": 31
+   "ultima_baixa": "14:35",
+   "ritmo_real": 30
   },
   {
    "plano": "6103279959",
@@ -90,13 +90,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Tupa",
    "total": 17,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12,
+   "gm": 13,
    "saida": "07:25",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:21",
-   "ritmo_real": 34
+   "ultima_baixa": "14:41",
+   "ritmo_real": 33
   },
   {
    "plano": "6103279958",
@@ -135,13 +135,13 @@
    "motorista": "Guilherme Alves De Andrade",
    "cidade": "Sao Paulo",
    "total": 15,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "08:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:57",
-   "ritmo_real": 29
+   "ultima_baixa": "14:46",
+   "ritmo_real": 31
   },
   {
    "plano": "6103279950",
@@ -150,13 +150,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Santa Cruz Do Rio Pardo",
    "total": 13,
-   "ok": 9,
+   "ok": 10,
    "semapont": 0,
-   "gm": 9,
+   "gm": 10,
    "saida": "09:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:05",
-   "ritmo_real": 36
+   "ultima_baixa": "14:50",
+   "ritmo_real": 37
   },
   {
    "plano": "6103279960",
@@ -165,13 +165,13 @@
    "motorista": "Jose Carlos Da Silva 2",
    "cidade": "Taguai",
    "total": 13,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "09:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:34",
-   "ritmo_real": 4
+   "ultima_baixa": "14:56",
+   "ritmo_real": 15
   },
   {
    "plano": "6103281391",
@@ -195,13 +195,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Pedrinhas Paulista",
    "total": 10,
-   "ok": 1,
+   "ok": 6,
    "semapont": 0,
-   "gm": 1,
+   "gm": 6,
    "saida": "14:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:24",
-   "ritmo_real": 0
+   "ultima_baixa": "14:55",
+   "ritmo_real": 6
   },
   {
    "plano": "6103281387",
@@ -554,25 +554,25 @@
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 114,
-   "ok": 54,
+   "ok": 55,
    "semapont": 0,
-   "gm": 52
+   "gm": 53
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 86,
-   "ok": 61,
+   "ok": 66,
    "semapont": 0,
-   "gm": 61
+   "gm": 66
   },
   {
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 86,
-   "ok": 46,
+   "ok": 54,
    "semapont": 0,
-   "gm": 46
+   "gm": 54
   },
   {
    "op": "Café · SJC",
@@ -614,11 +614,11 @@
   },
   {
    "h": "13",
-   "n": 17
+   "n": 16
   },
   {
    "h": "14",
-   "n": 6
+   "n": 21
   }
  ],
  "gm_sem_sac": 0
