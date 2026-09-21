@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T11:31:41-03:00",
+ "gerado_em": "2026-09-21T11:46:53-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -286,7 +286,7 @@
    "cidade": "Sao Paulo",
    "total": 5,
    "ok": 3,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 3,
    "saida": "08:52",
    "saida_fonte": "greenmile",
@@ -480,7 +480,7 @@
    "veic": 18,
    "total": 110,
    "ok": 7,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 7
   },
   {
