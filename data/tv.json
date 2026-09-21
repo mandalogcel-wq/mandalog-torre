@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T09:01:42-03:00",
+ "gerado_em": "2026-09-21T09:16:44-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,6 +8,21 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
+  {
+   "plano": "6103282975",
+   "op": "Café · Meso Marília",
+   "placa": "AUR5G40",
+   "motorista": "Bruno Sousa Rocha",
+   "cidade": "Avare",
+   "total": 22,
+   "ok": 0,
+   "semapont": 22,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
   {
    "plano": "6103282973",
    "op": "Café · Meso Bauru",
@@ -24,6 +39,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103282946",
+   "op": "Café · Meso Bauru",
+   "placa": "GDS8C65",
+   "motorista": "Cristina Sales Moreira",
+   "cidade": "Marilia",
+   "total": 19,
+   "ok": 0,
+   "semapont": 19,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103284230",
    "op": "Café · SJC",
    "placa": "AHE8H87",
@@ -31,7 +61,7 @@
    "cidade": "Taubate",
    "total": 17,
    "ok": 0,
-   "semapont": 17,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -46,7 +76,7 @@
    "cidade": "Pindamonhangaba",
    "total": 17,
    "ok": 0,
-   "semapont": 17,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -61,7 +91,7 @@
    "cidade": "Sao Jose Dos Campos",
    "total": 15,
    "ok": 0,
-   "semapont": 15,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -76,7 +106,7 @@
    "cidade": "Jacarei",
    "total": 13,
    "ok": 0,
-   "semapont": 13,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -91,7 +121,7 @@
    "cidade": "Jacarei",
    "total": 13,
    "ok": 0,
-   "semapont": 13,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -146,7 +176,7 @@
   {
    "plano": "6103282945",
    "op": "Café · Meso Bauru",
-   "placa": "DMQ",
+   "placa": "DMQ3G22",
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Sao Manuel",
    "total": 3,
@@ -185,6 +215,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103280250",
+   "op": "Café · Meso Marília",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Taruma",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -255,8 +300,16 @@
    "veic": 5,
    "total": 75,
    "ok": 0,
-   "semapont": 75,
+   "semapont": 0,
    "gm": 0
+  },
+  {
+   "op": "Café · Meso Bauru",
+   "veic": 3,
+   "total": 42,
+   "ok": 1,
+   "semapont": 19,
+   "gm": 1
   },
   {
    "op": "Café · Guarulhos",
@@ -267,19 +320,11 @@
    "gm": 2
   },
   {
-   "op": "Café · Meso Bauru",
-   "veic": 2,
-   "total": 23,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1
-  },
-  {
    "op": "Café · Meso Marília",
-   "veic": 1,
-   "total": 2,
+   "veic": 3,
+   "total": 25,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 23,
    "gm": 0
   }
  ],
