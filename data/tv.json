@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T13:01:39-03:00",
+ "gerado_em": "2026-09-21T13:31:52-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "10:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:58",
-   "ritmo_real": 11
+   "ultima_baixa": "13:19",
+   "ritmo_real": 12
   },
   {
    "plano": "6103282946",
@@ -105,13 +105,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 13,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "11:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:12",
-   "ritmo_real": 0
+   "ultima_baixa": "13:26",
+   "ritmo_real": 37
   },
   {
    "plano": "6103284229",
@@ -155,7 +155,7 @@
    "gm": 13,
    "saida": "12:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:00",
+   "ultima_baixa": "13:01",
    "ritmo_real": 0
   },
   {
@@ -185,7 +185,7 @@
    "gm": 1,
    "saida": "12:37",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:37",
+   "ultima_baixa": "13:01",
    "ritmo_real": 0
   },
   {
@@ -270,12 +270,12 @@
    "motorista": "Josafa Araujo Da Silva",
    "cidade": "Sao Paulo",
    "total": 6,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "13:01",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:04",
    "ritmo_real": 0
   },
   {
@@ -509,17 +509,17 @@
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 110,
-   "ok": 15,
+   "ok": 18,
    "semapont": 0,
-   "gm": 15
+   "gm": 18
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 81,
-   "ok": 41,
+   "ok": 42,
    "semapont": 1,
-   "gm": 41
+   "gm": 42
   },
   {
    "op": "Café · SJC",
@@ -557,11 +557,11 @@
   },
   {
    "h": "12",
-   "n": 27
+   "n": 26
   },
   {
    "h": "13",
-   "n": 8
+   "n": 13
   }
  ],
  "gm_sem_sac": 0
