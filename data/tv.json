@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T17:16:45-03:00",
+ "gerado_em": "2026-09-21T17:31:41-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -110,8 +110,8 @@
    "gm": 8,
    "saida": "11:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:56",
-   "ritmo_real": 41
+   "ultima_baixa": "17:07",
+   "ritmo_real": 42
   },
   {
    "plano": "6103284229",
@@ -120,7 +120,7 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Jacarei",
    "total": 13,
-   "ok": 0,
+   "ok": 8,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -405,12 +405,12 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "16:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "17:08",
    "ritmo_real": 0
   },
   {
@@ -524,9 +524,9 @@
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 106,
-   "ok": 68,
+   "ok": 70,
    "semapont": 0,
-   "gm": 67
+   "gm": 69
   },
   {
    "op": "Café · Meso Bauru",
@@ -540,7 +540,7 @@
    "op": "Café · SJC",
    "veic": 4,
    "total": 58,
-   "ok": 39,
+   "ok": 47,
    "semapont": 0,
    "gm": 0
   },
@@ -596,7 +596,11 @@
   },
   {
    "h": "16",
-   "n": 14
+   "n": 13
+  },
+  {
+   "h": "17",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
