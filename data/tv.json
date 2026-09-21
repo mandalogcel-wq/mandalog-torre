@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T16:01:49-03:00",
+ "gerado_em": "2026-09-21T16:31:46-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -195,13 +195,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Mairipora",
    "total": 12,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "11:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:50",
-   "ritmo_real": 47
+   "ultima_baixa": "16:29",
+   "ritmo_real": 46
   },
   {
    "plano": "6103281391",
@@ -339,6 +339,36 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103282940",
+   "op": "Café · Meso Bauru",
+   "placa": "EASOE29",
+   "motorista": "Jose Carlos Da Silva 2",
+   "cidade": "Bauru",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103282941",
+   "op": "Café · Meso Bauru",
+   "placa": "EASOE29",
+   "motorista": "Jose Carlos Da Silva 2",
+   "cidade": "Bauru",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103280250",
    "op": "Café · Meso Marília",
    "placa": "EASOE29",
@@ -465,12 +495,12 @@
    "motorista": "Deraldo Curcino Moreno",
    "cidade": "Ibiuna",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "16:17",
    "ritmo_real": 0
   },
   {
@@ -509,14 +539,14 @@
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 106,
-   "ok": 52,
+   "ok": 54,
    "semapont": 0,
-   "gm": 51
+   "gm": 53
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 7,
-   "total": 81,
+   "veic": 9,
+   "total": 85,
    "ok": 52,
    "semapont": 1,
    "gm": 52
@@ -570,6 +600,10 @@
   {
    "h": "15",
    "n": 19
+  },
+  {
+   "h": "16",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
