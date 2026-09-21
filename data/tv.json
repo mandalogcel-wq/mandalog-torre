@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T18:01:44-03:00",
+ "gerado_em": "2026-09-21T18:16:44-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -77,7 +77,7 @@
    "total": 17,
    "ok": 17,
    "semapont": 0,
-   "gm": 0,
+   "gm": 17,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -92,7 +92,7 @@
    "total": 15,
    "ok": 13,
    "semapont": 0,
-   "gm": 0,
+   "gm": 13,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -122,7 +122,7 @@
    "total": 13,
    "ok": 8,
    "semapont": 0,
-   "gm": 0,
+   "gm": 8,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -167,7 +167,7 @@
    "total": 13,
    "ok": 9,
    "semapont": 0,
-   "gm": 0,
+   "gm": 9,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -542,7 +542,7 @@
    "total": 58,
    "ok": 47,
    "semapont": 0,
-   "gm": 0
+   "gm": 47
   },
   {
    "op": "Café · Meso Marília",
