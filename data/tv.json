@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T08:16:52-03:00",
+ "gerado_em": "2026-09-21T08:31:45-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Bauru",
    "total": 20,
    "ok": 0,
-   "semapont": 20,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -65,6 +65,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103279844",
+   "op": "Café · Meso Marília",
+   "placa": "EFQ7G95",
+   "motorista": "Jose Ailton Felix Da Silva",
+   "cidade": "Marilia",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -123,8 +138,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:23",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -158,7 +173,15 @@
    "veic": 1,
    "total": 20,
    "ok": 0,
-   "semapont": 20,
+   "semapont": 0,
+   "gm": 0
+  },
+  {
+   "op": "Café · Meso Marília",
+   "veic": 1,
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
    "gm": 0
   }
  ],
