@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T09:16:44-03:00",
+ "gerado_em": "2026-09-21T09:31:43-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,22 @@
    "cidade": "Avare",
    "total": 22,
    "ok": 0,
-   "semapont": 22,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103279956",
+   "op": "Café · Meso Bauru",
+   "placa": "DJM6I11",
+   "motorista": "Aguinaldo Ribeiro Pinheiro",
+   "cidade": "Avare",
+   "total": 20,
+   "ok": 0,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -46,7 +61,7 @@
    "cidade": "Marilia",
    "total": 19,
    "ok": 0,
-   "semapont": 19,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -54,17 +69,17 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103284230",
-   "op": "Café · SJC",
-   "placa": "AHE8H87",
-   "motorista": "Renato Lopes Mendes",
-   "cidade": "Taubate",
-   "total": 17,
+   "plano": "6103279953",
+   "op": "Café · Meso Bauru",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Ibitinga",
+   "total": 19,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -189,18 +204,33 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103280250",
+   "op": "Café · Meso Marília",
+   "placa": "EASOE29",
+   "motorista": "Jose Carlos Da Silva 2",
+   "cidade": "Taruma",
+   "total": 2,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "08:37",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:37",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103279844",
    "op": "Café · Meso Marília",
    "placa": "EFQ7G95",
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Marilia",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:44",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:17",
    "ritmo_real": 0
   },
   {
@@ -219,17 +249,17 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103280250",
-   "op": "Café · Meso Marília",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Taruma",
-   "total": 1,
+   "plano": "6103281388",
+   "op": "Café · Guarulhos",
+   "placa": "ETO2A93",
+   "motorista": "Odimar Levino Lima De Paiva",
+   "cidade": "Sao Paulo",
+   "total": 2,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "11:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -264,6 +294,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103284978",
+   "op": "Café · Guarulhos",
+   "placa": "FJP5G78",
+   "motorista": "Jessica Morgania",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103283130",
    "op": "Café · Guarulhos",
    "placa": "HWD6886",
@@ -292,29 +337,44 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103280213",
+   "op": "Café · Guarulhos",
+   "placa": "ORF6F39",
+   "motorista": "Ronualdo Dos Reis Carvalho",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "11:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   }
  ],
  "pracas": [
   {
-   "op": "Café · SJC",
+   "op": "Café · Meso Bauru",
    "veic": 5,
-   "total": 75,
+   "total": 81,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1
+  },
+  {
+   "op": "Café · SJC",
+   "veic": 4,
+   "total": 58,
    "ok": 0,
    "semapont": 0,
    "gm": 0
   },
   {
-   "op": "Café · Meso Bauru",
-   "veic": 3,
-   "total": 42,
-   "ok": 1,
-   "semapont": 19,
-   "gm": 1
-  },
-  {
    "op": "Café · Guarulhos",
-   "veic": 8,
-   "total": 29,
+   "veic": 11,
+   "total": 33,
    "ok": 2,
    "semapont": 1,
    "gm": 2
@@ -322,16 +382,20 @@
   {
    "op": "Café · Meso Marília",
    "veic": 3,
-   "total": 25,
-   "ok": 0,
-   "semapont": 23,
-   "gm": 0
+   "total": 26,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4
   }
  ],
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 3
+   "n": 5
+  },
+  {
+   "h": "09",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
