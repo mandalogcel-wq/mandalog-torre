@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-21T08:31:45-03:00",
+ "gerado_em": "2026-09-21T08:46:39-03:00",
  "dia": "2026-09-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -20,6 +20,81 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103284230",
+   "op": "Café · SJC",
+   "placa": "AHE8H87",
+   "motorista": "Renato Lopes Mendes",
+   "cidade": "Taubate",
+   "total": 17,
+   "ok": 0,
+   "semapont": 17,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103284521",
+   "op": "Café · SJC",
+   "placa": "QPF5G34",
+   "motorista": "Mario Donizeti De Giovanni",
+   "cidade": "Pindamonhangaba",
+   "total": 17,
+   "ok": 0,
+   "semapont": 17,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103284227",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 15,
+   "ok": 0,
+   "semapont": 15,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103284229",
+   "op": "Café · SJC",
+   "placa": "FLF1G91",
+   "motorista": "Gabriel Felix Faysten Dos Santos",
+   "cidade": "Jacarei",
+   "total": 13,
+   "ok": 0,
+   "semapont": 13,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103284526",
+   "op": "Café · SJC",
+   "placa": "QOT3G41",
+   "motorista": "Edson Martins De Carvalho",
+   "cidade": "Jacarei",
+   "total": 13,
+   "ok": 0,
+   "semapont": 13,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -160,6 +235,14 @@
   }
  ],
  "pracas": [
+  {
+   "op": "Café · SJC",
+   "veic": 5,
+   "total": 75,
+   "ok": 0,
+   "semapont": 75,
+   "gm": 0
+  },
   {
    "op": "Café · Guarulhos",
    "veic": 8,
