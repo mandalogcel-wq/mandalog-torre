@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-22T12:31:39-03:00",
+ "gerado_em": "2026-09-22T13:01:50-03:00",
  "dia": "2026-09-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Fartura",
    "total": 22,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12,
+   "gm": 13,
    "saida": "07:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:21",
-   "ritmo_real": 22
+   "ultima_baixa": "12:32",
+   "ritmo_real": 21
   },
   {
    "plano": "6103282344",
@@ -45,12 +45,12 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itarare",
    "total": 21,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "09:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:36",
    "ritmo_real": 0
   },
   {
@@ -75,13 +75,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Ibitinga",
    "total": 19,
-   "ok": 3,
+   "ok": 5,
    "semapont": 0,
-   "gm": 3,
+   "gm": 5,
    "saida": "10:05",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:04",
-   "ritmo_real": 59
+   "ultima_baixa": "12:41",
+   "ritmo_real": 39
   },
   {
    "plano": "6103282337",
@@ -125,8 +125,8 @@
    "gm": 7,
    "saida": "10:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:29",
-   "ritmo_real": 19
+   "ultima_baixa": "12:31",
+   "ritmo_real": 20
   },
   {
    "plano": "6103282976",
@@ -150,13 +150,13 @@
    "motorista": "Ivan Albino",
    "cidade": "Embu Das Artes",
    "total": 13,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:16",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ultima_baixa": "12:59",
+   "ritmo_real": 2
   },
   {
    "plano": "6103286148",
@@ -200,8 +200,8 @@
    "gm": 5,
    "saida": "09:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:01",
-   "ritmo_real": 28
+   "ultima_baixa": "12:31",
+   "ritmo_real": 35
   },
   {
    "plano": "6103286452",
@@ -215,8 +215,8 @@
    "gm": 3,
    "saida": "09:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:29",
-   "ritmo_real": 96
+   "ultima_baixa": "12:39",
+   "ritmo_real": 100
   },
   {
    "plano": "6103284979",
@@ -255,13 +255,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "",
    "total": 8,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "08:15",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:57",
-   "ritmo_real": 42
+   "ultima_baixa": "12:47",
+   "ritmo_real": 44
   },
   {
    "plano": "6103286414",
@@ -300,13 +300,13 @@
    "motorista": "Miquéias Da Silva Santos Nery",
    "cidade": "Sao Paulo",
    "total": 7,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "10:51",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:38",
-   "ritmo_real": 0
+   "ultima_baixa": "12:45",
+   "ritmo_real": 22
   },
   {
    "plano": "6103284989",
@@ -584,33 +584,33 @@
    "op": "Café · Guarulhos",
    "veic": 20,
    "total": 112,
-   "ok": 46,
+   "ok": 52,
    "semapont": 1,
-   "gm": 46
+   "gm": 52
   },
   {
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 82,
-   "ok": 50,
+   "ok": 51,
    "semapont": 0,
-   "gm": 50
+   "gm": 51
   },
   {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 71,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6
+   "gm": 8
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 38,
-   "ok": 15,
+   "ok": 17,
    "semapont": 1,
-   "gm": 15
+   "gm": 17
   },
   {
    "op": "Café · SJC",
@@ -648,7 +648,7 @@
   },
   {
    "h": "12",
-   "n": 12
+   "n": 23
   }
  ],
  "gm_sem_sac": 0
