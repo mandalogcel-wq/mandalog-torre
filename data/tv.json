@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-22T15:31:45-03:00",
+ "gerado_em": "2026-09-22T15:46:39-03:00",
  "dia": "2026-09-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,9 +75,9 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Ibitinga",
    "total": 19,
-   "ok": 16,
+   "ok": 18,
    "semapont": 0,
-   "gm": 16,
+   "gm": 18,
    "saida": "10:05",
    "saida_fonte": "greenmile",
    "ultima_baixa": "15:17",
@@ -623,9 +623,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 38,
-   "ok": 29,
+   "ok": 31,
    "semapont": 1,
-   "gm": 29
+   "gm": 31
   },
   {
    "op": "Café · SJC",
