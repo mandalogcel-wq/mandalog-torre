@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-22T09:01:42-03:00",
+ "gerado_em": "2026-09-22T09:16:46-03:00",
  "dia": "2026-09-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -444,6 +444,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103282341",
+   "op": "Café · Guarulhos",
+   "placa": "QWS1C27",
+   "motorista": "Waldir",
+   "cidade": "Sao Paulo",
+   "total": 2,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "09:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103276500",
    "op": "Café · Guarulhos",
    "placa": "AMS9753",
@@ -492,10 +507,10 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 17,
-   "total": 99,
+   "veic": 18,
+   "total": 101,
    "ok": 6,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 6
   },
   {
