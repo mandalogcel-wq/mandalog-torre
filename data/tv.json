@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-22T12:01:48-03:00",
+ "gerado_em": "2026-09-22T12:16:43-03:00",
  "dia": "2026-09-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -67,6 +67,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:39",
    "ritmo_real": 14
+  },
+  {
+   "plano": "6103282948",
+   "op": "Café · Meso Bauru",
+   "placa": "EMF9E75",
+   "motorista": "Joao Batista Geraldo",
+   "cidade": "Botucatu",
+   "total": 19,
+   "ok": 0,
+   "semapont": 19,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103279953",
@@ -606,10 +621,10 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 5,
-   "total": 38,
+   "veic": 6,
+   "total": 57,
    "ok": 14,
-   "semapont": 1,
+   "semapont": 20,
    "gm": 14
   },
   {
