@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-22T17:02:17-03:00",
+ "gerado_em": "2026-09-22T17:16:48-03:00",
  "dia": "2026-09-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,9 +15,9 @@
    "motorista": "Alexandre Gabriel Fruguli",
    "cidade": "Itapeva",
    "total": 32,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -75,9 +75,9 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Ibitinga",
    "total": 19,
-   "ok": 19,
+   "ok": 18,
    "semapont": 0,
-   "gm": 19,
+   "gm": 18,
    "saida": "10:05",
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:36",
@@ -615,17 +615,17 @@
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 71,
-   "ok": 25,
+   "ok": 28,
    "semapont": 0,
-   "gm": 25
+   "gm": 28
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 38,
-   "ok": 35,
+   "ok": 34,
    "semapont": 1,
-   "gm": 35
+   "gm": 34
   },
   {
    "op": "Café · SJC",
