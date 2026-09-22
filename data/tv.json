@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-22T15:15:44-03:00",
+ "gerado_em": "2026-09-22T15:31:45-03:00",
  "dia": "2026-09-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Fartura",
    "total": 22,
-   "ok": 17,
+   "ok": 18,
    "semapont": 0,
-   "gm": 17,
+   "gm": 18,
    "saida": "07:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:49",
-   "ritmo_real": 21
+   "ultima_baixa": "15:05",
+   "ritmo_real": 24
   },
   {
    "plano": "6103282344",
@@ -45,13 +45,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itarare",
    "total": 21,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "09:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:37",
-   "ritmo_real": 40
+   "ultima_baixa": "15:02",
+   "ritmo_real": 29
   },
   {
    "plano": "6103282964",
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Palmital",
    "total": 20,
-   "ok": 19,
+   "ok": 20,
    "semapont": 0,
-   "gm": 19,
+   "gm": 20,
    "saida": "08:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:48",
-   "ritmo_real": 20
+   "ultima_baixa": "15:27",
+   "ritmo_real": 21
   },
   {
    "plano": "6103279953",
@@ -75,13 +75,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Ibitinga",
    "total": 19,
-   "ok": 15,
+   "ok": 16,
    "semapont": 0,
-   "gm": 15,
+   "gm": 16,
    "saida": "10:05",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:50",
-   "ritmo_real": 20
+   "ultima_baixa": "15:17",
+   "ritmo_real": 21
   },
   {
    "plano": "6103282337",
@@ -90,13 +90,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Taquarivai",
    "total": 18,
-   "ok": 10,
+   "ok": 13,
    "semapont": 0,
-   "gm": 10,
+   "gm": 13,
    "saida": "09:17",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:26",
-   "ritmo_real": 34
+   "ultima_baixa": "15:08",
+   "ritmo_real": 29
   },
   {
    "plano": "6103284230",
@@ -120,13 +120,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Assis",
    "total": 17,
-   "ok": 13,
+   "ok": 16,
    "semapont": 0,
-   "gm": 13,
+   "gm": 16,
    "saida": "10:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:02",
-   "ritmo_real": 17
+   "ultima_baixa": "15:18",
+   "ritmo_real": 19
   },
   {
    "plano": "6103282976",
@@ -135,12 +135,12 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Iacri",
    "total": 16,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "08:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:00",
+   "ultima_baixa": "15:24",
    "ritmo_real": 25
   },
   {
@@ -165,13 +165,13 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Sao Paulo",
    "total": 12,
-   "ok": 10,
+   "ok": 12,
    "semapont": 0,
-   "gm": 10,
+   "gm": 12,
    "saida": "08:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:30",
-   "ritmo_real": 36
+   "ultima_baixa": "15:27",
+   "ritmo_real": 35
   },
   {
    "plano": "6103279956",
@@ -405,12 +405,12 @@
    "motorista": "Wellington Pedro",
    "cidade": "Guarulhos",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "07:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:20",
    "ritmo_real": 0
   },
   {
@@ -495,9 +495,9 @@
    "motorista": "Waldir",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 1,
-   "semapont": 1,
-   "gm": 1,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
    "saida": "09:00",
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:22",
@@ -564,7 +564,7 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103286439",
+   "plano": "6103285013",
    "op": "Café · CD Sumaré",
    "placa": "SUP9B16",
    "motorista": "Ricardo Edson",
@@ -599,33 +599,33 @@
    "op": "Café · Guarulhos",
    "veic": 20,
    "total": 112,
-   "ok": 64,
-   "semapont": 1,
-   "gm": 64
-  },
-  {
-   "op": "Café · Meso Marília",
-   "veic": 5,
-   "total": 82,
    "ok": 69,
    "semapont": 0,
    "gm": 69
   },
   {
+   "op": "Café · Meso Marília",
+   "veic": 5,
+   "total": 82,
+   "ok": 75,
+   "semapont": 0,
+   "gm": 75
+  },
+  {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 71,
-   "ok": 14,
+   "ok": 19,
    "semapont": 0,
-   "gm": 14
+   "gm": 19
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 38,
-   "ok": 28,
+   "ok": 29,
    "semapont": 1,
-   "gm": 28
+   "gm": 29
   },
   {
    "op": "Café · SJC",
@@ -675,7 +675,7 @@
   },
   {
    "h": "15",
-   "n": 1
+   "n": 17
   }
  ],
  "gm_sem_sac": 0
