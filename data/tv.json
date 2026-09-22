@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-22T10:31:41-03:00",
+ "gerado_em": "2026-09-22T11:01:42-03:00",
  "dia": "2026-09-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Fartura",
    "total": 22,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "07:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:03",
-   "ritmo_real": 15
+   "ultima_baixa": "10:47",
+   "ritmo_real": 19
   },
   {
    "plano": "6103282344",
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Palmital",
    "total": 20,
-   "ok": 6,
+   "ok": 9,
    "semapont": 0,
-   "gm": 6,
+   "gm": 9,
    "saida": "08:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:22",
-   "ritmo_real": 5
+   "ultima_baixa": "10:47",
+   "ritmo_real": 14
   },
   {
    "plano": "6103279953",
@@ -120,13 +120,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Assis",
    "total": 17,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 4,
+   "saida": "10:32",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:51",
+   "ritmo_real": 6
   },
   {
    "plano": "6103282976",
@@ -135,13 +135,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Iacri",
    "total": 16,
-   "ok": 4,
+   "ok": 8,
    "semapont": 0,
-   "gm": 4,
+   "gm": 8,
    "saida": "08:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:24",
-   "ritmo_real": 17
+   "ultima_baixa": "10:57",
+   "ritmo_real": 12
   },
   {
    "plano": "6103286417",
@@ -180,13 +180,13 @@
    "motorista": "Aguinaldo Ribeiro Pinheiro",
    "cidade": "Avare",
    "total": 10,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 3,
+   "gm": 6,
    "saida": "08:25",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:11",
-   "ritmo_real": 23
+   "ultima_baixa": "10:43",
+   "ritmo_real": 28
   },
   {
    "plano": "6103286453",
@@ -195,12 +195,12 @@
    "motorista": "Valdir Nery",
    "cidade": "",
    "total": 10,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:10",
    "ritmo_real": 0
   },
   {
@@ -225,13 +225,13 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Osasco",
    "total": 10,
-   "ok": 4,
+   "ok": 9,
    "semapont": 0,
-   "gm": 4,
+   "gm": 9,
    "saida": "08:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:12",
-   "ritmo_real": 6
+   "ultima_baixa": "10:47",
+   "ritmo_real": 14
   },
   {
    "plano": "6103286426",
@@ -240,13 +240,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "",
    "total": 8,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "08:15",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:23",
-   "ritmo_real": 58
+   "ultima_baixa": "10:39",
+   "ritmo_real": 67
   },
   {
    "plano": "6103286414",
@@ -270,13 +270,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Sarutaia",
    "total": 7,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "09:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:28",
-   "ritmo_real": 22
+   "ultima_baixa": "10:49",
+   "ritmo_real": 18
   },
   {
    "plano": "6103284991",
@@ -288,8 +288,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:51",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -300,13 +300,13 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 7,
-   "ok": 3,
+   "ok": 7,
    "semapont": 0,
-   "gm": 3,
+   "gm": 7,
    "saida": "08:20",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:00",
-   "ritmo_real": 46
+   "ultima_baixa": "10:52",
+   "ritmo_real": 24
   },
   {
    "plano": "6103284229",
@@ -315,9 +315,9 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Jacarei",
    "total": 5,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -348,8 +348,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:37",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -450,11 +450,26 @@
    "motorista": "Waldir",
    "cidade": "Sao Paulo",
    "total": 2,
+   "ok": 1,
+   "semapont": 1,
+   "gm": 1,
+   "saida": "09:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:00",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103284228",
+   "op": "Café · SJC",
+   "placa": "",
+   "motorista": "",
+   "cidade": "",
+   "total": 1,
    "ok": 0,
    "semapont": 1,
    "gm": 0,
-   "saida": "09:00",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -524,17 +539,17 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 102,
-   "ok": 16,
+   "ok": 28,
    "semapont": 1,
-   "gm": 16
+   "gm": 28
   },
   {
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 82,
-   "ok": 22,
+   "ok": 36,
    "semapont": 0,
-   "gm": 22
+   "gm": 36
   },
   {
    "op": "Café · Itapeva",
@@ -548,17 +563,17 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 33,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 5
+   "gm": 8
   },
   {
    "op": "Café · SJC",
-   "veic": 2,
-   "total": 22,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0
+   "veic": 3,
+   "total": 23,
+   "ok": 1,
+   "semapont": 1,
+   "gm": 1
   },
   {
    "op": "Café · CD Sumaré",
@@ -576,11 +591,11 @@
   },
   {
    "h": "09",
-   "n": 20
+   "n": 23
   },
   {
    "h": "10",
-   "n": 12
+   "n": 38
   }
  ],
  "gm_sem_sac": 0
