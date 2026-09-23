@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T12:31:51-03:00",
+ "gerado_em": "2026-09-23T13:01:40-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -101,7 +101,7 @@
   {
    "plano": "6103288469",
    "op": "Café · Guarulhos",
-   "placa": "ETK3G65",
+   "placa": "ETK3G66",
    "motorista": "Ricardo",
    "cidade": "Sao Paulo",
    "total": 13,
@@ -213,8 +213,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "11:00",
-   "saida_fonte": "onda",
+   "saida": "12:41",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -300,13 +300,13 @@
    "motorista": "Narcisio",
    "cidade": "Sao Paulo",
    "total": 4,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "07:09",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:33",
-   "ritmo_real": 87
+   "ultima_baixa": "12:52",
+   "ritmo_real": 104
   },
   {
    "plano": "6103277839",
@@ -584,9 +584,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 86,
-   "ok": 19,
+   "ok": 20,
    "semapont": 0,
-   "gm": 19
+   "gm": 20
   },
   {
    "op": "Café · Itapeva",
@@ -652,7 +652,7 @@
   },
   {
    "h": "12",
-   "n": 5
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
