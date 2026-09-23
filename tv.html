@@ -604,20 +604,33 @@ function render(){
   });
   vs.sort(ordenar);
 
-  var velho = idadeMin() > VELHO_MIN;
-  document.body.classList.toggle("velho", velho);
-  var al = $("alerta");
-  al.hidden = !velho;
-  if (velho){
-    al.textContent = "O robô não atualiza há " + min2hm(idadeMin())
+  // Duas coisas tornam o quadro não confiável, e as duas pedem o mesmo
+  // tratamento: dizer o que houve e apagar as cores. Os números continuam na
+  // tela — são reais —, mas o risco derivado deles não é comparável, e pintar
+  // de vermelho quem está em dia ensina a sala a ignorar a cor.
+  var degradado = "";
+  if (idadeMin() > VELHO_MIN){
+    degradado = "O robô não atualiza há " + min2hm(idadeMin())
       + ". O semáforo está desligado até voltar.";
+  } else if (dados.greenmile_ok === false){
+    // Sem o GreenMile todo veículo perde a hora real de saída e o desfecho
+    // eletrônico: o que sobra é o apontamento manual da planilha, que chega
+    // horas depois. O total de entregues despenca e o aperto fica todo no
+    // vermelho — em 22/09/2026 isso mostrou 9,9% às 15h contra 53% reais.
+    degradado = "GreenMile fora do ar nesta rodada — só o apontamento manual. "
+      + "Entregas e horários estão incompletos e o semáforo está desligado.";
   }
+  document.body.classList.toggle("velho", !!degradado);
+  var al = $("alerta");
+  al.hidden = !degradado;
+  if (degradado) al.textContent = degradado;
 
   $("janela").textContent = dados.janela.abre + "–" + dados.janela.fecha;
   var hhmm = function(t){ return new Date(t)
     .toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }); };
   $("rodape").textContent = "Quadro de " + hhmm(dados.gerado_em)
     + (visto && visto.visto_em ? " · robô verificou " + hhmm(visto.visto_em) : "")
+    + (dados.greenmile_ok === false ? " · SEM GREENMILE" : "")
     + " · a tela recalcula o ritmo a cada 20 s";
 
   if (!vs.length){

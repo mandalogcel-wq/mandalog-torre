@@ -248,6 +248,15 @@ def main() -> None:
         "limite_aperto": LIMITE_APERTO,
         "veiculos": veiculos,
         "pracas": sorted(pracas.values(), key=lambda p: -p["total"]),
+        # Se o GreenMile respondeu nesta rodada. O mesclar_greenmile.py degrada
+        # para "só a planilha" quando não alcança o n8n — decisão certa para o
+        # painel, que prefere publicar algo a publicar nada. Para a parede é
+        # diferente: sem o GreenMile todo veículo perde a hora real de saída e
+        # o desfecho eletrônico, e o aperto passa a ser calculado sobre chute.
+        # Em 22/09/2026 uma falha de DNS no runner derrubou uma rodada e a tela
+        # mostrou 9,9% de entregas às 15h, contra 53% reais. A tela precisa
+        # dizer isso em vez de apresentar o número degradado como se fosse o dia.
+        "greenmile_ok": bool((dados.get("greenmile") or {}).get("disponivel", True)),
         "baixas_por_hora": [{"h": h, "n": n} for h, n in sorted(collections.Counter(
             hora_hoje(n.get("gm_partida") or n.get("gm_chegada", ""), hoje)[:2]
             for n in entregas
