@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T07:01:38-03:00",
+ "gerado_em": "2026-09-23T07:31:39-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -48,8 +48,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "07:19",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -189,6 +189,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103286414",
+   "op": "Café · Guarulhos",
+   "placa": "FSC5D26",
+   "motorista": "Carlos Cesar",
+   "cidade": "Sao Paulo",
+   "total": 4,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103286409",
    "op": "Café · Guarulhos",
    "placa": "FYH8F51",
@@ -198,8 +213,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "07:09",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -258,8 +273,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "07:21",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -290,6 +305,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103286439",
+   "op": "Café · CD Sumaré",
+   "placa": "BWQ5135",
+   "motorista": "Carlinhos Bernardine Silvinski",
+   "cidade": "Sumare",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -348,23 +378,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103286439",
-   "op": "Café · CD Sumaré",
-   "placa": "SUP9B16",
-   "motorista": "Ricardo Edson",
-   "cidade": "Sumare",
-   "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "07:05",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -387,8 +402,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 15,
-   "total": 73,
+   "veic": 16,
+   "total": 77,
    "ok": 3,
    "semapont": 0,
    "gm": 3
