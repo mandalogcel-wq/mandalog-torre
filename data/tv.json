@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T10:01:42-03:00",
+ "gerado_em": "2026-09-23T10:32:17-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -33,8 +33,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "10:15",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -45,13 +45,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Botucatu",
    "total": 19,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "07:19",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:26",
-   "ritmo_real": 67
+   "ultima_baixa": "10:16",
+   "ritmo_real": 59
   },
   {
    "plano": "6103282954",
@@ -75,13 +75,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Santa Maria Da Serra",
    "total": 14,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "08:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:18",
-   "ritmo_real": 30
+   "ultima_baixa": "10:08",
+   "ritmo_real": 37
   },
   {
    "plano": "6103288961",
@@ -204,6 +204,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103286417",
+   "op": "Café · Guarulhos",
+   "placa": "EMF0232",
+   "motorista": "Ivan Albino",
+   "cidade": "Osasco",
+   "total": 6,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "11:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103284987",
    "op": "Café · Guarulhos",
    "placa": "EOF5J69",
@@ -225,13 +240,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Mairipora",
    "total": 5,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "07:56",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:34",
-   "ritmo_real": 22
+   "ultima_baixa": "10:19",
+   "ritmo_real": 28
   },
   {
    "plano": "6103282337",
@@ -285,13 +300,13 @@
    "motorista": "Narcisio",
    "cidade": "Sao Paulo",
    "total": 4,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "07:09",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:27",
-   "ritmo_real": 48
+   "ultima_baixa": "09:56",
+   "ritmo_real": 68
   },
   {
    "plano": "6103277839",
@@ -384,6 +399,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103284993",
+   "op": "Café · Guarulhos",
+   "placa": "ETA3E32",
+   "motorista": "Valdir Da Silva Nery",
+   "cidade": "Sao Paulo",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103288255",
    "op": "Café · Guarulhos",
    "placa": "GWR9A64",
@@ -453,8 +483,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:10",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -480,12 +510,12 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Marilia",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:20",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:09",
    "ritmo_real": 0
   },
   {
@@ -500,7 +530,22 @@
    "gm": 1,
    "saida": "07:05",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:05",
+   "ultima_baixa": "10:01",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103281391",
+   "op": "Café · Guarulhos",
+   "placa": "JNS0435",
+   "motorista": "Rodrigo",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "11:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -528,8 +573,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:06",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   }
@@ -537,11 +582,11 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 16,
-   "total": 77,
-   "ok": 11,
+   "veic": 19,
+   "total": 86,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11
+   "gm": 13
   },
   {
    "op": "Café · Itapeva",
@@ -555,9 +600,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 51,
-   "ok": 5,
+   "ok": 8,
    "semapont": 0,
-   "gm": 5
+   "gm": 8
   },
   {
    "op": "Café · SJC",
@@ -571,9 +616,9 @@
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 4,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1
+   "gm": 2
   },
   {
    "op": "Café · CD Sumaré",
@@ -587,7 +632,7 @@
  "baixas_por_hora": [
   {
    "h": "07",
-   "n": 3
+   "n": 2
   },
   {
    "h": "08",
@@ -595,7 +640,11 @@
   },
   {
    "h": "09",
-   "n": 11
+   "n": 12
+  },
+  {
+   "h": "10",
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
