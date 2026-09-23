@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T15:01:41-03:00",
+ "gerado_em": "2026-09-23T15:31:45-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Gislaine Simone",
    "cidade": "Jau",
    "total": 15,
-   "ok": 2,
+   "ok": 6,
    "semapont": 0,
-   "gm": 2,
+   "gm": 6,
    "saida": "08:01",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:40",
-   "ritmo_real": 144
+   "ultima_baixa": "15:09",
+   "ritmo_real": 35
   },
   {
    "plano": "6103282958",
@@ -75,13 +75,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Santa Maria Da Serra",
    "total": 14,
-   "ok": 13,
+   "ok": 14,
    "semapont": 0,
-   "gm": 13,
+   "gm": 14,
    "saida": "08:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:18",
-   "ritmo_real": 25
+   "ultima_baixa": "15:09",
+   "ritmo_real": 32
   },
   {
    "plano": "6103288961",
@@ -195,13 +195,13 @@
    "motorista": "Orlando",
    "cidade": "Sao Paulo",
    "total": 6,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:46",
-   "ritmo_real": 74
+   "ultima_baixa": "15:08",
+   "ritmo_real": 64
   },
   {
    "plano": "6103286417",
@@ -555,12 +555,12 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Bariri",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "15:03",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:04",
    "ritmo_real": 0
   },
   {
@@ -584,9 +584,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 86,
-   "ok": 28,
+   "ok": 29,
    "semapont": 0,
-   "gm": 28
+   "gm": 29
   },
   {
    "op": "Café · Itapeva",
@@ -600,9 +600,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 51,
-   "ok": 22,
+   "ok": 28,
    "semapont": 0,
-   "gm": 22
+   "gm": 28
   },
   {
    "op": "Café · SJC",
@@ -665,7 +665,7 @@
   },
   {
    "h": "15",
-   "n": 1
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
