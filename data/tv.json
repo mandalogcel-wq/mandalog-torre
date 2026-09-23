@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T09:46:42-03:00",
+ "gerado_em": "2026-09-23T10:01:42-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Botucatu",
    "total": 19,
-   "ok": 3,
+   "ok": 2,
    "semapont": 0,
-   "gm": 3,
+   "gm": 2,
    "saida": "07:19",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:28",
-   "ritmo_real": 64
+   "ultima_baixa": "08:26",
+   "ritmo_real": 67
   },
   {
    "plano": "6103282954",
@@ -131,27 +131,12 @@
   {
    "plano": "6103288203",
    "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
+   "placa": "ETU7799",
+   "motorista": "Thiago Pereira Silva",
    "cidade": "Cachoeira Paulista",
    "total": 10,
    "ok": 0,
-   "semapont": 10,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103287992",
-   "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Jacarei",
-   "total": 9,
-   "ok": 0,
-   "semapont": 9,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -161,12 +146,12 @@
   {
    "plano": "6103288202",
    "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Igarata",
    "total": 9,
    "ok": 0,
-   "semapont": 9,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -189,18 +174,33 @@
    "ritmo_real": 6
   },
   {
-   "plano": "6103286407",
-   "op": "Café · Guarulhos",
-   "placa": "AMS9753",
-   "motorista": "Orlando",
-   "cidade": "Sao Paulo",
-   "total": 6,
+   "plano": "6103287992",
+   "op": "Café · SJC",
+   "placa": "QOT3G41",
+   "motorista": "Edson Martins De Carvalho",
+   "cidade": "Jacarei",
+   "total": 9,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103286407",
+   "op": "Café · Guarulhos",
+   "placa": "AMS9753",
+   "motorista": "Orlando",
+   "cidade": "Sao Paulo",
+   "total": 6,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "09:48",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:50",
    "ritmo_real": 0
   },
   {
@@ -225,13 +225,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Mairipora",
    "total": 5,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "07:56",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:09",
-   "ritmo_real": 20
+   "ultima_baixa": "09:34",
+   "ritmo_real": 22
   },
   {
    "plano": "6103282337",
@@ -251,12 +251,12 @@
   {
    "plano": "6103288207",
    "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
+   "placa": "AHE8H87",
+   "motorista": "Renato Lopes Mendes",
    "cidade": "Cruzeiro",
    "total": 4,
    "ok": 0,
-   "semapont": 4,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -294,21 +294,6 @@
    "ritmo_real": 48
   },
   {
-   "plano": "6103287996",
-   "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Sao Jose Dos Campos",
-   "total": 3,
-   "ok": 0,
-   "semapont": 3,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103277839",
    "op": "Café · Guarulhos",
    "placa": "BPG8H46",
@@ -318,6 +303,36 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103284227",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 3,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103287996",
+   "op": "Café · SJC",
+   "placa": "FLF1G91",
+   "motorista": "Gabriel Felix Faysten Dos Santos",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 3,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -480,12 +495,12 @@
    "motorista": "Guilherme",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "07:05",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "07:05",
    "ritmo_real": 0
   },
   {
@@ -524,9 +539,9 @@
    "op": "Café · Guarulhos",
    "veic": 16,
    "total": 77,
-   "ok": 8,
+   "ok": 11,
    "semapont": 0,
-   "gm": 8
+   "gm": 11
   },
   {
    "op": "Café · Itapeva",
@@ -540,16 +555,16 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 51,
-   "ok": 6,
+   "ok": 5,
    "semapont": 0,
-   "gm": 6
+   "gm": 5
   },
   {
    "op": "Café · SJC",
-   "veic": 5,
-   "total": 35,
+   "veic": 6,
+   "total": 38,
    "ok": 0,
-   "semapont": 35,
+   "semapont": 0,
    "gm": 0
   },
   {
@@ -572,7 +587,7 @@
  "baixas_por_hora": [
   {
    "h": "07",
-   "n": 2
+   "n": 3
   },
   {
    "h": "08",
@@ -580,7 +595,7 @@
   },
   {
    "h": "09",
-   "n": 10
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
