@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T14:01:42-03:00",
+ "gerado_em": "2026-09-23T14:31:41-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Aguinaldo Ribeiro Pinheiro",
    "cidade": "Capao Bonito",
    "total": 22,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "10:15",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:48",
-   "ritmo_real": 0
+   "ultima_baixa": "14:14",
+   "ritmo_real": 49
   },
   {
    "plano": "6103282948",
@@ -195,13 +195,13 @@
    "motorista": "Orlando",
    "cidade": "Sao Paulo",
    "total": 6,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:31",
-   "ritmo_real": 110
+   "ultima_baixa": "14:21",
+   "ritmo_real": 90
   },
   {
    "plano": "6103286417",
@@ -584,17 +584,17 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 86,
-   "ok": 25,
+   "ok": 26,
    "semapont": 0,
-   "gm": 25
+   "gm": 26
   },
   {
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 63,
-   "ok": 28,
+   "ok": 30,
    "semapont": 0,
-   "gm": 28
+   "gm": 30
   },
   {
    "op": "Café · Meso Bauru",
@@ -657,6 +657,10 @@
   {
    "h": "13",
    "n": 8
+  },
+  {
+   "h": "14",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
