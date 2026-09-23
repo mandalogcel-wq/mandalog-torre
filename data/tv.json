@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T13:01:40-03:00",
+ "gerado_em": "2026-09-23T13:31:43-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,12 +75,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Santa Maria Da Serra",
    "total": 14,
-   "ok": 11,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11,
+   "gm": 13,
    "saida": "08:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:28",
+   "ultima_baixa": "13:18",
    "ritmo_real": 25
   },
   {
@@ -200,8 +200,8 @@
    "gm": 2,
    "saida": "09:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:15",
-   "ritmo_real": 145
+   "ultima_baixa": "12:16",
+   "ritmo_real": 146
   },
   {
    "plano": "6103286417",
@@ -228,8 +228,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "13:05",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -285,13 +285,13 @@
    "motorista": "Carlos Cesar",
    "cidade": "Sao Paulo",
    "total": 4,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "10:59",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:45",
-   "ritmo_real": 0
+   "ultima_baixa": "13:23",
+   "ritmo_real": 98
   },
   {
    "plano": "6103286409",
@@ -405,12 +405,12 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "11:56",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:12",
    "ritmo_real": 0
   },
   {
@@ -584,9 +584,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 86,
-   "ok": 20,
+   "ok": 23,
    "semapont": 0,
-   "gm": 20
+   "gm": 23
   },
   {
    "op": "Café · Itapeva",
@@ -600,9 +600,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 51,
-   "ok": 19,
+   "ok": 21,
    "semapont": 0,
-   "gm": 19
+   "gm": 21
   },
   {
    "op": "Café · SJC",
@@ -653,6 +653,10 @@
   {
    "h": "12",
    "n": 6
+  },
+  {
+   "h": "13",
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
