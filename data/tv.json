@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T08:31:43-03:00",
+ "gerado_em": "2026-09-23T09:01:47-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Botucatu",
    "total": 19,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "07:19",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:19",
-   "ritmo_real": 0
+   "ultima_baixa": "08:26",
+   "ritmo_real": 67
   },
   {
    "plano": "6103282954",
@@ -135,12 +135,12 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itarare",
    "total": 9,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 3,
+   "saida": "08:48",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:48",
    "ritmo_real": 0
   },
   {
@@ -309,6 +309,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103282942",
+   "op": "Café · Meso Marília",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Marilia",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103286804",
    "op": "Café · Guarulhos",
    "placa": "SWU0J23",
@@ -399,6 +414,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103279953",
+   "op": "Café · Meso Bauru",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Bariri",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103288261",
    "op": "Café · Guarulhos",
    "placa": "SVL4J89",
@@ -427,22 +457,22 @@
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 63,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2
-  },
-  {
-   "op": "Café · Meso Bauru",
-   "veic": 4,
-   "total": 50,
    "ok": 3,
    "semapont": 0,
    "gm": 3
   },
   {
+   "op": "Café · Meso Bauru",
+   "veic": 5,
+   "total": 51,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4
+  },
+  {
    "op": "Café · Meso Marília",
-   "veic": 2,
-   "total": 2,
+   "veic": 3,
+   "total": 4,
    "ok": 0,
    "semapont": 0,
    "gm": 0
@@ -463,7 +493,7 @@
   },
   {
    "h": "08",
-   "n": 5
+   "n": 7
   }
  ],
  "gm_sem_sac": 0
