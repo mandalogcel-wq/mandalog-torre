@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T09:31:38-03:00",
+ "gerado_em": "2026-09-23T09:46:42-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -129,6 +129,51 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103288203",
+   "op": "Café · SJC",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Cachoeira Paulista",
+   "total": 10,
+   "ok": 0,
+   "semapont": 10,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103287992",
+   "op": "Café · SJC",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Jacarei",
+   "total": 9,
+   "ok": 0,
+   "semapont": 9,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103288202",
+   "op": "Café · SJC",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Igarata",
+   "total": 9,
+   "ok": 0,
+   "semapont": 9,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103282344",
    "op": "Café · Itapeva",
    "placa": "FOY8J69",
@@ -204,6 +249,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103288207",
+   "op": "Café · SJC",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Cruzeiro",
+   "total": 4,
+   "ok": 0,
+   "semapont": 4,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103286414",
    "op": "Café · Guarulhos",
    "placa": "FSC5D26",
@@ -232,6 +292,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:27",
    "ritmo_real": 48
+  },
+  {
+   "plano": "6103287996",
+   "op": "Café · SJC",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 3,
+   "ok": 0,
+   "semapont": 3,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103277839",
@@ -468,6 +543,14 @@
    "ok": 6,
    "semapont": 0,
    "gm": 6
+  },
+  {
+   "op": "Café · SJC",
+   "veic": 5,
+   "total": 35,
+   "ok": 0,
+   "semapont": 35,
+   "gm": 0
   },
   {
    "op": "Café · Meso Marília",
