@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-23T09:01:47-03:00",
+ "gerado_em": "2026-09-23T09:31:38-03:00",
  "dia": "2026-09-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Botucatu",
    "total": 19,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "07:19",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:26",
-   "ritmo_real": 67
+   "ultima_baixa": "09:28",
+   "ritmo_real": 64
   },
   {
    "plano": "6103282954",
@@ -75,13 +75,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Santa Maria Da Serra",
    "total": 14,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "08:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:18",
-   "ritmo_real": 0
+   "ultima_baixa": "09:18",
+   "ritmo_real": 30
   },
   {
    "plano": "6103288961",
@@ -135,13 +135,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itarare",
    "total": 9,
-   "ok": 3,
+   "ok": 9,
    "semapont": 0,
-   "gm": 3,
+   "gm": 9,
    "saida": "08:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:48",
-   "ritmo_real": 0
+   "ultima_baixa": "09:26",
+   "ritmo_real": 6
   },
   {
    "plano": "6103286407",
@@ -180,13 +180,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Mairipora",
    "total": 5,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "07:56",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:29",
-   "ritmo_real": 0
+   "ultima_baixa": "09:09",
+   "ritmo_real": 20
   },
   {
    "plano": "6103282337",
@@ -375,12 +375,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Assis",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "06:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:11",
    "ritmo_real": 0
   },
   {
@@ -449,33 +449,33 @@
    "op": "Café · Guarulhos",
    "veic": 16,
    "total": 77,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7
+   "gm": 8
   },
   {
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 63,
-   "ok": 3,
+   "ok": 9,
    "semapont": 0,
-   "gm": 3
+   "gm": 9
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 51,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4
+   "gm": 6
   },
   {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 4,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   },
   {
    "op": "Café · CD Sumaré",
@@ -494,6 +494,10 @@
   {
    "h": "08",
    "n": 7
+  },
+  {
+   "h": "09",
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
