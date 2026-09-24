@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-24T17:01:48-03:00",
+ "gerado_em": "2026-09-24T17:16:41-03:00",
  "dia": "2026-09-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -279,21 +279,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103286417",
-   "op": "Café · Guarulhos",
-   "placa": "EMF0232",
-   "motorista": "Ivan Albino",
-   "cidade": "Sao Paulo",
-   "total": 3,
-   "ok": 3,
-   "semapont": 0,
-   "gm": 3,
-   "saida": "15:23",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "15:37",
-   "ritmo_real": 69
-  },
-  {
    "plano": "6103288035",
    "op": "Café · Guarulhos",
    "placa": "BPG8H46",
@@ -369,6 +354,21 @@
    "ritmo_real": 94
   },
   {
+   "plano": "6103286417",
+   "op": "Café · Guarulhos",
+   "placa": "EMF0232",
+   "motorista": "Ivan Albino",
+   "cidade": "Sao Paulo",
+   "total": 2,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "15:23",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:37",
+   "ritmo_real": 138
+  },
+  {
    "plano": "6103288412",
    "op": "Café · CD Sumaré",
    "placa": "FDL6D77",
@@ -441,21 +441,6 @@
    "saida": "13:22",
    "saida_fonte": "greenmile",
    "ultima_baixa": "13:37",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103286452",
-   "op": "Café · Guarulhos",
-   "placa": "ETK3G65",
-   "motorista": "Ricardo Barros",
-   "cidade": "",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -560,11 +545,11 @@
   },
   {
    "op": "Café · Guarulhos",
-   "veic": 20,
-   "total": 82,
-   "ok": 34,
+   "veic": 19,
+   "total": 80,
+   "ok": 33,
    "semapont": 0,
-   "gm": 33
+   "gm": 32
   },
   {
    "op": "Café · Meso Bauru",
@@ -619,7 +604,7 @@
   },
   {
    "h": "13",
-   "n": 6
+   "n": 5
   },
   {
    "h": "14",
