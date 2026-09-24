@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-24T08:01:43-03:00",
+ "gerado_em": "2026-09-24T08:17:56-03:00",
  "dia": "2026-09-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -309,6 +309,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103282942",
+   "op": "Café · Meso Marília",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Marilia",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103288252",
    "op": "Café · Guarulhos",
    "placa": "SWU0J23",
@@ -369,6 +384,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103284979",
+   "op": "Café · Guarulhos",
+   "placa": "FBA7G31",
+   "motorista": "Adriano Reis",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103281391",
    "op": "Café · Guarulhos",
    "placa": "JNS0435",
@@ -380,6 +410,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103282954",
+   "op": "Café · Meso Bauru",
+   "placa": "RVD8G69",
+   "motorista": "Gislaine Simone",
+   "cidade": "Tabatinga",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -402,24 +447,24 @@
  "pracas": [
   {
    "op": "Café · Meso Marília",
-   "veic": 4,
-   "total": 76,
+   "veic": 5,
+   "total": 78,
    "ok": 0,
    "semapont": 3,
    "gm": 0
   },
   {
    "op": "Café · Guarulhos",
-   "veic": 16,
-   "total": 63,
+   "veic": 17,
+   "total": 64,
    "ok": 0,
    "semapont": 1,
    "gm": 0
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 2,
-   "total": 28,
+   "veic": 3,
+   "total": 29,
    "ok": 0,
    "semapont": 0,
    "gm": 0
