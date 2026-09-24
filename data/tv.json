@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-24T13:31:45-03:00",
+ "gerado_em": "2026-09-24T14:01:40-03:00",
  "dia": "2026-09-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -375,12 +375,12 @@
    "motorista": "Alex",
    "cidade": "Barueri",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "09:50",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:33",
    "ritmo_real": 0
   },
   {
@@ -480,12 +480,12 @@
    "motorista": "Miquéias Da Silva Santos Nery",
    "cidade": "Juquitiba",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "13:22",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:37",
    "ritmo_real": 0
   },
   {
@@ -607,9 +607,9 @@
    "op": "Café · Guarulhos",
    "veic": 20,
    "total": 82,
-   "ok": 22,
+   "ok": 25,
    "semapont": 0,
-   "gm": 22
+   "gm": 25
   },
   {
    "op": "Café · Meso Marília",
@@ -664,7 +664,7 @@
   },
   {
    "h": "13",
-   "n": 3
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
