@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-24T10:02:11-03:00",
+ "gerado_em": "2026-09-24T10:16:48-03:00",
  "dia": "2026-09-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,21 +8,6 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
-  {
-   "plano": "6103288524",
-   "op": "Café · Meso Marília",
-   "placa": "FOY8J69",
-   "motorista": "Jose Henrique Barbosa Navero",
-   "cidade": "Ourinhos",
-   "total": 24,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
   {
    "plano": "6103289589",
    "op": "Café · SJC",
@@ -292,6 +277,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "09:44",
    "ritmo_real": 9
+  },
+  {
+   "plano": "6103288203",
+   "op": "Café · SJC",
+   "placa": "ETU7799",
+   "motorista": "Thiago Pereira Silva",
+   "cidade": "Lorena",
+   "total": 4,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103288031",
@@ -582,8 +582,8 @@
  "pracas": [
   {
    "op": "Café · SJC",
-   "veic": 7,
-   "total": 93,
+   "veic": 8,
+   "total": 97,
    "ok": 0,
    "semapont": 0,
    "gm": 0
@@ -598,8 +598,8 @@
   },
   {
    "op": "Café · Meso Marília",
-   "veic": 5,
-   "total": 63,
+   "veic": 4,
+   "total": 39,
    "ok": 1,
    "semapont": 3,
    "gm": 1
