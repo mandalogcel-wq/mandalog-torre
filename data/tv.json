@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-24T14:01:40-03:00",
+ "gerado_em": "2026-09-24T14:31:41-03:00",
  "dia": "2026-09-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -129,21 +129,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103287990",
-   "op": "Café · SJC",
-   "placa": "QOT3G41",
-   "motorista": "Edson Martins De Carvalho",
-   "cidade": "Lorena",
-   "total": 11,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103288201",
    "op": "Café · SJC",
    "placa": "RUE0H58",
@@ -240,13 +225,13 @@
    "motorista": "Gislaine Simone",
    "cidade": "Jau",
    "total": 9,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "10:05",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:58",
-   "ritmo_real": 29
+   "ultima_baixa": "14:02",
+   "ritmo_real": 35
   },
   {
    "plano": "6103288469",
@@ -292,21 +277,6 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "10:03",
    "ritmo_real": 12
-  },
-  {
-   "plano": "6103288203",
-   "op": "Café · SJC",
-   "placa": "ETU7799",
-   "motorista": "Thiago Pereira Silva",
-   "cidade": "Lorena",
-   "total": 4,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
   },
   {
    "plano": "6103288031",
@@ -405,12 +375,12 @@
    "motorista": "Guilherme Alves De Andrade",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:53",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:53",
    "ritmo_real": 0
   },
   {
@@ -525,12 +495,12 @@
    "motorista": "Adriano Reis",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "13:25",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "14:13",
    "ritmo_real": 0
   },
   {
@@ -597,8 +567,8 @@
  "pracas": [
   {
    "op": "Café · SJC",
-   "veic": 8,
-   "total": 97,
+   "veic": 6,
+   "total": 82,
    "ok": 0,
    "semapont": 0,
    "gm": 0
@@ -607,9 +577,9 @@
    "op": "Café · Guarulhos",
    "veic": 20,
    "total": 82,
-   "ok": 25,
+   "ok": 27,
    "semapont": 0,
-   "gm": 25
+   "gm": 27
   },
   {
    "op": "Café · Meso Marília",
@@ -623,9 +593,9 @@
    "op": "Café · Meso Bauru",
    "veic": 3,
    "total": 37,
-   "ok": 9,
+   "ok": 10,
    "semapont": 0,
-   "gm": 9
+   "gm": 10
   },
   {
    "op": "Café · Itapeva",
@@ -648,7 +618,7 @@
  "baixas_por_hora": [
   {
    "h": "09",
-   "n": 5
+   "n": 6
   },
   {
    "h": "10",
@@ -656,7 +626,7 @@
   },
   {
    "h": "11",
-   "n": 7
+   "n": 6
   },
   {
    "h": "12",
@@ -665,6 +635,10 @@
   {
    "h": "13",
    "n": 6
+  },
+  {
+   "h": "14",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
