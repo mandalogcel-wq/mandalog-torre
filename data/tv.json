@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-24T18:16:40-03:00",
+ "gerado_em": "2026-09-24T18:31:49-03:00",
  "dia": "2026-09-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 19,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "12:09",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "17:01",
-   "ritmo_real": 97
+   "ultima_baixa": "18:05",
+   "ritmo_real": 89
   },
   {
    "plano": "6103289588",
@@ -375,13 +375,13 @@
    "motorista": "Dione Soares Galego",
    "cidade": "Taquaritinga",
    "total": 2,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "09:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:27",
-   "ritmo_real": 0
+   "ultima_baixa": "18:29",
+   "ritmo_real": 122
   },
   {
    "plano": "6103288251",
@@ -555,9 +555,9 @@
    "op": "Café · Meso Bauru",
    "veic": 3,
    "total": 37,
-   "ok": 15,
+   "ok": 16,
    "semapont": 0,
-   "gm": 15
+   "gm": 16
   },
   {
    "op": "Café · Meso Marília",
@@ -579,9 +579,9 @@
    "op": "Café · CD Sumaré",
    "veic": 2,
    "total": 3,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1
+   "gm": 2
   }
  ],
  "greenmile_ok": true,
@@ -621,6 +621,10 @@
   {
    "h": "17",
    "n": 4
+  },
+  {
+   "h": "18",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
