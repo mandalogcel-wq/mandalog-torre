@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-24T07:46:39-03:00",
+ "gerado_em": "2026-09-24T08:01:43-03:00",
  "dia": "2026-09-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Ourinhos",
    "total": 24,
    "ok": 0,
-   "semapont": 24,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -31,7 +31,22 @@
    "cidade": "Bauru",
    "total": 19,
    "ok": 0,
-   "semapont": 19,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103288521",
+   "op": "Café · Meso Marília",
+   "placa": "DMQ3G22",
+   "motorista": "Luciano Donizeti De Melo",
+   "cidade": "Nova Europa",
+   "total": 18,
+   "ok": 0,
+   "semapont": 3,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -46,7 +61,7 @@
    "cidade": "Marilia",
    "total": 18,
    "ok": 0,
-   "semapont": 18,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -76,7 +91,7 @@
    "cidade": "Herculandia",
    "total": 16,
    "ok": 0,
-   "semapont": 16,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -249,6 +264,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103286417",
+   "op": "Café · Guarulhos",
+   "placa": "EMF0232",
+   "motorista": "Ivan Albino",
+   "cidade": "Sao Paulo",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103288412",
    "op": "Café · CD Sumaré",
    "placa": "FDL6D77",
@@ -339,6 +369,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103281391",
+   "op": "Café · Guarulhos",
+   "placa": "JNS0435",
+   "motorista": "Rodrigo",
+   "cidade": "Sao Paulo",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103274694",
    "op": "Café · CD Sumaré",
    "placa": "SUP9B16",
@@ -356,19 +401,19 @@
  ],
  "pracas": [
   {
-   "op": "Café · Guarulhos",
-   "veic": 14,
-   "total": 60,
+   "op": "Café · Meso Marília",
+   "veic": 4,
+   "total": 76,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 3,
    "gm": 0
   },
   {
-   "op": "Café · Meso Marília",
-   "veic": 3,
-   "total": 58,
+   "op": "Café · Guarulhos",
+   "veic": 16,
+   "total": 63,
    "ok": 0,
-   "semapont": 58,
+   "semapont": 1,
    "gm": 0
   },
   {
@@ -376,7 +421,7 @@
    "veic": 2,
    "total": 28,
    "ok": 0,
-   "semapont": 19,
+   "semapont": 0,
    "gm": 0
   },
   {
