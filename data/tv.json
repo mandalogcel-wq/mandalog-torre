@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-25T09:01:45-03:00",
+ "gerado_em": "2026-09-25T09:16:40-03:00",
  "dia": "2026-09-25",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -82,6 +82,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:54",
    "ritmo_real": 18
+  },
+  {
+   "plano": "6103288525",
+   "op": "Café · Meso Marília",
+   "placa": "GDS8C65",
+   "motorista": "Cristina Sales Moreira",
+   "cidade": "Marilia",
+   "total": 18,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "08:13",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:46",
+   "ritmo_real": 25
   },
   {
    "plano": "6103288528",
@@ -194,14 +209,14 @@
    "placa": "EXO9I19",
    "motorista": "Claudio Douglas",
    "cidade": "Guarulhos",
-   "total": 8,
-   "ok": 2,
+   "total": 6,
+   "ok": 0,
    "semapont": 0,
-   "gm": 2,
-   "saida": "08:42",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:49",
-   "ritmo_real": 6
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103281530",
@@ -492,11 +507,11 @@
  "pracas": [
   {
    "op": "Café · Meso Marília",
-   "veic": 5,
-   "total": 74,
-   "ok": 10,
+   "veic": 6,
+   "total": 92,
+   "ok": 12,
    "semapont": 3,
-   "gm": 10
+   "gm": 12
   },
   {
    "op": "Café · Meso Bauru",
@@ -509,10 +524,10 @@
   {
    "op": "Café · Guarulhos",
    "veic": 17,
-   "total": 58,
-   "ok": 7,
+   "total": 56,
+   "ok": 5,
    "semapont": 5,
-   "gm": 7
+   "gm": 5
   },
   {
    "op": "Café · SJC",
