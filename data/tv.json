@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-25T14:31:43-03:00",
+ "gerado_em": "2026-09-25T15:01:46-03:00",
  "dia": "2026-09-25",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Ourinhos",
    "total": 24,
-   "ok": 17,
+   "ok": 18,
    "semapont": 0,
-   "gm": 17,
+   "gm": 18,
    "saida": "07:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:12",
+   "ultima_baixa": "14:32",
    "ritmo_real": 23
   },
   {
@@ -75,13 +75,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Nova Europa",
    "total": 18,
-   "ok": 7,
+   "ok": 8,
    "semapont": 3,
-   "gm": 7,
+   "gm": 8,
    "saida": "08:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:06",
-   "ritmo_real": 55
+   "ultima_baixa": "14:36",
+   "ritmo_real": 51
   },
   {
    "plano": "6103288525",
@@ -105,13 +105,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Herculandia",
    "total": 16,
-   "ok": 9,
+   "ok": 10,
    "semapont": 0,
-   "gm": 9,
+   "gm": 10,
    "saida": "06:58",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:49",
-   "ritmo_real": 50
+   "ultima_baixa": "14:52",
+   "ritmo_real": 52
   },
   {
    "plano": "6103288517",
@@ -120,13 +120,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Marilia",
    "total": 14,
-   "ok": 13,
+   "ok": 14,
    "semapont": 0,
-   "gm": 13,
+   "gm": 14,
    "saida": "08:10",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:56",
-   "ritmo_real": 22
+   "ultima_baixa": "14:58",
+   "ritmo_real": 25
   },
   {
    "plano": "6103290406",
@@ -135,13 +135,13 @@
    "motorista": "Orlando Vieira",
    "cidade": "Sao Paulo",
    "total": 12,
-   "ok": 4,
+   "ok": 7,
    "semapont": 0,
-   "gm": 4,
+   "gm": 7,
    "saida": "09:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:36",
-   "ritmo_real": 54
+   "ultima_baixa": "14:38",
+   "ritmo_real": 37
   },
   {
    "plano": "6103287990",
@@ -225,13 +225,13 @@
    "motorista": "Claudio Douglas",
    "cidade": "Guarulhos",
    "total": 6,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "09:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:00",
-   "ritmo_real": 0
+   "ultima_baixa": "14:51",
+   "ritmo_real": 86
   },
   {
    "plano": "6103283358/6103283361",
@@ -509,9 +509,9 @@
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 92,
-   "ok": 52,
+   "ok": 56,
    "semapont": 3,
-   "gm": 52
+   "gm": 56
   },
   {
    "op": "Café · Meso Bauru",
@@ -525,9 +525,9 @@
    "op": "Café · Guarulhos",
    "veic": 17,
    "total": 57,
-   "ok": 30,
+   "ok": 35,
    "semapont": 1,
-   "gm": 30
+   "gm": 35
   },
   {
    "op": "Café · SJC",
@@ -586,7 +586,7 @@
   },
   {
    "h": "14",
-   "n": 6
+   "n": 15
   }
  ],
  "gm_sem_sac": 0
