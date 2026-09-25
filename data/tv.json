@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-25T07:31:44-03:00",
+ "gerado_em": "2026-09-25T07:46:41-03:00",
  "dia": "2026-09-25",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,6 +8,21 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
+  {
+   "plano": "6103288527",
+   "op": "Café · Meso Marília",
+   "placa": "RVD8G69",
+   "motorista": "Gislaine Simone",
+   "cidade": "Piraju",
+   "total": 28,
+   "ok": 0,
+   "semapont": 28,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
   {
    "plano": "6103288524",
    "op": "Café · Meso Marília",
@@ -447,10 +462,10 @@
  "pracas": [
   {
    "op": "Café · Meso Marília",
-   "veic": 5,
-   "total": 74,
+   "veic": 6,
+   "total": 102,
    "ok": 2,
-   "semapont": 3,
+   "semapont": 31,
    "gm": 2
   },
   {
