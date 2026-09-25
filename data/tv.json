@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-25T14:01:44-03:00",
+ "gerado_em": "2026-09-25T14:31:43-03:00",
  "dia": "2026-09-25",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Ourinhos",
    "total": 24,
-   "ok": 16,
+   "ok": 17,
    "semapont": 0,
-   "gm": 16,
+   "gm": 17,
    "saida": "07:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:56",
+   "ultima_baixa": "14:12",
    "ritmo_real": 23
   },
   {
@@ -30,12 +30,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 16,
+   "ok": 18,
    "semapont": 0,
-   "gm": 16,
+   "gm": 18,
    "saida": "07:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:53",
+   "ultima_baixa": "14:17",
    "ritmo_real": 12
   },
   {
@@ -75,13 +75,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Nova Europa",
    "total": 18,
-   "ok": 6,
+   "ok": 7,
    "semapont": 3,
-   "gm": 6,
+   "gm": 7,
    "saida": "08:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:14",
-   "ritmo_real": 44
+   "ultima_baixa": "14:06",
+   "ritmo_real": 55
   },
   {
    "plano": "6103288525",
@@ -345,12 +345,12 @@
    "motorista": "Dione Soares Galego",
    "cidade": "Jundiai",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "07:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "14:28",
    "ritmo_real": 0
   },
   {
@@ -509,17 +509,17 @@
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 92,
-   "ok": 50,
+   "ok": 52,
    "semapont": 3,
-   "gm": 50
+   "gm": 52
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 3,
    "total": 60,
-   "ok": 52,
+   "ok": 54,
    "semapont": 0,
-   "gm": 52
+   "gm": 54
   },
   {
    "op": "Café · Guarulhos",
@@ -549,9 +549,9 @@
    "op": "Café · CD Sumaré",
    "veic": 3,
    "total": 8,
-   "ok": 0,
+   "ok": 2,
    "semapont": 4,
-   "gm": 0
+   "gm": 2
   }
  ],
  "greenmile_ok": true,
@@ -583,6 +583,10 @@
   {
    "h": "13",
    "n": 28
+  },
+  {
+   "h": "14",
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
