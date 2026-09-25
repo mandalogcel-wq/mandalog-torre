@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-25T11:31:40-03:00",
+ "gerado_em": "2026-09-25T11:46:43-03:00",
  "dia": "2026-09-25",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -331,10 +331,10 @@
    "cidade": "Sao Paulo",
    "total": 2,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:10",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -390,12 +390,12 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Itaqua",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "07:43",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:14",
    "ritmo_real": 0
   },
   {
@@ -525,9 +525,9 @@
    "op": "Café · Guarulhos",
    "veic": 17,
    "total": 57,
-   "ok": 13,
-   "semapont": 3,
-   "gm": 13
+   "ok": 15,
+   "semapont": 1,
+   "gm": 15
   },
   {
    "op": "Café · SJC",
@@ -570,7 +570,7 @@
   },
   {
    "h": "10",
-   "n": 22
+   "n": 24
   },
   {
    "h": "11",
