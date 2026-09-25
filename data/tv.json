@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-25T17:31:40-03:00",
+ "gerado_em": "2026-09-25T18:31:44-03:00",
  "dia": "2026-09-25",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -225,13 +225,13 @@
    "motorista": "Claudio Douglas",
    "cidade": "Guarulhos",
    "total": 6,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "09:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:51",
-   "ritmo_real": 86
+   "ultima_baixa": "18:06",
+   "ritmo_real": 122
   },
   {
    "plano": "6103283358/6103283361",
@@ -495,12 +495,12 @@
    "motorista": "Thales",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "18:22",
    "ritmo_real": 0
   },
   {
@@ -540,9 +540,9 @@
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 58,
-   "ok": 47,
+   "ok": 49,
    "semapont": 1,
-   "gm": 47
+   "gm": 49
   },
   {
    "op": "Café · SJC",
@@ -614,6 +614,10 @@
   {
    "h": "17",
    "n": 3
+  },
+  {
+   "h": "18",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
