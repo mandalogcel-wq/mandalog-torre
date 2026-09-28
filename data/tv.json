@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-28T11:31:40-03:00",
+ "gerado_em": "2026-09-28T11:46:49-03:00",
  "dia": "2026-09-28",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -150,9 +150,9 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Cotia",
    "total": 6,
-   "ok": 0,
+   "ok": 6,
    "semapont": 0,
-   "gm": 0,
+   "gm": 6,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -555,9 +555,9 @@
    "op": "Café · Guarulhos",
    "veic": 17,
    "total": 54,
-   "ok": 11,
+   "ok": 17,
    "semapont": 0,
-   "gm": 11
+   "gm": 17
   },
   {
    "op": "Café · SJC",
