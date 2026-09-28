@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-28T14:31:42-03:00",
+ "gerado_em": "2026-09-28T15:01:47-03:00",
  "dia": "2026-09-28",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Piraju",
    "total": 28,
-   "ok": 23,
+   "ok": 25,
    "semapont": 0,
-   "gm": 23,
+   "gm": 25,
    "saida": "08:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:27",
+   "ultima_baixa": "14:52",
    "ritmo_real": 16
   },
   {
@@ -60,12 +60,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Assis",
    "total": 18,
-   "ok": 14,
+   "ok": 16,
    "semapont": 0,
-   "gm": 14,
+   "gm": 16,
    "saida": "10:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:26",
+   "ultima_baixa": "15:00",
    "ritmo_real": 19
   },
   {
@@ -540,12 +540,12 @@
    "motorista": "Marcos Antonio Da Silva",
    "cidade": "Santos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:47",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "14:46",
    "ritmo_real": 0
   }
  ],
@@ -562,17 +562,17 @@
    "op": "Café · Meso Marília",
    "veic": 7,
    "total": 58,
-   "ok": 45,
+   "ok": 49,
    "semapont": 2,
-   "gm": 45
+   "gm": 49
   },
   {
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 56,
-   "ok": 19,
+   "ok": 20,
    "semapont": 0,
-   "gm": 19
+   "gm": 20
   },
   {
    "op": "Café · SJC",
@@ -619,7 +619,11 @@
   },
   {
    "h": "14",
-   "n": 8
+   "n": 12
+  },
+  {
+   "h": "15",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
