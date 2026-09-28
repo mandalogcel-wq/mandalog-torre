@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-28T10:01:42-03:00",
+ "gerado_em": "2026-09-28T10:16:40-03:00",
  "dia": "2026-09-28",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -22,6 +22,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "09:40",
    "ritmo_real": 6
+  },
+  {
+   "plano": "6103293825",
+   "op": "Café · SJC",
+   "placa": "QOT3G41",
+   "motorista": "Edson Martins De Carvalho",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 26,
+   "ok": 0,
+   "semapont": 26,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103288518",
@@ -90,6 +105,21 @@
    "motorista": "Orlando",
    "cidade": "Sao Paulo",
    "total": 17,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103289595",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Tremembe",
+   "total": 8,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -444,6 +474,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103293816",
+   "op": "Café · SJC",
+   "placa": "FLF1G91",
+   "motorista": "Gabriel Felix Faysten Dos Santos",
+   "cidade": "Sao Bento Do Sapucai",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103291723",
    "op": "Café · Guarulhos",
    "placa": "SSX7A52",
@@ -483,6 +528,14 @@
    "ok": 6,
    "semapont": 0,
    "gm": 6
+  },
+  {
+   "op": "Café · SJC",
+   "veic": 3,
+   "total": 35,
+   "ok": 0,
+   "semapont": 27,
+   "gm": 0
   },
   {
    "op": "Café · CD Sumaré",
