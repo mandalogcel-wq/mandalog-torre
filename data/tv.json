@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-28T17:01:42-03:00",
+ "gerado_em": "2026-09-28T17:16:46-03:00",
  "dia": "2026-09-28",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -300,8 +300,8 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Marilia",
    "total": 2,
-   "ok": 1,
-   "semapont": 1,
+   "ok": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -562,8 +562,8 @@
    "op": "Café · Meso Marília",
    "veic": 7,
    "total": 58,
-   "ok": 55,
-   "semapont": 1,
+   "ok": 56,
+   "semapont": 0,
    "gm": 54
   },
   {
