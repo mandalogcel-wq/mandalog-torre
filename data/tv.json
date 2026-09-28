@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-28T17:31:55-03:00",
+ "gerado_em": "2026-09-28T17:46:53-03:00",
  "dia": "2026-09-28",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -252,7 +252,7 @@
    "plano": "6103292508",
    "op": "Café · CD Sumaré",
    "placa": "BWQ5135",
-   "motorista": "Carlinhos",
+   "motorista": "Carlinhos Bernardine Silvinski",
    "cidade": "Sumare",
    "total": 2,
    "ok": 2,
@@ -495,9 +495,9 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -507,7 +507,7 @@
    "plano": "6103289001",
    "op": "Café · CD Sumaré",
    "placa": "FDL6D77",
-   "motorista": "Diones",
+   "motorista": "Dione Soares Galego",
    "cidade": "Limeira",
    "total": 1,
    "ok": 1,
@@ -570,9 +570,9 @@
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 56,
-   "ok": 30,
+   "ok": 31,
    "semapont": 0,
-   "gm": 30
+   "gm": 31
   },
   {
    "op": "Café · SJC",
