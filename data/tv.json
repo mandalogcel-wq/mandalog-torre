@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T15:46:40-03:00",
+ "gerado_em": "2026-09-29T16:01:44-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -270,12 +270,12 @@
    "motorista": "",
    "cidade": "Osasco",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "10:05",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:05",
    "ritmo_real": 0
   },
   {
@@ -361,7 +361,7 @@
    "cidade": "Sao Paulo",
    "total": 2,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -555,9 +555,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 58,
-   "ok": 27,
-   "semapont": 1,
-   "gm": 27
+   "ok": 29,
+   "semapont": 0,
+   "gm": 29
   },
   {
    "op": "Café · SJC",
@@ -596,7 +596,7 @@
   },
   {
    "h": "10",
-   "n": 23
+   "n": 25
   },
   {
    "h": "11",
