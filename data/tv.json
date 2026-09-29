@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T11:16:47-03:00",
+ "gerado_em": "2026-09-29T11:31:50-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -180,13 +180,13 @@
    "motorista": "Ricardo",
    "cidade": "Sao Bernardo Do Campo",
    "total": 11,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "09:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:10",
-   "ritmo_real": 0
+   "ultima_baixa": "11:30",
+   "ritmo_real": 40
   },
   {
    "plano": "6103296583",
@@ -453,8 +453,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "11:08",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -585,9 +585,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 58,
-   "ok": 7,
+   "ok": 9,
    "semapont": 1,
-   "gm": 7
+   "gm": 9
   },
   {
    "op": "Café · SJC",
@@ -627,6 +627,10 @@
   {
    "h": "10",
    "n": 23
+  },
+  {
+   "h": "11",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
