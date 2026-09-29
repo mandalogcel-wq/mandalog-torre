@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T13:46:43-03:00",
+ "gerado_em": "2026-09-29T14:01:53-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Ourinhos",
    "total": 19,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "09:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:22",
-   "ritmo_real": 17
+   "ultima_baixa": "13:56",
+   "ritmo_real": 24
   },
   {
    "plano": "6103288518",
@@ -90,13 +90,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "09:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:23",
-   "ritmo_real": 9
+   "ultima_baixa": "13:51",
+   "ritmo_real": 21
   },
   {
    "plano": "6103293856",
@@ -288,8 +288,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "13:48",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -300,12 +300,12 @@
    "motorista": "Alex Junior Brunelo",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "06:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:30",
    "ritmo_real": 0
   },
   {
@@ -539,25 +539,25 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 85,
-   "ok": 34,
+   "ok": 35,
    "semapont": 0,
-   "gm": 34
+   "gm": 35
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 78,
-   "ok": 48,
+   "ok": 49,
    "semapont": 0,
-   "gm": 48
+   "gm": 49
   },
   {
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 58,
-   "ok": 20,
+   "ok": 22,
    "semapont": 1,
-   "gm": 20
+   "gm": 22
   },
   {
    "op": "Café · SJC",
@@ -608,7 +608,7 @@
   },
   {
    "h": "13",
-   "n": 7
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
