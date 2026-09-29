@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T16:31:43-03:00",
+ "gerado_em": "2026-09-29T16:46:41-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Marilia",
    "total": 24,
-   "ok": 17,
+   "ok": 19,
    "semapont": 0,
-   "gm": 17,
+   "gm": 19,
    "saida": "09:13",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:33",
-   "ritmo_real": 24
+   "ultima_baixa": "16:08",
+   "ritmo_real": 23
   },
   {
    "plano": "6103292160",
@@ -90,13 +90,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "09:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:32",
-   "ritmo_real": 21
+   "ultima_baixa": "16:22",
+   "ritmo_real": 30
   },
   {
    "plano": "6103293856",
@@ -539,17 +539,17 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 85,
-   "ok": 47,
+   "ok": 49,
    "semapont": 0,
-   "gm": 47
+   "gm": 49
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 78,
-   "ok": 62,
+   "ok": 63,
    "semapont": 0,
-   "gm": 62
+   "gm": 63
   },
   {
    "op": "Café · Guarulhos",
@@ -620,7 +620,7 @@
   },
   {
    "h": "16",
-   "n": 2
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
