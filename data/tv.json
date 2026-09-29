@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T17:32:21-03:00",
+ "gerado_em": "2026-09-29T17:46:40-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -405,12 +405,12 @@
    "motorista": "Gilmario Domingos",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "08:33",
    "ritmo_real": 0
   },
   {
@@ -555,9 +555,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 58,
-   "ok": 31,
+   "ok": 33,
    "semapont": 0,
-   "gm": 31
+   "gm": 33
   },
   {
    "op": "Café · SJC",
@@ -588,7 +588,7 @@
   },
   {
    "h": "08",
-   "n": 5
+   "n": 7
   },
   {
    "h": "09",
