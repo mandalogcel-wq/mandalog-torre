@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T12:31:44-03:00",
+ "gerado_em": "2026-09-29T12:46:42-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,12 +60,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Ourinhos",
    "total": 19,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "09:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:00",
+   "ultima_baixa": "12:22",
    "ritmo_real": 17
   },
   {
@@ -75,13 +75,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Sao Manuel",
    "total": 18,
-   "ok": 7,
+   "ok": 9,
    "semapont": 0,
-   "gm": 7,
+   "gm": 9,
    "saida": "09:16",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:58",
-   "ritmo_real": 20
+   "ultima_baixa": "12:08",
+   "ritmo_real": 24
   },
   {
    "plano": "6103292157",
@@ -95,8 +95,8 @@
    "gm": 7,
    "saida": "09:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:51",
-   "ritmo_real": 4
+   "ultima_baixa": "12:23",
+   "ritmo_real": 9
   },
   {
    "plano": "6103293856",
@@ -539,17 +539,17 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 85,
-   "ok": 33,
+   "ok": 34,
    "semapont": 0,
-   "gm": 33
+   "gm": 34
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 78,
-   "ok": 43,
+   "ok": 45,
    "semapont": 0,
-   "gm": 43
+   "gm": 45
   },
   {
    "op": "Café · Guarulhos",
@@ -600,11 +600,11 @@
   },
   {
    "h": "11",
-   "n": 20
+   "n": 17
   },
   {
    "h": "12",
-   "n": 6
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
