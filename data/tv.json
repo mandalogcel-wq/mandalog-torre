@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T05:31:46-03:00",
+ "gerado_em": "2026-09-29T05:46:44-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -105,6 +105,51 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Taubate",
    "total": 13,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103296582",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Sao Bernardo Do Campo",
+   "total": 11,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103296583",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Carapicuiba",
+   "total": 11,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103296580",
+   "op": "Café · Guarulhos",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Sao Paulo",
+   "total": 10,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -454,6 +499,14 @@
    "gm": 0
   },
   {
+   "op": "Café · Guarulhos",
+   "veic": 19,
+   "total": 58,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0
+  },
+  {
    "op": "Café · SJC",
    "veic": 4,
    "total": 43,
@@ -468,14 +521,6 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3
-  },
-  {
-   "op": "Café · Guarulhos",
-   "veic": 16,
-   "total": 26,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0
   },
   {
    "op": "Café · CD Sumaré",
