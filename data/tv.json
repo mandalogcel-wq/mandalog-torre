@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T15:16:40-03:00",
+ "gerado_em": "2026-09-29T15:31:44-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -420,12 +420,12 @@
    "motorista": "Gabriel Azevedo",
    "cidade": "Taboao Da Serra",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "11:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:24",
    "ritmo_real": 0
   },
   {
@@ -555,9 +555,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 58,
-   "ok": 26,
+   "ok": 27,
    "semapont": 1,
-   "gm": 26
+   "gm": 27
   },
   {
    "op": "Café · SJC",
@@ -613,6 +613,10 @@
   {
    "h": "14",
    "n": 21
+  },
+  {
+   "h": "15",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
