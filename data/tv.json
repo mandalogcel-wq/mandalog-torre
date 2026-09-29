@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T08:01:50-03:00",
+ "gerado_em": "2026-09-29T08:16:38-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,6 +8,36 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
+  {
+   "plano": "6103288522",
+   "op": "Café · Meso Bauru",
+   "placa": "EFQ7G95",
+   "motorista": "Jose Ailton Felix Da Silva",
+   "cidade": "Avare",
+   "total": 26,
+   "ok": 0,
+   "semapont": 26,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103292162",
+   "op": "Café · Meso Marília",
+   "placa": "FOY8J69",
+   "motorista": "Jose Henrique Barbosa Navero",
+   "cidade": "Tupa",
+   "total": 25,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
   {
    "plano": "6103292159",
    "op": "Café · Meso Marília",
@@ -48,6 +78,21 @@
    "ok": 2,
    "semapont": 0,
    "gm": 2,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103292157",
+   "op": "Café · Meso Bauru",
+   "placa": "FCD7E39",
+   "motorista": "Erenaldo Xavier Lisboa",
+   "cidade": "Bauru",
+   "total": 17,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -492,11 +537,19 @@
  "pracas": [
   {
    "op": "Café · Meso Marília",
-   "veic": 4,
-   "total": 60,
+   "veic": 5,
+   "total": 85,
    "ok": 3,
    "semapont": 0,
    "gm": 3
+  },
+  {
+   "op": "Café · Meso Bauru",
+   "veic": 4,
+   "total": 76,
+   "ok": 2,
+   "semapont": 26,
+   "gm": 2
   },
   {
    "op": "Café · Guarulhos",
@@ -513,14 +566,6 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0
-  },
-  {
-   "op": "Café · Meso Bauru",
-   "veic": 2,
-   "total": 33,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2
   },
   {
    "op": "Café · CD Sumaré",
