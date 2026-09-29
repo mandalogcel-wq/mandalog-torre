@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-29T05:01:48-03:00",
+ "gerado_em": "2026-09-29T05:31:46-03:00",
  "dia": "2026-09-29",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -264,6 +264,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103291658",
+   "op": "Café · Guarulhos",
+   "placa": "GWR9A64",
+   "motorista": "Thales De Jesus Santos",
+   "cidade": "Sao Paulo",
+   "total": 2,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103294482",
    "op": "Café · Guarulhos",
    "placa": "HWD6886",
@@ -456,10 +471,10 @@
   },
   {
    "op": "Café · Guarulhos",
-   "veic": 15,
-   "total": 24,
+   "veic": 16,
+   "total": 26,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0
   },
   {
