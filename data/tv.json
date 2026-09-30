@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-30T10:31:42-03:00",
+ "gerado_em": "2026-09-30T10:46:41-03:00",
  "dia": "2026-09-30",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -294,17 +294,17 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103296121",
+   "plano": "6103296132",
    "op": "Café · Guarulhos",
    "placa": "BPG8H46",
    "motorista": "Wellington Pedro Da Silva",
-   "cidade": "Sao Paulo",
+   "cidade": "Carapicuiba",
    "total": 2,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "07:20",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -339,17 +339,17 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103296132",
+   "plano": "6103296121",
    "op": "Café · Guarulhos",
    "placa": "HWD6886",
    "motorista": "Deraldo Curcino Moreno",
-   "cidade": "Carapicuiba",
+   "cidade": "Sao Paulo",
    "total": 2,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "07:20",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
