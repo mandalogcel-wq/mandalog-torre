@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-30T09:32:12-03:00",
+ "gerado_em": "2026-09-30T10:01:47-03:00",
  "dia": "2026-09-30",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Gabriel Azevedo Medeiros",
    "cidade": "Sao Paulo",
    "total": 13,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "05:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ultima_baixa": "09:49",
+   "ritmo_real": 8
   },
   {
    "plano": "6103292164",
@@ -135,13 +135,13 @@
    "motorista": "",
    "cidade": "Sao Paulo",
    "total": 4,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "07:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:53",
-   "ritmo_real": 22
+   "ultima_baixa": "09:34",
+   "ritmo_real": 29
   },
   {
    "plano": "6103296220",
@@ -195,12 +195,12 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "07:42",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:35",
    "ritmo_real": 0
   },
   {
@@ -509,9 +509,9 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 100,
-   "ok": 9,
+   "ok": 16,
    "semapont": 0,
-   "gm": 9
+   "gm": 16
   },
   {
    "op": "Café · Meso Bauru",
@@ -550,7 +550,7 @@
   },
   {
    "h": "09",
-   "n": 1
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
