@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-09-30T07:31:43-03:00",
+ "gerado_em": "2026-09-30T08:16:46-03:00",
  "dia": "2026-09-30",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "",
    "cidade": "Itapevi",
    "total": 23,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 3,
+   "saida": "07:48",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "07:49",
    "ritmo_real": 0
   },
   {
@@ -183,8 +183,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "07:42",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -419,9 +419,9 @@
    "op": "Café · Guarulhos",
    "veic": 24,
    "total": 100,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0
+   "gm": 3
   },
   {
    "op": "Café · Meso Marília",
@@ -441,6 +441,11 @@
   }
  ],
  "greenmile_ok": true,
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "07",
+   "n": 3
+  }
+ ],
  "gm_sem_sac": 0
 }
