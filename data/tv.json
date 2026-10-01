@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T12:01:49-03:00",
+ "gerado_em": "2026-10-01T12:16:53-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -354,21 +354,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103298711",
-   "op": "Café · Meso Bauru",
-   "placa": "DMQ3G22",
-   "motorista": "Luciano Donizeti De Melo",
-   "cidade": "Bauru",
-   "total": 3,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103298709",
    "op": "Café · Meso Bauru",
    "placa": "FCD7E39",
@@ -378,8 +363,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "11:59",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -570,12 +555,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Bauru",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "11:46",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "11:46",
    "ritmo_real": 0
   },
   {
@@ -681,11 +666,11 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 7,
-   "total": 18,
-   "ok": 2,
+   "veic": 6,
+   "total": 15,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2
+   "gm": 3
   },
   {
    "op": "Café · CD Sumaré",
@@ -716,7 +701,7 @@
   },
   {
    "h": "11",
-   "n": 16
+   "n": 17
   },
   {
    "h": "12",
