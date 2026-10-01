@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T17:31:50-03:00",
+ "gerado_em": "2026-10-01T18:01:56-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,8 +75,8 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Campos Do Jordao",
    "total": 18,
-   "ok": 13,
-   "semapont": 1,
+   "ok": 14,
+   "semapont": 0,
    "gm": 13,
    "saida": "12:49",
    "saida_fonte": "greenmile",
@@ -750,8 +750,8 @@
    "op": "Café · SJC",
    "veic": 8,
    "total": 103,
-   "ok": 65,
-   "semapont": 1,
+   "ok": 66,
+   "semapont": 0,
    "gm": 65
   },
   {
