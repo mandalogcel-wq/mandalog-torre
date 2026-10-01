@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T13:16:45-03:00",
+ "gerado_em": "2026-10-01T13:31:49-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Taubate",
    "total": 30,
-   "ok": 5,
+   "ok": 7,
    "semapont": 0,
-   "gm": 5,
+   "gm": 7,
    "saida": "12:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:56",
-   "ritmo_real": 9
+   "ultima_baixa": "13:21",
+   "ritmo_real": 10
   },
   {
    "plano": "6103291651",
@@ -75,13 +75,13 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Campos Do Jordao",
    "total": 18,
-   "ok": 1,
+   "ok": 3,
    "semapont": 1,
-   "gm": 1,
+   "gm": 3,
    "saida": "12:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:51",
-   "ritmo_real": 0
+   "ultima_baixa": "13:22",
+   "ritmo_real": 16
   },
   {
    "plano": "6103291650",
@@ -120,13 +120,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Guaratingueta",
    "total": 15,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "07:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:23",
-   "ritmo_real": 22
+   "ultima_baixa": "13:09",
+   "ritmo_real": 23
   },
   {
    "plano": "6103299536",
@@ -180,13 +180,13 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Paraibuna",
    "total": 10,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "11:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:00",
-   "ritmo_real": 0
+   "ultima_baixa": "13:25",
+   "ritmo_real": 42
   },
   {
    "plano": "6103297985",
@@ -375,7 +375,7 @@
    "motorista": "Wellington Pedro Da Silva",
    "cidade": "Carapicuiba",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -585,7 +585,7 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Rio Grande Da Serra",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -652,15 +652,15 @@
    "op": "Café · SJC",
    "veic": 8,
    "total": 103,
-   "ok": 28,
+   "ok": 35,
    "semapont": 1,
-   "gm": 28
+   "gm": 35
   },
   {
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 96,
-   "ok": 12,
+   "ok": 15,
    "semapont": 41,
    "gm": 2
   },
@@ -705,7 +705,11 @@
   },
   {
    "h": "12",
-   "n": 20
+   "n": 21
+  },
+  {
+   "h": "13",
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
