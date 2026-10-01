@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T13:31:49-03:00",
+ "gerado_em": "2026-10-01T13:46:52-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -519,6 +519,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103293815",
+   "op": "Café · Guarulhos",
+   "placa": "AMS9753",
+   "motorista": "Orlando Vieira",
+   "cidade": "Vargem Grande Paulista",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103296122",
    "op": "Café · Guarulhos",
    "placa": "BZC2A90",
@@ -658,8 +673,8 @@
   },
   {
    "op": "Café · Guarulhos",
-   "veic": 23,
-   "total": 96,
+   "veic": 24,
+   "total": 97,
    "ok": 15,
    "semapont": 41,
    "gm": 2
