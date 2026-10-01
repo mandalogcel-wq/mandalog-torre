@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T11:46:52-03:00",
+ "gerado_em": "2026-10-01T12:01:49-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Douglas Rodrigues Cardozo",
    "cidade": "Ribeirao Branco",
    "total": 21,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "10:37",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:25",
-   "ritmo_real": 0
+   "ultima_baixa": "11:56",
+   "ritmo_real": 10
   },
   {
    "plano": "6103291650",
@@ -120,13 +120,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Guaratingueta",
    "total": 15,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12,
+   "gm": 13,
    "saida": "07:39",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:08",
-   "ritmo_real": 19
+   "ultima_baixa": "11:44",
+   "ritmo_real": 20
   },
   {
    "plano": "6103299536",
@@ -180,12 +180,12 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Paraibuna",
    "total": 10,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "11:57",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:00",
    "ritmo_real": 0
   },
   {
@@ -243,8 +243,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "11:57",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -270,21 +270,6 @@
    "motorista": "Carlos Cesar Cardoso Lima Junior",
    "cidade": "Sao Paulo",
    "total": 6,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103300535",
-   "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Sao Jose Do Barreiro",
-   "total": 5,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -662,7 +647,7 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -674,17 +659,17 @@
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 107,
-   "ok": 13,
+   "ok": 15,
    "semapont": 0,
-   "gm": 13
+   "gm": 15
   },
   {
    "op": "Café · SJC",
-   "veic": 9,
-   "total": 107,
-   "ok": 19,
+   "veic": 8,
+   "total": 102,
+   "ok": 21,
    "semapont": 0,
-   "gm": 19
+   "gm": 21
   },
   {
    "op": "Café · Guarulhos",
@@ -692,7 +677,7 @@
    "total": 94,
    "ok": 3,
    "semapont": 65,
-   "gm": 1
+   "gm": 2
   },
   {
    "op": "Café · Meso Bauru",
@@ -731,7 +716,11 @@
   },
   {
    "h": "11",
-   "n": 13
+   "n": 16
+  },
+  {
+   "h": "12",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
