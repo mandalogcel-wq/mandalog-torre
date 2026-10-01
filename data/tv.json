@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T17:01:51-03:00",
+ "gerado_em": "2026-10-01T17:16:47-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -294,6 +294,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103291391",
+   "op": "Café · Guarulhos",
+   "placa": "FYH8F51",
+   "motorista": "Narciso Henrique Da Silva",
+   "cidade": "Taboao Da Serra",
+   "total": 6,
+   "ok": 6,
+   "semapont": 0,
+   "gm": 6,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103296148",
    "op": "Café · Guarulhos",
    "placa": "0",
@@ -504,6 +519,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103289875",
+   "op": "Café · Guarulhos",
+   "placa": "FYH8F51",
+   "motorista": "Narciso Henrique Da Silva",
+   "cidade": "Taboao Da Serra",
+   "total": 2,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103298365",
    "op": "Café · Guarulhos",
    "placa": "PEE0H20",
@@ -639,6 +669,36 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103282283",
+   "op": "Café · Guarulhos",
+   "placa": "FYH8F51",
+   "motorista": "Narciso Henrique Da Silva",
+   "cidade": "Taboao Da Serra",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103290096",
+   "op": "Café · Guarulhos",
+   "placa": "FYH8F51",
+   "motorista": "Narciso Henrique Da Silva",
+   "cidade": "",
+   "total": 1,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103298374",
    "op": "Café · Guarulhos",
    "placa": "SVL4J89",
@@ -671,6 +731,14 @@
  ],
  "pracas": [
   {
+   "op": "Café · Guarulhos",
+   "veic": 28,
+   "total": 112,
+   "ok": 42,
+   "semapont": 37,
+   "gm": 18
+  },
+  {
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 107,
@@ -685,14 +753,6 @@
    "ok": 62,
    "semapont": 1,
    "gm": 62
-  },
-  {
-   "op": "Café · Guarulhos",
-   "veic": 24,
-   "total": 102,
-   "ok": 32,
-   "semapont": 37,
-   "gm": 9
   },
   {
    "op": "Café · Meso Bauru",
