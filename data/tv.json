@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T10:31:53-03:00",
+ "gerado_em": "2026-10-01T11:01:49-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -225,7 +225,7 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Cerqueira Cesar",
    "total": 5,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -496,7 +496,7 @@
    "cidade": "Rio Grande Da Serra",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -563,7 +563,7 @@
    "veic": 21,
    "total": 91,
    "ok": 2,
-   "semapont": 70,
+   "semapont": 69,
    "gm": 0
   },
   {
@@ -578,7 +578,7 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 18,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0
   },
