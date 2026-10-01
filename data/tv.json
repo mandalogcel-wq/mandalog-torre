@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T11:31:56-03:00",
+ "gerado_em": "2026-10-01T11:46:52-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -49,7 +49,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -94,7 +94,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -154,7 +154,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -184,7 +184,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -244,7 +244,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -289,7 +289,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -361,7 +361,7 @@
    "cidade": "Sao Paulo",
    "total": 3,
    "ok": 0,
-   "semapont": 3,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -630,9 +630,9 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Itaquaquecetuba",
    "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -690,9 +690,9 @@
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 94,
-   "ok": 2,
-   "semapont": 69,
-   "gm": 0
+   "ok": 3,
+   "semapont": 65,
+   "gm": 1
   },
   {
    "op": "Café · Meso Bauru",
