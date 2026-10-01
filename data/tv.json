@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T16:01:51-03:00",
+ "gerado_em": "2026-10-01T16:16:47-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -390,7 +390,7 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Jau",
    "total": 3,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
    "gm": 2,
    "saida": "14:48",
@@ -698,7 +698,7 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 18,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
    "gm": 7
   },
