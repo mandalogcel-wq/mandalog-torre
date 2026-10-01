@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T18:31:50-03:00",
+ "gerado_em": "2026-10-01T19:01:44-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,9 +30,9 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itarare",
    "total": 30,
-   "ok": 11,
+   "ok": 18,
    "semapont": 0,
-   "gm": 11,
+   "gm": 18,
    "saida": "07:11",
    "saida_fonte": "greenmile",
    "ultima_baixa": "17:30",
@@ -60,9 +60,9 @@
    "motorista": "Douglas Rodrigues Cardozo",
    "cidade": "Ribeirao Branco",
    "total": 21,
-   "ok": 15,
+   "ok": 16,
    "semapont": 0,
-   "gm": 15,
+   "gm": 16,
    "saida": "10:37",
    "saida_fonte": "greenmile",
    "ultima_baixa": "18:23",
@@ -90,13 +90,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itaporanga",
    "total": 17,
-   "ok": 12,
+   "ok": 16,
    "semapont": 0,
-   "gm": 12,
+   "gm": 16,
    "saida": "09:23",
    "saida_fonte": "greenmile",
    "ultima_baixa": "15:34",
-   "ritmo_real": 34
+   "ritmo_real": 31
   },
   {
    "plano": "6103299566",
@@ -742,9 +742,9 @@
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 107,
-   "ok": 64,
+   "ok": 76,
    "semapont": 0,
-   "gm": 64
+   "gm": 76
   },
   {
    "op": "Café · SJC",
@@ -783,7 +783,7 @@
   },
   {
    "h": "09",
-   "n": 9
+   "n": 10
   },
   {
    "h": "10",
