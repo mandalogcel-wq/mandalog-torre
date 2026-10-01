@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T13:46:52-03:00",
+ "gerado_em": "2026-10-01T14:01:46-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Itapeva",
    "total": 39,
-   "ok": 4,
+   "ok": 0,
    "semapont": 0,
-   "gm": 4,
-   "saida": "11:02",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "11:03",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -30,13 +30,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itarare",
    "total": 30,
-   "ok": 4,
+   "ok": 0,
    "semapont": 0,
-   "gm": 4,
-   "saida": "07:11",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "09:22",
-   "ritmo_real": 23
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103300540",
@@ -45,13 +45,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Taubate",
    "total": 30,
-   "ok": 7,
+   "ok": 0,
    "semapont": 0,
-   "gm": 7,
-   "saida": "12:08",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:21",
-   "ritmo_real": 10
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103291651",
@@ -60,13 +60,13 @@
    "motorista": "Douglas Rodrigues Cardozo",
    "cidade": "Ribeirao Branco",
    "total": 21,
-   "ok": 6,
+   "ok": 0,
    "semapont": 0,
-   "gm": 6,
-   "saida": "10:37",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:05",
-   "ritmo_real": 8
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103300545",
@@ -75,13 +75,13 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Campos Do Jordao",
    "total": 18,
-   "ok": 3,
+   "ok": 0,
    "semapont": 1,
-   "gm": 3,
-   "saida": "12:49",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:22",
-   "ritmo_real": 16
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103291650",
@@ -90,13 +90,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itaporanga",
    "total": 17,
-   "ok": 9,
+   "ok": 0,
    "semapont": 0,
-   "gm": 9,
-   "saida": "09:23",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:44",
-   "ritmo_real": 25
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103299566",
@@ -120,13 +120,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Guaratingueta",
    "total": 15,
-   "ok": 15,
+   "ok": 0,
    "semapont": 0,
-   "gm": 15,
-   "saida": "07:39",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:09",
-   "ritmo_real": 23
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103299536",
@@ -153,8 +153,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "12:41",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -180,13 +180,13 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Paraibuna",
    "total": 10,
-   "ok": 3,
+   "ok": 0,
    "semapont": 0,
-   "gm": 3,
-   "saida": "11:57",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:25",
-   "ritmo_real": 42
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103297985",
@@ -195,13 +195,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 3,
+   "ok": 0,
    "semapont": 0,
-   "gm": 3,
-   "saida": "07:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:25",
-   "ritmo_real": 12
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103296580",
@@ -226,7 +226,7 @@
    "cidade": "Sao Vicente",
    "total": 7,
    "ok": 0,
-   "semapont": 3,
+   "semapont": 7,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -258,8 +258,23 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "11:57",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103293815",
+   "op": "Café · Guarulhos",
+   "placa": "AMS9753",
+   "motorista": "Orlando Vieira",
+   "cidade": "Taboao Da Serra",
+   "total": 6,
+   "ok": 5,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -315,13 +330,13 @@
    "motorista": "Thiago Pereira Silva",
    "cidade": "Cruzeiro",
    "total": 4,
-   "ok": 4,
+   "ok": 0,
    "semapont": 0,
-   "gm": 4,
-   "saida": "08:55",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "11:14",
-   "ritmo_real": 46
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103298360",
@@ -519,21 +534,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103293815",
-   "op": "Café · Guarulhos",
-   "placa": "AMS9753",
-   "motorista": "Orlando Vieira",
-   "cidade": "Vargem Grande Paulista",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103296122",
    "op": "Café · Guarulhos",
    "placa": "BZC2A90",
@@ -647,10 +647,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 1,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
-   "ultima_baixa": "12:00",
+   "ultima_baixa": "",
    "ritmo_real": 0
   }
  ],
@@ -659,25 +659,25 @@
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 107,
-   "ok": 23,
+   "ok": 0,
    "semapont": 0,
-   "gm": 23
+   "gm": 0
   },
   {
    "op": "Café · SJC",
    "veic": 8,
    "total": 103,
-   "ok": 35,
+   "ok": 0,
    "semapont": 1,
-   "gm": 35
+   "gm": 0
   },
   {
    "op": "Café · Guarulhos",
    "veic": 24,
-   "total": 97,
-   "ok": 15,
-   "semapont": 41,
-   "gm": 2
+   "total": 102,
+   "ok": 20,
+   "semapont": 45,
+   "gm": 1
   },
   {
    "op": "Café · Meso Bauru",
@@ -699,32 +699,12 @@
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
-   "h": "07",
-   "n": 2
-  },
-  {
-   "h": "08",
-   "n": 6
-  },
-  {
-   "h": "09",
-   "n": 9
-  },
-  {
-   "h": "10",
-   "n": 4
-  },
-  {
    "h": "11",
-   "n": 17
+   "n": 3
   },
   {
    "h": "12",
-   "n": 21
-  },
-  {
-   "h": "13",
-   "n": 6
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
