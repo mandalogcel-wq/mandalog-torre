@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T07:01:45-03:00",
+ "gerado_em": "2026-10-01T07:46:50-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -20,6 +20,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103291398",
+   "op": "Café · Itapeva",
+   "placa": "EMF9E75",
+   "motorista": "Joao Batista Geraldo",
+   "cidade": "Itarare",
+   "total": 23,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "07:11",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -431,19 +446,19 @@
  ],
  "pracas": [
   {
+   "op": "Café · Itapeva",
+   "veic": 4,
+   "total": 95,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0
+  },
+  {
    "op": "Café · Guarulhos",
    "veic": 20,
    "total": 90,
    "ok": 0,
    "semapont": 77,
-   "gm": 0
-  },
-  {
-   "op": "Café · Itapeva",
-   "veic": 3,
-   "total": 72,
-   "ok": 0,
-   "semapont": 0,
    "gm": 0
   },
   {
