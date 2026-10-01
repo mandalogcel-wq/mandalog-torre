@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-01T08:31:42-03:00",
+ "gerado_em": "2026-10-01T08:46:49-03:00",
  "dia": "2026-10-01",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Itapeva",
    "total": 39,
    "ok": 0,
-   "semapont": 39,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -30,12 +30,12 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itarare",
    "total": 23,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "07:11",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:14",
    "ritmo_real": 0
   },
   {
@@ -46,7 +46,7 @@
    "cidade": "Ribeirao Branco",
    "total": 21,
    "ok": 0,
-   "semapont": 21,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -75,13 +75,13 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Guaratingueta",
    "total": 15,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 2,
+   "saida": "07:39",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "07:51",
+   "ritmo_real": 10
   },
   {
    "plano": "6103299536",
@@ -135,13 +135,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 3,
+   "saida": "07:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:25",
+   "ritmo_real": 12
   },
   {
    "plano": "6103296110",
@@ -151,7 +151,7 @@
    "cidade": "Sao Vicente",
    "total": 7,
    "ok": 0,
-   "semapont": 7,
+   "semapont": 3,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -464,25 +464,25 @@
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 95,
-   "ok": 0,
-   "semapont": 60,
-   "gm": 0
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2
   },
   {
    "op": "Café · Guarulhos",
    "veic": 20,
    "total": 90,
    "ok": 0,
-   "semapont": 78,
+   "semapont": 74,
    "gm": 0
   },
   {
    "op": "Café · SJC",
    "veic": 3,
    "total": 28,
-   "ok": 0,
+   "ok": 5,
    "semapont": 0,
-   "gm": 0
+   "gm": 5
   },
   {
    "op": "Café · Meso Bauru",
@@ -494,6 +494,15 @@
   }
  ],
  "greenmile_ok": true,
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "07",
+   "n": 2
+  },
+  {
+   "h": "08",
+   "n": 5
+  }
+ ],
  "gm_sem_sac": 0
 }
