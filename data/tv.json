@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-02T11:01:47-03:00",
+ "gerado_em": "2026-10-02T11:16:48-03:00",
  "dia": "2026-10-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Marilia",
    "total": 21,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "10:36",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:36",
    "ritmo_real": 0
   },
   {
@@ -30,13 +30,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Assis",
    "total": 18,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 3,
+   "saida": "10:19",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:50",
+   "ritmo_real": 12
   },
   {
    "plano": "6103301948",
@@ -120,13 +120,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Tremembe",
    "total": 11,
-   "ok": 3,
+   "ok": 5,
    "semapont": 0,
-   "gm": 3,
+   "gm": 5,
    "saida": "09:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:15",
-   "ritmo_real": 23
+   "ultima_baixa": "10:40",
+   "ritmo_real": 18
   },
   {
    "plano": "6103299339",
@@ -210,13 +210,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "09:41",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:14",
-   "ritmo_real": 32
+   "ultima_baixa": "10:49",
+   "ritmo_real": 34
   },
   {
    "plano": "6103302051",
@@ -630,12 +630,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bastos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "10:28",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:29",
    "ritmo_real": 0
   },
   {
@@ -734,25 +734,25 @@
    "op": "Café · Guarulhos",
    "veic": 28,
    "total": 121,
-   "ok": 15,
+   "ok": 16,
    "semapont": 4,
-   "gm": 15
+   "gm": 16
   },
   {
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 43,
-   "ok": 1,
+   "ok": 6,
    "semapont": 0,
-   "gm": 1
+   "gm": 6
   },
   {
    "op": "Café · SJC",
    "veic": 6,
    "total": 35,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6
+   "gm": 8
   },
   {
    "op": "Café · Itapeva",
@@ -791,7 +791,7 @@
   },
   {
    "h": "10",
-   "n": 8
+   "n": 16
   }
  ],
  "gm_sem_sac": 0
