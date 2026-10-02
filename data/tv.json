@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-02T09:16:54-03:00",
+ "gerado_em": "2026-10-02T09:31:47-03:00",
  "dia": "2026-10-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -234,6 +234,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103300870",
+   "op": "Café · SJC",
+   "placa": "RUX9H44",
+   "motorista": "Cleberson Roberto Lourenco Gomes",
+   "cidade": "Taubate",
+   "total": 4,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103301011",
    "op": "Café · Guarulhos",
    "placa": "BPG8H46",
@@ -292,6 +307,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:58",
    "ritmo_real": 18
+  },
+  {
+   "plano": "6103300545",
+   "op": "Café · SJC",
+   "placa": "SIP2F31",
+   "motorista": "Sergio Silva De Moraes",
+   "cidade": "Campos Do Jordao",
+   "total": 3,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103298379",
@@ -658,8 +688,8 @@
   },
   {
    "op": "Café · SJC",
-   "veic": 4,
-   "total": 28,
+   "veic": 6,
+   "total": 35,
    "ok": 3,
    "semapont": 0,
    "gm": 3
