@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-02T17:46:40-03:00",
+ "gerado_em": "2026-10-02T18:01:49-03:00",
  "dia": "2026-10-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Marilia",
    "total": 21,
-   "ok": 19,
+   "ok": 20,
    "semapont": 0,
-   "gm": 12,
+   "gm": 15,
    "saida": "10:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "17:16",
-   "ritmo_real": 36
+   "ultima_baixa": "18:01",
+   "ritmo_real": 32
   },
   {
    "plano": "6103298733",
@@ -290,8 +290,8 @@
    "gm": 4,
    "saida": "13:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:28",
-   "ritmo_real": 36
+   "ultima_baixa": "17:47",
+   "ritmo_real": 90
   },
   {
    "plano": "6103301011",
@@ -742,9 +742,9 @@
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 43,
-   "ok": 40,
+   "ok": 41,
    "semapont": 0,
-   "gm": 33
+   "gm": 36
   },
   {
    "op": "Café · SJC",
@@ -819,7 +819,11 @@
   },
   {
    "h": "17",
-   "n": 5
+   "n": 6
+  },
+  {
+   "h": "18",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
