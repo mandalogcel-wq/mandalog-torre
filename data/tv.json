@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-02T10:31:45-03:00",
+ "gerado_em": "2026-10-02T10:47:01-03:00",
  "dia": "2026-10-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -67,6 +67,21 @@
    "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103291398",
+   "op": "Café · Itapeva",
+   "placa": "EMF9E75",
+   "motorista": "Joao Batista Geraldo",
+   "cidade": "Itarare",
+   "total": 14,
+   "ok": 14,
+   "semapont": 0,
+   "gm": 14,
+   "saida": "08:16",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:35",
+   "ritmo_real": 13
   },
   {
    "plano": "6103302067",
@@ -172,6 +187,21 @@
    "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103291397",
+   "op": "Café · Itapeva",
+   "placa": "AQB7H29",
+   "motorista": "Fabio Henrique Pereira",
+   "cidade": "Itapeva",
+   "total": 8,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "08:28",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:57",
+   "ritmo_real": 3
   },
   {
    "plano": "6103302050",
@@ -710,6 +740,14 @@
    "gm": 6
   },
   {
+   "op": "Café · Itapeva",
+   "veic": 2,
+   "total": 22,
+   "ok": 18,
+   "semapont": 0,
+   "gm": 18
+  },
+  {
    "op": "Café · CD Sumaré",
    "veic": 3,
    "total": 13,
@@ -730,11 +768,11 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 4
+   "n": 13
   },
   {
    "h": "09",
-   "n": 6
+   "n": 8
   },
   {
    "h": "10",
