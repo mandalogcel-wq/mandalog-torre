@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-02T13:31:48-03:00",
+ "gerado_em": "2026-10-02T14:01:45-03:00",
  "dia": "2026-10-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Sao Paulo",
    "total": 15,
-   "ok": 3,
-   "semapont": 0,
-   "gm": 3,
-   "saida": "07:42",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "10:01",
-   "ritmo_real": 51
+   "ok": 0,
+   "semapont": 15,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103302079",
@@ -61,7 +61,7 @@
    "cidade": "Itapecerica Da Serra",
    "total": 14,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 14,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -78,10 +78,10 @@
    "ok": 14,
    "semapont": 0,
    "gm": 14,
-   "saida": "08:16",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "09:35",
-   "ritmo_real": 13
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103302067",
@@ -91,7 +91,7 @@
    "cidade": "Sao Paulo",
    "total": 13,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 13,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -105,12 +105,12 @@
    "motorista": "Ricardo Barros",
    "cidade": "Carapicuiba",
    "total": 12,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2,
-   "saida": "09:18",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "10:28",
+   "ok": 0,
+   "semapont": 12,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -120,13 +120,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Tremembe",
    "total": 11,
-   "ok": 8,
+   "ok": 0,
    "semapont": 0,
-   "gm": 8,
-   "saida": "09:18",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:56",
-   "ritmo_real": 30
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103299339",
@@ -150,12 +150,12 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 9,
-   "ok": 2,
+   "ok": 0,
    "semapont": 0,
-   "gm": 2,
-   "saida": "09:32",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "11:57",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -166,7 +166,7 @@
    "cidade": "Sao Paulo",
    "total": 9,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 9,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -181,10 +181,10 @@
    "cidade": "Embu Guacu",
    "total": 9,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 9,
    "gm": 0,
-   "saida": "11:20",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -195,13 +195,13 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Itapeva",
    "total": 8,
-   "ok": 8,
+   "ok": 0,
    "semapont": 0,
-   "gm": 8,
-   "saida": "08:28",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:43",
-   "ritmo_real": 34
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103302050",
@@ -210,13 +210,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 6,
-   "semapont": 0,
-   "gm": 6,
-   "saida": "09:41",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:21",
-   "ritmo_real": 44
+   "ok": 0,
+   "semapont": 8,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103302051",
@@ -225,13 +225,13 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Sao Paulo",
    "total": 6,
-   "ok": 5,
-   "semapont": 0,
-   "gm": 5,
-   "saida": "08:33",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:19",
-   "ritmo_real": 64
+   "ok": 0,
+   "semapont": 6,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103296148",
@@ -241,10 +241,10 @@
    "cidade": "Sao Paulo",
    "total": 5,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 5,
    "gm": 0,
-   "saida": "07:52",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -255,12 +255,12 @@
    "motorista": "Renato Lopes Mendes",
    "cidade": "Sao Jose Do Barreiro",
    "total": 5,
-   "ok": 5,
+   "ok": 0,
    "semapont": 0,
-   "gm": 5,
-   "saida": "12:34",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:36",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -285,12 +285,12 @@
    "motorista": "Cleberson Roberto Lourenco Gomes",
    "cidade": "Taubate",
    "total": 4,
-   "ok": 1,
+   "ok": 0,
    "semapont": 0,
-   "gm": 1,
-   "saida": "13:14",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:16",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -301,7 +301,7 @@
    "cidade": "Itapevi",
    "total": 3,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 3,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -316,7 +316,7 @@
    "cidade": "Cajamar",
    "total": 3,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 3,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -345,13 +345,13 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Paraibuna",
    "total": 3,
-   "ok": 3,
+   "ok": 0,
    "semapont": 0,
-   "gm": 3,
-   "saida": "08:21",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:58",
-   "ritmo_real": 18
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103300545",
@@ -360,13 +360,13 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Campos Do Jordao",
    "total": 3,
-   "ok": 3,
+   "ok": 0,
    "semapont": 0,
-   "gm": 3,
-   "saida": "12:35",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "13:14",
-   "ritmo_real": 18
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103298379",
@@ -375,12 +375,12 @@
    "motorista": "Antonio Jose Vaz",
    "cidade": "Sao Jose Dos Campos",
    "total": 2,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2,
-   "saida": "08:42",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:54",
+   "ok": 0,
+   "semapont": 2,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -391,7 +391,7 @@
    "cidade": "Carapicuiba",
    "total": 2,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 2,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -405,9 +405,9 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Vargem Grande Paulista",
    "total": 2,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2,
+   "ok": 1,
+   "semapont": 1,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -421,10 +421,10 @@
    "cidade": "Sao Jose Dos Campos",
    "total": 2,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 2,
    "gm": 0,
-   "saida": "10:23",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -436,7 +436,7 @@
    "cidade": "Sao Paulo",
    "total": 2,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 2,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -525,12 +525,12 @@
    "motorista": "Gilberto Jose De Lima",
    "cidade": "Barueri",
    "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "06:07",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "09:41",
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -585,12 +585,12 @@
    "motorista": "Guilherme Alves De Andrade",
    "cidade": "Sao Bernardo Do Campo",
    "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "06:39",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "06:39",
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -600,12 +600,12 @@
    "motorista": "Carlos Cesar Cardoso Lima Junior",
    "cidade": "Diadema",
    "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "09:16",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:54",
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -615,9 +615,9 @@
    "motorista": "Carlos Cesar Cardoso Lima Junior",
    "cidade": "Itapevi",
    "total": 1,
-   "ok": 1,
+   "ok": 0,
    "semapont": 0,
-   "gm": 1,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -647,7 +647,7 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 1,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -675,12 +675,12 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Suzano",
    "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "08:23",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:18",
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -691,10 +691,10 @@
    "cidade": "Sao Jose Dos Campos",
    "total": 1,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0,
-   "saida": "09:18",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -705,12 +705,12 @@
    "motorista": "Gilmario Domingos",
    "cidade": "Sao Bernardo Do Campo",
    "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "08:37",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:02",
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -721,7 +721,7 @@
    "cidade": "Diadema",
    "total": 1,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -734,9 +734,9 @@
    "op": "Café · Guarulhos",
    "veic": 28,
    "total": 121,
-   "ok": 27,
-   "semapont": 4,
-   "gm": 27
+   "ok": 2,
+   "semapont": 117,
+   "gm": 0
   },
   {
    "op": "Café · Meso Marília",
@@ -750,17 +750,17 @@
    "op": "Café · SJC",
    "veic": 6,
    "total": 35,
-   "ok": 22,
+   "ok": 0,
    "semapont": 0,
-   "gm": 22
+   "gm": 0
   },
   {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 27,
-   "ok": 22,
+   "ok": 14,
    "semapont": 0,
-   "gm": 22
+   "gm": 14
   },
   {
    "op": "Café · CD Sumaré",
@@ -782,32 +782,24 @@
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
-   "h": "06",
+   "h": "09",
    "n": 1
   },
   {
-   "h": "08",
-   "n": 13
-  },
-  {
-   "h": "09",
-   "n": 8
-  },
-  {
    "h": "10",
-   "n": 16
+   "n": 5
   },
   {
    "h": "11",
-   "n": 20
+   "n": 16
   },
   {
    "h": "12",
-   "n": 24
+   "n": 4
   },
   {
    "h": "13",
-   "n": 6
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
