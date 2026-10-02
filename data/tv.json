@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-02T09:46:45-03:00",
+ "gerado_em": "2026-10-02T10:03:15-03:00",
  "dia": "2026-10-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -105,13 +105,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Tremembe",
    "total": 11,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "09:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:29",
-   "ritmo_real": 0
+   "ultima_baixa": "09:47",
+   "ritmo_real": 18
   },
   {
    "plano": "6103299339",
@@ -138,8 +138,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:32",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -180,12 +180,12 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:41",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:42",
    "ritmo_real": 0
   },
   {
@@ -480,12 +480,12 @@
    "motorista": "Gilberto Jose De Lima",
    "cidade": "Barueri",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "06:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:41",
    "ritmo_real": 0
   },
   {
@@ -530,7 +530,7 @@
    "gm": 1,
    "saida": "08:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:31",
+   "ultima_baixa": "09:51",
    "ritmo_real": 0
   },
   {
@@ -674,9 +674,9 @@
    "op": "Café · Guarulhos",
    "veic": 28,
    "total": 121,
-   "ok": 6,
+   "ok": 8,
    "semapont": 4,
-   "gm": 6
+   "gm": 8
   },
   {
    "op": "Café · Meso Marília",
@@ -690,9 +690,9 @@
    "op": "Café · SJC",
    "veic": 6,
    "total": 35,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4
+   "gm": 5
   },
   {
    "op": "Café · CD Sumaré",
@@ -715,11 +715,11 @@
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 5
+   "n": 4
   },
   {
    "h": "09",
-   "n": 2
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
