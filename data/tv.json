@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-02T18:01:49-03:00",
+ "gerado_em": "2026-10-02T18:31:48-03:00",
  "dia": "2026-10-02",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -20,7 +20,7 @@
    "gm": 15,
    "saida": "10:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "18:01",
+   "ultima_baixa": "18:30",
    "ritmo_real": 32
   },
   {
@@ -690,12 +690,12 @@
    "motorista": "Wellington Costa Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "18:10",
    "ritmo_real": 0
   },
   {
@@ -734,9 +734,9 @@
    "op": "Café · Guarulhos",
    "veic": 28,
    "total": 121,
-   "ok": 51,
+   "ok": 52,
    "semapont": 4,
-   "gm": 51
+   "gm": 52
   },
   {
    "op": "Café · Meso Marília",
@@ -823,7 +823,7 @@
   },
   {
    "h": "18",
-   "n": 3
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
