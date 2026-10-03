@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-03T13:16:41-03:00",
+ "gerado_em": "2026-10-03T14:31:43-03:00",
  "dia": "2026-10-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,12 +75,12 @@
    "motorista": "Alex Junio De oliveira",
    "cidade": "Santo Andre",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "14:05",
    "ritmo_real": 0
   },
   {
@@ -194,9 +194,9 @@
    "op": "Café · Guarulhos",
    "veic": 12,
    "total": 15,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12
+   "gm": 13
   }
  ],
  "greenmile_ok": true,
@@ -212,6 +212,10 @@
   {
    "h": "12",
    "n": 3
+  },
+  {
+   "h": "14",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
