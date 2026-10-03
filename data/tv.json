@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-03T10:31:45-03:00",
+ "gerado_em": "2026-10-03T11:01:44-03:00",
  "dia": "2026-10-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,12 +90,12 @@
    "motorista": "",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:42",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:42",
    "ritmo_real": 0
   },
   {
@@ -125,7 +125,7 @@
    "gm": 1,
    "saida": "07:59",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:59",
+   "ultima_baixa": "10:32",
    "ritmo_real": 0
   },
   {
@@ -170,7 +170,7 @@
    "gm": 1,
    "saida": "07:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:26",
+   "ultima_baixa": "10:41",
    "ritmo_real": 0
   },
   {
@@ -209,24 +209,20 @@
    "op": "Café · Guarulhos",
    "veic": 13,
    "total": 16,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8
+   "gm": 9
   }
  ],
  "greenmile_ok": true,
  "baixas_por_hora": [
-  {
-   "h": "07",
-   "n": 2
-  },
   {
    "h": "09",
    "n": 2
   },
   {
    "h": "10",
-   "n": 4
+   "n": 7
   }
  ],
  "gm_sem_sac": 0
