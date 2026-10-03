@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-03T11:01:44-03:00",
+ "gerado_em": "2026-10-03T11:31:47-03:00",
  "dia": "2026-10-03",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -12,7 +12,7 @@
    "plano": "6103302352",
    "op": "Café · Guarulhos",
    "placa": "SWU0J23",
-   "motorista": "",
+   "motorista": "Gilmario Domingos",
    "cidade": "Guarulhos",
    "total": 3,
    "ok": 0,
@@ -87,7 +87,7 @@
    "plano": "6103301097",
    "op": "Café · Guarulhos",
    "placa": "EMF0232",
-   "motorista": "",
+   "motorista": "Guilherme",
    "cidade": "Sao Paulo",
    "total": 1,
    "ok": 1,
@@ -177,7 +177,7 @@
    "plano": "6103302355",
    "op": "Café · Guarulhos",
    "placa": "PEE0H20",
-   "motorista": "",
+   "motorista": "Gilmario Domingos",
    "cidade": "Sao Paulo",
    "total": 1,
    "ok": 0,
