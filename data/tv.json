@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-05T14:31:44-03:00",
+ "gerado_em": "2026-10-05T14:46:45-03:00",
  "dia": "2026-10-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -240,7 +240,7 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Taboao Da Serra",
    "total": 7,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -600,7 +600,7 @@
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 68,
-   "ok": 16,
+   "ok": 18,
    "semapont": 0,
    "gm": 16
   },
