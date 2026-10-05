@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-05T16:01:41-03:00",
+ "gerado_em": "2026-10-05T16:27:07-03:00",
  "dia": "2026-10-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -210,13 +210,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Agudos",
    "total": 10,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "08:58",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:30",
-   "ritmo_real": 35
+   "ultima_baixa": "15:54",
+   "ritmo_real": 59
   },
   {
    "plano": "6103301948",
@@ -577,9 +577,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 76,
-   "ok": 37,
+   "ok": 38,
    "semapont": 0,
-   "gm": 37
+   "gm": 38
   },
   {
    "op": "Café · Guarulhos",
@@ -638,7 +638,7 @@
   },
   {
    "h": "15",
-   "n": 20
+   "n": 21
   }
  ],
  "gm_sem_sac": 0
