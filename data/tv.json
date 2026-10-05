@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-05T13:31:47-03:00",
+ "gerado_em": "2026-10-05T14:01:45-03:00",
  "dia": "2026-10-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,21 +8,6 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
-  {
-   "plano": "6103300878",
-   "op": "Café · SJC",
-   "placa": "ETU7799",
-   "motorista": "Thiago Pereira Silva",
-   "cidade": "Campos Do Jordao",
-   "total": 26,
-   "ok": 4,
-   "semapont": 0,
-   "gm": 4,
-   "saida": "10:25",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:48",
-   "ritmo_real": 15
-  },
   {
    "plano": "6103298722",
    "op": "Café · Meso Bauru",
@@ -45,13 +30,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Pompeia",
    "total": 21,
-   "ok": 17,
+   "ok": 20,
    "semapont": 0,
-   "gm": 17,
+   "gm": 20,
    "saida": "08:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:57",
-   "ritmo_real": 13
+   "ultima_baixa": "13:59",
+   "ritmo_real": 14
   },
   {
    "plano": "6103298724",
@@ -67,6 +52,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:54",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103300878",
+   "op": "Café · SJC",
+   "placa": "ETU7799",
+   "motorista": "Thiago Pereira Silva",
+   "cidade": "Campos Do Jordao",
+   "total": 20,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "10:25",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:48",
+   "ritmo_real": 15
   },
   {
    "plano": "6103298737",
@@ -90,13 +90,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Ourinhos",
    "total": 18,
-   "ok": 9,
+   "ok": 11,
    "semapont": 0,
-   "gm": 9,
+   "gm": 11,
    "saida": "09:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:24",
-   "ritmo_real": 30
+   "ultima_baixa": "13:33",
+   "ritmo_real": 25
   },
   {
    "plano": "6103298723",
@@ -105,13 +105,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Ibitinga",
    "total": 18,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "08:44",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:43",
-   "ritmo_real": 20
+   "ultima_baixa": "13:38",
+   "ritmo_real": 29
   },
   {
    "plano": "6103303675",
@@ -131,16 +131,16 @@
   {
    "plano": "6103304371",
    "op": "Café · SJC",
-   "placa": "SIP2F31",
-   "motorista": "Sergio Silva De Moraes",
+   "placa": "",
+   "motorista": "",
    "cidade": "Taubate",
    "total": 16,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "08:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:21",
+   "ultima_baixa": "14:00",
    "ritmo_real": 39
   },
   {
@@ -165,13 +165,28 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Sao Jose Dos Campos",
    "total": 14,
-   "ok": 5,
+   "ok": 7,
    "semapont": 0,
-   "gm": 5,
+   "gm": 7,
    "saida": "08:19",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:09",
-   "ritmo_real": 57
+   "ultima_baixa": "12:42",
+   "ritmo_real": 44
+  },
+  {
+   "plano": "6103304373",
+   "op": "Café · SJC",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 12,
+   "ok": 8,
+   "semapont": 0,
+   "gm": 8,
+   "saida": "09:24",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:50",
+   "ritmo_real": 36
   },
   {
    "plano": "6103302081",
@@ -180,28 +195,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 12,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "11:16",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:44",
    "ritmo_real": 0
-  },
-  {
-   "plano": "6103304373",
-   "op": "Café · SJC",
-   "placa": "RUX9H44",
-   "motorista": "Cleberson Roberto Lourenco Gomes",
-   "cidade": "Sao Jose Dos Campos",
-   "total": 12,
-   "ok": 7,
-   "semapont": 0,
-   "gm": 7,
-   "saida": "09:24",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:55",
-   "ritmo_real": 33
   },
   {
    "plano": "6103298726",
@@ -255,13 +255,13 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Pindamonhangaba",
    "total": 7,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "08:56",
    "saida_fonte": "greenmile",
    "ultima_baixa": "12:53",
-   "ritmo_real": 62
+   "ritmo_real": 31
   },
   {
    "plano": "6103300871",
@@ -270,13 +270,28 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Sao Jose Dos Campos",
    "total": 6,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "07:34",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:47",
-   "ritmo_real": 28
+   "ultima_baixa": "13:56",
+   "ritmo_real": 53
+  },
+  {
+   "plano": "6103304544",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Guaratingueta",
+   "total": 6,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103301011",
@@ -420,12 +435,12 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "11:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:50",
    "ritmo_real": 0
   },
   {
@@ -582,35 +597,35 @@
  "pracas": [
   {
    "op": "Café · SJC",
-   "veic": 7,
+   "veic": 8,
    "total": 95,
-   "ok": 33,
+   "ok": 39,
    "semapont": 0,
-   "gm": 33
+   "gm": 39
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 76,
-   "ok": 26,
+   "ok": 27,
    "semapont": 0,
-   "gm": 25
+   "gm": 26
   },
   {
    "op": "Café · Guarulhos",
    "veic": 21,
    "total": 68,
-   "ok": 9,
+   "ok": 13,
    "semapont": 0,
-   "gm": 9
+   "gm": 13
   },
   {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 59,
-   "ok": 40,
+   "ok": 45,
    "semapont": 0,
-   "gm": 40
+   "gm": 45
   },
   {
    "op": "Café · CD Sumaré",
@@ -633,19 +648,23 @@
   },
   {
    "h": "10",
-   "n": 20
-  },
-  {
-   "h": "11",
    "n": 21
   },
   {
+   "h": "11",
+   "n": 20
+  },
+  {
    "h": "12",
-   "n": 24
+   "n": 26
   },
   {
    "h": "13",
-   "n": 4
+   "n": 17
+  },
+  {
+   "h": "14",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
