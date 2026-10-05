@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-05T12:46:41-03:00",
+ "gerado_em": "2026-10-05T13:01:47-03:00",
  "dia": "2026-10-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,12 +30,12 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Pompeia",
    "total": 21,
-   "ok": 15,
+   "ok": 17,
    "semapont": 0,
-   "gm": 15,
+   "gm": 17,
    "saida": "08:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:25",
+   "ultima_baixa": "12:57",
    "ritmo_real": 13
   },
   {
@@ -510,9 +510,9 @@
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 59,
-   "ok": 37,
+   "ok": 39,
    "semapont": 0,
-   "gm": 37
+   "gm": 39
   },
   {
    "op": "Café · SJC",
@@ -551,7 +551,7 @@
   },
   {
    "h": "12",
-   "n": 11
+   "n": 13
   }
  ],
  "gm_sem_sac": 0
