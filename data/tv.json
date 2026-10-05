@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-05T15:31:43-03:00",
+ "gerado_em": "2026-10-05T15:46:41-03:00",
  "dia": "2026-10-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 4,
+   "ok": 9,
    "semapont": 0,
-   "gm": 3,
+   "gm": 9,
    "saida": "08:53",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:54",
-   "ritmo_real": 0
+   "ultima_baixa": "15:30",
+   "ritmo_real": 50
   },
   {
    "plano": "6103300878",
@@ -80,8 +80,8 @@
    "gm": 20,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:39",
-   "ritmo_real": 20
+   "ultima_baixa": "15:03",
+   "ritmo_real": 21
   },
   {
    "plano": "6103303197",
@@ -592,9 +592,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 76,
-   "ok": 32,
+   "ok": 37,
    "semapont": 0,
-   "gm": 31
+   "gm": 37
   },
   {
    "op": "Café · Guarulhos",
@@ -653,7 +653,7 @@
   },
   {
    "h": "15",
-   "n": 7
+   "n": 14
   }
  ],
  "gm_sem_sac": 0
