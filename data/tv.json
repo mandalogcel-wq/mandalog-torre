@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-05T06:01:42-03:00",
+ "gerado_em": "2026-10-05T07:16:42-03:00",
  "dia": "2026-10-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -177,11 +177,11 @@
    "plano": "6103299466",
    "op": "Café · CD Sumaré",
    "placa": "BWQ5135",
-   "motorista": "Carlinhos",
+   "motorista": "Carlinhos Bernardine Silvinski",
    "cidade": "Amparo",
    "total": 2,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -192,7 +192,7 @@
    "plano": "6103302116",
    "op": "Café · CD Sumaré",
    "placa": "FDL6D77",
-   "motorista": "Diones",
+   "motorista": "Diones Soares Galego",
    "cidade": "Braganca Paulista",
    "total": 2,
    "ok": 0,
@@ -369,7 +369,7 @@
    "veic": 3,
    "total": 5,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0
   }
  ],
