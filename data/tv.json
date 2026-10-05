@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-05T08:46:40-03:00",
+ "gerado_em": "2026-10-05T09:01:44-03:00",
  "dia": "2026-10-05",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -88,8 +88,8 @@
    "op": "Café · Meso Marília",
    "placa": "DMQ3G22",
    "motorista": "Luciano Donizeti De Melo",
-   "cidade": "Bernardino De Campos",
-   "total": 14,
+   "cidade": "Ourinhos",
+   "total": 16,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -168,8 +168,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:59",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -198,8 +198,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:49",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -300,12 +300,12 @@
    "motorista": "Guilherme",
    "cidade": "Santo Andre",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "05:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "05:54",
    "ritmo_real": 0
   },
   {
@@ -388,7 +388,7 @@
   {
    "op": "Café · Meso Marília",
    "veic": 3,
-   "total": 55,
+   "total": 57,
    "ok": 0,
    "semapont": 0,
    "gm": 0
@@ -397,9 +397,9 @@
    "op": "Café · Guarulhos",
    "veic": 15,
    "total": 53,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   },
   {
    "op": "Café · Meso Bauru",
@@ -427,6 +427,11 @@
   }
  ],
  "greenmile_ok": true,
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "05",
+   "n": 1
+  }
+ ],
  "gm_sem_sac": 0
 }
