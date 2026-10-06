@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-06T07:31:43-03:00",
+ "gerado_em": "2026-10-06T07:46:46-03:00",
  "dia": "2026-10-06",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,6 +15,21 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Ourinhos",
    "total": 26,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103298732",
+   "op": "Café · Meso Marília",
+   "placa": "MGS5I23",
+   "motorista": "Edwin Felipe De Oliveira Marques",
+   "cidade": "Marilia",
+   "total": 25,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -129,6 +144,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103298735",
+   "op": "Café · Meso Marília",
+   "placa": "EASOE29",
+   "motorista": "Jose Carlos Da Silva 2",
+   "cidade": "Santa Cruz Do Rio Pardo",
+   "total": 8,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103305453",
    "op": "Café · Guarulhos",
    "placa": "DBB3A54",
@@ -150,13 +180,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 7,
-   "ok": 1,
+   "ok": 4,
    "semapont": 0,
-   "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 4,
+   "saida": "07:03",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "07:25",
+   "ritmo_real": 10
   },
   {
    "plano": "6103304544",
@@ -354,6 +384,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103288511",
+   "op": "Café · Meso Marília",
+   "placa": "MGS5I23",
+   "motorista": "Edwin Felipe De Oliveira Marques",
+   "cidade": "Marilia",
+   "total": 2,
+   "ok": 0,
+   "semapont": 2,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103305059",
    "op": "Café · Guarulhos",
    "placa": "SVL4J89",
@@ -521,25 +566,25 @@
  ],
  "pracas": [
   {
+   "op": "Café · Meso Marília",
+   "veic": 6,
+   "total": 83,
+   "ok": 0,
+   "semapont": 2,
+   "gm": 0
+  },
+  {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 70,
-   "ok": 1,
+   "ok": 4,
    "semapont": 0,
-   "gm": 1
+   "gm": 4
   },
   {
    "op": "Café · Guarulhos",
    "veic": 20,
    "total": 62,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0
-  },
-  {
-   "op": "Café · Meso Marília",
-   "veic": 3,
-   "total": 48,
    "ok": 0,
    "semapont": 0,
    "gm": 0
@@ -562,6 +607,11 @@
   }
  ],
  "greenmile_ok": true,
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "07",
+   "n": 3
+  }
+ ],
  "gm_sem_sac": 0
 }
