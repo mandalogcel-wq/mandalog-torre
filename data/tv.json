@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-06T14:46:41-03:00",
+ "gerado_em": "2026-10-06T15:01:46-03:00",
  "dia": "2026-10-06",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Marilia",
    "total": 25,
-   "ok": 18,
+   "ok": 20,
    "semapont": 0,
-   "gm": 18,
+   "gm": 20,
    "saida": "09:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:11",
-   "ritmo_real": 12
+   "ultima_baixa": "14:41",
+   "ritmo_real": 15
   },
   {
    "plano": "6103298729",
@@ -60,13 +60,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 22,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "10:11",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:53",
-   "ritmo_real": 20
+   "ultima_baixa": "14:48",
+   "ritmo_real": 92
   },
   {
    "plano": "6103298725",
@@ -75,13 +75,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Jau",
    "total": 21,
-   "ok": 10,
+   "ok": 13,
    "semapont": 0,
-   "gm": 10,
+   "gm": 13,
    "saida": "08:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:13",
-   "ritmo_real": 18
+   "ultima_baixa": "14:39",
+   "ritmo_real": 15
   },
   {
    "plano": "6103298736",
@@ -165,13 +165,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Bauru",
    "total": 12,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "08:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:19",
-   "ritmo_real": 36
+   "ultima_baixa": "14:36",
+   "ritmo_real": 34
   },
   {
    "plano": "6103298735",
@@ -195,13 +195,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "11:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:29",
-   "ritmo_real": 106
+   "ultima_baixa": "14:53",
+   "ritmo_real": 95
   },
   {
    "plano": "6103298724",
@@ -225,13 +225,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Guaratingueta",
    "total": 6,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "08:13",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:10",
-   "ritmo_real": 39
+   "ultima_baixa": "14:34",
+   "ritmo_real": 50
   },
   {
    "plano": "6103300876",
@@ -255,12 +255,12 @@
    "motorista": "Douglas Rodrigues Cardozo",
    "cidade": "Apiai",
    "total": 5,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 3,
+   "saida": "14:45",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:47",
    "ritmo_real": 0
   },
   {
@@ -659,41 +659,41 @@
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 83,
-   "ok": 23,
+   "ok": 25,
    "semapont": 0,
-   "gm": 23
+   "gm": 25
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 83,
-   "ok": 39,
+   "ok": 44,
    "semapont": 0,
-   "gm": 39
+   "gm": 44
   },
   {
    "op": "Café · Guarulhos",
    "veic": 22,
    "total": 67,
-   "ok": 30,
+   "ok": 31,
    "semapont": 0,
-   "gm": 30
+   "gm": 31
   },
   {
    "op": "Café · Itapeva",
    "veic": 2,
    "total": 35,
-   "ok": 18,
+   "ok": 21,
    "semapont": 0,
-   "gm": 18
+   "gm": 21
   },
   {
    "op": "Café · SJC",
    "veic": 5,
    "total": 29,
-   "ok": 25,
+   "ok": 26,
    "semapont": 0,
-   "gm": 25
+   "gm": 26
   },
   {
    "op": "Café · CD Sumaré",
@@ -736,7 +736,7 @@
   },
   {
    "h": "14",
-   "n": 10
+   "n": 22
   }
  ],
  "gm_sem_sac": 0
