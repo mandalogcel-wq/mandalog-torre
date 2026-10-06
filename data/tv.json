@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-06T16:02:00-03:00",
+ "gerado_em": "2026-10-06T16:16:49-03:00",
  "dia": "2026-10-06",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -552,7 +552,7 @@
    "plano": "6103305091",
    "op": "Café · Guarulhos",
    "placa": "FSC5D26",
-   "motorista": "",
+   "motorista": "Carlos Cesar",
    "cidade": "Sao Paulo",
    "total": 1,
    "ok": 1,
