@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-06T15:01:46-03:00",
+ "gerado_em": "2026-10-06T15:16:41-03:00",
  "dia": "2026-10-06",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -82,21 +82,6 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "14:39",
    "ritmo_real": 15
-  },
-  {
-   "plano": "6103298736",
-   "op": "Café · Meso Marília",
-   "placa": "KOP9F85",
-   "motorista": "Luis Carlos Do Carmo Matos",
-   "cidade": "Tupa",
-   "total": 20,
-   "ok": 3,
-   "semapont": 0,
-   "gm": 3,
-   "saida": "12:07",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:08",
-   "ritmo_real": 0
   },
   {
    "plano": "6103298728",
@@ -656,14 +641,6 @@
  ],
  "pracas": [
   {
-   "op": "Café · Meso Marília",
-   "veic": 6,
-   "total": 83,
-   "ok": 25,
-   "semapont": 0,
-   "gm": 25
-  },
-  {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 83,
@@ -678,6 +655,14 @@
    "ok": 31,
    "semapont": 0,
    "gm": 31
+  },
+  {
+   "op": "Café · Meso Marília",
+   "veic": 5,
+   "total": 63,
+   "ok": 22,
+   "semapont": 0,
+   "gm": 22
   },
   {
    "op": "Café · Itapeva",
@@ -728,7 +713,7 @@
   },
   {
    "h": "12",
-   "n": 24
+   "n": 21
   },
   {
    "h": "13",
