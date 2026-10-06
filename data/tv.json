@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-06T15:46:40-03:00",
+ "gerado_em": "2026-10-06T16:02:00-03:00",
  "dia": "2026-10-06",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Marilia",
    "total": 25,
-   "ok": 20,
+   "ok": 23,
    "semapont": 0,
-   "gm": 20,
+   "gm": 23,
    "saida": "09:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:41",
-   "ritmo_real": 15
+   "ultima_baixa": "15:41",
+   "ritmo_real": 16
   },
   {
    "plano": "6103298729",
@@ -75,12 +75,12 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Jau",
    "total": 21,
-   "ok": 14,
+   "ok": 16,
    "semapont": 0,
-   "gm": 14,
+   "gm": 16,
    "saida": "08:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:17",
+   "ultima_baixa": "15:53",
    "ritmo_real": 17
   },
   {
@@ -90,13 +90,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Cerqueira Cesar",
    "total": 16,
-   "ok": 7,
+   "ok": 10,
    "semapont": 0,
-   "gm": 7,
+   "gm": 10,
    "saida": "08:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:08",
-   "ritmo_real": 46
+   "ultima_baixa": "15:49",
+   "ritmo_real": 49
   },
   {
    "plano": "6103302079",
@@ -165,13 +165,13 @@
    "motorista": "Jose Carlos Da Silva 2",
    "cidade": "Santa Cruz Do Rio Pardo",
    "total": 8,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
+   "gm": 4,
    "saida": "12:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ultima_baixa": "15:42",
+   "ritmo_real": 59
   },
   {
    "plano": "6103302081",
@@ -210,13 +210,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Guaratingueta",
    "total": 6,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "08:13",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:34",
-   "ritmo_real": 50
+   "ultima_baixa": "15:36",
+   "ritmo_real": 52
   },
   {
    "plano": "6103300876",
@@ -240,13 +240,13 @@
    "motorista": "Douglas Rodrigues Cardozo",
    "cidade": "Apiai",
    "total": 5,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "14:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:47",
-   "ritmo_real": 0
+   "ultima_baixa": "16:00",
+   "ritmo_real": 25
   },
   {
    "plano": "6103301005",
@@ -330,7 +330,7 @@
    "motorista": "Gilmario Domingos",
    "cidade": "Ferraz De Vasconcelos",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -410,7 +410,7 @@
    "gm": 2,
    "saida": "15:15",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:15",
+   "ultima_baixa": "15:32",
    "ritmo_real": 0
   },
   {
@@ -510,7 +510,7 @@
    "motorista": "Alex Junior Brunelo",
    "cidade": "Sao Bernardo Do Campo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -645,12 +645,12 @@
    "motorista": "Gilmario Domingos",
    "cidade": "Ferraz De Vasconcelos",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "12:22",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:22",
    "ritmo_real": 0
   }
  ],
@@ -659,15 +659,15 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 83,
-   "ok": 46,
+   "ok": 51,
    "semapont": 0,
-   "gm": 46
+   "gm": 51
   },
   {
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 69,
-   "ok": 34,
+   "ok": 39,
    "semapont": 0,
    "gm": 34
   },
@@ -675,25 +675,25 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 63,
-   "ok": 22,
+   "ok": 29,
    "semapont": 0,
-   "gm": 22
+   "gm": 29
   },
   {
    "op": "Café · Itapeva",
    "veic": 2,
    "total": 35,
-   "ok": 21,
+   "ok": 22,
    "semapont": 0,
-   "gm": 21
+   "gm": 22
   },
   {
    "op": "Café · SJC",
    "veic": 5,
    "total": 29,
-   "ok": 26,
+   "ok": 27,
    "semapont": 0,
-   "gm": 26
+   "gm": 27
   },
   {
    "op": "Café · CD Sumaré",
@@ -728,7 +728,7 @@
   },
   {
    "h": "12",
-   "n": 21
+   "n": 24
   },
   {
    "h": "13",
@@ -740,7 +740,11 @@
   },
   {
    "h": "15",
-   "n": 5
+   "n": 16
+  },
+  {
+   "h": "16",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
