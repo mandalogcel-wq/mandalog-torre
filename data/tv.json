@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T06:31:42-03:00",
+ "gerado_em": "2026-10-07T06:46:46-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,9 +45,9 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Tupa",
    "total": 20,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -75,12 +75,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Piraju",
    "total": 17,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "06:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "06:30",
    "ritmo_real": 0
   },
   {
@@ -106,7 +106,7 @@
    "cidade": "Botucatu",
    "total": 8,
    "ok": 0,
-   "semapont": 8,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -159,25 +159,10 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103301474",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Sao Paulo",
-   "total": 4,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103301477",
    "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
+   "placa": "ETO2A93",
+   "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Sao Paulo",
    "total": 4,
    "ok": 0,
@@ -189,27 +174,12 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103300993",
+   "plano": "6103301474",
    "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "Marcos Antonio Da Silva",
-   "cidade": "Mogi Das Cruzes",
-   "total": 3,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103301478",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Mogi Das Cruzes",
-   "total": 3,
+   "placa": "SWU0J23",
+   "motorista": "Gilmario Domingos",
+   "cidade": "Sao Paulo",
+   "total": 4,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -224,6 +194,36 @@
    "placa": "AMS9753",
    "motorista": "Orlando Vieira",
    "cidade": "Sao Paulo",
+   "total": 3,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103301478",
+   "op": "Café · Guarulhos",
+   "placa": "FSC5D26",
+   "motorista": "Carlos Cesar Cardoso De Lima Junior",
+   "cidade": "Mogi Das Cruzes",
+   "total": 3,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103300993",
+   "op": "Café · Guarulhos",
+   "placa": "SSX7A52",
+   "motorista": "Marcos Antonio Da Silva",
+   "cidade": "Mogi Das Cruzes",
    "total": 3,
    "ok": 0,
    "semapont": 0,
@@ -249,21 +249,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103306350",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Sao Paulo",
-   "total": 2,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103306354",
    "op": "Café · Guarulhos",
    "placa": "",
@@ -284,6 +269,21 @@
    "placa": "",
    "motorista": "",
    "cidade": "Sao Vicente",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103306350",
+   "op": "Café · Guarulhos",
+   "placa": "BZC2490",
+   "motorista": "Gilberto Jose De Lima",
+   "cidade": "Sao Paulo",
    "total": 2,
    "ok": 0,
    "semapont": 0,
@@ -329,21 +329,6 @@
    "placa": "",
    "motorista": "",
    "cidade": "Guarulhos",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103304897",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Mogi Das Cruzes",
    "total": 1,
    "ok": 0,
    "semapont": 0,
@@ -435,9 +420,9 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Taguai",
    "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -472,6 +457,21 @@
    "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103304897",
+   "op": "Café · Guarulhos",
+   "placa": "SSX7A52",
+   "motorista": "Marcos Antonio Da Silva",
+   "cidade": "Mogi Das Cruzes",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   }
  ],
  "pracas": [
@@ -479,9 +479,9 @@
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 66,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0
+   "ok": 6,
+   "semapont": 0,
+   "gm": 6
   },
   {
    "op": "Café · Guarulhos",
@@ -504,7 +504,7 @@
    "veic": 2,
    "total": 26,
    "ok": 0,
-   "semapont": 8,
+   "semapont": 0,
    "gm": 0
   },
   {
@@ -517,6 +517,11 @@
   }
  ],
  "greenmile_ok": true,
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "06",
+   "n": 2
+  }
+ ],
  "gm_sem_sac": 0
 }
