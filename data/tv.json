@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T09:01:42-03:00",
+ "gerado_em": "2026-10-07T09:16:41-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,12 +45,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Ourinhos",
    "total": 26,
-   "ok": 0,
+   "ok": 5,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 5,
+   "saida": "08:49",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:50",
    "ritmo_real": 0
   },
   {
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 2,
+   "ok": 6,
    "semapont": 0,
-   "gm": 2,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 6,
+   "saida": "08:33",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:49",
+   "ritmo_real": 5
   },
   {
    "plano": "6103298736",
@@ -607,9 +607,9 @@
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 70,
-   "ok": 6,
+   "ok": 11,
    "semapont": 0,
-   "gm": 6
+   "gm": 11
   },
   {
    "op": "Café · Guarulhos",
@@ -623,9 +623,9 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 50,
-   "ok": 4,
+   "ok": 8,
    "semapont": 0,
-   "gm": 4
+   "gm": 8
   },
   {
    "op": "Café · CD Sumaré",
@@ -652,7 +652,7 @@
   },
   {
    "h": "08",
-   "n": 7
+   "n": 16
   }
  ],
  "gm_sem_sac": 0
