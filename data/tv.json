@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T17:16:48-03:00",
+ "gerado_em": "2026-10-07T17:31:45-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Ourinhos",
    "total": 26,
-   "ok": 25,
+   "ok": 0,
    "semapont": 0,
-   "gm": 25,
-   "saida": "08:49",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "14:44",
-   "ritmo_real": 15
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103298734",
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 21,
+   "ok": 0,
    "semapont": 0,
-   "gm": 21,
-   "saida": "08:33",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:40",
-   "ritmo_real": 27
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103298736",
@@ -75,13 +75,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Tupa",
    "total": 20,
-   "ok": 18,
+   "ok": 0,
    "semapont": 0,
-   "gm": 18,
-   "saida": "07:33",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01",
-   "ritmo_real": 23
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103303198",
@@ -90,13 +90,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Garca",
    "total": 18,
-   "ok": 4,
+   "ok": 0,
    "semapont": 0,
-   "gm": 4,
-   "saida": "08:29",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:57",
-   "ritmo_real": 89
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103298735",
@@ -105,13 +105,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Piraju",
    "total": 17,
-   "ok": 11,
+   "ok": 0,
    "semapont": 0,
-   "gm": 11,
-   "saida": "06:00",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "15:44",
-   "ritmo_real": 55
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103303675",
@@ -165,13 +165,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 8,
-   "ok": 8,
+   "ok": 0,
    "semapont": 0,
-   "gm": 8,
-   "saida": "09:26",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "11:33",
-   "ritmo_real": 18
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103306325",
@@ -198,8 +198,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "09:05",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -210,12 +210,12 @@
    "motorista": "Dione Marcos Mareth",
    "cidade": "Limeira",
    "total": 7,
-   "ok": 7,
+   "ok": 0,
    "semapont": 0,
-   "gm": 7,
-   "saida": "07:26",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "11:37",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -230,8 +230,8 @@
    "gm": 4,
    "saida": "08:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:47",
-   "ritmo_real": 14
+   "ultima_baixa": "17:08",
+   "ritmo_real": 101
   },
   {
    "plano": "6103301474",
@@ -303,8 +303,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "09:04",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -332,10 +332,10 @@
    "total": 2,
    "ok": 2,
    "semapont": 0,
-   "gm": 2,
-   "saida": "12:02",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:19",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -347,10 +347,10 @@
    "total": 2,
    "ok": 2,
    "semapont": 0,
-   "gm": 2,
-   "saida": "12:27",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:27",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -393,8 +393,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "15:36",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -420,7 +420,7 @@
    "motorista": "Fernando Luiz Leite De Moura",
    "cidade": "Sao Bernardo Do Campo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -497,10 +497,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 1,
-   "saida": "12:25",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "12:25",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -557,7 +557,7 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 1,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -587,10 +587,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 1,
-   "saida": "08:08",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "10:39",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -637,15 +637,15 @@
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 70,
-   "ok": 60,
+   "ok": 6,
    "semapont": 0,
-   "gm": 59
+   "gm": 0
   },
   {
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 59,
-   "ok": 41,
+   "ok": 43,
    "semapont": 0,
    "gm": 41
   },
@@ -653,17 +653,17 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 52,
-   "ok": 35,
+   "ok": 2,
    "semapont": 0,
-   "gm": 35
+   "gm": 0
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 3,
    "total": 17,
-   "ok": 7,
+   "ok": 0,
    "semapont": 0,
-   "gm": 7
+   "gm": 0
   },
   {
    "op": "Café · SJC",
@@ -677,44 +677,44 @@
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
-   "h": "06",
-   "n": 2
-  },
-  {
    "h": "08",
-   "n": 16
+   "n": 5
   },
   {
    "h": "09",
-   "n": 22
+   "n": 14
   },
   {
    "h": "10",
-   "n": 26
+   "n": 13
   },
   {
    "h": "11",
-   "n": 38
+   "n": 13
   },
   {
    "h": "12",
-   "n": 31
+   "n": 11
   },
   {
    "h": "13",
-   "n": 4
+   "n": 1
   },
   {
    "h": "14",
-   "n": 11
+   "n": 3
   },
   {
    "h": "15",
-   "n": 19
+   "n": 17
   },
   {
    "h": "16",
-   "n": 11
+   "n": 6
+  },
+  {
+   "h": "17",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
