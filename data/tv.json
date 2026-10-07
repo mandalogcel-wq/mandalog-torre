@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T15:16:44-03:00",
+ "gerado_em": "2026-10-07T15:32:03-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -122,10 +122,10 @@
    "total": 17,
    "ok": 9,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 9,
+   "saida": "15:22",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:25",
    "ritmo_real": 0
   },
   {
@@ -270,13 +270,13 @@
    "motorista": "Carlos Cesar Cardoso De Lima Junior",
    "cidade": "Mogi Das Cruzes",
    "total": 3,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "09:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:35",
-   "ritmo_real": 0
+   "ultima_baixa": "15:09",
+   "ritmo_real": 107
   },
   {
    "plano": "6103300993",
@@ -405,12 +405,12 @@
    "motorista": "Miquéias Da Silva Santos Nery",
    "cidade": "Caraguatatuba",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "11:11",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:14",
    "ritmo_real": 0
   },
   {
@@ -645,9 +645,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 59,
-   "ok": 31,
+   "ok": 34,
    "semapont": 0,
-   "gm": 22
+   "gm": 34
   },
   {
    "op": "Café · Meso Bauru",
@@ -707,6 +707,10 @@
   {
    "h": "14",
    "n": 11
+  },
+  {
+   "h": "15",
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
