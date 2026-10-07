@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T16:31:44-03:00",
+ "gerado_em": "2026-10-07T16:46:40-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,12 +60,12 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 18,
+   "ok": 20,
    "semapont": 0,
-   "gm": 18,
+   "gm": 20,
    "saida": "08:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:39",
+   "ultima_baixa": "16:29",
    "ritmo_real": 28
   },
   {
@@ -75,13 +75,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Tupa",
    "total": 20,
-   "ok": 16,
+   "ok": 18,
    "semapont": 0,
-   "gm": 16,
+   "gm": 18,
    "saida": "07:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:41",
-   "ritmo_real": 21
+   "ultima_baixa": "16:01",
+   "ritmo_real": 23
   },
   {
    "plano": "6103303198",
@@ -510,12 +510,12 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Guaratingueta",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:54",
    "ritmo_real": 0
   },
   {
@@ -615,9 +615,9 @@
    "motorista": "Marcos Antonio Da Silva",
    "cidade": "Mogi Das Cruzes",
    "total": 1,
-   "ok": 1,
+   "ok": 0,
    "semapont": 0,
-   "gm": 1,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -637,9 +637,9 @@
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 70,
-   "ok": 58,
+   "ok": 60,
    "semapont": 0,
-   "gm": 57
+   "gm": 59
   },
   {
    "op": "Café · Guarulhos",
@@ -653,9 +653,9 @@
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 52,
-   "ok": 32,
+   "ok": 34,
    "semapont": 0,
-   "gm": 32
+   "gm": 34
   },
   {
    "op": "Café · CD Sumaré",
@@ -686,7 +686,7 @@
   },
   {
    "h": "09",
-   "n": 22
+   "n": 23
   },
   {
    "h": "10",
@@ -714,7 +714,7 @@
   },
   {
    "h": "16",
-   "n": 4
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
