@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T08:01:44-03:00",
+ "gerado_em": "2026-10-07T08:16:43-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,9 +45,9 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -63,8 +63,8 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "07:33",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -286,7 +286,7 @@
    "cidade": "Ourinhos",
    "total": 2,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -570,9 +570,9 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 50,
-   "ok": 0,
-   "semapont": 2,
-   "gm": 0
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2
   },
   {
    "op": "Café · Itapeva",
