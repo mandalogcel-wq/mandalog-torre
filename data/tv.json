@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T18:46:40-03:00",
+ "gerado_em": "2026-10-07T19:16:42-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -105,7 +105,7 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Piraju",
    "total": 17,
-   "ok": 12,
+   "ok": 14,
    "semapont": 0,
    "gm": 12,
    "saida": "06:00",
@@ -637,7 +637,7 @@
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 70,
-   "ok": 63,
+   "ok": 65,
    "semapont": 0,
    "gm": 62
   },
