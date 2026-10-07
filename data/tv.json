@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T19:16:42-03:00",
+ "gerado_em": "2026-10-07T19:31:49-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -62,7 +62,7 @@
    "total": 22,
    "ok": 22,
    "semapont": 0,
-   "gm": 21,
+   "gm": 22,
    "saida": "08:33",
    "saida_fonte": "greenmile",
    "ultima_baixa": "16:40",
@@ -107,7 +107,7 @@
    "total": 17,
    "ok": 14,
    "semapont": 0,
-   "gm": 12,
+   "gm": 14,
    "saida": "06:00",
    "saida_fonte": "greenmile",
    "ultima_baixa": "17:19",
@@ -393,8 +393,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "15:36",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -602,10 +602,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "19:10",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "19:10",
    "ritmo_real": 0
   },
   {
@@ -639,7 +639,7 @@
    "total": 70,
    "ok": 65,
    "semapont": 0,
-   "gm": 62
+   "gm": 65
   },
   {
    "op": "Café · Guarulhos",
@@ -655,7 +655,7 @@
    "total": 52,
    "ok": 36,
    "semapont": 0,
-   "gm": 35
+   "gm": 36
   },
   {
    "op": "Café · CD Sumaré",
@@ -719,6 +719,10 @@
   {
    "h": "17",
    "n": 11
+  },
+  {
+   "h": "19",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
