@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T06:01:40-03:00",
+ "gerado_em": "2026-10-07T06:16:51-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,9 +45,9 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Tupa",
    "total": 20,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -75,12 +75,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Piraju",
    "total": 17,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "06:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "06:30",
    "ritmo_real": 0
   },
   {
@@ -99,21 +99,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103306325",
-   "op": "Café · Guarulhos",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Sao Paulo",
-   "total": 8,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103298729",
    "op": "Café · Meso Bauru",
    "placa": "AUR5G40",
@@ -121,10 +106,25 @@
    "cidade": "Botucatu",
    "total": 8,
    "ok": 0,
-   "semapont": 8,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103306325",
+   "op": "Café · Guarulhos",
+   "placa": "ORF6F39",
+   "motorista": "Ronualdo Dos Reis Carvalho",
+   "cidade": "Sao Paulo",
+   "total": 8,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -435,9 +435,9 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Taguai",
    "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -479,9 +479,9 @@
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 66,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0
+   "ok": 6,
+   "semapont": 0,
+   "gm": 6
   },
   {
    "op": "Café · Guarulhos",
@@ -504,7 +504,7 @@
    "veic": 2,
    "total": 26,
    "ok": 0,
-   "semapont": 8,
+   "semapont": 0,
    "gm": 0
   },
   {
@@ -517,6 +517,11 @@
   }
  ],
  "greenmile_ok": true,
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "06",
+   "n": 2
+  }
+ ],
  "gm_sem_sac": 0
 }
