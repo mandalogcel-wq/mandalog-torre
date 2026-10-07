@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T13:16:53-03:00",
+ "gerado_em": "2026-10-07T13:46:45-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -255,7 +255,7 @@
    "motorista": "Orlando Vieira",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
    "gm": 2,
    "saida": "08:00",
@@ -630,7 +630,7 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 59,
-   "ok": 27,
+   "ok": 28,
    "semapont": 0,
    "gm": 21
   },
