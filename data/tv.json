@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T12:46:54-03:00",
+ "gerado_em": "2026-10-07T13:01:48-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 13,
+   "ok": 16,
    "semapont": 0,
-   "gm": 13,
+   "gm": 16,
    "saida": "08:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:11",
-   "ritmo_real": 22
+   "ultima_baixa": "13:01",
+   "ritmo_real": 21
   },
   {
    "plano": "6103298736",
@@ -90,13 +90,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Garca",
    "total": 18,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "08:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:30",
-   "ritmo_real": 0
+   "ultima_baixa": "12:57",
+   "ritmo_real": 89
   },
   {
    "plano": "6103298735",
@@ -112,6 +112,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:27",
    "ritmo_real": 37
+  },
+  {
+   "plano": "6103303675",
+   "op": "Café · Guarulhos",
+   "placa": "RNS4A88",
+   "motorista": "Gabriel Azevedo Medeiros",
+   "cidade": "Sao Paulo",
+   "total": 17,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103307801",
@@ -240,13 +255,13 @@
    "motorista": "Orlando Vieira",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "08:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:24",
-   "ritmo_real": 0
+   "ultima_baixa": "12:37",
+   "ritmo_real": 133
   },
   {
    "plano": "6103301478",
@@ -410,7 +425,7 @@
    "gm": 1,
    "saida": "08:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:08",
+   "ultima_baixa": "12:36",
    "ritmo_real": 0
   },
   {
@@ -515,7 +530,7 @@
    "gm": 1,
    "saida": "06:37",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "06:37",
+   "ultima_baixa": "12:49",
    "ritmo_real": 0
   },
   {
@@ -612,20 +627,20 @@
    "gm": 47
   },
   {
+   "op": "Café · Guarulhos",
+   "veic": 19,
+   "total": 59,
+   "ok": 23,
+   "semapont": 0,
+   "gm": 21
+  },
+  {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 50,
-   "ok": 25,
+   "ok": 30,
    "semapont": 0,
-   "gm": 25
-  },
-  {
-   "op": "Café · Guarulhos",
-   "veic": 18,
-   "total": 42,
-   "ok": 20,
-   "semapont": 0,
-   "gm": 20
+   "gm": 30
   },
   {
    "op": "Café · CD Sumaré",
@@ -648,11 +663,11 @@
  "baixas_por_hora": [
   {
    "h": "06",
-   "n": 3
+   "n": 2
   },
   {
    "h": "08",
-   "n": 17
+   "n": 16
   },
   {
    "h": "09",
@@ -668,7 +683,11 @@
   },
   {
    "h": "12",
-   "n": 22
+   "n": 29
+  },
+  {
+   "h": "13",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
