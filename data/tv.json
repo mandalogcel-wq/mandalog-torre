@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T20:31:43-03:00",
+ "gerado_em": "2026-10-07T20:46:45-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -17,11 +17,11 @@
    "total": 39,
    "ok": 5,
    "semapont": 0,
-   "gm": 4,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 5,
+   "saida": "14:15",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:49",
+   "ritmo_real": 18
   },
   {
    "plano": "6103300906",
@@ -31,12 +31,12 @@
    "cidade": "Itarare",
    "total": 28,
    "ok": 18,
-   "semapont": 10,
+   "semapont": 0,
    "gm": 18,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida": "08:02",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:46",
+   "ritmo_real": 17
   },
   {
    "plano": "6103298730",
@@ -122,11 +122,11 @@
    "total": 17,
    "ok": 13,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 13,
+   "saida": "15:22",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:07",
+   "ritmo_real": 4
   },
   {
    "plano": "6103307801",
@@ -138,10 +138,10 @@
    "ok": 10,
    "semapont": 0,
    "gm": 10,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida": "08:06",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:16",
+   "ritmo_real": 20
   },
   {
    "plano": "6103300907",
@@ -153,10 +153,10 @@
    "ok": 11,
    "semapont": 0,
    "gm": 11,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida": "08:55",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:17",
+   "ritmo_real": 32
   },
   {
    "plano": "6103298729",
@@ -182,11 +182,11 @@
    "total": 8,
    "ok": 8,
    "semapont": 0,
-   "gm": 0,
+   "gm": 8,
    "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:23",
+   "ritmo_real": 38
   },
   {
    "plano": "6103299326",
@@ -225,13 +225,13 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Sao Paulo",
    "total": 4,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 4,
+   "saida": "08:28",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:08",
+   "ritmo_real": 101
   },
   {
    "plano": "6103301474",
@@ -257,11 +257,11 @@
    "total": 3,
    "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:38",
+   "ritmo_real": 97
   },
   {
    "plano": "6103301478",
@@ -273,10 +273,10 @@
    "ok": 3,
    "semapont": 0,
    "gm": 3,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida": "09:27",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:09",
+   "ritmo_real": 107
   },
   {
    "plano": "6103300993",
@@ -285,12 +285,12 @@
    "motorista": "Marcos Antonio Da Silva",
    "cidade": "Mogi Das Cruzes",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 3,
+   "saida": "08:27",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:46",
    "ritmo_real": 0
   },
   {
@@ -362,10 +362,10 @@
    "total": 2,
    "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "07:48",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:06",
    "ritmo_real": 0
   },
   {
@@ -378,8 +378,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:22",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -407,10 +407,10 @@
    "total": 2,
    "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "11:11",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:14",
    "ritmo_real": 0
   },
   {
@@ -435,12 +435,12 @@
    "motorista": "",
    "cidade": "Guarulhos",
    "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "08:08",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:36",
    "ritmo_real": 0
   },
   {
@@ -452,10 +452,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "11:25",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:20",
    "ritmo_real": 0
   },
   {
@@ -468,9 +468,9 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "09:17",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:52",
    "ritmo_real": 0
   },
   {
@@ -513,9 +513,9 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "09:54",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:32",
    "ritmo_real": 0
   },
   {
@@ -542,10 +542,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "06:37",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:49",
    "ritmo_real": 0
   },
   {
@@ -572,10 +572,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "08:25",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:43",
    "ritmo_real": 0
   },
   {
@@ -630,8 +630,8 @@
    "veic": 3,
    "total": 78,
    "ok": 34,
-   "semapont": 10,
-   "gm": 33
+   "semapont": 0,
+   "gm": 34
   },
   {
    "op": "Café · Meso Marília",
@@ -645,9 +645,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 59,
-   "ok": 40,
-   "semapont": 1,
-   "gm": 7
+   "ok": 46,
+   "semapont": 0,
+   "gm": 44
   },
   {
    "op": "Café · Meso Bauru",
@@ -682,43 +682,43 @@
   },
   {
    "h": "08",
-   "n": 11
+   "n": 16
   },
   {
    "h": "09",
-   "n": 8
+   "n": 22
   },
   {
    "h": "10",
-   "n": 13
+   "n": 26
   },
   {
    "h": "11",
-   "n": 25
+   "n": 38
   },
   {
    "h": "12",
-   "n": 18
+   "n": 29
   },
   {
    "h": "13",
-   "n": 3
+   "n": 4
   },
   {
    "h": "14",
-   "n": 8
+   "n": 11
   },
   {
    "h": "15",
-   "n": 2
+   "n": 19
   },
   {
    "h": "16",
-   "n": 5
+   "n": 11
   },
   {
    "h": "17",
-   "n": 6
+   "n": 11
   },
   {
    "h": "19",
