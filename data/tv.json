@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-07T14:02:04-03:00",
+ "gerado_em": "2026-10-07T14:31:42-03:00",
  "dia": "2026-10-07",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -18,8 +18,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "14:15",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -150,13 +150,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Itaoca",
    "total": 11,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "08:55",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:08",
-   "ritmo_real": 15
+   "ultima_baixa": "14:17",
+   "ritmo_real": 32
   },
   {
    "plano": "6103298729",
@@ -614,9 +614,9 @@
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 78,
-   "ok": 26,
+   "ok": 27,
    "semapont": 0,
-   "gm": 26
+   "gm": 27
   },
   {
    "op": "Café · Meso Marília",
@@ -688,6 +688,10 @@
   {
    "h": "13",
    "n": 4
+  },
+  {
+   "h": "14",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
