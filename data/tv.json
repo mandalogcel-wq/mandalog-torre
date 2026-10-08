@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-08T15:01:46-03:00",
+ "gerado_em": "2026-10-08T15:16:47-03:00",
  "dia": "2026-10-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,12 +60,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "10:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:24",
+   "ultima_baixa": "14:49",
    "ritmo_real": 20
   },
   {
@@ -90,13 +90,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Assis",
    "total": 15,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "12:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:49",
-   "ritmo_real": 18
+   "ultima_baixa": "14:33",
+   "ritmo_real": 21
   },
   {
    "plano": "6103303198",
@@ -105,12 +105,12 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Garca",
    "total": 14,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "14:33",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:33",
    "ritmo_real": 0
   },
   {
@@ -120,13 +120,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Santa Maria Da Serra",
    "total": 13,
-   "ok": 9,
+   "ok": 12,
    "semapont": 0,
-   "gm": 9,
+   "gm": 12,
    "saida": "11:56",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:15",
-   "ritmo_real": 2
+   "ultima_baixa": "14:56",
+   "ritmo_real": 16
   },
   {
    "plano": "6103308483",
@@ -667,9 +667,9 @@
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 57,
-   "ok": 24,
+   "ok": 30,
    "semapont": 0,
-   "gm": 24
+   "gm": 30
   },
   {
    "op": "Café · SJC",
@@ -691,9 +691,9 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 26,
-   "ok": 15,
+   "ok": 16,
    "semapont": 0,
-   "gm": 14
+   "gm": 15
   },
   {
    "op": "Café · CD Sumaré",
@@ -736,7 +736,7 @@
   },
   {
    "h": "14",
-   "n": 11
+   "n": 18
   }
  ],
  "gm_sem_sac": 0
