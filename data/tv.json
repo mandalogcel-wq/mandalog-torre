@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-08T10:01:48-03:00",
+ "gerado_em": "2026-10-08T10:16:53-03:00",
  "dia": "2026-10-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -22,6 +22,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "09:27",
    "ritmo_real": 18
+  },
+  {
+   "plano": "6103308883",
+   "op": "Café · SJC",
+   "placa": "QPF5G34",
+   "motorista": "Mario Donizeti De Giovanni",
+   "cidade": "Taubate",
+   "total": 27,
+   "ok": 0,
+   "semapont": 27,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103307698",
@@ -172,6 +187,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "09:00",
    "ritmo_real": 38
+  },
+  {
+   "plano": "6103308888",
+   "op": "Café · SJC",
+   "placa": "RUE0H58",
+   "motorista": "Roberto Henrique Costa",
+   "cidade": "Lagoinha",
+   "total": 5,
+   "ok": 0,
+   "semapont": 5,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103300996",
@@ -634,6 +664,14 @@
    "gm": 6
   },
   {
+   "op": "Café · SJC",
+   "veic": 4,
+   "total": 55,
+   "ok": 4,
+   "semapont": 32,
+   "gm": 4
+  },
+  {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 46,
@@ -656,14 +694,6 @@
    "ok": 6,
    "semapont": 0,
    "gm": 6
-  },
-  {
-   "op": "Café · SJC",
-   "veic": 2,
-   "total": 23,
-   "ok": 4,
-   "semapont": 0,
-   "gm": 4
   },
   {
    "op": "Café · CD Sumaré",
