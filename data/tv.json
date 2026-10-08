@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-08T16:01:43-03:00",
+ "gerado_em": "2026-10-08T16:16:47-03:00",
  "dia": "2026-10-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,13 +90,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Assis",
    "total": 15,
-   "ok": 9,
+   "ok": 11,
    "semapont": 0,
-   "gm": 9,
+   "gm": 11,
    "saida": "12:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:23",
-   "ritmo_real": 25
+   "ultima_baixa": "15:56",
+   "ritmo_real": 23
   },
   {
    "plano": "6103303198",
@@ -706,9 +706,9 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 26,
-   "ok": 17,
+   "ok": 19,
    "semapont": 0,
-   "gm": 16
+   "gm": 18
   },
   {
    "op": "Café · CD Sumaré",
@@ -755,7 +755,7 @@
   },
   {
    "h": "15",
-   "n": 11
+   "n": 13
   }
  ],
  "gm_sem_sac": 0
