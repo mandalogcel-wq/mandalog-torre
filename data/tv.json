@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-08T13:31:49-03:00",
+ "gerado_em": "2026-10-08T14:01:45-03:00",
  "dia": "2026-10-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itapeva",
    "total": 34,
-   "ok": 12,
+   "ok": 15,
    "semapont": 0,
-   "gm": 12,
+   "gm": 15,
    "saida": "07:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:09",
-   "ritmo_real": 30
+   "ultima_baixa": "13:44",
+   "ritmo_real": 26
   },
   {
    "plano": "6103308883",
@@ -30,13 +30,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Taubate",
    "total": 27,
-   "ok": 11,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11,
+   "gm": 13,
    "saida": "10:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:26",
-   "ritmo_real": 18
+   "ultima_baixa": "13:49",
+   "ritmo_real": 17
   },
   {
    "plano": "6103307698",
@@ -45,13 +45,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Aparecida",
    "total": 19,
-   "ok": 10,
+   "ok": 18,
    "semapont": 0,
-   "gm": 10,
+   "gm": 18,
    "saida": "09:09",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:22",
-   "ritmo_real": 19
+   "ultima_baixa": "13:23",
+   "ritmo_real": 14
   },
   {
    "plano": "6103303192",
@@ -60,12 +60,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "10:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:27",
+   "ultima_baixa": "13:49",
    "ritmo_real": 20
   },
   {
@@ -90,13 +90,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Assis",
    "total": 15,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "12:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:29",
-   "ritmo_real": 17
+   "ultima_baixa": "13:49",
+   "ritmo_real": 18
   },
   {
    "plano": "6103303198",
@@ -204,21 +204,6 @@
    "ritmo_real": 38
   },
   {
-   "plano": "6103308888",
-   "op": "Café · SJC",
-   "placa": "RUE0H58",
-   "motorista": "Roberto Henrique Costa",
-   "cidade": "Lagoinha",
-   "total": 5,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103300996",
    "op": "Café · Guarulhos",
    "placa": "",
@@ -247,6 +232,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "10:56",
    "ritmo_real": 61
+  },
+  {
+   "plano": "6103308888",
+   "op": "Café · SJC",
+   "placa": "RUE0H58",
+   "motorista": "Roberto Henrique Costa",
+   "cidade": "Lagoinha",
+   "total": 4,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103301474",
@@ -389,6 +389,21 @@
    "placa": "SVL4J89",
    "motorista": "Wellington Costa Dos Santos",
    "cidade": "Osasco",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103288030",
+   "op": "Café · Guarulhos",
+   "placa": "SWU0J23",
+   "motorista": "Gilmario Domingos",
+   "cidade": "Mogi Das Cruzes",
    "total": 2,
    "ok": 0,
    "semapont": 0,
@@ -642,8 +657,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 24,
-   "total": 76,
+   "veic": 25,
+   "total": 78,
    "ok": 23,
    "semapont": 0,
    "gm": 23
@@ -652,33 +667,33 @@
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 57,
-   "ok": 21,
+   "ok": 22,
    "semapont": 0,
-   "gm": 21
+   "gm": 22
   },
   {
    "op": "Café · SJC",
    "veic": 4,
-   "total": 55,
-   "ok": 25,
+   "total": 54,
+   "ok": 35,
    "semapont": 0,
-   "gm": 25
+   "gm": 35
   },
   {
    "op": "Café · Itapeva",
    "veic": 1,
    "total": 34,
-   "ok": 12,
+   "ok": 15,
    "semapont": 0,
-   "gm": 12
+   "gm": 15
   },
   {
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 26,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 13
+   "gm": 14
   },
   {
    "op": "Café · CD Sumaré",
@@ -713,11 +728,11 @@
   },
   {
    "h": "12",
-   "n": 23
+   "n": 27
   },
   {
    "h": "13",
-   "n": 9
+   "n": 20
   }
  ],
  "gm_sem_sac": 0
