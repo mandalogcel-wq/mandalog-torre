@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-08T14:31:48-03:00",
+ "gerado_em": "2026-10-08T15:01:46-03:00",
  "dia": "2026-10-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Mario Donizeti De Giovanni",
    "cidade": "Taubate",
    "total": 27,
-   "ok": 13,
+   "ok": 14,
    "semapont": 0,
-   "gm": 13,
+   "gm": 14,
    "saida": "10:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:49",
-   "ritmo_real": 17
+   "ultima_baixa": "14:14",
+   "ritmo_real": 18
   },
   {
    "plano": "6103307698",
@@ -75,13 +75,13 @@
    "motorista": "Ricardo De Barros Viana",
    "cidade": "Sao Paulo",
    "total": 16,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:18",
-   "ritmo_real": 37
+   "ultima_baixa": "14:45",
+   "ritmo_real": 36
   },
   {
    "plano": "6103303199",
@@ -315,12 +315,12 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "07:48",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "14:38",
    "ritmo_real": 0
   },
   {
@@ -659,9 +659,9 @@
    "op": "Café · Guarulhos",
    "veic": 26,
    "total": 82,
-   "ok": 30,
+   "ok": 33,
    "semapont": 0,
-   "gm": 29
+   "gm": 32
   },
   {
    "op": "Café · Meso Bauru",
@@ -675,9 +675,9 @@
    "op": "Café · SJC",
    "veic": 3,
    "total": 50,
-   "ok": 36,
+   "ok": 37,
    "semapont": 0,
-   "gm": 36
+   "gm": 37
   },
   {
    "op": "Café · Itapeva",
@@ -736,7 +736,7 @@
   },
   {
    "h": "14",
-   "n": 7
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
