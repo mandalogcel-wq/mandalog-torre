@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-08T09:31:45-03:00",
+ "gerado_em": "2026-10-08T09:46:41-03:00",
  "dia": "2026-10-08",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -273,8 +273,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "09:14",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -601,7 +601,7 @@
    "cidade": "Sumare",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -655,7 +655,7 @@
    "veic": 2,
    "total": 3,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0
   }
  ],
