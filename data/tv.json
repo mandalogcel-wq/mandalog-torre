@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-09T11:01:44-03:00",
+ "gerado_em": "2026-10-09T11:16:42-03:00",
  "dia": "2026-10-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -459,21 +459,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103303190",
-   "op": "Café · Meso Marília",
-   "placa": "MGS5I23",
-   "motorista": "Edwin Felipe De Oliveira Marques",
-   "cidade": "Ourinhos",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103306309",
    "op": "Café · Guarulhos",
    "placa": "ORF6F39",
@@ -515,8 +500,8 @@
   },
   {
    "op": "Café · Meso Marília",
-   "veic": 8,
-   "total": 37,
+   "veic": 7,
+   "total": 36,
    "ok": 7,
    "semapont": 0,
    "gm": 7
