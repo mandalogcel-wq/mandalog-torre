@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-09T13:31:46-03:00",
+ "gerado_em": "2026-10-09T13:46:45-03:00",
  "dia": "2026-10-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,12 +90,12 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Botucatu",
    "total": 10,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "10:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:41",
+   "ultima_baixa": "13:03",
    "ritmo_real": 21
   },
   {
@@ -105,13 +105,13 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Assis",
    "total": 8,
-   "ok": 3,
+   "ok": 7,
    "semapont": 0,
-   "gm": 3,
+   "gm": 7,
    "saida": "11:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:10",
-   "ritmo_real": 16
+   "ultima_baixa": "13:07",
+   "ritmo_real": 15
   },
   {
    "plano": "6103308471",
@@ -270,12 +270,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Ourinhos",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "13:01",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:02",
    "ritmo_real": 0
   },
   {
@@ -517,17 +517,17 @@
    "op": "Café · Meso Marília",
    "veic": 7,
    "total": 36,
-   "ok": 15,
+   "ok": 21,
    "semapont": 0,
-   "gm": 15
+   "gm": 21
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 32,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8
+   "gm": 9
   },
   {
    "op": "Café · Itapeva",
@@ -582,7 +582,7 @@
   },
   {
    "h": "13",
-   "n": 1
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
