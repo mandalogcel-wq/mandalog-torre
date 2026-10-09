@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-09T07:31:48-03:00",
+ "gerado_em": "2026-10-09T08:01:44-03:00",
  "dia": "2026-10-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -138,8 +138,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "07:54",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -219,6 +219,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103288030",
+   "op": "Café · Guarulhos",
+   "placa": "SWU0J23",
+   "motorista": "Gilmario Domingos",
+   "cidade": "Mogi Das Cruzes",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103309262",
    "op": "Café · Guarulhos",
    "placa": "CLU0415",
@@ -288,8 +303,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "07:53",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -312,8 +327,8 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 17,
-   "total": 49,
+   "veic": 18,
+   "total": 51,
    "ok": 0,
    "semapont": 0,
    "gm": 0
