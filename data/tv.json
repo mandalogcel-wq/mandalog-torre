@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-09T08:31:43-03:00",
+ "gerado_em": "2026-10-09T08:46:40-03:00",
  "dia": "2026-10-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -54,6 +54,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103308440",
+   "op": "Café · Meso Marília",
+   "placa": "EVZ9C64",
+   "motorista": "Daniel Eduardo Gonçalves",
+   "cidade": "Assis",
+   "total": 8,
+   "ok": 0,
+   "semapont": 8,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103308471",
    "op": "Café · Guarulhos",
    "placa": "EZC5B87",
@@ -63,8 +78,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "08:28",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -151,7 +166,7 @@
    "cidade": "Ourinhos",
    "total": 2,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -166,7 +181,7 @@
    "cidade": "Santa Cruz Do Rio Pardo",
    "total": 2,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -211,7 +226,7 @@
    "cidade": "Ourinhos",
    "total": 2,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -395,10 +410,10 @@
   },
   {
    "op": "Café · Meso Marília",
-   "veic": 6,
-   "total": 27,
+   "veic": 7,
+   "total": 35,
    "ok": 0,
-   "semapont": 6,
+   "semapont": 8,
    "gm": 0
   },
   {
