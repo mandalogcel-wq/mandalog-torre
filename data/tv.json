@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-09T11:16:42-03:00",
+ "gerado_em": "2026-10-09T11:31:45-03:00",
  "dia": "2026-10-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Marilia",
    "total": 18,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "09:11",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:08",
-   "ritmo_real": 14
+   "ultima_baixa": "11:22",
+   "ritmo_real": 26
   },
   {
    "plano": "6103299566",
@@ -30,9 +30,9 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Sao Paulo",
    "total": 16,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:00",
    "saida_fonte": "onda",
    "ultima_baixa": "",
@@ -45,12 +45,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Fartura",
    "total": 13,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "11:22",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "11:23",
    "ritmo_real": 0
   },
   {
@@ -90,12 +90,12 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Botucatu",
    "total": 10,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "10:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:18",
    "ritmo_real": 0
   },
   {
@@ -399,6 +399,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103298729",
+   "op": "Café · Meso Bauru",
+   "placa": "AUR5G40",
+   "motorista": "Bruno Sousa Rocha",
+   "cidade": "Botucatu",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103308899",
    "op": "Café · Guarulhos",
    "placa": "EMF0232",
@@ -494,25 +509,25 @@
    "op": "Café · Guarulhos",
    "veic": 16,
    "total": 61,
-   "ok": 7,
+   "ok": 9,
    "semapont": 0,
-   "gm": 7
+   "gm": 9
   },
   {
    "op": "Café · Meso Marília",
    "veic": 7,
    "total": 36,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7
+   "gm": 8
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 5,
-   "total": 31,
-   "ok": 0,
+   "veic": 6,
+   "total": 32,
+   "ok": 5,
    "semapont": 0,
-   "gm": 0
+   "gm": 5
   },
   {
    "op": "Café · Itapeva",
@@ -556,6 +571,10 @@
   {
    "h": "10",
    "n": 9
+  },
+  {
+   "h": "11",
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
