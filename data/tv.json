@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-09T21:01:41-03:00",
+ "gerado_em": "2026-10-09T21:16:42-03:00",
  "dia": "2026-10-09",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 12,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 3,
+   "saida": "08:51",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:58",
+   "ritmo_real": 202
   },
   {
    "plano": "6103300908",
@@ -63,10 +63,10 @@
    "ok": 5,
    "semapont": 0,
    "gm": 5,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida": "07:28",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:10",
+   "ritmo_real": 136
   },
   {
    "plano": "6103308433",
@@ -105,13 +105,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 0,
+   "ok": 8,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 8,
+   "saida": "08:28",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:27",
+   "ritmo_real": 67
   },
   {
    "plano": "6103299566",
@@ -138,9 +138,9 @@
    "ok": 6,
    "semapont": 0,
    "gm": 6,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "10:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:04",
    "ritmo_real": 0
   },
   {
@@ -153,10 +153,10 @@
    "ok": 5,
    "semapont": 0,
    "gm": 5,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida": "07:18",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:40",
+   "ritmo_real": 49
   },
   {
    "plano": "6103308434",
@@ -183,8 +183,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "04:36",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -258,10 +258,10 @@
    "ok": 2,
    "semapont": 0,
    "gm": 2,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "saida": "07:54",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "11:57",
+   "ritmo_real": 143
   },
   {
    "plano": "6103308446",
@@ -345,12 +345,12 @@
    "motorista": "Marcos Antonio Da Silva",
    "cidade": "Barueri",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "08:45",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:32",
    "ritmo_real": 0
   },
   {
@@ -375,12 +375,12 @@
    "motorista": "Fernando Luiz Leite De Moura",
    "cidade": "Barueri",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "05:54",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:46",
    "ritmo_real": 0
   },
   {
@@ -423,8 +423,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:20",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -438,9 +438,9 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "06:05",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:42",
    "ritmo_real": 0
   },
   {
@@ -483,9 +483,9 @@
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "saida": "07:53",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:07",
    "ritmo_real": 0
   },
   {
@@ -495,12 +495,12 @@
    "motorista": "Miquéias Da Silva Santos Nery",
    "cidade": "Itaquaquecetuba",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:02",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:05",
    "ritmo_real": 0
   }
  ],
@@ -509,9 +509,9 @@
    "op": "Café · Guarulhos",
    "veic": 16,
    "total": 53,
-   "ok": 11,
+   "ok": 27,
    "semapont": 0,
-   "gm": 11
+   "gm": 27
   },
   {
    "op": "Café · Meso Marília",
@@ -557,16 +557,24 @@
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
-   "h": "09",
-   "n": 6
-  },
-  {
-   "h": "10",
+   "h": "07",
    "n": 1
   },
   {
-   "h": "11",
+   "h": "08",
+   "n": 3
+  },
+  {
+   "h": "09",
+   "n": 10
+  },
+  {
+   "h": "10",
    "n": 9
+  },
+  {
+   "h": "11",
+   "n": 10
   },
   {
    "h": "12",
@@ -574,23 +582,23 @@
   },
   {
    "h": "13",
-   "n": 7
-  },
-  {
-   "h": "14",
-   "n": 5
-  },
-  {
-   "h": "15",
-   "n": 3
-  },
-  {
-   "h": "16",
    "n": 8
   },
   {
+   "h": "14",
+   "n": 9
+  },
+  {
+   "h": "15",
+   "n": 4
+  },
+  {
+   "h": "16",
+   "n": 14
+  },
+  {
    "h": "17",
-   "n": 1
+   "n": 4
   },
   {
    "h": "18",
