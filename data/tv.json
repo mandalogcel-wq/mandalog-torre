@@ -1,39 +1,14 @@
 {
- "gerado_em": "2026-10-11T05:01:44-03:00",
- "dia": "2026-10-11",
+ "gerado_em": "2026-10-12T05:01:51-03:00",
+ "dia": "2026-10-12",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
   "abre": "08:00",
   "fecha": "18:00"
  },
  "limite_aperto": 1.5,
- "veiculos": [
-  {
-   "plano": "6103291714",
-   "op": "Café · Guarulhos",
-   "placa": "PEE0H20",
-   "motorista": "Miquéias Da Silva Santos Nery",
-   "cidade": "Cajamar",
-   "total": 3,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  }
- ],
- "pracas": [
-  {
-   "op": "Café · Guarulhos",
-   "veic": 1,
-   "total": 3,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0
-  }
- ],
+ "veiculos": [],
+ "pracas": [],
  "greenmile_ok": true,
  "baixas_por_hora": [],
  "gm_sem_sac": 0
