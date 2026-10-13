@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T13:46:43-03:00",
+ "gerado_em": "2026-10-13T14:01:45-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 26,
-   "ok": 9,
+   "ok": 17,
    "semapont": 0,
-   "gm": 9,
+   "gm": 17,
    "saida": "09:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:27",
-   "ritmo_real": 15
+   "ultima_baixa": "13:50",
+   "ritmo_real": 13
   },
   {
    "plano": "6103310886",
@@ -75,13 +75,13 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Taubate",
    "total": 19,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "11:31",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:29",
-   "ritmo_real": 13
+   "ultima_baixa": "14:00",
+   "ritmo_real": 29
   },
   {
    "plano": "6103308430",
@@ -150,13 +150,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Jacarei",
    "total": 10,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "09:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:40",
-   "ritmo_real": 23
+   "ultima_baixa": "13:54",
+   "ritmo_real": 41
   },
   {
    "plano": "6103308439",
@@ -240,12 +240,12 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Ubatuba",
    "total": 5,
-   "ok": 0,
+   "ok": 5,
    "semapont": 0,
-   "gm": 0,
+   "gm": 5,
    "saida": "10:10",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:10",
    "ritmo_real": 0
   },
   {
@@ -599,9 +599,9 @@
    "op": "Café · SJC",
    "veic": 5,
    "total": 87,
-   "ok": 33,
+   "ok": 44,
    "semapont": 0,
-   "gm": 33
+   "gm": 44
   },
   {
    "op": "Café · Meso Bauru",
@@ -615,9 +615,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 46,
-   "ok": 15,
+   "ok": 20,
    "semapont": 0,
-   "gm": 14
+   "gm": 19
   },
   {
    "op": "Café · Meso Marília",
@@ -648,7 +648,7 @@
   },
   {
    "h": "10",
-   "n": 29
+   "n": 34
   },
   {
    "h": "11",
@@ -660,7 +660,11 @@
   },
   {
    "h": "13",
-   "n": 11
+   "n": 21
+  },
+  {
+   "h": "14",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
