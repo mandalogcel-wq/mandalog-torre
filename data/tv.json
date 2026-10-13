@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T10:31:50-03:00",
+ "gerado_em": "2026-10-13T10:46:40-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -339,6 +339,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103298724",
+   "op": "Café · Meso Bauru",
+   "placa": "FWY5H02",
+   "motorista": "Manoel Mariano Da Silva",
+   "cidade": "Bauru",
+   "total": 2,
+   "ok": 0,
+   "semapont": 2,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103308434",
    "op": "Café · Meso Bauru",
    "placa": "KOP9F85",
@@ -545,10 +560,10 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 6,
-   "total": 57,
+   "veic": 7,
+   "total": 59,
    "ok": 13,
-   "semapont": 0,
+   "semapont": 2,
    "gm": 13
   },
   {
