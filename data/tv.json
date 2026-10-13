@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T18:31:43-03:00",
+ "gerado_em": "2026-10-13T19:01:43-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -555,12 +555,12 @@
    "motorista": "Marcos Antonio Da Silva",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "18:38",
    "ritmo_real": 0
   },
   {
@@ -615,9 +615,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 46,
-   "ok": 35,
+   "ok": 36,
    "semapont": 0,
-   "gm": 28
+   "gm": 29
   },
   {
    "op": "Café · Meso Marília",
@@ -680,7 +680,7 @@
   },
   {
    "h": "18",
-   "n": 4
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
