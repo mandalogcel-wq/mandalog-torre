@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T14:31:39-03:00",
+ "gerado_em": "2026-10-13T14:46:37-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Ocaucu",
    "total": 24,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "13:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:50",
-   "ritmo_real": 1
+   "ultima_baixa": "14:07",
+   "ritmo_real": 9
   },
   {
    "plano": "6103308428",
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 11,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11,
+   "gm": 13,
    "saida": "10:52",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:37",
-   "ritmo_real": 16
+   "ultima_baixa": "14:31",
+   "ritmo_real": 18
   },
   {
    "plano": "6103312286",
@@ -90,13 +90,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Bariri",
    "total": 15,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:30",
-   "ritmo_real": 48
+   "ultima_baixa": "14:26",
+   "ritmo_real": 49
   },
   {
    "plano": "6103312354",
@@ -607,9 +607,9 @@
    "op": "Café · Meso Bauru",
    "veic": 8,
    "total": 60,
-   "ok": 37,
+   "ok": 40,
    "semapont": 0,
-   "gm": 37
+   "gm": 40
   },
   {
    "op": "Café · Guarulhos",
@@ -623,9 +623,9 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 44,
-   "ok": 16,
+   "ok": 17,
    "semapont": 0,
-   "gm": 16
+   "gm": 17
   },
   {
    "op": "Café · CD Sumaré",
@@ -664,7 +664,7 @@
   },
   {
    "h": "14",
-   "n": 3
+   "n": 7
   }
  ],
  "gm_sem_sac": 0
