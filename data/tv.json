@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T09:16:43-03:00",
+ "gerado_em": "2026-10-13T09:31:42-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,12 +45,12 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Bariri",
    "total": 15,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 3,
+   "saida": "09:30",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:31",
    "ritmo_real": 0
   },
   {
@@ -61,7 +61,7 @@
    "cidade": "Areiopolis",
    "total": 11,
    "ok": 0,
-   "semapont": 11,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -75,12 +75,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Assis",
    "total": 10,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:18",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:18",
    "ritmo_real": 0
   },
   {
@@ -110,6 +110,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103303196",
+   "op": "Café · Meso Bauru",
+   "placa": "AUR5G40",
+   "motorista": "Bruno Sousa Rocha",
+   "cidade": "Avare",
+   "total": 5,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -198,8 +213,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "09:05",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -318,8 +333,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:13",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -348,8 +363,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:24",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -432,19 +447,19 @@
  "pracas": [
   {
    "op": "Café · Meso Bauru",
-   "veic": 5,
-   "total": 52,
-   "ok": 0,
-   "semapont": 11,
-   "gm": 0
+   "veic": 6,
+   "total": 57,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3
   },
   {
    "op": "Café · Meso Marília",
    "veic": 3,
    "total": 42,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   },
   {
    "op": "Café · Guarulhos",
@@ -468,6 +483,10 @@
   {
    "h": "08",
    "n": 2
+  },
+  {
+   "h": "09",
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
