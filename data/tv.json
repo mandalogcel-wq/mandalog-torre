@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T09:01:42-03:00",
+ "gerado_em": "2026-10-13T09:16:43-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -47,6 +47,21 @@
    "total": 15,
    "ok": 0,
    "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103308431",
+   "op": "Café · Meso Bauru",
+   "placa": "FWY5H02",
+   "motorista": "Manoel Mariano Da Silva",
+   "cidade": "Areiopolis",
+   "total": 11,
+   "ok": 0,
+   "semapont": 11,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -416,17 +431,17 @@
  ],
  "pracas": [
   {
-   "op": "Café · Meso Marília",
-   "veic": 3,
-   "total": 42,
+   "op": "Café · Meso Bauru",
+   "veic": 5,
+   "total": 52,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 11,
    "gm": 0
   },
   {
-   "op": "Café · Meso Bauru",
-   "veic": 4,
-   "total": 41,
+   "op": "Café · Meso Marília",
+   "veic": 3,
+   "total": 42,
    "ok": 0,
    "semapont": 0,
    "gm": 0
