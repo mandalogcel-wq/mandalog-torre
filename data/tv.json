@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T13:31:41-03:00",
+ "gerado_em": "2026-10-13T13:46:43-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 6,
+   "ok": 9,
    "semapont": 0,
-   "gm": 6,
+   "gm": 9,
    "saida": "10:52",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:25",
-   "ritmo_real": 18
+   "ultima_baixa": "13:04",
+   "ritmo_real": 16
   },
   {
    "plano": "6103312286",
@@ -90,13 +90,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Bariri",
    "total": 15,
-   "ok": 3,
+   "ok": 6,
    "semapont": 0,
-   "gm": 3,
+   "gm": 6,
    "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:31",
-   "ritmo_real": 0
+   "ultima_baixa": "13:30",
+   "ritmo_real": 48
   },
   {
    "plano": "6103312354",
@@ -285,12 +285,12 @@
    "motorista": "Ricardo Edson",
    "cidade": "Mogi Mirim",
    "total": 4,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
+   "gm": 4,
    "saida": "08:45",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:21",
    "ritmo_real": 0
   },
   {
@@ -607,9 +607,9 @@
    "op": "Café · Meso Bauru",
    "veic": 8,
    "total": 60,
-   "ok": 28,
+   "ok": 34,
    "semapont": 0,
-   "gm": 28
+   "gm": 34
   },
   {
    "op": "Café · Guarulhos",
@@ -631,9 +631,9 @@
    "op": "Café · CD Sumaré",
    "veic": 2,
    "total": 6,
-   "ok": 2,
+   "ok": 6,
    "semapont": 0,
-   "gm": 2
+   "gm": 6
   }
  ],
  "greenmile_ok": true,
@@ -656,11 +656,11 @@
   },
   {
    "h": "12",
-   "n": 24
+   "n": 26
   },
   {
    "h": "13",
-   "n": 3
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
