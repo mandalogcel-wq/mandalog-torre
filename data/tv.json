@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T13:16:48-03:00",
+ "gerado_em": "2026-10-13T13:31:41-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Aparecida",
    "total": 19,
-   "ok": 13,
+   "ok": 15,
    "semapont": 0,
-   "gm": 13,
+   "gm": 15,
    "saida": "09:20",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:36",
-   "ritmo_real": 16
+   "ultima_baixa": "13:30",
+   "ritmo_real": 17
   },
   {
    "plano": "6103312352",
@@ -495,12 +495,12 @@
    "motorista": "Carlos Cesar Cardoso Lima Junior",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "13:18",
    "ritmo_real": 0
   },
   {
@@ -571,7 +571,7 @@
    "cidade": "Taboao Da Serra",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -599,9 +599,9 @@
    "op": "Café · SJC",
    "veic": 5,
    "total": 87,
-   "ok": 31,
+   "ok": 33,
    "semapont": 0,
-   "gm": 31
+   "gm": 33
   },
   {
    "op": "Café · Meso Bauru",
@@ -615,9 +615,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 46,
-   "ok": 14,
-   "semapont": 1,
-   "gm": 13
+   "ok": 15,
+   "semapont": 0,
+   "gm": 14
   },
   {
    "op": "Café · Meso Marília",
@@ -657,6 +657,10 @@
   {
    "h": "12",
    "n": 24
+  },
+  {
+   "h": "13",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
