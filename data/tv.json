@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T16:01:44-03:00",
+ "gerado_em": "2026-10-13T16:18:11-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 13,
+   "ok": 15,
    "semapont": 0,
-   "gm": 13,
+   "gm": 15,
    "saida": "10:52",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:31",
-   "ritmo_real": 18
+   "ultima_baixa": "15:53",
+   "ritmo_real": 21
   },
   {
    "plano": "6103312286",
@@ -622,9 +622,9 @@
    "op": "Café · Meso Bauru",
    "veic": 9,
    "total": 61,
-   "ok": 42,
+   "ok": 44,
    "semapont": 0,
-   "gm": 42
+   "gm": 44
   },
   {
    "op": "Café · Guarulhos",
@@ -683,7 +683,7 @@
   },
   {
    "h": "15",
-   "n": 13
+   "n": 15
   }
  ],
  "gm_sem_sac": 0
