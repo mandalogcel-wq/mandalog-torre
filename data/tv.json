@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T10:16:46-03:00",
+ "gerado_em": "2026-10-13T10:31:50-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,6 +8,21 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
+  {
+   "plano": "6103312299",
+   "op": "Café · SJC",
+   "placa": "FLF1G91",
+   "motorista": "Gabriel Felix Faysten Dos Santos",
+   "cidade": "Sao Jose Dos Campos",
+   "total": 26,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3,
+   "saida": "09:00",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:29",
+   "ritmo_real": 0
+  },
   {
    "plano": "6103310886",
    "op": "Café · Meso Marília",
@@ -39,6 +54,36 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103312286",
+   "op": "Café · SJC",
+   "placa": "QOT3G41",
+   "motorista": "Edson Martins De Carvalho",
+   "cidade": "Aparecida",
+   "total": 19,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3,
+   "saida": "09:20",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:02",
+   "ritmo_real": 16
+  },
+  {
+   "plano": "6103312352",
+   "op": "Café · SJC",
+   "placa": "RUE0H58",
+   "motorista": "Roberto Henrique Costa",
+   "cidade": "Taubate",
+   "total": 19,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103308430",
    "op": "Café · Meso Bauru",
    "placa": "FOY8J69",
@@ -51,6 +96,21 @@
    "saida": "09:30",
    "saida_fonte": "greenmile",
    "ultima_baixa": "09:31",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103312354",
+   "op": "Café · SJC",
+   "placa": "ETU7799",
+   "motorista": "Thiago Pereira Silva",
+   "cidade": "Guaratingueta",
+   "total": 13,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -75,13 +135,28 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Assis",
    "total": 10,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "09:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:01",
+   "ultima_baixa": "10:29",
    "ritmo_real": 14
+  },
+  {
+   "plano": "6103312351",
+   "op": "Café · SJC",
+   "placa": "DHT4H86",
+   "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
+   "cidade": "Jacarei",
+   "total": 10,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "09:12",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:30",
+   "ritmo_real": 0
   },
   {
    "plano": "6103308439",
@@ -90,13 +165,13 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Tupa",
    "total": 8,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "09:37",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:37",
-   "ritmo_real": 0
+   "ultima_baixa": "10:30",
+   "ritmo_real": 26
   },
   {
    "plano": "6103308479",
@@ -120,12 +195,12 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Avare",
    "total": 5,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "10:26",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:28",
    "ritmo_real": 0
   },
   {
@@ -153,8 +228,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:10",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -287,7 +362,7 @@
    "total": 2,
    "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -461,20 +536,28 @@
  ],
  "pracas": [
   {
+   "op": "Café · SJC",
+   "veic": 5,
+   "total": 87,
+   "ok": 8,
+   "semapont": 0,
+   "gm": 8
+  },
+  {
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 57,
-   "ok": 11,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11
+   "gm": 13
   },
   {
    "op": "Café · Meso Marília",
    "veic": 4,
    "total": 44,
-   "ok": 7,
+   "ok": 11,
    "semapont": 0,
-   "gm": 5
+   "gm": 11
   },
   {
    "op": "Café · Guarulhos",
@@ -501,11 +584,11 @@
   },
   {
    "h": "09",
-   "n": 17
+   "n": 19
   },
   {
    "h": "10",
-   "n": 1
+   "n": 13
   }
  ],
  "gm_sem_sac": 0
