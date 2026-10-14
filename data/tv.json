@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-14T12:01:47-03:00",
+ "gerado_em": "2026-10-14T12:31:43-03:00",
  "dia": "2026-10-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -120,13 +120,13 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Aparecida",
    "total": 14,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "11:05",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:06",
-   "ritmo_real": 0
+   "ultima_baixa": "12:05",
+   "ritmo_real": 20
   },
   {
    "plano": "6103311002",
@@ -135,13 +135,13 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Capao Bonito",
    "total": 12,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "09:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:12",
-   "ritmo_real": 14
+   "ultima_baixa": "12:04",
+   "ritmo_real": 24
   },
   {
    "plano": "6103314438",
@@ -195,13 +195,13 @@
    "motorista": "Thiago Pereira Silva",
    "cidade": "Cunha",
    "total": 9,
-   "ok": 3,
+   "ok": 5,
    "semapont": 0,
-   "gm": 3,
+   "gm": 5,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:02",
-   "ritmo_real": 14
+   "ultima_baixa": "12:25",
+   "ritmo_real": 58
   },
   {
    "plano": "6103303198",
@@ -600,12 +600,12 @@
    "motorista": "Narciso Henrique Da Silva",
    "cidade": "Atibaia",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "12:07",
    "ritmo_real": 0
   },
   {
@@ -689,17 +689,17 @@
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 75,
-   "ok": 19,
+   "ok": 20,
    "semapont": 0,
-   "gm": 19
+   "gm": 20
   },
   {
    "op": "Café · Itapeva",
    "veic": 5,
    "total": 72,
-   "ok": 18,
+   "ok": 19,
    "semapont": 0,
-   "gm": 18
+   "gm": 19
   },
   {
    "op": "Café · Meso Marília",
@@ -721,9 +721,9 @@
    "op": "Café · SJC",
    "veic": 7,
    "total": 39,
-   "ok": 10,
+   "ok": 14,
    "semapont": 0,
-   "gm": 10
+   "gm": 14
   },
   {
    "op": "Café · CD Sumaré",
@@ -755,6 +755,10 @@
   {
    "h": "11",
    "n": 29
+  },
+  {
+   "h": "12",
+   "n": 6
   }
  ],
  "gm_sem_sac": 0
