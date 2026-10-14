@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-14T09:31:43-03:00",
+ "gerado_em": "2026-10-14T09:46:46-03:00",
  "dia": "2026-10-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Marilia",
    "total": 19,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:32",
-   "ritmo_real": 0
+   "ultima_baixa": "09:29",
+   "ritmo_real": 57
   },
   {
    "plano": "6103308435",
@@ -76,7 +76,7 @@
    "cidade": "Piraju",
    "total": 18,
    "ok": 0,
-   "semapont": 18,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -90,12 +90,12 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Marilia",
    "total": 16,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:19",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:19",
    "ritmo_real": 0
   },
   {
@@ -105,13 +105,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Ourinhos",
    "total": 15,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 2,
+   "saida": "09:23",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:25",
+   "ritmo_real": 1
   },
   {
    "plano": "6103311002",
@@ -615,16 +615,16 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 58,
-   "ok": 2,
+   "ok": 6,
    "semapont": 0,
-   "gm": 2
+   "gm": 6
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 5,
    "total": 54,
    "ok": 3,
-   "semapont": 18,
+   "semapont": 0,
    "gm": 3
   },
   {
@@ -656,7 +656,7 @@
   },
   {
    "h": "09",
-   "n": 4
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
