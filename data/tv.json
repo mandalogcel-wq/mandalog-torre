@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-14T08:01:41-03:00",
+ "gerado_em": "2026-10-14T08:16:40-03:00",
  "dia": "2026-10-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -61,7 +61,7 @@
    "cidade": "Marilia",
    "total": 19,
    "ok": 0,
-   "semapont": 19,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -159,6 +159,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103303198",
+   "op": "Café · Meso Bauru",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Pirajui",
+   "total": 9,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103300906",
    "op": "Café · Itapeva",
    "placa": "MGS5I23",
@@ -234,11 +249,11 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103303198",
-   "op": "Café · Meso Bauru",
-   "placa": "KOP9F85",
-   "motorista": "Luis Carlos Do Carmo Matos",
-   "cidade": "Guaranta",
+   "plano": "6103303195",
+   "op": "Café · Meso Marília",
+   "placa": "AUR5G40",
+   "motorista": "Bruno Sousa Rocha",
+   "cidade": "Marilia",
    "total": 4,
    "ok": 0,
    "semapont": 0,
@@ -294,21 +309,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103303195",
-   "op": "Café · Meso Marília",
-   "placa": "AUR5G40",
-   "motorista": "Bruno Sousa Rocha",
-   "cidade": "Marilia",
-   "total": 3,
-   "ok": 0,
-   "semapont": 3,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103308479",
    "op": "Café · Guarulhos",
    "placa": "ETO2A93",
@@ -335,6 +335,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103313090",
+   "op": "Café · CD Sumaré",
+   "placa": "SUP9B16",
+   "motorista": "Ricardo Edson",
+   "cidade": "Sumare",
+   "total": 3,
+   "ok": 0,
+   "semapont": 3,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -569,15 +584,15 @@
   {
    "op": "Café · Meso Marília",
    "veic": 4,
-   "total": 53,
+   "total": 54,
    "ok": 0,
-   "semapont": 22,
+   "semapont": 0,
    "gm": 0
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 3,
-   "total": 30,
+   "total": 35,
    "ok": 0,
    "semapont": 0,
    "gm": 0
@@ -592,10 +607,10 @@
   },
   {
    "op": "Café · CD Sumaré",
-   "veic": 3,
-   "total": 4,
+   "veic": 4,
+   "total": 7,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 3,
    "gm": 0
   }
  ],
