@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-14T19:31:44-03:00",
+ "gerado_em": "2026-10-14T20:31:41-03:00",
  "dia": "2026-10-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -645,12 +645,12 @@
    "motorista": "Deraldo Curcino Moreno",
    "cidade": "Osasco",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "20:06",
    "ritmo_real": 0
   },
   {
@@ -704,9 +704,9 @@
    "op": "Café · Guarulhos",
    "veic": 18,
    "total": 75,
-   "ok": 30,
+   "ok": 31,
    "semapont": 0,
-   "gm": 30
+   "gm": 31
   },
   {
    "op": "Café · Itapeva",
@@ -802,6 +802,10 @@
   {
    "h": "19",
    "n": 6
+  },
+  {
+   "h": "20",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
