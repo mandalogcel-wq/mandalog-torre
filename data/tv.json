@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-14T15:01:42-03:00",
+ "gerado_em": "2026-10-14T15:16:48-03:00",
  "dia": "2026-10-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Bauru",
    "total": 21,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
-   "gm": 12,
+   "gm": 13,
    "saida": "10:50",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:30",
-   "ritmo_real": 20
+   "ultima_baixa": "15:00",
+   "ritmo_real": 21
   },
   {
    "plano": "6103310888",
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Marilia",
    "total": 19,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:58",
-   "ritmo_real": 25
+   "ultima_baixa": "14:36",
+   "ritmo_real": 26
   },
   {
    "plano": "6103308435",
@@ -90,13 +90,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Marilia",
    "total": 16,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "09:19",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:36",
-   "ritmo_real": 29
+   "ultima_baixa": "14:53",
+   "ritmo_real": 33
   },
   {
    "plano": "6103308437",
@@ -705,17 +705,17 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 58,
-   "ok": 40,
+   "ok": 42,
    "semapont": 0,
-   "gm": 40
+   "gm": 42
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 6,
    "total": 55,
-   "ok": 21,
+   "ok": 22,
    "semapont": 0,
-   "gm": 21
+   "gm": 22
   },
   {
    "op": "Café · SJC",
@@ -766,7 +766,11 @@
   },
   {
    "h": "14",
-   "n": 13
+   "n": 15
+  },
+  {
+   "h": "15",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
