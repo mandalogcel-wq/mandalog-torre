@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-13T20:46:44-03:00",
+ "gerado_em": "2026-10-13T21:46:39-03:00",
  "dia": "2026-10-13",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,13 +90,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Bariri",
    "total": 15,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "18:10",
-   "ritmo_real": 52
+   "ultima_baixa": "21:25",
+   "ritmo_real": 65
   },
   {
    "plano": "6103312354",
@@ -607,9 +607,9 @@
    "op": "Café · Meso Bauru",
    "veic": 8,
    "total": 60,
-   "ok": 53,
+   "ok": 54,
    "semapont": 0,
-   "gm": 53
+   "gm": 54
   },
   {
    "op": "Café · Guarulhos",
@@ -681,6 +681,10 @@
   {
    "h": "18",
    "n": 5
+  },
+  {
+   "h": "21",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
