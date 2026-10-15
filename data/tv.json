@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-15T05:16:46-03:00",
+ "gerado_em": "2026-10-15T05:31:42-03:00",
  "dia": "2026-10-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -271,7 +271,7 @@
    "cidade": "Guarulhos",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -300,7 +300,7 @@
    "veic": 14,
    "total": 62,
    "ok": 3,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 3
   },
   {
