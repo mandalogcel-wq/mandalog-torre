@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-14T20:31:41-03:00",
+ "gerado_em": "2026-10-14T21:01:43-03:00",
  "dia": "2026-10-14",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -279,6 +279,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103303675",
+   "op": "Café · Guarulhos",
+   "placa": "RNS4A88",
+   "motorista": "Gabriel Azevedo Medeiros",
+   "cidade": "Sao Paulo",
+   "total": 6,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103314697",
    "op": "Café · SJC",
    "placa": "AHE8H87",
@@ -337,21 +352,6 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "11:18",
    "ritmo_real": 65
-  },
-  {
-   "plano": "6103303675",
-   "op": "Café · Guarulhos",
-   "placa": "RNS4A88",
-   "motorista": "Gabriel Azevedo Medeiros",
-   "cidade": "Sao Paulo",
-   "total": 4,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
   },
   {
    "plano": "6103314665",
@@ -703,7 +703,7 @@
   {
    "op": "Café · Guarulhos",
    "veic": 18,
-   "total": 75,
+   "total": 77,
    "ok": 31,
    "semapont": 0,
    "gm": 31
