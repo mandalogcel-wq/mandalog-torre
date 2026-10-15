@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-15T07:31:44-03:00",
+ "gerado_em": "2026-10-15T08:01:43-03:00",
  "dia": "2026-10-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -17,6 +17,21 @@
    "total": 19,
    "ok": 0,
    "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103310881",
+   "op": "Café · Meso Bauru",
+   "placa": "",
+   "motorista": "",
+   "cidade": "Bauru",
+   "total": 17,
+   "ok": 0,
+   "semapont": 17,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -305,10 +320,10 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 3,
-   "total": 27,
+   "veic": 4,
+   "total": 44,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 17,
    "gm": 0
   },
   {
