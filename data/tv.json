@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-15T13:31:44-03:00",
+ "gerado_em": "2026-10-15T13:46:50-03:00",
  "dia": "2026-10-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Sao Manuel",
    "total": 21,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "12:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:18",
-   "ritmo_real": 1
+   "ultima_baixa": "13:05",
+   "ritmo_real": 7
   },
   {
    "plano": "6103310885",
@@ -30,13 +30,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Ibitinga",
    "total": 19,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "09:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:41",
-   "ritmo_real": 10
+   "ultima_baixa": "13:17",
+   "ritmo_real": 16
   },
   {
    "plano": "6103310883",
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 18,
-   "ok": 8,
+   "ok": 10,
    "semapont": 0,
-   "gm": 8,
+   "gm": 10,
    "saida": "11:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:00",
-   "ritmo_real": 16
+   "ultima_baixa": "13:23",
+   "ritmo_real": 15
   },
   {
    "plano": "6103310881",
@@ -599,9 +599,9 @@
    "op": "Café · Meso Bauru",
    "veic": 9,
    "total": 86,
-   "ok": 32,
+   "ok": 37,
    "semapont": 0,
-   "gm": 32
+   "gm": 37
   },
   {
    "op": "Café · Guarulhos",
@@ -672,7 +672,7 @@
   },
   {
    "h": "13",
-   "n": 7
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
