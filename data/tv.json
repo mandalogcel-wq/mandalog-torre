@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-15T11:01:47-03:00",
+ "gerado_em": "2026-10-15T11:16:40-03:00",
  "dia": "2026-10-15",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,12 +30,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Ibitinga",
    "total": 19,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "09:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:30",
+   "ultima_baixa": "10:40",
    "ritmo_real": 7
   },
   {
@@ -525,12 +525,12 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Marilia",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "10:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:52",
    "ritmo_real": 0
   },
   {
@@ -554,9 +554,9 @@
    "op": "Café · Meso Bauru",
    "veic": 8,
    "total": 85,
-   "ok": 13,
+   "ok": 14,
    "semapont": 0,
-   "gm": 13
+   "gm": 14
   },
   {
    "op": "Café · Guarulhos",
@@ -594,9 +594,9 @@
    "op": "Café · Meso Marília",
    "veic": 2,
    "total": 2,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   }
  ],
  "greenmile_ok": true,
@@ -615,7 +615,7 @@
   },
   {
    "h": "10",
-   "n": 16
+   "n": 18
   }
  ],
  "gm_sem_sac": 0
