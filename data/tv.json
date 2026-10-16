@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-16T11:01:51-03:00",
+ "gerado_em": "2026-10-16T11:31:45-03:00",
  "dia": "2026-10-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -165,13 +165,13 @@
    "motorista": "Diemes Elder Rogerio Da Silva",
    "cidade": "Campinas",
    "total": 6,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
    "gm": 1,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:01",
-   "ritmo_real": 0
+   "ultima_baixa": "10:42",
+   "ritmo_real": 41
   },
   {
    "plano": "6103308432",
@@ -270,12 +270,12 @@
    "motorista": "Hilton Conceicao Silva",
    "cidade": "Campinas",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
    "gm": 0,
    "saida": "07:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "07:24",
    "ritmo_real": 0
   },
   {
@@ -533,7 +533,7 @@
    "op": "Café · CD Sumaré",
    "veic": 8,
    "total": 19,
-   "ok": 7,
+   "ok": 11,
    "semapont": 0,
    "gm": 6
   },
@@ -549,6 +549,10 @@
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
+   "h": "07",
+   "n": 3
+  },
+  {
    "h": "08",
    "n": 17
   },
@@ -558,7 +562,7 @@
   },
   {
    "h": "10",
-   "n": 20
+   "n": 21
   },
   {
    "h": "11",
