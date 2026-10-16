@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-16T18:01:46-03:00",
+ "gerado_em": "2026-10-16T18:46:40-03:00",
  "dia": "2026-10-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 10,
+   "ok": 14,
    "semapont": 0,
-   "gm": 10,
+   "gm": 14,
    "saida": "09:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:59",
-   "ritmo_real": 43
+   "ultima_baixa": "18:13",
+   "ritmo_real": 40
   },
   {
    "plano": "6103314483",
@@ -502,9 +502,9 @@
    "op": "Café · Meso Bauru",
    "veic": 9,
    "total": 67,
-   "ok": 44,
+   "ok": 48,
    "semapont": 0,
-   "gm": 44
+   "gm": 48
   },
   {
    "op": "Café · Guarulhos",
@@ -572,6 +572,10 @@
   {
    "h": "17",
    "n": 7
+  },
+  {
+   "h": "18",
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
