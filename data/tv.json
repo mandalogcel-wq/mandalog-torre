@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-16T11:31:45-03:00",
+ "gerado_em": "2026-10-16T11:46:49-03:00",
  "dia": "2026-10-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "09:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:15",
-   "ritmo_real": 12
+   "ultima_baixa": "11:24",
+   "ritmo_real": 23
   },
   {
    "plano": "6103314483",
@@ -60,13 +60,13 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Tupa",
    "total": 20,
-   "ok": 10,
+   "ok": 13,
    "semapont": 0,
-   "gm": 10,
+   "gm": 13,
    "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:50",
-   "ritmo_real": 17
+   "ultima_baixa": "11:27",
+   "ritmo_real": 16
   },
   {
    "plano": "6103314479",
@@ -75,13 +75,13 @@
    "motorista": "Fabio Henrique De Souza",
    "cidade": "Marilia",
    "total": 16,
-   "ok": 3,
+   "ok": 5,
    "semapont": 0,
-   "gm": 3,
+   "gm": 5,
    "saida": "08:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:06",
-   "ritmo_real": 0
+   "ultima_baixa": "11:03",
+   "ritmo_real": 14
   },
   {
    "plano": "6103318120",
@@ -167,10 +167,10 @@
    "total": 6,
    "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:42",
+   "ultima_baixa": "11:23",
    "ritmo_real": 41
   },
   {
@@ -225,7 +225,7 @@
    "motorista": "Ivan Albino Da Silva Junior",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -272,10 +272,10 @@
    "total": 3,
    "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "07:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:24",
+   "ultima_baixa": "11:07",
    "ritmo_real": 0
   },
   {
@@ -509,23 +509,23 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 75,
-   "ok": 24,
+   "ok": 29,
    "semapont": 0,
-   "gm": 24
+   "gm": 29
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 9,
    "total": 67,
-   "ok": 16,
+   "ok": 17,
    "semapont": 0,
-   "gm": 16
+   "gm": 17
   },
   {
    "op": "Café · Guarulhos",
    "veic": 10,
    "total": 48,
-   "ok": 12,
+   "ok": 13,
    "semapont": 0,
    "gm": 10
   },
@@ -535,7 +535,7 @@
    "total": 19,
    "ok": 11,
    "semapont": 0,
-   "gm": 6
+   "gm": 10
   },
   {
    "op": "Café · SJC",
@@ -549,10 +549,6 @@
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
-   "h": "07",
-   "n": 3
-  },
-  {
    "h": "08",
    "n": 17
   },
@@ -562,11 +558,11 @@
   },
   {
    "h": "10",
-   "n": 21
+   "n": 20
   },
   {
    "h": "11",
-   "n": 1
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
