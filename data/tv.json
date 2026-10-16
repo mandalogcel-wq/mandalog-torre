@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-16T14:16:41-03:00",
+ "gerado_em": "2026-10-16T14:31:45-03:00",
  "dia": "2026-10-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Cerqueira Cesar",
    "total": 25,
-   "ok": 10,
+   "ok": 12,
    "semapont": 0,
-   "gm": 10,
+   "gm": 12,
    "saida": "12:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:59",
+   "ultima_baixa": "14:28",
    "ritmo_real": 11
   },
   {
@@ -30,13 +30,13 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Jau",
    "total": 21,
-   "ok": 11,
+   "ok": 21,
    "semapont": 0,
-   "gm": 11,
+   "gm": 21,
    "saida": "08:38",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:56",
-   "ritmo_real": 20
+   "ultima_baixa": "14:30",
+   "ritmo_real": 18
   },
   {
    "plano": "6103314476",
@@ -75,13 +75,13 @@
    "motorista": "Fabio Henrique De Souza",
    "cidade": "Marilia",
    "total": 16,
-   "ok": 11,
+   "ok": 15,
    "semapont": 0,
-   "gm": 11,
+   "gm": 15,
    "saida": "08:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:10",
-   "ritmo_real": 12
+   "ultima_baixa": "14:05",
+   "ritmo_real": 17
   },
   {
    "plano": "6103318120",
@@ -105,13 +105,13 @@
    "motorista": "Jose Henrique Barbosa Navero",
    "cidade": "Avare",
    "total": 13,
-   "ok": 6,
+   "ok": 9,
    "semapont": 0,
-   "gm": 6,
+   "gm": 9,
    "saida": "08:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:58",
-   "ritmo_real": 60
+   "ultima_baixa": "14:23",
+   "ritmo_real": 41
   },
   {
    "plano": "6103310887",
@@ -135,13 +135,13 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 10,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "09:42",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:57",
-   "ritmo_real": 45
+   "ultima_baixa": "14:10",
+   "ritmo_real": 52
   },
   {
    "plano": "6103318116",
@@ -165,13 +165,13 @@
    "motorista": "Diemes Elder Rogerio Da Silva",
    "cidade": "Campinas",
    "total": 6,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:15",
-   "ritmo_real": 65
+   "ultima_baixa": "14:16",
+   "ritmo_real": 64
   },
   {
    "plano": "6103308432",
@@ -240,13 +240,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Ourinhos",
    "total": 3,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "08:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:54",
-   "ritmo_real": 80
+   "ultima_baixa": "14:10",
+   "ritmo_real": 168
   },
   {
    "plano": "6103301011",
@@ -290,6 +290,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103316128",
+   "op": "Café · Guarulhos",
+   "placa": "CDL5A39",
+   "motorista": "John Lucas",
+   "cidade": "Embu Das Artes",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:29",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -380,21 +395,6 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103316128",
-   "op": "Café · Guarulhos",
-   "placa": "CDL5A39",
-   "motorista": "John Lucas",
-   "cidade": "Embu Das Artes",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:29",
-   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -494,33 +494,33 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 75,
-   "ok": 51,
+   "ok": 58,
    "semapont": 0,
-   "gm": 51
+   "gm": 58
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 9,
    "total": 67,
-   "ok": 24,
+   "ok": 37,
    "semapont": 0,
-   "gm": 24
+   "gm": 37
   },
   {
    "op": "Café · Guarulhos",
    "veic": 9,
-   "total": 45,
-   "ok": 18,
+   "total": 46,
+   "ok": 19,
    "semapont": 0,
-   "gm": 15
+   "gm": 16
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 8,
    "total": 19,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14
+   "gm": 15
   },
   {
    "op": "Café · SJC",
@@ -556,6 +556,10 @@
   {
    "h": "13",
    "n": 9
+  },
+  {
+   "h": "14",
+   "n": 22
   }
  ],
  "gm_sem_sac": 0
