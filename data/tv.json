@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-16T13:16:44-03:00",
+ "gerado_em": "2026-10-16T13:31:40-03:00",
  "dia": "2026-10-16",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -150,13 +150,13 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 9,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "08:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:25",
-   "ritmo_real": 103
+   "ultima_baixa": "13:30",
+   "ritmo_real": 90
   },
   {
    "plano": "6103314710",
@@ -525,9 +525,9 @@
    "op": "Café · Guarulhos",
    "veic": 10,
    "total": 47,
-   "ok": 17,
+   "ok": 18,
    "semapont": 0,
-   "gm": 14
+   "gm": 15
   },
   {
    "op": "Café · CD Sumaré",
@@ -567,6 +567,10 @@
   {
    "h": "12",
    "n": 19
+  },
+  {
+   "h": "13",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
