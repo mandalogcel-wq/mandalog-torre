@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-17T11:01:42-03:00",
+ "gerado_em": "2026-10-17T16:31:42-03:00",
  "dia": "2026-10-17",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,12 +45,12 @@
    "motorista": "Wellington Pedro Da Silva",
    "cidade": "Osasco",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "16:21",
    "ritmo_real": 0
   }
  ],
@@ -59,9 +59,9 @@
    "op": "Café · Guarulhos",
    "veic": 3,
    "total": 5,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2
+   "gm": 3
   }
  ],
  "greenmile_ok": true,
@@ -72,6 +72,10 @@
   },
   {
    "h": "10",
+   "n": 1
+  },
+  {
+   "h": "16",
    "n": 1
   }
  ],
