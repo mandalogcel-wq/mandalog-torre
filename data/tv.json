@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T07:46:52-03:00",
+ "gerado_em": "2026-10-19T08:01:44-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Guilherme",
    "cidade": "Sao Paulo",
    "total": 17,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "06:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "06:53",
-   "ritmo_real": 12
+   "ultima_baixa": "07:58",
+   "ritmo_real": 29
   },
   {
    "plano": "6103319785",
@@ -60,13 +60,13 @@
    "motorista": "Orlando Vieira",
    "cidade": "Taboao Da Serra",
    "total": 10,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "06:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:04",
-   "ritmo_real": 0
+   "ultima_baixa": "07:40",
+   "ritmo_real": 18
   },
   {
    "plano": "6103319776",
@@ -359,9 +359,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 86,
-   "ok": 4,
+   "ok": 7,
    "semapont": 0,
-   "gm": 4
+   "gm": 7
   },
   {
    "op": "Café · Meso Marília",
@@ -388,7 +388,7 @@
   },
   {
    "h": "07",
-   "n": 1
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
