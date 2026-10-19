@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T16:16:50-03:00",
+ "gerado_em": "2026-10-19T16:31:42-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Jacarei",
    "total": 21,
-   "ok": 5,
+   "ok": 9,
    "semapont": 0,
-   "gm": 5,
+   "gm": 9,
    "saida": "09:58",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:30",
-   "ritmo_real": 32
+   "ultima_baixa": "15:33",
+   "ritmo_real": 31
   },
   {
    "plano": "6103309693",
@@ -165,13 +165,13 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Sao Jose Dos Campos",
    "total": 15,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "12:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:58",
-   "ritmo_real": 37
+   "ultima_baixa": "16:23",
+   "ritmo_real": 30
   },
   {
    "plano": "6103317676",
@@ -240,13 +240,13 @@
    "motorista": "Orlando Vieira",
    "cidade": "Taboao Da Serra",
    "total": 10,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 5,
+   "gm": 7,
    "saida": "06:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:53",
-   "ritmo_real": 117
+   "ultima_baixa": "16:27",
+   "ritmo_real": 94
   },
   {
    "plano": "6103302137",
@@ -300,13 +300,13 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Itapevi",
    "total": 8,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4,
+   "gm": 5,
    "saida": "11:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:57",
-   "ritmo_real": 87
+   "ultima_baixa": "16:14",
+   "ritmo_real": 69
   },
   {
    "plano": "6103317668",
@@ -405,12 +405,12 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Queluz",
    "total": 4,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "12:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "16:21",
    "ritmo_real": 0
   },
   {
@@ -542,10 +542,10 @@
    "total": 2,
    "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "07:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:28",
+   "ultima_baixa": "16:06",
    "ritmo_real": 0
   },
   {
@@ -674,9 +674,9 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 87,
-   "ok": 58,
+   "ok": 63,
    "semapont": 0,
-   "gm": 48
+   "gm": 56
   },
   {
    "op": "Café · CD Sumaré",
@@ -698,9 +698,9 @@
    "op": "Café · SJC",
    "veic": 6,
    "total": 65,
-   "ok": 34,
+   "ok": 40,
    "semapont": 0,
-   "gm": 34
+   "gm": 40
   },
   {
    "op": "Café · Meso Marília",
@@ -719,7 +719,7 @@
   },
   {
    "h": "07",
-   "n": 7
+   "n": 5
   },
   {
    "h": "08",
@@ -751,7 +751,11 @@
   },
   {
    "h": "15",
-   "n": 21
+   "n": 24
+  },
+  {
+   "h": "16",
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
