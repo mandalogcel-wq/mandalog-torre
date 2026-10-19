@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T09:01:41-03:00",
+ "gerado_em": "2026-10-19T09:16:45-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 0,
-   "semapont": 22,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "08:51",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:54",
+   "ritmo_real": 1
   },
   {
    "plano": "6103309693",
@@ -46,7 +46,7 @@
    "cidade": "Sao Roque",
    "total": 19,
    "ok": 0,
-   "semapont": 19,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -61,7 +61,7 @@
    "cidade": "Bauru",
    "total": 18,
    "ok": 0,
-   "semapont": 18,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -91,7 +91,7 @@
    "cidade": "Vargem",
    "total": 16,
    "ok": 0,
-   "semapont": 16,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -106,10 +106,10 @@
    "cidade": "Rio Claro",
    "total": 16,
    "ok": 0,
-   "semapont": 16,
+   "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "07:41",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -120,8 +120,23 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Santa Cruz Do Rio Pardo",
    "total": 15,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "08:18",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:53",
+   "ritmo_real": 11
+  },
+  {
+   "plano": "6103317676",
+   "op": "Café · Meso Marília",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Pompeia",
+   "total": 14,
    "ok": 0,
-   "semapont": 15,
+   "semapont": 14,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -150,8 +165,23 @@
    "motorista": "Hilton Conceicao Silva",
    "cidade": "Sorocaba",
    "total": 12,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3,
+   "saida": "07:23",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:44",
+   "ritmo_real": 28
+  },
+  {
+   "plano": "6103317673",
+   "op": "Café · Meso Marília",
+   "placa": "GDS8C65",
+   "motorista": "Cristina Sales Moreira",
+   "cidade": "Marilia",
+   "total": 11,
    "ok": 0,
-   "semapont": 12,
+   "semapont": 11,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -180,9 +210,9 @@
    "motorista": "Alex Dos Santos",
    "cidade": "Paulinia",
    "total": 9,
-   "ok": 0,
-   "semapont": 9,
-   "gm": 0,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -271,7 +301,7 @@
    "cidade": "Sorocaba",
    "total": 5,
    "ok": 0,
-   "semapont": 5,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -466,7 +496,7 @@
    "cidade": "Jundiai",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -562,25 +592,25 @@
    "op": "Café · CD Sumaré",
    "veic": 7,
    "total": 78,
-   "ok": 0,
-   "semapont": 78,
-   "gm": 0
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 68,
-   "ok": 4,
-   "semapont": 40,
-   "gm": 0
+   "ok": 8,
+   "semapont": 0,
+   "gm": 4
   },
   {
    "op": "Café · Meso Marília",
-   "veic": 3,
-   "total": 39,
-   "ok": 0,
-   "semapont": 15,
-   "gm": 0
+   "veic": 5,
+   "total": 64,
+   "ok": 4,
+   "semapont": 25,
+   "gm": 4
   }
  ],
  "greenmile_ok": true,
@@ -591,11 +621,11 @@
   },
   {
    "h": "07",
-   "n": 4
+   "n": 5
   },
   {
    "h": "08",
-   "n": 2
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
