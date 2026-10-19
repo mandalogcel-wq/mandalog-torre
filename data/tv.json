@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T16:31:42-03:00",
+ "gerado_em": "2026-10-19T16:46:41-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 13,
+   "ok": 22,
    "semapont": 0,
-   "gm": 13,
+   "gm": 22,
    "saida": "08:51",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:51",
-   "ritmo_real": 30
+   "ultima_baixa": "16:12",
+   "ritmo_real": 21
   },
   {
    "plano": "6103319270",
@@ -75,12 +75,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Bauru",
    "total": 18,
-   "ok": 13,
+   "ok": 15,
    "semapont": 0,
-   "gm": 13,
+   "gm": 15,
    "saida": "10:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:28",
+   "ultima_baixa": "16:24",
    "ritmo_real": 25
   },
   {
@@ -120,13 +120,13 @@
    "motorista": "Daniele Aparecida De Oliveira Magalhaes",
    "cidade": "Rio Claro",
    "total": 16,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
    "gm": 5,
    "saida": "07:41",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:55",
-   "ritmo_real": 60
+   "ultima_baixa": "15:19",
+   "ritmo_real": 53
   },
   {
    "plano": "6103319262",
@@ -135,9 +135,9 @@
    "motorista": "Edson Martins De Carvalho",
    "cidade": "Aparecida",
    "total": 16,
-   "ok": 12,
+   "ok": 14,
    "semapont": 0,
-   "gm": 12,
+   "gm": 14,
    "saida": "08:37",
    "saida_fonte": "greenmile",
    "ultima_baixa": "15:20",
@@ -255,7 +255,7 @@
    "motorista": "Alex Dos Santos",
    "cidade": "Paulinia",
    "total": 9,
-   "ok": 7,
+   "ok": 9,
    "semapont": 0,
    "gm": 7,
    "saida": "10:59",
@@ -345,12 +345,12 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Avare",
    "total": 6,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "16:11",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:12",
    "ritmo_real": 0
   },
   {
@@ -450,9 +450,9 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Taubate",
    "total": 3,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "08:14",
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:14",
@@ -682,7 +682,7 @@
    "op": "Café · CD Sumaré",
    "veic": 7,
    "total": 78,
-   "ok": 37,
+   "ok": 40,
    "semapont": 0,
    "gm": 32
   },
@@ -690,17 +690,17 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 68,
-   "ok": 44,
+   "ok": 57,
    "semapont": 0,
-   "gm": 40
+   "gm": 53
   },
   {
    "op": "Café · SJC",
    "veic": 6,
    "total": 65,
-   "ok": 40,
+   "ok": 44,
    "semapont": 0,
-   "gm": 40
+   "gm": 44
   },
   {
    "op": "Café · Meso Marília",
@@ -751,11 +751,11 @@
   },
   {
    "h": "15",
-   "n": 24
+   "n": 25
   },
   {
    "h": "16",
-   "n": 11
+   "n": 24
   }
  ],
  "gm_sem_sac": 0
