@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T10:46:40-03:00",
+ "gerado_em": "2026-10-19T11:01:45-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Assis",
    "total": 23,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 23,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -30,13 +30,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 4,
-   "semapont": 0,
-   "gm": 4,
-   "saida": "08:51",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:54",
-   "ritmo_real": 1
+   "ok": 0,
+   "semapont": 22,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103319270",
@@ -61,7 +61,7 @@
    "cidade": "Sao Roque",
    "total": 19,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 19,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -76,7 +76,7 @@
    "cidade": "Bauru",
    "total": 18,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 18,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -90,13 +90,13 @@
    "motorista": "Guilherme",
    "cidade": "Sao Paulo",
    "total": 17,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "06:04",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:08",
-   "ritmo_real": 31
+   "ultima_baixa": "10:54",
+   "ritmo_real": 33
   },
   {
    "plano": "6103309690",
@@ -106,7 +106,7 @@
    "cidade": "Vargem",
    "total": 16,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 16,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -121,10 +121,10 @@
    "cidade": "Rio Claro",
    "total": 16,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 16,
    "gm": 0,
-   "saida": "07:41",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -150,13 +150,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Santa Cruz Do Rio Pardo",
    "total": 15,
-   "ok": 6,
-   "semapont": 0,
-   "gm": 6,
-   "saida": "08:18",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "09:36",
-   "ritmo_real": 15
+   "ok": 0,
+   "semapont": 15,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103319263",
@@ -181,7 +181,7 @@
    "cidade": "Pompeia",
    "total": 14,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 14,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -210,13 +210,13 @@
    "motorista": "Hilton Conceicao Silva",
    "cidade": "Sorocaba",
    "total": 12,
-   "ok": 7,
-   "semapont": 0,
-   "gm": 7,
-   "saida": "07:23",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "10:30",
-   "ritmo_real": 27
+   "ok": 0,
+   "semapont": 12,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103317673",
@@ -226,7 +226,7 @@
    "cidade": "Marilia",
    "total": 11,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 11,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -255,9 +255,9 @@
    "motorista": "Alex Dos Santos",
    "cidade": "Paulinia",
    "total": 9,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
+   "ok": 0,
+   "semapont": 9,
+   "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -270,13 +270,13 @@
    "motorista": "Giovanni Luiz Da Silva Viera Inonceio",
    "cidade": "Campos Do Jordao",
    "total": 8,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "09:37",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:48",
-   "ritmo_real": 0
+   "ultima_baixa": "10:56",
+   "ritmo_real": 34
   },
   {
    "plano": "6103319776",
@@ -288,8 +288,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:58",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -315,12 +315,12 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Aguas De Santa Barbara",
    "total": 8,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "09:55",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "09:55",
+   "ok": 0,
+   "semapont": 8,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -330,12 +330,12 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Avare",
    "total": 7,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2,
-   "saida": "08:17",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:17",
+   "ok": 0,
+   "semapont": 7,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -346,7 +346,7 @@
    "cidade": "Avare",
    "total": 6,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 6,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -361,7 +361,7 @@
    "cidade": "Sorocaba",
    "total": 5,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 5,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -435,12 +435,27 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Bauru",
    "total": 3,
+   "ok": 0,
+   "semapont": 3,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103312352",
+   "op": "Café · SJC",
+   "placa": "RUE0H58",
+   "motorista": "Roberto Henrique Costa",
+   "cidade": "Taubate",
+   "total": 3,
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:26",
+   "saida": "08:14",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:15",
+   "ultima_baixa": "08:14",
    "ritmo_real": 0
   },
   {
@@ -510,12 +525,12 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:52",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:52",
    "ritmo_real": 0
   },
   {
@@ -571,10 +586,10 @@
    "cidade": "Jundiai",
    "total": 1,
    "ok": 0,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 0,
-   "saida": "09:19",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -615,12 +630,12 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Marilia",
    "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "09:20",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "09:20",
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -659,41 +674,41 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 86,
-   "ok": 17,
+   "ok": 19,
    "semapont": 0,
-   "gm": 16
+   "gm": 18
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 7,
    "total": 78,
-   "ok": 8,
-   "semapont": 0,
-   "gm": 8
+   "ok": 0,
+   "semapont": 78,
+   "gm": 0
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 68,
-   "ok": 12,
+   "ok": 4,
+   "semapont": 64,
+   "gm": 0
+  },
+  {
+   "op": "Café · SJC",
+   "veic": 6,
+   "total": 65,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8
+   "gm": 9
   },
   {
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 64,
-   "ok": 7,
-   "semapont": 0,
-   "gm": 7
-  },
-  {
-   "op": "Café · SJC",
-   "veic": 5,
-   "total": 62,
-   "ok": 6,
-   "semapont": 0,
-   "gm": 6
+   "ok": 0,
+   "semapont": 64,
+   "gm": 0
   }
  ],
  "greenmile_ok": true,
@@ -704,15 +719,15 @@
   },
   {
    "h": "07",
-   "n": 5
+   "n": 4
   },
   {
    "h": "08",
-   "n": 15
+   "n": 4
   },
   {
    "h": "09",
-   "n": 13
+   "n": 8
   },
   {
    "h": "10",
