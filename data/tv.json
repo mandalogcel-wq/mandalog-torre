@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T14:17:09-03:00",
+ "gerado_em": "2026-10-19T14:31:43-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -495,13 +495,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Campos Do Jordao",
    "total": 2,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "09:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:49",
-   "ritmo_real": 0
+   "ultima_baixa": "14:29",
+   "ritmo_real": 100
   },
   {
    "plano": "6103318110",
@@ -698,9 +698,9 @@
    "op": "Café · SJC",
    "veic": 6,
    "total": 65,
-   "ok": 27,
+   "ok": 28,
    "semapont": 0,
-   "gm": 27
+   "gm": 28
   },
   {
    "op": "Café · Meso Marília",
@@ -744,6 +744,10 @@
   {
    "h": "13",
    "n": 29
+  },
+  {
+   "h": "14",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
