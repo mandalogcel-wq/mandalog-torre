@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T17:46:40-03:00",
+ "gerado_em": "2026-10-19T18:01:43-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -165,13 +165,13 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Sao Jose Dos Campos",
    "total": 15,
-   "ok": 8,
+   "ok": 9,
    "semapont": 0,
-   "gm": 8,
+   "gm": 9,
    "saida": "12:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:23",
-   "ritmo_real": 30
+   "ultima_baixa": "17:45",
+   "ritmo_real": 36
   },
   {
    "plano": "6103317676",
@@ -662,10 +662,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "15:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:08",
+   "ultima_baixa": "17:58",
    "ritmo_real": 0
   }
  ],
@@ -676,7 +676,7 @@
    "total": 87,
    "ok": 69,
    "semapont": 0,
-   "gm": 57
+   "gm": 58
   },
   {
    "op": "Café · CD Sumaré",
@@ -698,9 +698,9 @@
    "op": "Café · SJC",
    "veic": 6,
    "total": 65,
-   "ok": 45,
+   "ok": 46,
    "semapont": 0,
-   "gm": 45
+   "gm": 46
   },
   {
    "op": "Café · Meso Marília",
@@ -751,7 +751,7 @@
   },
   {
    "h": "15",
-   "n": 25
+   "n": 24
   },
   {
    "h": "16",
@@ -759,7 +759,7 @@
   },
   {
    "h": "17",
-   "n": 7
+   "n": 9
   }
  ],
  "gm_sem_sac": 0
