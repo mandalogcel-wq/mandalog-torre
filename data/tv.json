@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T07:31:42-03:00",
+ "gerado_em": "2026-10-19T07:46:52-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Assis",
    "total": 23,
    "ok": 0,
-   "semapont": 23,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -106,7 +106,7 @@
    "cidade": "Bauru",
    "total": 4,
    "ok": 0,
-   "semapont": 4,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -166,7 +166,7 @@
    "cidade": "Bauru",
    "total": 3,
    "ok": 0,
-   "semapont": 3,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -316,7 +316,7 @@
    "cidade": "Marilia",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -368,7 +368,7 @@
    "veic": 2,
    "total": 24,
    "ok": 0,
-   "semapont": 24,
+   "semapont": 0,
    "gm": 0
   },
   {
@@ -376,7 +376,7 @@
    "veic": 2,
    "total": 7,
    "ok": 0,
-   "semapont": 7,
+   "semapont": 0,
    "gm": 0
   }
  ],
