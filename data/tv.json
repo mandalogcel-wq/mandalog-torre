@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T16:01:43-03:00",
+ "gerado_em": "2026-10-19T16:16:50-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -62,10 +62,10 @@
    "total": 19,
    "ok": 9,
    "semapont": 0,
-   "gm": 5,
+   "gm": 7,
    "saida": "15:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:31",
+   "ultima_baixa": "15:34",
    "ritmo_real": 1
   },
   {
@@ -540,12 +540,12 @@
    "motorista": "Marcos Antonio Da Silva",
    "cidade": "Sao Paulo",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
    "gm": 0,
    "saida": "07:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "07:28",
    "ritmo_real": 0
   },
   {
@@ -674,7 +674,7 @@
    "op": "Café · Guarulhos",
    "veic": 19,
    "total": 87,
-   "ok": 56,
+   "ok": 58,
    "semapont": 0,
    "gm": 48
   },
@@ -684,7 +684,7 @@
    "total": 78,
    "ok": 37,
    "semapont": 0,
-   "gm": 30
+   "gm": 32
   },
   {
    "op": "Café · Meso Bauru",
@@ -719,7 +719,7 @@
   },
   {
    "h": "07",
-   "n": 5
+   "n": 7
   },
   {
    "h": "08",
@@ -751,7 +751,7 @@
   },
   {
    "h": "15",
-   "n": 19
+   "n": 21
   }
  ],
  "gm_sem_sac": 0
