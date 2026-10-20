@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T16:31:43-03:00",
+ "gerado_em": "2026-10-20T16:46:44-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Botucatu",
    "total": 17,
-   "ok": 14,
+   "ok": 16,
    "semapont": 0,
-   "gm": 14,
+   "gm": 16,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:34",
-   "ritmo_real": 33
+   "ultima_baixa": "16:24",
+   "ritmo_real": 32
   },
   {
    "plano": "6103317669",
@@ -369,21 +369,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103298712",
-   "op": "Café · Meso Bauru",
-   "placa": "EFQ7G95",
-   "motorista": "Jose Ailton Felix Da Silva",
-   "cidade": "Bauru",
-   "total": 2,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103319673",
    "op": "Café · CD Sumaré",
    "placa": "GHA9A82",
@@ -560,7 +545,7 @@
    "gm": 1,
    "saida": "15:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:49",
+   "ultima_baixa": "16:13",
    "ritmo_real": 0
   }
  ],
@@ -575,11 +560,11 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 5,
-   "total": 43,
-   "ok": 37,
+   "veic": 4,
+   "total": 41,
+   "ok": 39,
    "semapont": 0,
-   "gm": 37
+   "gm": 39
   },
   {
    "op": "Café · Itapeva",
@@ -654,11 +639,11 @@
   },
   {
    "h": "15",
-   "n": 15
+   "n": 14
   },
   {
    "h": "16",
-   "n": 2
+   "n": 5
   }
  ],
  "gm_sem_sac": 0
