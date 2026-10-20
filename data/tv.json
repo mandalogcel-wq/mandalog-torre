@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T11:46:45-03:00",
+ "gerado_em": "2026-10-20T12:01:43-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,13 +75,13 @@
    "motorista": "Ricardo Barros",
    "cidade": "Sao Paulo",
    "total": 15,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2,
+   "gm": 3,
    "saida": "09:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:22",
-   "ritmo_real": 46
+   "ultima_baixa": "11:40",
+   "ritmo_real": 62
   },
   {
    "plano": "6103318352",
@@ -105,13 +105,13 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Jacarei",
    "total": 12,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "06:43",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:36",
-   "ritmo_real": 25
+   "ultima_baixa": "11:35",
+   "ritmo_real": 29
   },
   {
    "plano": "6103314644",
@@ -255,12 +255,12 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Osasco",
    "total": 5,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:33",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "11:42",
    "ritmo_real": 0
   },
   {
@@ -285,13 +285,13 @@
    "motorista": "Sergio Silva De Moraes",
    "cidade": "Sao Jose Dos Campos",
    "total": 5,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "10:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:39",
-   "ritmo_real": 31
+   "ultima_baixa": "11:58",
+   "ritmo_real": 37
   },
   {
    "plano": "6103314640",
@@ -569,9 +569,9 @@
    "op": "Café · Guarulhos",
    "veic": 9,
    "total": 77,
-   "ok": 28,
+   "ok": 30,
    "semapont": 0,
-   "gm": 28
+   "gm": 30
   },
   {
    "op": "Café · Meso Bauru",
@@ -609,9 +609,9 @@
    "op": "Café · SJC",
    "veic": 2,
    "total": 17,
-   "ok": 13,
+   "ok": 16,
    "semapont": 0,
-   "gm": 13
+   "gm": 16
   }
  ],
  "greenmile_ok": true,
@@ -638,7 +638,7 @@
   },
   {
    "h": "11",
-   "n": 3
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
