@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T07:46:42-03:00",
+ "gerado_em": "2026-10-20T08:01:39-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -18,8 +18,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "07:34",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -105,13 +105,13 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Jacarei",
    "total": 12,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "06:43",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "07:12",
-   "ritmo_real": 23
+   "ultima_baixa": "07:46",
+   "ritmo_real": 28
   },
   {
    "plano": "6103317674",
@@ -168,8 +168,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "07:54",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -316,9 +316,9 @@
    "op": "Café · SJC",
    "veic": 2,
    "total": 17,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3
+   "gm": 4
   }
  ],
  "greenmile_ok": true,
@@ -329,7 +329,7 @@
   },
   {
    "h": "07",
-   "n": 1
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
