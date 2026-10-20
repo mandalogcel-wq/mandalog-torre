@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T18:01:42-03:00",
+ "gerado_em": "2026-10-20T19:16:53-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -452,10 +452,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:08",
+   "ultima_baixa": "18:41",
    "ritmo_real": 0
   },
   {
@@ -588,7 +588,7 @@
    "total": 24,
    "ok": 23,
    "semapont": 0,
-   "gm": 21
+   "gm": 22
   },
   {
    "op": "Café · SJC",
@@ -615,7 +615,7 @@
   },
   {
    "h": "09",
-   "n": 24
+   "n": 23
   },
   {
    "h": "10",
@@ -648,6 +648,10 @@
   {
    "h": "17",
    "n": 6
+  },
+  {
+   "h": "18",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
