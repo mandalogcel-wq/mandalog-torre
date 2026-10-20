@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-19T21:01:43-03:00",
+ "gerado_em": "2026-10-19T21:16:42-03:00",
  "dia": "2026-10-19",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Emanuel Sousa Rocha",
    "cidade": "Assis",
    "total": 23,
-   "ok": 0,
-   "semapont": 22,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 17,
+   "semapont": 0,
+   "gm": 17,
+   "saida": "10:46",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:50",
+   "ritmo_real": 26
   },
   {
    "plano": "6103317672",
@@ -30,13 +30,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 22,
-   "ok": 0,
-   "semapont": 22,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 22,
+   "semapont": 0,
+   "gm": 22,
+   "saida": "08:51",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "16:12",
+   "ritmo_real": 21
   },
   {
    "plano": "6103319270",
@@ -62,11 +62,11 @@
    "total": 19,
    "ok": 19,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 17,
+   "saida": "15:27",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "20:35",
+   "ritmo_real": 17
   },
   {
    "plano": "6103314474",
@@ -75,13 +75,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Bauru",
    "total": 18,
-   "ok": 0,
-   "semapont": 18,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 17,
+   "semapont": 0,
+   "gm": 17,
+   "saida": "10:33",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:46",
+   "ritmo_real": 27
   },
   {
    "plano": "6103319781",
@@ -122,11 +122,11 @@
    "total": 16,
    "ok": 16,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 12,
+   "saida": "07:41",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "19:28",
+   "ritmo_real": 47
   },
   {
    "plano": "6103319262",
@@ -150,13 +150,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Santa Cruz Do Rio Pardo",
    "total": 15,
-   "ok": 0,
-   "semapont": 13,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 13,
+   "semapont": 0,
+   "gm": 13,
+   "saida": "08:18",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:30",
+   "ritmo_real": 21
   },
   {
    "plano": "6103319263",
@@ -180,13 +180,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Pompeia",
    "total": 14,
-   "ok": 0,
-   "semapont": 14,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 5,
+   "semapont": 0,
+   "gm": 5,
+   "saida": "14:19",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "18:42",
+   "ritmo_real": 66
   },
   {
    "plano": "6103319785",
@@ -212,11 +212,11 @@
    "total": 12,
    "ok": 12,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 12,
+   "saida": "07:23",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:07",
+   "ritmo_real": 34
   },
   {
    "plano": "6103317673",
@@ -225,13 +225,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Marilia",
    "total": 11,
-   "ok": 0,
-   "semapont": 11,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 11,
+   "semapont": 0,
+   "gm": 11,
+   "saida": "10:46",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:59",
+   "ritmo_real": 19
   },
   {
    "plano": "6103319885",
@@ -257,11 +257,11 @@
    "total": 9,
    "ok": 9,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 7,
+   "saida": "10:59",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:56",
+   "ritmo_real": 23
   },
   {
    "plano": "6103319275",
@@ -315,13 +315,13 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Aguas De Santa Barbara",
    "total": 8,
-   "ok": 0,
-   "semapont": 8,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "09:55",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:44",
+   "ritmo_real": 76
   },
   {
    "plano": "6103317664",
@@ -330,13 +330,13 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Avare",
    "total": 7,
-   "ok": 0,
-   "semapont": 6,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 7,
+   "semapont": 0,
+   "gm": 7,
+   "saida": "08:17",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "14:17",
+   "ritmo_real": 38
   },
   {
    "plano": "6103317665",
@@ -345,13 +345,13 @@
    "motorista": "Daniel Eduardo Gonçalves",
    "cidade": "Avare",
    "total": 6,
-   "ok": 0,
-   "semapont": 6,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "16:11",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "17:47",
+   "ritmo_real": 32
   },
   {
    "plano": "6103306089",
@@ -378,9 +378,9 @@
    "ok": 3,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "saida": "12:59",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "12:59",
    "ritmo_real": 0
   },
   {
@@ -437,11 +437,11 @@
    "total": 3,
    "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 3,
+   "saida": "08:26",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "13:03",
+   "ritmo_real": 84
   },
   {
    "plano": "6103312352",
@@ -587,10 +587,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:19",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "10:41",
    "ritmo_real": 0
   },
   {
@@ -632,10 +632,10 @@
    "total": 1,
    "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:20",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:20",
    "ritmo_real": 0
   },
   {
@@ -684,15 +684,15 @@
    "total": 78,
    "ok": 76,
    "semapont": 0,
-   "gm": 0
+   "gm": 49
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 68,
-   "ok": 7,
-   "semapont": 60,
-   "gm": 0
+   "ok": 61,
+   "semapont": 0,
+   "gm": 57
   },
   {
    "op": "Café · SJC",
@@ -706,9 +706,9 @@
    "op": "Café · Meso Marília",
    "veic": 5,
    "total": 64,
-   "ok": 1,
-   "semapont": 60,
-   "gm": 0
+   "ok": 47,
+   "semapont": 0,
+   "gm": 47
   }
  ],
  "greenmile_ok": true,
@@ -719,51 +719,59 @@
   },
   {
    "h": "07",
-   "n": 4
+   "n": 5
   },
   {
    "h": "08",
-   "n": 4
-  },
-  {
-   "h": "09",
-   "n": 8
-  },
-  {
-   "h": "10",
-   "n": 8
-  },
-  {
-   "h": "11",
-   "n": 12
-  },
-  {
-   "h": "12",
-   "n": 20
-  },
-  {
-   "h": "13",
-   "n": 12
-  },
-  {
-   "h": "14",
-   "n": 3
-  },
-  {
-   "h": "15",
-   "n": 13
-  },
-  {
-   "h": "16",
    "n": 14
   },
   {
+   "h": "09",
+   "n": 13
+  },
+  {
+   "h": "10",
+   "n": 31
+  },
+  {
+   "h": "11",
+   "n": 27
+  },
+  {
+   "h": "12",
+   "n": 35
+  },
+  {
+   "h": "13",
+   "n": 29
+  },
+  {
+   "h": "14",
+   "n": 15
+  },
+  {
+   "h": "15",
+   "n": 24
+  },
+  {
+   "h": "16",
+   "n": 29
+  },
+  {
    "h": "17",
-   "n": 3
+   "n": 18
   },
   {
    "h": "18",
-   "n": 1
+   "n": 4
+  },
+  {
+   "h": "19",
+   "n": 3
+  },
+  {
+   "h": "20",
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
