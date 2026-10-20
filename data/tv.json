@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T16:46:44-03:00",
+ "gerado_em": "2026-10-20T17:01:46-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Botucatu",
    "total": 17,
-   "ok": 16,
+   "ok": 17,
    "semapont": 0,
-   "gm": 16,
+   "gm": 17,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:24",
-   "ritmo_real": 32
+   "ultima_baixa": "16:48",
+   "ritmo_real": 31
   },
   {
    "plano": "6103317669",
@@ -75,13 +75,13 @@
    "motorista": "Ricardo Barros",
    "cidade": "Sao Paulo",
    "total": 15,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "09:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:18",
-   "ritmo_real": 38
+   "ultima_baixa": "16:33",
+   "ritmo_real": 42
   },
   {
    "plano": "6103318352",
@@ -90,13 +90,13 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Taquarivai",
    "total": 14,
-   "ok": 10,
+   "ok": 11,
    "semapont": 0,
-   "gm": 10,
+   "gm": 11,
    "saida": "11:06",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:28",
-   "ritmo_real": 23
+   "ultima_baixa": "16:52",
+   "ritmo_real": 24
   },
   {
    "plano": "6103319270",
@@ -150,13 +150,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itai",
    "total": 9,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "06:43",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:48",
-   "ritmo_real": 1
+   "ultima_baixa": "16:42",
+   "ritmo_real": 138
   },
   {
    "plano": "6103318350",
@@ -330,9 +330,9 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Aguas De Santa Barbara",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -554,33 +554,33 @@
    "op": "Café · Guarulhos",
    "veic": 11,
    "total": 80,
-   "ok": 48,
+   "ok": 49,
    "semapont": 0,
-   "gm": 46
+   "gm": 47
   },
   {
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 41,
-   "ok": 39,
+   "ok": 40,
    "semapont": 0,
-   "gm": 39
+   "gm": 40
   },
   {
    "op": "Café · Itapeva",
    "veic": 4,
    "total": 34,
-   "ok": 12,
+   "ok": 15,
    "semapont": 0,
-   "gm": 12
+   "gm": 15
   },
   {
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 34,
-   "ok": 28,
+   "ok": 31,
    "semapont": 0,
-   "gm": 28
+   "gm": 31
   },
   {
    "op": "Café · CD Sumaré",
@@ -643,7 +643,7 @@
   },
   {
    "h": "16",
-   "n": 5
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
