@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T08:01:39-03:00",
+ "gerado_em": "2026-10-20T08:31:43-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -144,6 +144,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103317677",
+   "op": "Café · Meso Marília",
+   "placa": "GDS8C65",
+   "motorista": "Cristina Sales Moreira",
+   "cidade": "Assis",
+   "total": 9,
+   "ok": 0,
+   "semapont": 9,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103299335",
    "op": "Café · Meso Marília",
    "placa": "KOP9F85",
@@ -277,6 +292,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103317667",
+   "op": "Café · Meso Marília",
+   "placa": "EFQ7G95",
+   "motorista": "Jose Ailton Felix Da Silva",
+   "cidade": "Taruma",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   }
  ],
  "pracas": [
@@ -297,20 +327,20 @@
    "gm": 0
   },
   {
+   "op": "Café · Meso Marília",
+   "veic": 4,
+   "total": 28,
+   "ok": 8,
+   "semapont": 10,
+   "gm": 8
+  },
+  {
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 25,
    "ok": 0,
    "semapont": 0,
    "gm": 0
-  },
-  {
-   "op": "Café · Meso Marília",
-   "veic": 2,
-   "total": 18,
-   "ok": 8,
-   "semapont": 0,
-   "gm": 8
   },
   {
    "op": "Café · SJC",
