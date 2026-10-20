@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T13:31:42-03:00",
+ "gerado_em": "2026-10-20T13:46:42-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Botucatu",
    "total": 17,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:41",
-   "ritmo_real": 51
+   "ultima_baixa": "13:18",
+   "ritmo_real": 49
   },
   {
    "plano": "6103317669",
@@ -60,13 +60,13 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 11,
+   "ok": 14,
    "semapont": 0,
-   "gm": 11,
+   "gm": 14,
    "saida": "08:40",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:21",
-   "ritmo_real": 16
+   "ultima_baixa": "13:16",
+   "ritmo_real": 21
   },
   {
    "plano": "6103321144",
@@ -120,13 +120,13 @@
    "motorista": "Hilton Conceicao Silva",
    "cidade": "Limeira",
    "total": 11,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "08:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:49",
-   "ritmo_real": 27
+   "ultima_baixa": "13:22",
+   "ritmo_real": 41
   },
   {
    "plano": "6103317674",
@@ -380,7 +380,7 @@
    "gm": 2,
    "saida": "11:50",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:50",
+   "ultima_baixa": "13:01",
    "ritmo_real": 0
   },
   {
@@ -577,9 +577,9 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 41,
-   "ok": 23,
+   "ok": 27,
    "semapont": 0,
-   "gm": 23
+   "gm": 27
   },
   {
    "op": "Café · Itapeva",
@@ -601,9 +601,9 @@
    "op": "Café · CD Sumaré",
    "veic": 12,
    "total": 32,
-   "ok": 12,
+   "ok": 14,
    "semapont": 1,
-   "gm": 12
+   "gm": 14
   },
   {
    "op": "Café · SJC",
@@ -638,7 +638,7 @@
   },
   {
    "h": "11",
-   "n": 12
+   "n": 10
   },
   {
    "h": "12",
@@ -646,7 +646,7 @@
   },
   {
    "h": "13",
-   "n": 2
+   "n": 10
   }
  ],
  "gm_sem_sac": 0
