@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T16:01:50-03:00",
+ "gerado_em": "2026-10-20T16:16:40-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -399,6 +399,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "4566465",
+   "op": "Café · Guarulhos",
+   "placa": "HWD6886",
+   "motorista": "Deraldo Curcino Moreno",
+   "cidade": "Sao Paulo",
+   "total": 2,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103311000",
    "op": "Café · Itapeva",
    "placa": "MGS5I23",
@@ -552,9 +567,9 @@
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 10,
-   "total": 78,
-   "ok": 45,
+   "veic": 11,
+   "total": 80,
+   "ok": 47,
    "semapont": 0,
    "gm": 45
   },
