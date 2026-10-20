@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T15:01:44-03:00",
+ "gerado_em": "2026-10-20T15:16:41-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Botucatu",
    "total": 17,
-   "ok": 10,
+   "ok": 12,
    "semapont": 0,
-   "gm": 10,
+   "gm": 12,
    "saida": "08:24",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:19",
-   "ritmo_real": 39
+   "ultima_baixa": "15:00",
+   "ritmo_real": 36
   },
   {
    "plano": "6103317669",
@@ -519,36 +519,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103313109",
-   "op": "Café · CD Sumaré",
-   "placa": "SVL4J89",
-   "motorista": "Wellington Costa Dos Santos",
-   "cidade": "Cerquilho",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103316530",
-   "op": "Café · CD Sumaré",
-   "placa": "SVL4J89",
-   "motorista": "Wellington Costa Dos Santos",
-   "cidade": "Cerquilho",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103314641",
    "op": "Café · CD Sumaré",
    "placa": "UOT9H65",
@@ -577,9 +547,9 @@
    "op": "Café · Meso Bauru",
    "veic": 4,
    "total": 41,
-   "ok": 32,
+   "ok": 34,
    "semapont": 0,
-   "gm": 32
+   "gm": 34
   },
   {
    "op": "Café · Itapeva",
@@ -599,8 +569,8 @@
   },
   {
    "op": "Café · CD Sumaré",
-   "veic": 11,
-   "total": 26,
+   "veic": 9,
+   "total": 24,
    "ok": 19,
    "semapont": 1,
    "gm": 19
@@ -650,11 +620,11 @@
   },
   {
    "h": "14",
-   "n": 8
+   "n": 9
   },
   {
    "h": "15",
-   "n": 1
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
