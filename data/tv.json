@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T07:01:40-03:00",
+ "gerado_em": "2026-10-20T07:16:42-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -16,7 +16,7 @@
    "cidade": "Sao Paulo",
    "total": 20,
    "ok": 0,
-   "semapont": 20,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -31,7 +31,7 @@
    "cidade": "Sao Paulo",
    "total": 19,
    "ok": 0,
-   "semapont": 19,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -76,7 +76,7 @@
    "cidade": "Sao Paulo",
    "total": 15,
    "ok": 0,
-   "semapont": 15,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -105,12 +105,12 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Jacarei",
    "total": 12,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
+   "gm": 2,
+   "saida": "06:43",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "06:49",
    "ritmo_real": 0
   },
   {
@@ -138,8 +138,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "06:43",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -166,7 +166,7 @@
    "cidade": "Pirapora Do Bom Jesus",
    "total": 7,
    "ok": 0,
-   "semapont": 7,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -181,7 +181,7 @@
    "cidade": "Osasco",
    "total": 5,
    "ok": 0,
-   "semapont": 5,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -196,7 +196,7 @@
    "cidade": "Francisco Morato",
    "total": 5,
    "ok": 0,
-   "semapont": 5,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -226,7 +226,7 @@
    "cidade": "Itapecerica Da Serra",
    "total": 3,
    "ok": 0,
-   "semapont": 3,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -241,7 +241,7 @@
    "cidade": "Itaquaquecetuba",
    "total": 2,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -271,10 +271,10 @@
    "cidade": "Aruja",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "06:23",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   }
@@ -285,7 +285,7 @@
    "veic": 9,
    "total": 77,
    "ok": 0,
-   "semapont": 77,
+   "semapont": 0,
    "gm": 0
   },
   {
@@ -316,12 +316,17 @@
    "op": "Café · SJC",
    "veic": 2,
    "total": 17,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0
+   "gm": 2
   }
  ],
  "greenmile_ok": true,
- "baixas_por_hora": [],
+ "baixas_por_hora": [
+  {
+   "h": "06",
+   "n": 1
+  }
+ ],
  "gm_sem_sac": 0
 }
