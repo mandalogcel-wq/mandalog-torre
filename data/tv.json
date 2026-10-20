@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T10:31:41-03:00",
+ "gerado_em": "2026-10-20T10:46:42-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -120,13 +120,13 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Candido Mota",
    "total": 10,
-   "ok": 4,
+   "ok": 8,
    "semapont": 0,
-   "gm": 4,
+   "gm": 8,
    "saida": "08:34",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:59",
-   "ritmo_real": 19
+   "ultima_baixa": "10:29",
+   "ritmo_real": 13
   },
   {
    "plano": "6103318351",
@@ -150,13 +150,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Assis",
    "total": 9,
-   "ok": 3,
+   "ok": 6,
    "semapont": 0,
-   "gm": 3,
+   "gm": 6,
    "saida": "08:36",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:42",
-   "ritmo_real": 32
+   "ultima_baixa": "10:21",
+   "ritmo_real": 21
   },
   {
    "plano": "6103299335",
@@ -378,8 +378,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "10:17",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   }
@@ -405,9 +405,9 @@
    "op": "Café · Meso Marília",
    "veic": 6,
    "total": 34,
-   "ok": 15,
+   "ok": 22,
    "semapont": 0,
-   "gm": 15
+   "gm": 22
   },
   {
    "op": "Café · Itapeva",
@@ -450,11 +450,11 @@
   },
   {
    "h": "09",
-   "n": 22
+   "n": 23
   },
   {
    "h": "10",
-   "n": 5
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
