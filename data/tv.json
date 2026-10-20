@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T09:46:42-03:00",
+ "gerado_em": "2026-10-20T10:01:44-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Sao Paulo",
    "total": 20,
-   "ok": 5,
+   "ok": 8,
    "semapont": 0,
-   "gm": 5,
+   "gm": 8,
    "saida": "07:34",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:37",
-   "ritmo_real": 6
+   "ultima_baixa": "09:39",
+   "ritmo_real": 12
   },
   {
    "plano": "6103321219",
@@ -30,12 +30,12 @@
    "motorista": "Valdir",
    "cidade": "Sao Paulo",
    "total": 19,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:25",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:38",
    "ritmo_real": 0
   },
   {
@@ -75,12 +75,12 @@
    "motorista": "Ricardo Barros",
    "cidade": "Sao Paulo",
    "total": 15,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:36",
    "ritmo_real": 0
   },
   {
@@ -135,13 +135,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itai",
    "total": 9,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "06:43",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ultima_baixa": "09:48",
+   "ritmo_real": 1
   },
   {
    "plano": "6103317677",
@@ -180,13 +180,13 @@
    "motorista": "Guilherme Alves De Andrade",
    "cidade": "Pirapora Do Bom Jesus",
    "total": 7,
-   "ok": 2,
+   "ok": 4,
    "semapont": 0,
-   "gm": 2,
+   "gm": 4,
    "saida": "07:54",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:14",
-   "ritmo_real": 0
+   "ultima_baixa": "09:57",
+   "ritmo_real": 14
   },
   {
    "plano": "6103314476",
@@ -213,8 +213,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:33",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -255,13 +255,13 @@
    "motorista": "Orlando Vieira",
    "cidade": "Itapecerica Da Serra",
    "total": 3,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "09:09",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:10",
-   "ritmo_real": 0
+   "ultima_baixa": "09:47",
+   "ritmo_real": 18
   },
   {
    "plano": "6103314482",
@@ -389,9 +389,9 @@
    "op": "Café · Guarulhos",
    "veic": 9,
    "total": 77,
-   "ok": 9,
+   "ok": 18,
    "semapont": 0,
-   "gm": 9
+   "gm": 18
   },
   {
    "op": "Café · Meso Bauru",
@@ -413,9 +413,9 @@
    "op": "Café · Itapeva",
    "veic": 3,
    "total": 25,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0
+   "gm": 2
   },
   {
    "op": "Café · SJC",
@@ -450,7 +450,7 @@
   },
   {
    "h": "09",
-   "n": 7
+   "n": 18
   }
  ],
  "gm_sem_sac": 0
