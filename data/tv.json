@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21T07:46:37-03:00",
+ "gerado_em": "2026-10-21T08:01:44-03:00",
  "dia": "2026-10-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -75,6 +75,21 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Mineiros Do Tiete",
    "total": 12,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103317676",
+   "op": "Café · Meso Marília",
+   "placa": "KOP9F85",
+   "motorista": "Luis Carlos Do Carmo Matos",
+   "cidade": "Pompeia",
+   "total": 8,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -309,6 +324,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103317669",
+   "op": "Café · Meso Bauru",
+   "placa": "FWY5H02",
+   "motorista": "Manoel Mariano Da Silva",
+   "cidade": "Cafelandia",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103314629",
    "op": "Café · CD Sumaré",
    "placa": "QWW2F03",
@@ -372,8 +402,8 @@
  "pracas": [
   {
    "op": "Café · Meso Bauru",
-   "veic": 6,
-   "total": 73,
+   "veic": 7,
+   "total": 74,
    "ok": 0,
    "semapont": 0,
    "gm": 0
@@ -387,20 +417,20 @@
    "gm": 1
   },
   {
+   "op": "Café · Meso Marília",
+   "veic": 5,
+   "total": 17,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2
+  },
+  {
    "op": "Café · Guarulhos",
    "veic": 4,
    "total": 12,
    "ok": 0,
    "semapont": 1,
    "gm": 0
-  },
-  {
-   "op": "Café · Meso Marília",
-   "veic": 4,
-   "total": 9,
-   "ok": 2,
-   "semapont": 0,
-   "gm": 2
   }
  ],
  "greenmile_ok": true,
