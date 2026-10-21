@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21T14:31:43-03:00",
+ "gerado_em": "2026-10-21T14:46:44-03:00",
  "dia": "2026-10-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Emanuel Sousa Rocha",
    "cidade": "Fartura",
    "total": 22,
-   "ok": 10,
+   "ok": 12,
    "semapont": 0,
-   "gm": 10,
+   "gm": 12,
    "saida": "09:15",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:38",
-   "ritmo_real": 29
+   "ultima_baixa": "14:10",
+   "ritmo_real": 27
   },
   {
    "plano": "6103317671",
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 14,
+   "ok": 16,
    "semapont": 0,
-   "gm": 14,
+   "gm": 16,
    "saida": "08:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:57",
-   "ritmo_real": 25
+   "ultima_baixa": "14:29",
+   "ritmo_real": 24
   },
   {
    "plano": "6103322362",
@@ -644,9 +644,9 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 74,
-   "ok": 44,
+   "ok": 48,
    "semapont": 0,
-   "gm": 44
+   "gm": 48
   },
   {
    "op": "Café · Itapeva",
@@ -721,7 +721,7 @@
   },
   {
    "h": "14",
-   "n": 4
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
