@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21T17:01:45-03:00",
+ "gerado_em": "2026-10-21T17:31:44-03:00",
  "dia": "2026-10-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 18,
-   "ok": 9,
+   "ok": 11,
    "semapont": 0,
-   "gm": 9,
+   "gm": 11,
    "saida": "08:53",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:47",
-   "ritmo_real": 40
+   "ultima_baixa": "17:09",
+   "ritmo_real": 46
   },
   {
    "plano": "6103318350",
@@ -165,13 +165,13 @@
    "motorista": "Valdir",
    "cidade": "Sao Paulo",
    "total": 8,
-   "ok": 4,
+   "ok": 6,
    "semapont": 0,
-   "gm": 4,
+   "gm": 6,
    "saida": "13:10",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:58",
-   "ritmo_real": 22
+   "ultima_baixa": "17:19",
+   "ritmo_real": 17
   },
   {
    "plano": "6103317676",
@@ -690,9 +690,9 @@
    "op": "Café · SJC",
    "veic": 5,
    "total": 53,
-   "ok": 42,
+   "ok": 44,
    "semapont": 0,
-   "gm": 42
+   "gm": 44
   },
   {
    "op": "Café · CD Sumaré",
@@ -706,9 +706,9 @@
    "op": "Café · Guarulhos",
    "veic": 13,
    "total": 36,
-   "ok": 16,
+   "ok": 18,
    "semapont": 0,
-   "gm": 14
+   "gm": 16
   },
   {
    "op": "Café · Meso Marília",
@@ -760,6 +760,10 @@
   {
    "h": "16",
    "n": 16
+  },
+  {
+   "h": "17",
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
