@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21T08:16:44-03:00",
+ "gerado_em": "2026-10-21T08:46:43-03:00",
  "dia": "2026-10-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,12 +30,12 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "08:03",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:28",
    "ritmo_real": 0
   },
   {
@@ -105,12 +105,12 @@
    "motorista": "Ronualdo dos Reis",
    "cidade": "Sao Paulo",
    "total": 7,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "07:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "08:28",
    "ritmo_real": 0
   },
   {
@@ -120,12 +120,12 @@
    "motorista": "Daniele Aparecida De Oliveira Magalhaes",
    "cidade": "Valinhos",
    "total": 6,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "08:07",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:16",
    "ritmo_real": 0
   },
   {
@@ -153,8 +153,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "08:25",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -198,8 +198,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "08:11",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -404,17 +404,17 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 74,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 10,
    "total": 38,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1
+   "gm": 2
   },
   {
    "op": "Café · Meso Marília",
@@ -428,9 +428,9 @@
    "op": "Café · Guarulhos",
    "veic": 4,
    "total": 12,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0
+   "gm": 1
   }
  ],
  "greenmile_ok": true,
@@ -438,6 +438,10 @@
   {
    "h": "06",
    "n": 1
+  },
+  {
+   "h": "08",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
