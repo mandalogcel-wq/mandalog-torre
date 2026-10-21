@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-20T19:31:41-03:00",
+ "gerado_em": "2026-10-20T21:46:44-03:00",
  "dia": "2026-10-20",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -414,21 +414,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103319666",
-   "op": "Café · CD Sumaré",
-   "placa": "#N/A",
-   "motorista": "Dione Soares Galego",
-   "cidade": "Jundiai",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:56",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103319758",
    "op": "Café · Guarulhos",
    "placa": "BPG8H46",
@@ -516,6 +501,21 @@
    "saida": "13:47",
    "saida_fonte": "greenmile",
    "ultima_baixa": "13:53",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103319666",
+   "op": "Café · CD Sumaré",
+   "placa": "FDL6D77",
+   "motorista": "Dione Soares Galego",
+   "cidade": "Jundiai",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:56",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
