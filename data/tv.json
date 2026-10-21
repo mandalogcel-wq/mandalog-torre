@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21T12:16:47-03:00",
+ "gerado_em": "2026-10-21T12:31:43-03:00",
  "dia": "2026-10-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -65,8 +65,8 @@
    "gm": 7,
    "saida": "09:23",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:48",
-   "ritmo_real": 4
+   "ultima_baixa": "12:15",
+   "ritmo_real": 29
   },
   {
    "plano": "6103321261",
@@ -406,7 +406,7 @@
    "cidade": "Sao Paulo",
    "total": 1,
    "ok": 0,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -579,7 +579,7 @@
    "veic": 10,
    "total": 24,
    "ok": 10,
-   "semapont": 1,
+   "semapont": 0,
    "gm": 7
   },
   {
@@ -603,7 +603,7 @@
   },
   {
    "h": "09",
-   "n": 22
+   "n": 21
   },
   {
    "h": "10",
@@ -612,6 +612,10 @@
   {
    "h": "11",
    "n": 12
+  },
+  {
+   "h": "12",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
