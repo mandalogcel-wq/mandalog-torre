@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21T09:31:42-03:00",
+ "gerado_em": "2026-10-21T09:46:45-03:00",
  "dia": "2026-10-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,12 +30,12 @@
    "motorista": "Emanuel Sousa Rocha",
    "cidade": "Fartura",
    "total": 22,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:15",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:15",
    "ritmo_real": 0
   },
   {
@@ -45,13 +45,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "08:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:41",
-   "ritmo_real": 6
+   "ultima_baixa": "09:23",
+   "ritmo_real": 18
   },
   {
    "plano": "6103318350",
@@ -90,12 +90,12 @@
    "motorista": "Manoel Mariano Da Silva",
    "cidade": "Ourinhos",
    "total": 14,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:10",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:11",
    "ritmo_real": 0
   },
   {
@@ -105,13 +105,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Mineiros Do Tiete",
    "total": 12,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "08:32",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:33",
-   "ritmo_real": 0
+   "ultima_baixa": "09:24",
+   "ritmo_real": 26
   },
   {
    "plano": "6103317676",
@@ -165,13 +165,13 @@
    "motorista": "Marcelo Roberto Zangerolamo",
    "cidade": "Ibate",
    "total": 6,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 3,
+   "saida": "09:07",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:16",
+   "ritmo_real": 2
   },
   {
    "plano": "6103314471",
@@ -393,8 +393,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
+   "saida": "09:07",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -449,9 +449,9 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 74,
-   "ok": 4,
+   "ok": 9,
    "semapont": 0,
-   "gm": 4
+   "gm": 9
   },
   {
    "op": "Café · Itapeva",
@@ -465,9 +465,9 @@
    "op": "Café · CD Sumaré",
    "veic": 10,
    "total": 38,
-   "ok": 3,
+   "ok": 6,
    "semapont": 0,
-   "gm": 3
+   "gm": 6
   },
   {
    "op": "Café · Meso Marília",
@@ -498,7 +498,7 @@
   },
   {
    "h": "09",
-   "n": 8
+   "n": 16
   }
  ],
  "gm_sem_sac": 0
