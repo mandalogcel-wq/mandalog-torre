@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-21T08:46:43-03:00",
+ "gerado_em": "2026-10-21T09:16:43-03:00",
  "dia": "2026-10-21",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -8,6 +8,21 @@
  },
  "limite_aperto": 1.5,
  "veiculos": [
+  {
+   "plano": "6103318352",
+   "op": "Café · Itapeva",
+   "placa": "EVZ9C64",
+   "motorista": "Daniel Eduardo Gonçalves",
+   "cidade": "Itapeva",
+   "total": 33,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
   {
    "plano": "6103317675",
    "op": "Café · Meso Bauru",
@@ -30,12 +45,27 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Bauru",
    "total": 20,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "08:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:28",
+   "ultima_baixa": "08:41",
+   "ritmo_real": 6
+  },
+  {
+   "plano": "6103318350",
+   "op": "Café · Itapeva",
+   "placa": "FOY8J69",
+   "motorista": "Jose Henrique Barbosa Navero",
+   "cidade": "Paranapanema",
+   "total": 17,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -75,12 +105,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Mineiros Do Tiete",
    "total": 12,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "08:32",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:33",
    "ritmo_real": 0
   },
   {
@@ -120,13 +150,13 @@
    "motorista": "Daniele Aparecida De Oliveira Magalhaes",
    "cidade": "Valinhos",
    "total": 6,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "08:07",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:16",
-   "ritmo_real": 0
+   "ultima_baixa": "08:37",
+   "ritmo_real": 21
   },
   {
    "plano": "6103314646",
@@ -339,6 +369,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103316570",
+   "op": "Café · Guarulhos",
+   "placa": "HWD6886",
+   "motorista": "Deraldo Curcino Moreno",
+   "cidade": "",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103314629",
    "op": "Café · CD Sumaré",
    "placa": "QWW2F03",
@@ -404,17 +449,25 @@
    "op": "Café · Meso Bauru",
    "veic": 7,
    "total": 74,
-   "ok": 1,
+   "ok": 4,
    "semapont": 0,
-   "gm": 1
+   "gm": 4
+  },
+  {
+   "op": "Café · Itapeva",
+   "veic": 2,
+   "total": 50,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 10,
    "total": 38,
-   "ok": 2,
+   "ok": 3,
    "semapont": 0,
-   "gm": 2
+   "gm": 3
   },
   {
    "op": "Café · Meso Marília",
@@ -426,8 +479,8 @@
   },
   {
    "op": "Café · Guarulhos",
-   "veic": 4,
-   "total": 12,
+   "veic": 5,
+   "total": 13,
    "ok": 1,
    "semapont": 0,
    "gm": 1
@@ -441,7 +494,7 @@
   },
   {
    "h": "08",
-   "n": 3
+   "n": 7
   }
  ],
  "gm_sem_sac": 0
