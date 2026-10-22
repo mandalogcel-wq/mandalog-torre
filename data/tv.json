@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-22T15:46:56-03:00",
+ "gerado_em": "2026-10-22T16:01:50-03:00",
  "dia": "2026-10-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Roberto Henrique Costa",
    "cidade": "Sao Jose Dos Campos",
    "total": 26,
-   "ok": 21,
+   "ok": 23,
    "semapont": 0,
-   "gm": 21,
+   "gm": 23,
    "saida": "08:29",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:11",
+   "ultima_baixa": "15:48",
    "ritmo_real": 20
   },
   {
@@ -30,13 +30,13 @@
    "motorista": "",
    "cidade": "Campos Do Jordao",
    "total": 20,
-   "ok": 5,
+   "ok": 6,
    "semapont": 0,
-   "gm": 5,
+   "gm": 6,
    "saida": "13:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:28",
-   "ritmo_real": 28
+   "ultima_baixa": "15:43",
+   "ritmo_real": 26
   },
   {
    "plano": "6103321599",
@@ -60,13 +60,13 @@
    "motorista": "Hilton Conceicao Silva",
    "cidade": "Piracicaba",
    "total": 19,
-   "ok": 9,
+   "ok": 10,
    "semapont": 0,
-   "gm": 9,
+   "gm": 10,
    "saida": "10:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:23",
-   "ritmo_real": 38
+   "ultima_baixa": "15:45",
+   "ritmo_real": 36
   },
   {
    "plano": "6103313119",
@@ -90,13 +90,13 @@
    "motorista": "Ana Priscila Dos Reis Canova",
    "cidade": "Campinas",
    "total": 18,
-   "ok": 12,
+   "ok": 14,
    "semapont": 0,
-   "gm": 12,
+   "gm": 14,
    "saida": "08:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:15",
-   "ritmo_real": 36
+   "ultima_baixa": "15:44",
+   "ritmo_real": 32
   },
   {
    "plano": "6103322566",
@@ -105,13 +105,13 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Bauru",
    "total": 17,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "gm": 4,
+   "saida": "15:33",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "15:35",
+   "ritmo_real": 1
   },
   {
    "plano": "6103317911",
@@ -120,13 +120,13 @@
    "motorista": "Marcelo Roberto Zangerolamo",
    "cidade": "Americana",
    "total": 17,
-   "ok": 14,
+   "ok": 15,
    "semapont": 0,
-   "gm": 14,
+   "gm": 15,
    "saida": "10:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:27",
-   "ritmo_real": 23
+   "ultima_baixa": "16:01",
+   "ritmo_real": 24
   },
   {
    "plano": "6103324457",
@@ -509,17 +509,17 @@
    "op": "Café · CD Sumaré",
    "veic": 11,
    "total": 117,
-   "ok": 55,
+   "ok": 59,
    "semapont": 0,
-   "gm": 55
+   "gm": 59
   },
   {
    "op": "Café · SJC",
    "veic": 6,
    "total": 65,
-   "ok": 39,
+   "ok": 42,
    "semapont": 0,
-   "gm": 39
+   "gm": 42
   },
   {
    "op": "Café · Guarulhos",
@@ -533,9 +533,9 @@
    "op": "Café · Meso Bauru",
    "veic": 3,
    "total": 19,
-   "ok": 1,
+   "ok": 5,
    "semapont": 0,
-   "gm": 1
+   "gm": 5
   },
   {
    "op": "Café · Itapeva",
@@ -586,7 +586,11 @@
   },
   {
    "h": "15",
-   "n": 9
+   "n": 19
+  },
+  {
+   "h": "16",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
