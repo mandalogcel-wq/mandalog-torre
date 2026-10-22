@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-22T18:16:43-03:00",
+ "gerado_em": "2026-10-22T18:46:41-03:00",
  "dia": "2026-10-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -105,13 +105,13 @@
    "motorista": "Marcelo Roberto Zangerolamo",
    "cidade": "Americana",
    "total": 17,
-   "ok": 15,
+   "ok": 16,
    "semapont": 0,
-   "gm": 15,
+   "gm": 16,
    "saida": "10:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "16:01",
-   "ritmo_real": 24
+   "ultima_baixa": "17:56",
+   "ritmo_real": 30
   },
   {
    "plano": "6103324457",
@@ -479,9 +479,9 @@
    "op": "Café · CD Sumaré",
    "veic": 10,
    "total": 99,
-   "ok": 69,
+   "ok": 70,
    "semapont": 0,
-   "gm": 63
+   "gm": 64
   },
   {
    "op": "Café · SJC",
@@ -564,7 +564,7 @@
   },
   {
    "h": "17",
-   "n": 7
+   "n": 8
   }
  ],
  "gm_sem_sac": 0
