@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-22T19:16:45-03:00",
+ "gerado_em": "2026-10-22T19:46:52-03:00",
  "dia": "2026-10-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -225,7 +225,7 @@
    "motorista": "Wellington Pedro",
    "cidade": "Campos Do Jordao",
    "total": 4,
-   "ok": 0,
+   "ok": 4,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -271,7 +271,7 @@
    "cidade": "Sao Paulo",
    "total": 4,
    "ok": 0,
-   "semapont": 2,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
@@ -495,8 +495,8 @@
    "op": "Café · Guarulhos",
    "veic": 8,
    "total": 39,
-   "ok": 22,
-   "semapont": 2,
+   "ok": 26,
+   "semapont": 0,
    "gm": 19
   },
   {
