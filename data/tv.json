@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-22T15:31:44-03:00",
+ "gerado_em": "2026-10-22T15:46:56-03:00",
  "dia": "2026-10-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,13 +60,13 @@
    "motorista": "Hilton Conceicao Silva",
    "cidade": "Piracicaba",
    "total": 19,
-   "ok": 7,
+   "ok": 9,
    "semapont": 0,
-   "gm": 7,
+   "gm": 9,
    "saida": "10:03",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:49",
-   "ritmo_real": 24
+   "ultima_baixa": "15:23",
+   "ritmo_real": 38
   },
   {
    "plano": "6103313119",
@@ -90,13 +90,13 @@
    "motorista": "Ana Priscila Dos Reis Canova",
    "cidade": "Campinas",
    "total": 18,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "08:35",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:14",
-   "ritmo_real": 33
+   "ultima_baixa": "15:15",
+   "ritmo_real": 36
   },
   {
    "plano": "6103322566",
@@ -120,12 +120,12 @@
    "motorista": "Marcelo Roberto Zangerolamo",
    "cidade": "Americana",
    "total": 17,
-   "ok": 12,
+   "ok": 14,
    "semapont": 0,
-   "gm": 12,
+   "gm": 14,
    "saida": "10:27",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:39",
+   "ultima_baixa": "15:27",
    "ritmo_real": 23
   },
   {
@@ -509,9 +509,9 @@
    "op": "Café · CD Sumaré",
    "veic": 11,
    "total": 117,
-   "ok": 50,
+   "ok": 55,
    "semapont": 0,
-   "gm": 50
+   "gm": 55
   },
   {
    "op": "Café · SJC",
@@ -586,7 +586,7 @@
   },
   {
    "h": "15",
-   "n": 4
+   "n": 9
   }
  ],
  "gm_sem_sac": 0
