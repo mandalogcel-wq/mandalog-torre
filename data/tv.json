@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-22T17:46:55-03:00",
+ "gerado_em": "2026-10-22T18:01:44-03:00",
  "dia": "2026-10-22",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -26,8 +26,8 @@
   {
    "plano": "6103323841",
    "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
+   "placa": "AHE8H87",
+   "motorista": "Renato Lopes Mendes",
    "cidade": "Campos Do Jordao",
    "total": 20,
    "ok": 6,
@@ -135,7 +135,7 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Piedade",
    "total": 12,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -217,21 +217,6 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "10:35",
    "ritmo_real": 14
-  },
-  {
-   "plano": "6103323843",
-   "op": "Café · SJC",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Taubate",
-   "total": 5,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
   },
   {
    "plano": "6103322063",
@@ -494,14 +479,14 @@
    "op": "Café · CD Sumaré",
    "veic": 10,
    "total": 99,
-   "ok": 65,
+   "ok": 66,
    "semapont": 0,
    "gm": 62
   },
   {
    "op": "Café · SJC",
-   "veic": 6,
-   "total": 65,
+   "veic": 5,
+   "total": 60,
    "ok": 44,
    "semapont": 0,
    "gm": 44
