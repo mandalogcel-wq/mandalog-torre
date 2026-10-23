@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T05:16:42-03:00",
+ "gerado_em": "2026-10-23T06:16:43-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -84,6 +84,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103325893",
+   "op": "Café · Guarulhos",
+   "placa": "EQU2E79",
+   "motorista": "Moises",
+   "cidade": "Sao Paulo",
+   "total": 12,
+   "ok": 0,
+   "semapont": 12,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103323844",
    "op": "Café · SJC",
    "placa": "FLF1G91",
@@ -140,6 +155,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103325894",
+   "op": "Café · Guarulhos",
+   "placa": "ETO2A93",
+   "motorista": "Odimar",
+   "cidade": "Taboao Da Serra",
+   "total": 4,
+   "ok": 0,
+   "semapont": 4,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -297,20 +327,20 @@
    "gm": 0
   },
   {
+   "op": "Café · Guarulhos",
+   "veic": 7,
+   "total": 25,
+   "ok": 0,
+   "semapont": 16,
+   "gm": 0
+  },
+  {
    "op": "Café · Meso Bauru",
    "veic": 2,
    "total": 15,
    "ok": 1,
    "semapont": 0,
    "gm": 1
-  },
-  {
-   "op": "Café · Guarulhos",
-   "veic": 5,
-   "total": 9,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0
   },
   {
    "op": "Café · CD Sumaré",
