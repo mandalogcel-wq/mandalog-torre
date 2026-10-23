@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T12:16:46-03:00",
+ "gerado_em": "2026-10-23T12:31:44-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -135,13 +135,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 12,
-   "ok": 3,
+   "ok": 6,
    "semapont": 0,
-   "gm": 3,
+   "gm": 6,
    "saida": "08:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:52",
-   "ritmo_real": 44
+   "ultima_baixa": "12:09",
+   "ritmo_real": 45
   },
   {
    "plano": "6103322398",
@@ -219,6 +219,21 @@
    "ritmo_real": 27
   },
   {
+   "plano": "6103314643",
+   "op": "Café · CD Sumaré",
+   "placa": "CLU0415",
+   "motorista": "Antonio Jose Vaz",
+   "cidade": "Bofete",
+   "total": 8,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103316534",
    "op": "Café · CD Sumaré",
    "placa": "EAW3F02",
@@ -279,12 +294,12 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103314643",
+   "plano": "6103319694",
    "op": "Café · CD Sumaré",
-   "placa": "CLU0415",
-   "motorista": "Antonio Jose Vaz",
-   "cidade": "Bofete",
-   "total": 4,
+   "placa": "ORF6F39",
+   "motorista": "Ronualdo Dos Reis Carvalho",
+   "cidade": "Ibiuna",
+   "total": 5,
    "ok": 0,
    "semapont": 0,
    "gm": 0,
@@ -354,6 +369,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103321261",
+   "op": "Café · CD Sumaré",
+   "placa": "GHA9A82",
+   "motorista": "Alex Dos Santos",
+   "cidade": "Itatiba",
+   "total": 2,
+   "ok": 2,
+   "semapont": 0,
+   "gm": 2,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103316544",
    "op": "Café · CD Sumaré",
    "placa": "SIB1G21",
@@ -411,21 +441,6 @@
    "saida": "09:22",
    "saida_fonte": "greenmile",
    "ultima_baixa": "09:22",
-   "ritmo_real": 0
-  },
-  {
-   "plano": "6103308435",
-   "op": "Café · Meso Bauru",
-   "placa": "FOY8J69",
-   "motorista": "Jose Henrique Barbosa Navero",
-   "cidade": "Avare",
-   "total": 1,
-   "ok": 1,
-   "semapont": 0,
-   "gm": 1,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -530,11 +545,11 @@
   },
   {
    "op": "Café · CD Sumaré",
-   "veic": 11,
-   "total": 55,
-   "ok": 15,
+   "veic": 13,
+   "total": 66,
+   "ok": 17,
    "semapont": 0,
-   "gm": 13
+   "gm": 15
   },
   {
    "op": "Café · Guarulhos",
@@ -548,17 +563,17 @@
    "op": "Café · SJC",
    "veic": 2,
    "total": 25,
-   "ok": 14,
+   "ok": 17,
    "semapont": 0,
-   "gm": 14
+   "gm": 17
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 3,
-   "total": 24,
-   "ok": 8,
+   "veic": 2,
+   "total": 23,
+   "ok": 7,
    "semapont": 0,
-   "gm": 8
+   "gm": 7
   },
   {
    "op": "Café · Itapeva",
@@ -586,6 +601,10 @@
   {
    "h": "11",
    "n": 22
+  },
+  {
+   "h": "12",
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
