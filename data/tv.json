@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T09:31:45-03:00",
+ "gerado_em": "2026-10-23T09:46:43-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Marilia",
    "total": 21,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "gm": 1,
+   "saida": "09:17",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:17",
    "ritmo_real": 0
   },
   {
@@ -60,12 +60,27 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Ourinhos",
    "total": 15,
+   "ok": 4,
+   "semapont": 0,
+   "gm": 4,
+   "saida": "08:26",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:24",
+   "ritmo_real": 16
+  },
+  {
+   "plano": "6103321257",
+   "op": "Café · CD Sumaré",
+   "placa": "UOT9H65",
+   "motorista": "Marcelo Roberto Zangerolamo",
+   "cidade": "Campinas",
+   "total": 15,
    "ok": 1,
    "semapont": 0,
    "gm": 1,
-   "saida": "08:26",
+   "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:37",
+   "ultima_baixa": "09:30",
    "ritmo_real": 0
   },
   {
@@ -150,13 +165,13 @@
    "motorista": "Emanuel Sousa Rocha",
    "cidade": "Iacri",
    "total": 10,
-   "ok": 1,
+   "ok": 3,
    "semapont": 0,
-   "gm": 1,
+   "gm": 3,
    "saida": "08:56",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:56",
-   "ritmo_real": 0
+   "ultima_baixa": "09:19",
+   "ritmo_real": 12
   },
   {
    "plano": "6103317699",
@@ -166,7 +181,7 @@
    "cidade": "Amparo",
    "total": 10,
    "ok": 0,
-   "semapont": 10,
+   "semapont": 0,
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "padrao",
@@ -180,13 +195,13 @@
    "motorista": "Fabio Henrique Pereira",
    "cidade": "Lencois Paulista",
    "total": 9,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
-   "gm": 3,
+   "gm": 4,
    "saida": "08:13",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:41",
-   "ritmo_real": 8
+   "ultima_baixa": "09:12",
+   "ritmo_real": 16
   },
   {
    "plano": "6103316534",
@@ -195,12 +210,27 @@
    "motorista": "Daniele Aparecida De Oliveira Magalhaes",
    "cidade": "Boituva",
    "total": 8,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "07:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "08:13",
+   "ultima_baixa": "09:08",
+   "ritmo_real": 55
+  },
+  {
+   "plano": "6103316553",
+   "op": "Café · CD Sumaré",
+   "placa": "SBY8G05",
+   "motorista": "Marcelo Vieira",
+   "cidade": "Boituva",
+   "total": 7,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -285,12 +315,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Marilia",
    "total": 2,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:21",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "09:11",
    "ritmo_real": 0
   },
   {
@@ -345,12 +375,12 @@
    "motorista": "Jose Ailton Felix Da Silva",
    "cidade": "Marilia",
    "total": 1,
-   "ok": 0,
-   "semapont": 1,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "09:22",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "09:22",
    "ritmo_real": 0
   },
   {
@@ -442,6 +472,21 @@
    "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
+  },
+  {
+   "plano": "6103313108",
+   "op": "Café · CD Sumaré",
+   "placa": "SWU2D97",
+   "motorista": "Walmenig Sousa",
+   "cidade": "Sorocaba",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   }
  ],
  "pracas": [
@@ -449,17 +494,17 @@
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 94,
-   "ok": 5,
-   "semapont": 1,
-   "gm": 5
+   "ok": 14,
+   "semapont": 0,
+   "gm": 14
   },
   {
    "op": "Café · CD Sumaré",
-   "veic": 8,
-   "total": 32,
-   "ok": 1,
-   "semapont": 10,
-   "gm": 1
+   "veic": 11,
+   "total": 55,
+   "ok": 3,
+   "semapont": 0,
+   "gm": 3
   },
   {
    "op": "Café · SJC",
@@ -481,9 +526,9 @@
    "op": "Café · Meso Bauru",
    "veic": 3,
    "total": 24,
-   "ok": 4,
+   "ok": 5,
    "semapont": 0,
-   "gm": 4
+   "gm": 5
   }
  ],
  "greenmile_ok": true,
@@ -491,6 +536,10 @@
   {
    "h": "08",
    "n": 11
+  },
+  {
+   "h": "09",
+   "n": 12
   }
  ],
  "gm_sem_sac": 0
