@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T14:46:40-03:00",
+ "gerado_em": "2026-10-23T15:01:44-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -150,13 +150,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 12,
-   "ok": 8,
+   "ok": 11,
    "semapont": 0,
-   "gm": 8,
+   "gm": 11,
    "saida": "08:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "13:14",
-   "ritmo_real": 41
+   "ultima_baixa": "14:39",
+   "ritmo_real": 37
   },
   {
    "plano": "6103322398",
@@ -570,9 +570,9 @@
    "op": "Café · SJC",
    "veic": 3,
    "total": 39,
-   "ok": 34,
+   "ok": 37,
    "semapont": 0,
-   "gm": 34
+   "gm": 37
   },
   {
    "op": "Café · Guarulhos",
@@ -631,7 +631,7 @@
   },
   {
    "h": "14",
-   "n": 6
+   "n": 9
   }
  ],
  "gm_sem_sac": 0
