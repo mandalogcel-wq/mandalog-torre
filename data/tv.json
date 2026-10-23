@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T11:31:53-03:00",
+ "gerado_em": "2026-10-23T11:46:47-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -45,13 +45,13 @@
    "motorista": "Cristina Sales Moreira",
    "cidade": "Tupa",
    "total": 16,
-   "ok": 12,
+   "ok": 14,
    "semapont": 0,
-   "gm": 12,
+   "gm": 14,
    "saida": "07:59",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:50",
-   "ritmo_real": 6
+   "ultima_baixa": "11:26",
+   "ritmo_real": 8
   },
   {
    "plano": "6103322564",
@@ -60,13 +60,13 @@
    "motorista": "Erenaldo Xavier Lisboa",
    "cidade": "Ourinhos",
    "total": 15,
-   "ok": 6,
+   "ok": 7,
    "semapont": 0,
-   "gm": 6,
+   "gm": 7,
    "saida": "08:26",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "10:12",
-   "ritmo_real": 19
+   "ultima_baixa": "11:15",
+   "ritmo_real": 26
   },
   {
    "plano": "6103321257",
@@ -90,12 +90,12 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Avare",
    "total": 14,
-   "ok": 0,
+   "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "10:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:49",
    "ritmo_real": 0
   },
   {
@@ -230,7 +230,7 @@
    "gm": 6,
    "saida": "07:57",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "11:01",
+   "ultima_baixa": "11:02",
    "ritmo_real": 34
   },
   {
@@ -509,9 +509,9 @@
    "op": "Café · Meso Marília",
    "veic": 9,
    "total": 94,
-   "ok": 44,
+   "ok": 47,
    "semapont": 0,
-   "gm": 44
+   "gm": 47
   },
   {
    "op": "Café · CD Sumaré",
@@ -541,9 +541,9 @@
    "op": "Café · Meso Bauru",
    "veic": 3,
    "total": 24,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6
+   "gm": 8
   },
   {
    "op": "Café · Itapeva",
@@ -566,11 +566,11 @@
   },
   {
    "h": "10",
-   "n": 30
+   "n": 32
   },
   {
    "h": "11",
-   "n": 8
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
