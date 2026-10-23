@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T15:46:43-03:00",
+ "gerado_em": "2026-10-23T16:16:42-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,13 +15,13 @@
    "motorista": "Luis Carlos Do Carmo Matos",
    "cidade": "Marilia",
    "total": 21,
-   "ok": 10,
+   "ok": 12,
    "semapont": 0,
-   "gm": 10,
+   "gm": 12,
    "saida": "09:17",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:27",
-   "ritmo_real": 41
+   "ultima_baixa": "15:58",
+   "ritmo_real": 36
   },
   {
    "plano": "6103322562",
@@ -75,12 +75,12 @@
    "motorista": "Marcelo Roberto Zangerolamo",
    "cidade": "Campinas",
    "total": 15,
-   "ok": 11,
+   "ok": 12,
    "semapont": 0,
-   "gm": 11,
+   "gm": 12,
    "saida": "09:30",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:13",
+   "ultima_baixa": "15:44",
    "ritmo_real": 34
   },
   {
@@ -105,13 +105,13 @@
    "motorista": "Luciano Donizeti De Melo",
    "cidade": "Avare",
    "total": 14,
-   "ok": 8,
+   "ok": 11,
    "semapont": 0,
-   "gm": 8,
+   "gm": 11,
    "saida": "10:49",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "15:15",
-   "ritmo_real": 32
+   "ultima_baixa": "15:54",
+   "ritmo_real": 26
   },
   {
    "plano": "6103323849",
@@ -165,9 +165,9 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Pompeia",
    "total": 12,
-   "ok": 12,
+   "ok": 10,
    "semapont": 0,
-   "gm": 9,
+   "gm": 10,
    "saida": "08:03",
    "saida_fonte": "greenmile",
    "ultima_baixa": "15:22",
@@ -302,7 +302,7 @@
    "total": 5,
    "ok": 2,
    "semapont": 0,
-   "gm": 0,
+   "gm": 2,
    "saida": "08:00",
    "saida_fonte": "padrao",
    "ultima_baixa": "",
@@ -556,15 +556,15 @@
    "total": 94,
    "ok": 82,
    "semapont": 0,
-   "gm": 79
+   "gm": 82
   },
   {
    "op": "Café · CD Sumaré",
    "veic": 13,
    "total": 66,
-   "ok": 30,
+   "ok": 31,
    "semapont": 0,
-   "gm": 24
+   "gm": 27
   },
   {
    "op": "Café · SJC",
@@ -586,9 +586,9 @@
    "op": "Café · Meso Bauru",
    "veic": 2,
    "total": 23,
-   "ok": 17,
+   "ok": 20,
    "semapont": 0,
-   "gm": 17
+   "gm": 20
   },
   {
    "op": "Café · Itapeva",
@@ -635,7 +635,7 @@
   },
   {
    "h": "15",
-   "n": 8
+   "n": 14
   }
  ],
  "gm_sem_sac": 0
