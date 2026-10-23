@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T13:16:42-03:00",
+ "gerado_em": "2026-10-23T13:31:50-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -135,13 +135,13 @@
    "motorista": "Gabriel Felix Faysten Dos Santos",
    "cidade": "Sao Jose Dos Campos",
    "total": 12,
-   "ok": 7,
+   "ok": 8,
    "semapont": 0,
-   "gm": 7,
+   "gm": 8,
    "saida": "08:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:52",
-   "ritmo_real": 44
+   "ultima_baixa": "13:14",
+   "ritmo_real": 41
   },
   {
    "plano": "6103322398",
@@ -315,13 +315,13 @@
    "motorista": "Odimar Levino Lima De Paiva",
    "cidade": "Taboao Da Serra",
    "total": 4,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1,
+   "gm": 2,
    "saida": "09:17",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:34",
-   "ritmo_real": 0
+   "ultima_baixa": "13:10",
+   "ritmo_real": 216
   },
   {
    "plano": "6103322290",
@@ -555,17 +555,17 @@
    "op": "Café · Guarulhos",
    "veic": 8,
    "total": 30,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1
+   "gm": 2
   },
   {
    "op": "Café · SJC",
    "veic": 2,
    "total": 25,
-   "ok": 18,
+   "ok": 19,
    "semapont": 0,
-   "gm": 18
+   "gm": 19
   },
   {
    "op": "Café · Meso Bauru",
@@ -605,6 +605,10 @@
   {
    "h": "12",
    "n": 18
+  },
+  {
+   "h": "13",
+   "n": 2
   }
  ],
  "gm_sem_sac": 0
