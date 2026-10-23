@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-23T09:16:47-03:00",
+ "gerado_em": "2026-10-23T09:31:45-03:00",
  "dia": "2026-10-23",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -144,21 +144,6 @@
    "ritmo_real": 0
   },
   {
-   "plano": "6103317699",
-   "op": "Café · CD Sumaré",
-   "placa": "",
-   "motorista": "",
-   "cidade": "Amparo",
-   "total": 10,
-   "ok": 0,
-   "semapont": 10,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "padrao",
-   "ultima_baixa": "",
-   "ritmo_real": 0
-  },
-  {
    "plano": "6103322550",
    "op": "Café · Meso Marília",
    "placa": "AUR5G40",
@@ -171,6 +156,21 @@
    "saida": "08:56",
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:56",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103317699",
+   "op": "Café · CD Sumaré",
+   "placa": "QXT1D86",
+   "motorista": "Mauricio Capovilla",
+   "cidade": "Amparo",
+   "total": 10,
+   "ok": 0,
+   "semapont": 10,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -187,6 +187,21 @@
    "saida_fonte": "greenmile",
    "ultima_baixa": "08:41",
    "ritmo_real": 8
+  },
+  {
+   "plano": "6103316534",
+   "op": "Café · CD Sumaré",
+   "placa": "EAW3F02",
+   "motorista": "Daniele Aparecida De Oliveira Magalhaes",
+   "cidade": "Boituva",
+   "total": 8,
+   "ok": 1,
+   "semapont": 0,
+   "gm": 1,
+   "saida": "07:57",
+   "saida_fonte": "greenmile",
+   "ultima_baixa": "08:13",
+   "ritmo_real": 0
   },
   {
    "plano": "6103316546",
@@ -228,8 +243,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "09:17",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -279,6 +294,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103316544",
+   "op": "Café · CD Sumaré",
+   "placa": "SIB1G21",
+   "motorista": "Hilton Conceicao Silva",
+   "cidade": "Analandia",
+   "total": 2,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103324346",
    "op": "Café · Guarulhos",
    "placa": "SSX7A52",
@@ -290,6 +320,36 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103324221",
+   "op": "Café · CD Sumaré",
+   "placa": "BWQ5135",
+   "motorista": "Carlinhos Bernardine Slivinski",
+   "cidade": "Itu",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103317662",
+   "op": "Café · Meso Marília",
+   "placa": "EFQ7G95",
+   "motorista": "Jose Ailton Felix Da Silva",
+   "cidade": "Marilia",
+   "total": 1,
+   "ok": 0,
+   "semapont": 1,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -339,6 +399,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103316506",
+   "op": "Café · CD Sumaré",
+   "placa": "QWW2F03",
+   "motorista": "Ana Priscila Dos Reis Canova",
+   "cidade": "Campinas",
+   "total": 1,
+   "ok": 0,
+   "semapont": 0,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103313109",
    "op": "Café · CD Sumaré",
    "placa": "SVL4J89",
@@ -372,11 +447,19 @@
  "pracas": [
   {
    "op": "Café · Meso Marília",
-   "veic": 8,
-   "total": 93,
+   "veic": 9,
+   "total": 94,
    "ok": 5,
-   "semapont": 0,
+   "semapont": 1,
    "gm": 5
+  },
+  {
+   "op": "Café · CD Sumaré",
+   "veic": 8,
+   "total": 32,
+   "ok": 1,
+   "semapont": 10,
+   "gm": 1
   },
   {
    "op": "Café · SJC",
@@ -401,21 +484,13 @@
    "ok": 4,
    "semapont": 0,
    "gm": 4
-  },
-  {
-   "op": "Café · CD Sumaré",
-   "veic": 4,
-   "total": 20,
-   "ok": 0,
-   "semapont": 10,
-   "gm": 0
   }
  ],
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
    "h": "08",
-   "n": 10
+   "n": 11
   }
  ],
  "gm_sem_sac": 0
