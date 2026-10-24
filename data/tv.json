@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-24T09:46:39-03:00",
+ "gerado_em": "2026-10-24T10:01:44-03:00",
  "dia": "2026-10-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,28 +15,13 @@
    "motorista": "Ronualdo Dos Reis Carvalho",
    "cidade": "Sao Paulo",
    "total": 7,
-   "ok": 3,
+   "ok": 5,
    "semapont": 0,
-   "gm": 3,
+   "gm": 5,
    "saida": "08:28",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "09:24",
-   "ritmo_real": 18
-  },
-  {
-   "plano": "6103321219",
-   "op": "Café · Guarulhos",
-   "placa": "ETA3E32",
-   "motorista": "Valdir",
-   "cidade": "Sao Paulo",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
+   "ultima_baixa": "09:50",
+   "ritmo_real": 15
   },
   {
    "plano": "6103306089",
@@ -67,31 +52,16 @@
    "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
-  },
-  {
-   "plano": "6103318371",
-   "op": "Café · Guarulhos",
-   "placa": "FYH8F51",
-   "motorista": "Narciso Henrique Da Silva",
-   "cidade": "Embu Guacu",
-   "total": 1,
-   "ok": 0,
-   "semapont": 0,
-   "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
-   "ultima_baixa": "",
-   "ritmo_real": 0
   }
  ],
  "pracas": [
   {
    "op": "Café · Guarulhos",
-   "veic": 5,
-   "total": 11,
-   "ok": 4,
+   "veic": 3,
+   "total": 9,
+   "ok": 6,
    "semapont": 0,
-   "gm": 3
+   "gm": 5
   }
  ],
  "greenmile_ok": true,
@@ -102,7 +72,7 @@
   },
   {
    "h": "09",
-   "n": 2
+   "n": 4
   }
  ],
  "gm_sem_sac": 0
