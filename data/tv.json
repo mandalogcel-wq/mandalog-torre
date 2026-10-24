@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-24T09:31:43-03:00",
+ "gerado_em": "2026-10-24T09:46:39-03:00",
  "dia": "2026-10-24",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -60,7 +60,7 @@
    "motorista": "Ricardo De Barros Viana",
    "cidade": "Sao Paulo",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
@@ -89,7 +89,7 @@
    "op": "Café · Guarulhos",
    "veic": 5,
    "total": 11,
-   "ok": 3,
+   "ok": 4,
    "semapont": 0,
    "gm": 3
   }
