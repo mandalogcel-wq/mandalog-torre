@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-26T08:16:49-03:00",
+ "gerado_em": "2026-10-26T08:31:47-03:00",
  "dia": "2026-10-26",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -90,12 +90,12 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itapeva",
    "total": 14,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "07:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "08:27",
    "ritmo_real": 0
   },
   {
@@ -234,6 +234,21 @@
    "ritmo_real": 0
   },
   {
+   "plano": "6103325765",
+   "op": "Café · Meso Bauru",
+   "placa": "FCD7E39",
+   "motorista": "Erenaldo Xavier Lisboa",
+   "cidade": "Bauru",
+   "total": 5,
+   "ok": 0,
+   "semapont": 5,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
    "plano": "6103321144",
    "op": "Café · Guarulhos",
    "placa": "ETK3G65",
@@ -260,6 +275,21 @@
    "gm": 0,
    "saida": "08:00",
    "saida_fonte": "onda",
+   "ultima_baixa": "",
+   "ritmo_real": 0
+  },
+  {
+   "plano": "6103325755",
+   "op": "Café · Meso Bauru",
+   "placa": "FWY5H02",
+   "motorista": "Manoel Mariano Da Silva",
+   "cidade": "Bauru",
+   "total": 4,
+   "ok": 0,
+   "semapont": 4,
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -538,19 +568,19 @@
   },
   {
    "op": "Café · Meso Bauru",
-   "veic": 3,
-   "total": 41,
+   "veic": 5,
+   "total": 50,
    "ok": 0,
-   "semapont": 30,
+   "semapont": 39,
    "gm": 0
   },
   {
    "op": "Café · Itapeva",
    "veic": 2,
    "total": 39,
-   "ok": 1,
+   "ok": 2,
    "semapont": 0,
-   "gm": 1
+   "gm": 2
   },
   {
    "op": "Café · Meso Marília",
@@ -565,6 +595,10 @@
  "baixas_por_hora": [
   {
    "h": "07",
+   "n": 1
+  },
+  {
+   "h": "08",
    "n": 1
   }
  ],
