@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-26T15:16:47-03:00",
+ "gerado_em": "2026-10-26T15:31:49-03:00",
  "dia": "2026-10-26",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -225,13 +225,13 @@
    "motorista": "Cleberson Roberto Lourenco Gomes",
    "cidade": "Aparecida",
    "total": 14,
-   "ok": 6,
+   "ok": 8,
    "semapont": 0,
-   "gm": 6,
+   "gm": 8,
    "saida": "12:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:12",
-   "ritmo_real": 13
+   "ultima_baixa": "15:07",
+   "ritmo_real": 17
   },
   {
    "plano": "6103327535",
@@ -738,8 +738,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "15:21",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -817,9 +817,9 @@
    "op": "Café · SJC",
    "veic": 7,
    "total": 92,
-   "ok": 19,
+   "ok": 21,
    "semapont": 0,
-   "gm": 19
+   "gm": 21
   },
   {
    "op": "Café · CD Sumaré",
@@ -890,7 +890,7 @@
   },
   {
    "h": "15",
-   "n": 1
+   "n": 3
   }
  ],
  "gm_sem_sac": 0
