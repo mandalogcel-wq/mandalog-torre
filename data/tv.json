@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-26T16:01:51-03:00",
+ "gerado_em": "2026-10-26T16:16:43-03:00",
  "dia": "2026-10-26",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -615,12 +615,12 @@
    "motorista": "Carlinhos Bernardine Slivinski",
    "cidade": "Sumare",
    "total": 1,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "11:18",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "15:38",
    "ritmo_real": 0
   },
   {
@@ -732,7 +732,7 @@
    "plano": "6103325951",
    "op": "Café · Guarulhos",
    "placa": "HWD6886",
-   "motorista": "Deraldo Curcino Moreno",
+   "motorista": "Miguel Costa Pereira Neto",
    "cidade": "Sao Paulo",
    "total": 1,
    "ok": 0,
@@ -825,9 +825,9 @@
    "op": "Café · CD Sumaré",
    "veic": 9,
    "total": 91,
-   "ok": 60,
+   "ok": 61,
    "semapont": 0,
-   "gm": 55
+   "gm": 56
   },
   {
    "op": "Café · Guarulhos",
@@ -890,7 +890,7 @@
   },
   {
    "h": "15",
-   "n": 13
+   "n": 14
   },
   {
    "h": "16",
