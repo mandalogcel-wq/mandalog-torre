@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-26T09:16:46-03:00",
+ "gerado_em": "2026-10-26T09:31:47-03:00",
  "dia": "2026-10-26",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -15,12 +15,12 @@
    "motorista": "Edwin Felipe De Oliveira Marques",
    "cidade": "Itabera",
    "total": 25,
-   "ok": 1,
+   "ok": 0,
    "semapont": 0,
-   "gm": 1,
-   "saida": "07:28",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "07:57",
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
    "ritmo_real": 0
   },
   {
@@ -150,13 +150,13 @@
    "motorista": "Joao Batista Geraldo",
    "cidade": "Itapeva",
    "total": 14,
-   "ok": 2,
+   "ok": 0,
    "semapont": 0,
-   "gm": 2,
-   "saida": "07:46",
-   "saida_fonte": "greenmile",
-   "ultima_baixa": "08:41",
-   "ritmo_real": 14
+   "gm": 0,
+   "saida": "08:00",
+   "saida_fonte": "padrao",
+   "ultima_baixa": "",
+   "ritmo_real": 0
   },
   {
    "plano": "6103317906",
@@ -288,8 +288,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "07:48",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -498,8 +498,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "06:02",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -529,7 +529,7 @@
    "semapont": 0,
    "gm": 0,
    "saida": "08:00",
-   "saida_fonte": "greenmile",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -618,8 +618,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "05:07",
-   "saida_fonte": "greenmile",
+   "saida": "08:00",
+   "saida_fonte": "onda",
    "ultima_baixa": "",
    "ritmo_real": 0
   }
@@ -653,9 +653,9 @@
    "op": "Café · Itapeva",
    "veic": 2,
    "total": 39,
-   "ok": 3,
+   "ok": 0,
    "semapont": 0,
-   "gm": 3
+   "gm": 0
   },
   {
    "op": "Café · Meso Marília",
@@ -669,12 +669,8 @@
  "greenmile_ok": true,
  "baixas_por_hora": [
   {
-   "h": "07",
-   "n": 1
-  },
-  {
    "h": "08",
-   "n": 13
+   "n": 11
   },
   {
    "h": "09",
