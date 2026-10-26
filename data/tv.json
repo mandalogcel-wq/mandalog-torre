@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-26T10:46:39-03:00",
+ "gerado_em": "2026-10-26T11:01:48-03:00",
  "dia": "2026-10-26",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -240,12 +240,12 @@
    "motorista": "Edilson Da Silva Bento",
    "cidade": "Sao Paulo",
    "total": 9,
-   "ok": 0,
+   "ok": 1,
    "semapont": 0,
-   "gm": 0,
+   "gm": 1,
    "saida": "09:46",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:39",
    "ritmo_real": 0
   },
   {
@@ -375,12 +375,12 @@
    "motorista": "Valdir Da Silva Nery",
    "cidade": "Sao Paulo",
    "total": 3,
-   "ok": 0,
+   "ok": 3,
    "semapont": 0,
-   "gm": 0,
+   "gm": 3,
    "saida": "09:13",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "",
+   "ultima_baixa": "10:46",
    "ritmo_real": 0
   },
   {
@@ -528,8 +528,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:58",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -618,8 +618,8 @@
    "ok": 0,
    "semapont": 0,
    "gm": 0,
-   "saida": "08:00",
-   "saida_fonte": "onda",
+   "saida": "10:46",
+   "saida_fonte": "greenmile",
    "ultima_baixa": "",
    "ritmo_real": 0
   },
@@ -675,9 +675,9 @@
    "op": "Café · Guarulhos",
    "veic": 23,
    "total": 57,
-   "ok": 12,
+   "ok": 16,
    "semapont": 0,
-   "gm": 6
+   "gm": 10
   },
   {
    "op": "Café · Itapeva",
@@ -712,7 +712,7 @@
   },
   {
    "h": "10",
-   "n": 24
+   "n": 28
   }
  ],
  "gm_sem_sac": 0
