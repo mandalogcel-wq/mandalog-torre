@@ -5,14 +5,17 @@ Roda depois de mesclar_greenmile.py e antes de cifrar.py. Não coleta nada:
 lê o data/operacao.json que o resto do pipeline já produziu e reduz ao que a
 parede precisa.
 
-POR QUE UM ARQUIVO EM CLARO, E SEPARADO DO operacao.enc
+POR QUE UM ARQUIVO SEPARADO DO operacao.enc, COM SENHA PRÓPRIA
 
-A torre fica ligada sozinha numa TV da operação. Pedir senha a cada recarga
-não funciona, e embutir a senha do painel na página seria muito pior: ela
-decifra o operacao.enc, que carrega Arcor, Supley e 3 Corações juntos —
-publicá-la abriria todos os clientes de uma vez.
+A torre fica ligada sozinha numa TV da operação. Usar a senha do painel seria
+muito pior: ela decifra o operacao.enc, que carrega Arcor, Supley e 3 Corações
+juntos — expô-la na TV abriria todos os clientes de uma vez.
 
-Então a parede recebe um arquivo próprio, em claro, com o mínimo. Ficam de
+Então a parede recebe um arquivo próprio, com o mínimo. Até 26/10/2026 ele saía
+em claro; desde então o cifrar.py o grava como data/tv.enc com a senha TV_SENHA,
+e o data/tv.json fica só na máquina do robô, como os outros JSON. A TV abre
+sozinha porque a senha vai no fragmento da URL (#s=...), que nunca é enviado ao
+servidor. Ficam de
 fora, de propósito, os dois campos que identificam a carga do cliente:
 
     nf       — número da nota fiscal
@@ -35,17 +38,13 @@ ficam de fora, e a tela de qualidade da torre fica sem alimento até que se
 decida onde ela vai morar. A adesão ao GreenMile fica, porque já é indicador
 publicado no painel do cliente.
 
-Liberar data/tv.json exigiu uma linha explícita no .gitignore, que bloqueia
-data/* por lista positiva. Isso é de propósito — ver o comentário de lá.
+POR QUE EXISTE UM tv-ping.json
 
-POR QUE EXISTEM UM tv.hash E UM tv-ping.json
+O tv.hash agora é do cifrar.py, como o de todo .enc: ele compara o conteúdo sem
+o gerado_em e só recifra quando algo mudou. Por isso este script grava o
+tv.json sempre — quem decide se vale republicar é o cifrar.py.
 
-O tv.hash repete a trava do cifrar.py: gerado_em muda a cada rodada e o
-workflow comita a pasta inteira, então sem comparar o conteúdo sem esse campo
-o robô comitaria um arquivo a cada 15 min para sempre, inclusive de
-madrugada, quando nada acontece.
-
-Só que isso cria um segundo problema: parado o dado, o gerado_em envelhece, e
+A trava por conteúdo cria um segundo problema: parado o dado, o gerado_em envelhece, e
 a torre — que apaga o semáforo com dado de mais de 30 min — desligava as cores
 mesmo tendo o robô olhado dois minutos antes. "Não mudou" não é "está velho".
 
@@ -73,7 +72,6 @@ devolvem 500; foram sondadas antes de mexer na produção.
 from __future__ import annotations
 
 import collections
-import hashlib
 import json
 import sys
 from datetime import date, datetime, timedelta, timezone
@@ -82,7 +80,6 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 ENTRADA = RAIZ / "data" / "operacao.json"
 SAIDA = RAIZ / "data" / "tv.json"
-HASH = RAIZ / "data" / "tv.hash"
 PING = RAIZ / "data" / "tv-ping.json"
 
 FUSO = timezone(timedelta(hours=-3))
@@ -270,25 +267,13 @@ def main() -> None:
                           if n["gm_ok"] and n["classe"] == "semapont"),
     }
 
-    # Comparação sem gerado_em: só o conteúdo decide se vale reescrever.
-    corpo = dict(payload)
-    corpo.pop("gerado_em")
-    digest = hashlib.sha256(
-        json.dumps(corpo, ensure_ascii=False, sort_keys=True).encode("utf-8")
-    ).hexdigest()
-
     # O ping sai sempre, mudando o dado ou não: é o que diz à torre que o robô
     # continua vivo.
     PING.write_text(json.dumps({"visto_em": agora.isoformat(timespec="seconds")}) + "\n",
                     encoding="utf-8")
 
-    if HASH.exists() and HASH.read_text(encoding="utf-8").strip() == digest:
-        print(f"{SAIDA.relative_to(RAIZ)} inalterado — só o ping foi atualizado")
-        return
-
     SAIDA.parent.mkdir(parents=True, exist_ok=True)
     SAIDA.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
-    HASH.write_text(digest + "\n", encoding="utf-8")
 
     print(f"{SAIDA.relative_to(RAIZ)} gravado")
     print(f"  {len(veiculos)} veículos · {sum(v['total'] for v in veiculos)} notas "

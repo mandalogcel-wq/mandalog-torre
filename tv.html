@@ -15,7 +15,9 @@
      Complementa o painel (index.html), nao o substitui: o painel e consulta,
      com historico e mapa; esta tela e decisao, e mostra SO O DIA VIGENTE.
 
-     Le data/tv.json, que scripts/build_tv.py publica a cada rodada do robo.
+     Le data/tv.enc, que scripts/build_tv.py + cifrar.py publicam a cada rodada
+     do robo. O arquivo e cifrado (senha TV_SENHA). A TV abre sozinha com a senha
+     no fragmento da URL: tv.html#s=SENHA. O fragmento nao e enviado ao servidor.
      O arquivo tem fatos; o risco e calculado aqui, contra o relogio, porque
      congelado na coleta ele envelheceria antes de chegar na parede.
 
@@ -311,9 +313,38 @@ body.velho .kpi{border-bottom-color:var(--navy-3)!important}
   font-family:var(--mono); font-size:calc(var(--u)*1.31); letter-spacing:.08em;
   text-transform:uppercase; color:var(--ink-3)}
 
+/* ---- porta: a senha da torre. Some quando o dado decifra. ---- */
+.porta{position:fixed; inset:0; z-index:50; background:var(--navy); color:#fff;
+  display:flex; align-items:center; justify-content:center}
+.porta[hidden]{display:none}
+.porta form{display:flex; flex-direction:column; gap:calc(var(--u)*1.1);
+  width:min(90vw, calc(var(--u)*72))}
+.porta h2{margin:0; font-family:var(--cond); font-weight:700; text-transform:uppercase;
+  font-size:calc(var(--u)*4.6); line-height:1}
+.porta h2 em{font-style:normal; color:var(--laranja)}
+.porta p{margin:0; font-size:calc(var(--u)*1.8); color:rgba(255,255,255,.75)}
+.porta input{font-family:var(--mono); font-size:calc(var(--u)*2.4);
+  padding:calc(var(--u)*.8) calc(var(--u)*1); border:0; border-radius:calc(var(--u)*.3);
+  color:var(--ink); background:#fff}
+.porta button{font-family:var(--cond); font-weight:700; text-transform:uppercase;
+  font-size:calc(var(--u)*2.6); letter-spacing:.04em; padding:calc(var(--u)*.7);
+  border:0; border-radius:calc(var(--u)*.3); background:var(--laranja); color:#fff; cursor:pointer}
+.porta input:focus-visible,.porta button:focus-visible{outline:calc(var(--u)*.3) solid var(--laranja); outline-offset:calc(var(--u)*.2)}
+.porta .aviso{min-height:1.4em; color:#FFB38A}
+
 </style>
 </head>
 <body>
+<div class="porta" id="porta" hidden>
+  <form id="portaForm">
+    <h2>Torre <em>operacional</em></h2>
+    <p>Os dados desta tela são cifrados. Informe a senha da torre.</p>
+    <input id="senha" name="senha" type="password" autocomplete="current-password"
+           aria-label="Senha da torre" required>
+    <button type="submit">Abrir</button>
+    <p class="aviso" id="portaAviso" role="status"></p>
+  </form>
+</div>
 <header class="marcas">
   <img src="assets/mandalog.png" alt="Mandalog Operações Logísticas">
   <i class="div"></i>
@@ -424,7 +455,7 @@ body.velho .kpi{border-bottom-color:var(--navy-3)!important}
    horas o veículo começou).
 =========================================================================== */
 
-var FONTE = "data/tv.json";
+var FONTE = "data/tv.enc";      // cifrado; a senha vem de #s= ou da porta
 var PING  = "data/tv-ping.json";   // só o carimbo de quando o robô olhou
 var MS_FETCH = 5 * 60 * 1000;   // buscar dado novo
 var MS_TICK  = 20 * 1000;       // recalcular o aperto contra o relógio
@@ -813,7 +844,56 @@ function relogio(){
     { weekday: "long", day: "2-digit", month: "short" });
 }
 
+/* ---------- senha e decifragem ----------
+   A senha fica no fragmento da URL (tv.html#s=...), que o navegador não envia
+   ao servidor. É o que deixa a TV abrir sozinha depois de desligar. A chave
+   derivada é guardada em memória por salt: o PBKDF2 de 600 mil iterações só
+   roda de novo quando o robô recifra o arquivo. */
+var SENHA = new URLSearchParams(location.hash.replace(/^#/, "")).get("s") || "";
+var CHAVE = null, SALT = null;
+
+function b64bytes(s){ return Uint8Array.from(atob(s), function(c){ return c.charCodeAt(0); }); }
+
+function chavePara(env){
+  if (CHAVE && SALT === env.salt) return Promise.resolve(CHAVE);
+  return crypto.subtle.importKey("raw", new TextEncoder().encode(SENHA), "PBKDF2", false, ["deriveKey"])
+    .then(function(m){
+      return crypto.subtle.deriveKey(
+        { name: "PBKDF2", salt: b64bytes(env.salt), iterations: env.iter, hash: "SHA-256" },
+        m, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+    })
+    .then(function(k){ CHAVE = k; SALT = env.salt; return k; });
+}
+
+function decifrar(env){
+  return chavePara(env)
+    .then(function(k){ return crypto.subtle.decrypt({ name: "AES-GCM", iv: b64bytes(env.iv) }, k, b64bytes(env.ct)); })
+    .then(function(b){ return JSON.parse(new TextDecoder().decode(b)); });
+}
+
+function abrirPorta(msg){
+  $("portaAviso").textContent = msg || "";
+  $("porta").hidden = false;
+  $("senha").focus();
+}
+
+$("portaForm").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  SENHA = $("senha").value;
+  CHAVE = null; SALT = null;
+  // Grava no fragmento para a TV não pedir de novo ao recarregar.
+  history.replaceState(null, "", location.pathname + "#s=" + encodeURIComponent(SENHA));
+  $("portaAviso").textContent = "Abrindo…";
+  buscar();
+});
+
 function buscar(){
+  if (!window.crypto || !crypto.subtle){
+    abrirPorta("Este navegador não decifra os dados. Abra a página por https.");
+    return;
+  }
+  if (!SENHA){ abrirPorta(""); return; }
+
   // O ping é lido junto e nunca derruba a tela: se ele faltar, a idade cai
   // para o gerado_em, que é o comportamento antigo.
   fetch(PING + "?t=" + Date.now(), { cache: "no-store" })
@@ -825,13 +905,26 @@ function buscar(){
   // caminho serviria o mesmo arquivo o dia inteiro.
   fetch(FONTE + "?t=" + Date.now(), { cache: "no-store" })
     .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function(j){ dados = j; render(); })
+    .then(function(env){
+      return decifrar(env).catch(function(){
+        // AES-GCM recusa senha errada; não é falha de rede.
+        CHAVE = null; SALT = null;
+        var e = new Error("senha"); e.senha = true; throw e;
+      });
+    })
+    .then(function(j){ dados = j; $("porta").hidden = true; render(); })
     .catch(function(e){
+      if (e.senha){
+        // Senha errada ou trocada: a tela não mostra dado que não consegue ler.
+        dados = null;
+        abrirPorta("Senha incorreta ou alterada. Informe a senha da torre.");
+        return;
+      }
       // Sem dado, a tela diz que está sem dado. Deixar o quadro anterior
       // congelado seria pior: ninguém saberia que parou.
       if (!dados){
         $("sub").textContent = "Sem dado — " + e.message;
-        vazio("Não foi possível carregar data/tv.json.");
+        vazio("Não foi possível carregar os dados da torre.");
       }
     });
 }

@@ -6,6 +6,7 @@ Cifra um payload por cliente, cada um com a sua senha.
     data/painel-arcor.json      -> data/arcor.enc      SENHA_ARCOR
     data/painel-supley.json     -> data/supley.enc     SENHA_SUPLEY
     data/painel-mandalog.json   -> data/mandalog.enc   SENHA_MANDALOG
+    data/tv.json                -> data/tv.enc         TV_SENHA
 
 Só os arquivos cifrados vão para o repositório. Os JSON em texto claro estão no
 .gitignore e nunca são publicados — quem baixar um .enc sem a senha recebe bytes
@@ -55,6 +56,11 @@ PAYLOADS = [
      "env": "SENHA_SUPLEY", "obrigatorio": False},
     {"slug": "mandalog", "saida": "mandalog.enc",
      "env": "SENHA_MANDALOG", "obrigatorio": False},
+    # A torre de parede saiu em claro até 26/10/2026. Passou a ter senha própria:
+    # a TV abre com a senha no fragmento da URL (#s=...), que o navegador não
+    # envia ao servidor.
+    {"slug": "tv", "entrada": "tv.json", "saida": "tv.enc",
+     "env": "TV_SENHA", "obrigatorio": False},
 ]
 
 
@@ -146,7 +152,7 @@ def main() -> None:
     trabalho: list[tuple[Path, Path, str]] = []
     senhas: dict[str, str] = {}
     for p in PAYLOADS:
-        entrada = DADOS / f"painel-{p['slug']}.json"
+        entrada = DADOS / p.get("entrada", f"painel-{p['slug']}.json")
         senha = os.environ.get(p["env"], "")
 
         if not entrada.exists():

@@ -16,18 +16,9 @@ data/*
 !data/*.enc
 !data/*.hash
 
-# A torre de parede (tv.html) fica ligada sozinha numa TV da operação e não tem
-# como digitar senha. Este arquivo sai EM CLARO, de propósito — decisão de
-# 02/09/2026, público é a equipe Mandalog.
-#
-# Embutir a senha do painel na página seria pior: ela decifra o operacao.enc,
-# que carrega 3 Corações, Arcor e Supley juntos, e publicá-la abriria os três.
-#
-# Por sair em claro, scripts/build_tv.py omite NF e razão social do
-# destinatário, e NÃO inclui divergência de apontamento — invariante 6.
-# Publica-se o que a tela mostra, e nada além.
-!data/tv.json
-!data/tv.hash
+# A torre de parede (tv.html) saiu em claro de 02/09 a 26/10/2026. Desde então
+# o data/tv.json fica bloqueado como os outros JSON e só o data/tv.enc
+# (cifrado com TV_SENHA) é publicado — ele já passa pela regra !data/*.enc.
 # Sessenta bytes por rodada dizendo quando o robô olhou pela última vez. A
 # torre usa isso para a trava de frescor: sem ele, dado parado de madrugada
 # passava por dado velho e o semáforo se apagava sozinho.

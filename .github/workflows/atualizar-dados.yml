@@ -8,6 +8,7 @@ name: Atualizar dados da operação
 #   PAINEL_SENHA        senha de acesso ao painel, usada para cifrar os dados
 #   N8N_WEBHOOK_URL     URL de produção do workflow "Torre 3C · API GreenMile"
 #   N8N_WEBHOOK_TOKEN   valor do header X-Torre-Token dessa credencial
+#   TV_SENHA            senha da torre de parede (tv.html), própria e ≥ 12 caracteres
 #   N8N_ALERTA_URL      URL de produção do workflow "Torre · Alerta de Falha"
 #                       (mesmo header X-Torre-Token acima — credencial reaproveitada)
 #
@@ -101,6 +102,8 @@ jobs:
           SENHA_ARCOR:    ${{ secrets.SENHA_ARCOR }}
           SENHA_SUPLEY:   ${{ secrets.SENHA_SUPLEY }}
           SENHA_MANDALOG: ${{ secrets.SENHA_MANDALOG }}
+          # Torre de parede (tv.html). A TV abre com a senha no fragmento da URL.
+          TV_SENHA:       ${{ secrets.TV_SENHA }}
         run: python3 scripts/cifrar.py
 
       - name: Comitar se houver mudança
