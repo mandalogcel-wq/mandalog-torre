@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-26T15:01:48-03:00",
+ "gerado_em": "2026-10-26T15:16:47-03:00",
  "dia": "2026-10-26",
  "fonte": "Planilha ROTEIRIZAÇÃO 2026 · export das abas em data/raw",
  "janela": {
@@ -30,13 +30,13 @@
    "motorista": "Bruno Sousa Rocha",
    "cidade": "Botucatu",
    "total": 22,
-   "ok": 13,
+   "ok": 18,
    "semapont": 0,
-   "gm": 13,
+   "gm": 18,
    "saida": "08:12",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:08",
-   "ritmo_real": 30
+   "ultima_baixa": "14:50",
+   "ritmo_real": 23
   },
   {
    "plano": "6103322557",
@@ -75,13 +75,13 @@
    "motorista": "Emanuel Sousa Rocha",
    "cidade": "Pederneiras",
    "total": 18,
-   "ok": 7,
+   "ok": 9,
    "semapont": 0,
-   "gm": 7,
+   "gm": 9,
    "saida": "08:53",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "12:11",
-   "ritmo_real": 33
+   "ultima_baixa": "14:44",
+   "ritmo_real": 44
   },
   {
    "plano": "6103325753",
@@ -105,13 +105,13 @@
    "motorista": "Edson Aparecido Dos Santos",
    "cidade": "Piracaia",
    "total": 17,
-   "ok": 11,
+   "ok": 13,
    "semapont": 0,
-   "gm": 11,
+   "gm": 13,
    "saida": "11:08",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:15",
-   "ritmo_real": 18
+   "ultima_baixa": "15:00",
+   "ritmo_real": 19
   },
   {
    "plano": "6103327532",
@@ -255,13 +255,13 @@
    "motorista": "Daniele Aparecida De Oliveira Magalhaes",
    "cidade": "Leme",
    "total": 13,
-   "ok": 10,
+   "ok": 12,
    "semapont": 0,
-   "gm": 10,
+   "gm": 12,
    "saida": "08:22",
    "saida_fonte": "greenmile",
-   "ultima_baixa": "14:16",
-   "ritmo_real": 27
+   "ultima_baixa": "14:59",
+   "ritmo_real": 26
   },
   {
    "plano": "6103325770",
@@ -809,9 +809,9 @@
    "op": "Café · Meso Bauru",
    "veic": 9,
    "total": 112,
-   "ok": 61,
+   "ok": 68,
    "semapont": 0,
-   "gm": 61
+   "gm": 68
   },
   {
    "op": "Café · SJC",
@@ -825,9 +825,9 @@
    "op": "Café · CD Sumaré",
    "veic": 9,
    "total": 91,
-   "ok": 56,
+   "ok": 60,
    "semapont": 0,
-   "gm": 51
+   "gm": 55
   },
   {
    "op": "Café · Guarulhos",
@@ -886,7 +886,11 @@
   },
   {
    "h": "14",
-   "n": 19
+   "n": 29
+  },
+  {
+   "h": "15",
+   "n": 1
   }
  ],
  "gm_sem_sac": 0
