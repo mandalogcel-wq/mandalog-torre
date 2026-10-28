@@ -646,6 +646,19 @@ function renderFrescor(){
 // apenas hora de fechamento. Só vira vermelho ali se nem o expediente
 // anterior atualizou (1200 min ~ 20h), sinal de que o robô já está parado
 // há mais de um ciclo inteiro.
+// Praças deste painel cujo coletor do n8n parou (mesclar_greenmile.py). A API
+// pode responder com a fatia de um coletor congelada: em 27/10/2026 o CD GRU
+// levou 401 o dia inteiro e SJC, Guarulhos e Itapeva apareceram como se
+// estivessem em dia. Só conta praça com nota nos últimos 3 dias, a mesma
+// janela dos coletores: sem plano nessa janela o coletor não tem o que gravar
+// e a fatia envelhece sem haver falha nenhuma.
+function pracasSemGm(base){
+  const lista = (base && base.greenmile && base.greenmile.operacoes_sem_gm) || [];
+  const corte = new Date(Date.now() - 3 * 86400000).toISOString().slice(0, 10);
+  const aqui = new Set((base.notas || []).filter(n => n.data && n.data >= corte).map(n => n.operacao));
+  return lista.filter(op => aqui.has(op));
+}
+
 function calcularSaude(base){
   if(!base || !base.gerado_em) return null;
   const min = Math.max(0, Math.round((Date.now() - new Date(base.gerado_em)) / 60000));
@@ -654,9 +667,12 @@ function calcularSaude(base){
   }).format(Date.now()));
   const dentroJanela = horaBR >= 5 && horaBR < 21;
   const gmOk = !base.greenmile || base.greenmile.disponivel !== false;
+  const semGm = pracasSemGm(base);
 
   if(dentroJanela){
     if(min >= 240) return {cor: 'vermelho', texto: 'sem acesso — automação parada há ' + Math.floor(min/60) + 'h'};
+    if(gmOk && semGm.length) return {cor: 'amarelo', rotulo: 'sem GreenMile: ' + semGm.map(op => op.replace(/^Café · /, '')).join(', '),
+      texto: 'parcial — sem integração com o GreenMile em ' + semGm.join(', ') + '; essas praças mostram só o apontamento manual'};
     if(min >= 120 || !gmOk) return {cor: 'amarelo', texto: !gmOk ? 'parcial — GreenMile indisponível' : 'parcial — dado desatualizando'};
     return {cor: 'verde', texto: 'tudo funcionando'};
   }
@@ -670,7 +686,7 @@ function renderSaude(){
   if(!s){ el.hidden = true; return; }
   el.hidden = false;
   el.className = 'saude' + (s.cor === 'verde' ? '' : ' ' + s.cor);
-  el.textContent = s.cor === 'verde' ? 'operando' : s.cor === 'amarelo' ? 'parcial' : 'sem acesso';
+  el.textContent = s.rotulo || (s.cor === 'verde' ? 'operando' : s.cor === 'amarelo' ? 'parcial' : 'sem acesso');
   el.title = s.texto;
 }
 
@@ -1322,7 +1338,8 @@ function render(){
           </span>
           <span class="lane-right">
             <span class="strip">${strip}</span>
-            <span class="gmtag">${ag.entregue}/${ag.total} entregas<br>GreenMile <b>${pct(ag.gmSim,ag.gmBase)}%</b></span>
+            <span class="gmtag">${ag.entregue}/${ag.total} entregas<br>GreenMile <b>${
+              pracasSemGm(BASE).includes(g.operacao) ? 'sem integração' : pct(ag.gmSim,ag.gmBase) + '%'}</b></span>
             <span class="badge ${s.cls}">${s.txt}</span>
             <span class="caret" aria-hidden="true">+</span>
           </span>

@@ -651,17 +651,31 @@ function render(){
     degradado = "GreenMile fora do ar nesta rodada — só o apontamento manual. "
       + "Entregas e horários estão incompletos e o semáforo está desligado.";
   }
+  // Um coletor parado derruba só as praças dele. Se são todas as da tela, é o
+  // mesmo caso de cima; se é parte, o aviso sobe mas o semáforo das outras
+  // praças continua valendo.
+  var semGm = dados.pracas_sem_gm || [];
+  var nomesSemGm = semGm.map(nomePraca).join(", ");
+  var todasSemGm = semGm.length && semGm.length >= (dados.pracas || []).length;
+  if (!degradado && todasSemGm){
+    degradado = "Sem integração com o GreenMile (" + nomesSemGm + ") — só o apontamento manual. "
+      + "Entregas e horários estão incompletos e o semáforo está desligado.";
+  }
   document.body.classList.toggle("velho", !!degradado);
+  var aviso = degradado || (semGm.length
+    ? "Sem integração com o GreenMile em " + nomesSemGm
+      + " — essas praças mostram só o apontamento manual." : "");
   var al = $("alerta");
-  al.hidden = !degradado;
-  if (degradado) al.textContent = degradado;
+  al.hidden = !aviso;
+  if (aviso) al.textContent = aviso;
 
   $("janela").textContent = dados.janela.abre + "–" + dados.janela.fecha;
   var hhmm = function(t){ return new Date(t)
     .toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }); };
   $("rodape").textContent = "Quadro de " + hhmm(dados.gerado_em)
     + (visto && visto.visto_em ? " · robô verificou " + hhmm(visto.visto_em) : "")
-    + (dados.greenmile_ok === false ? " · SEM GREENMILE" : "")
+    + (dados.greenmile_ok === false ? " · SEM GREENMILE"
+       : semGm.length ? " · SEM GREENMILE: " + nomesSemGm.toUpperCase() : "")
     + " · a tela recalcula o ritmo a cada 20 s";
 
   if (!vs.length){
@@ -723,7 +737,8 @@ function render(){
       var tr = el("tr", p.cr ? "cr" : p.at ? "at" : "ok");
       var td = el("td", "praca");
       var sp = el("span", "pr"); sp.appendChild(el("i", "ponto"));
-      sp.appendChild(document.createTextNode(p.op.replace(/^Café · /, "")));
+      sp.appendChild(document.createTextNode(p.op.replace(/^Café · /, "")
+        + (semGm.indexOf(p.op) >= 0 ? " · sem GreenMile" : "")));
       td.appendChild(sp); tr.appendChild(td);
       [p.veic, p.total, p.ok, p.total - p.ok].forEach(function(n){
         tr.appendChild(el("td", null, String(n)));
@@ -781,7 +796,8 @@ function render(){
     var tr = el("tr", pc >= 90 ? "ok" : pc >= 80 ? "at" : "cr");
     var td = el("td", "praca");
     var sp = el("span", "pr"); sp.appendChild(el("i", "ponto"));
-    sp.appendChild(document.createTextNode(p.op.replace(/^Café · /, "")));
+    sp.appendChild(document.createTextNode(p.op.replace(/^Café · /, "")
+      + (semGm.indexOf(p.op) >= 0 ? " · sem GreenMile" : "")));
     td.appendChild(sp); tr.appendChild(td);
     tr.appendChild(el("td", null, String(p.ok)));
     tr.appendChild(el("td", null, String(p.gm)));
@@ -873,6 +889,7 @@ function recortar(j){
   return Object.assign({}, j, {
     veiculos: vs,
     pracas: (j.pracas || []).filter(function(p){ return naPraca(p.op); }),
+    pracas_sem_gm: (j.pracas_sem_gm || []).filter(naPraca),
     gm_sem_sac: gss
   });
 }

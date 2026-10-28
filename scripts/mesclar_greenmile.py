@@ -35,6 +35,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -62,6 +63,45 @@ CLASSE_GM = {
 # tinha feito o trabalho. O status ainda é guardado em `gm_status`, para
 # consulta, mas não manda na classe.
 CLASSE_FECHADA = {"entregue", "reentregar", "devolucao"}
+
+# Cada coletor do n8n cobre um grupo de praças e grava a sua fatia (`origem`)
+# nas tabelas. Quando um coletor falha, a fatia dele não é apagada: as linhas
+# antigas continuam lá e a API segue respondendo. Em 27/10/2026 a credencial
+# do CD GRU passou a levar 401 e SJC, Guarulhos e Itapeva ficaram um dia
+# inteiro sem GreenMile sem nenhum aviso, porque `disponivel` só olha se a API
+# respondeu. O carimbo `atualizado_em` de cada fatia é o que denuncia o coletor
+# parado.
+ORIGEM_OPERACOES = {
+    "CD GRU": ["Café · SJC", "Café · Guarulhos", "Café · Itapeva"],
+    "CD CAMPINAS": ["Café · CD Sumaré", "Café · Meso Bauru", "Café · Meso Marília"],
+}
+# Os coletores rodam a cada 30 min. Duas rodadas perdidas e mais folga.
+MINUTOS_ATRASO = 75
+
+
+def frescor_coletores(payload: dict | None) -> tuple[dict, list[str]]:
+    """Última coleta de cada fatia e as praças cujo coletor está parado.
+
+    Sem payload (API fora do ar), todas as praças ficam sem GreenMile.
+    """
+    ultima: dict[str, str] = {}
+    for linha in (payload or {}).get("entregas", []) + (payload or {}).get("posicoes", []):
+        o, t = linha.get("origem"), linha.get("atualizado_em") or ""
+        if o and t > ultima.get(o, ""):
+            ultima[o] = t
+    agora = datetime.now(timezone.utc)
+    fontes, sem_gm = {}, []
+    for origem, operacoes in ORIGEM_OPERACOES.items():
+        t = ultima.get(origem, "")
+        try:
+            idade = (agora - datetime.fromisoformat(t.replace("Z", "+00:00"))).total_seconds() / 60
+        except ValueError:
+            idade = None
+        atrasada = payload is None or idade is None or idade > MINUTOS_ATRASO
+        fontes[origem] = {"ultima_coleta": t, "atrasada": atrasada, "operacoes": operacoes}
+        if atrasada:
+            sem_gm += operacoes
+    return fontes, sem_gm
 
 
 def buscar_gm() -> dict | None:
@@ -95,8 +135,16 @@ def main() -> None:
     payload = buscar_gm()
     dado = json.loads(ARQUIVO.read_text(encoding="utf-8"))
 
+    fontes, sem_gm = frescor_coletores(payload)
+    for origem, f in fontes.items():
+        if f["atrasada"]:
+            print(f"  aviso: coletor {origem} sem atualização desde "
+                  f"{f['ultima_coleta'] or 'nunca'} — {', '.join(f['operacoes'])} sem GreenMile")
+
     if payload is None:
         dado.setdefault("greenmile", {"disponivel": False})
+        dado["greenmile"]["coletores"] = fontes
+        dado["greenmile"]["operacoes_sem_gm"] = sem_gm
         ARQUIVO.write_text(json.dumps(dado, ensure_ascii=False, indent=1), encoding="utf-8")
         return
 
@@ -148,6 +196,8 @@ def main() -> None:
         "disponivel": True,
         "gerado_em": payload.get("gerado_em"),
         "posicoes": payload.get("posicoes", []),
+        "coletores": fontes,
+        "operacoes_sem_gm": sem_gm,
     }
 
     ARQUIVO.write_text(json.dumps(dado, ensure_ascii=False, indent=1), encoding="utf-8")

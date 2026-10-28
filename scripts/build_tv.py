@@ -257,6 +257,12 @@ def main() -> None:
         # mostrou 9,9% de entregas às 15h, contra 53% reais. A tela precisa
         # dizer isso em vez de apresentar o número degradado como se fosse o dia.
         "greenmile_ok": bool((dados.get("greenmile") or {}).get("disponivel", True)),
+        # Praças cujo coletor do n8n parou, mesmo com a API respondendo. Em
+        # 27/10/2026 o coletor do CD GRU levou 401 o dia inteiro e a parede
+        # mostrou Guarulhos com 0% de GreenMile como se fosse o dado do dia.
+        # Só entram as praças com veículo hoje: aviso de praça vazia é ruído.
+        "pracas_sem_gm": sorted(set((dados.get("greenmile") or {}).get("operacoes_sem_gm", []))
+                                & set(pracas)),
         "baixas_por_hora": [{"h": h, "n": n} for h, n in sorted(collections.Counter(
             hora_hoje(n.get("gm_partida") or n.get("gm_chegada", ""), hoje)[:2]
             for n in entregas
