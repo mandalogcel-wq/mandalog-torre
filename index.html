@@ -136,6 +136,7 @@ th,td{text-align:left;padding:7px 10px 6px;border-bottom:1px solid var(--rule);v
 th{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--navy)}
 td{font-size:12.5px}
 td.nf{font-family:"IBM Plex Mono",monospace;font-size:12px;white-space:nowrap}
+td.kg,th.kg{font-family:"IBM Plex Mono",monospace;font-size:12px;white-space:nowrap;text-align:right}
 td.st,td.gm{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
 .st.entregue{color:var(--ok)}.st.reentregar{color:var(--reent)}
 .st.devolucao{color:var(--devol)}.st.andamento{color:var(--laranja-esc)}
@@ -537,6 +538,15 @@ function agruparPorPlano(ns){
       cidades: [...new Set(notas.map(n => n.cidade).filter(Boolean))].sort()
     };
   });
+}
+
+// Peso da NF em kg: planejado do GreenMile onde ele cobre a nota, coluna PESO
+// da planilha onde não cobre (mesclar_greenmile.py decide). Nota sem peso fica
+// fora da soma e é contada à parte, para o total não parecer completo.
+const fmtKg = v => v.toLocaleString('pt-BR', {maximumFractionDigits: v >= 100 ? 0 : 1});
+function pesoPlano(notas){
+  const com = notas.filter(n => n.peso_kg > 0);
+  return {kg: com.reduce((s, n) => s + n.peso_kg, 0), sem: notas.length - com.length};
 }
 
 function statusPlano(g){
@@ -1316,12 +1326,14 @@ function render(){
 
   const lanes = recortado
     .map((g,i) => {
-      const ag = agregar(g.notas), s = statusPlano(g);
+      const ag = agregar(g.notas), s = statusPlano(g), pp = pesoPlano(g.notas);
       const strip = g.notas.map(n =>
         `<i class="blk ${n.classe}" title="NF ${n.nf} · ${CLASSES[n.classe]}"></i>`).join('');
       const linhas = g.notas.map(n => `<tr>
           <td class="nf">${n.nf || '—'}</td><td>${n.cliente || '—'}</td>
           <td class="hide">${n.cidade || '—'}</td>
+          <td class="kg" title="${n.peso_origem === 'greenmile' ? 'Peso do GreenMile' : n.peso_origem ? 'Peso da planilha' : 'Sem peso informado'}">${
+            n.peso_kg > 0 ? fmtKg(n.peso_kg) : '—'}</td>
           <td class="st ${n.classe}">${rotuloDesfecho(n)}</td>
           <td class="gm ${n.gm_ok ? 'sim' : 'nao'}">${
             n.gm || (n.gm_ok ? 'Baixa eletrônica' : '—')}</td></tr>`).join('');
@@ -1338,7 +1350,9 @@ function render(){
           </span>
           <span class="lane-right">
             <span class="strip">${strip}</span>
-            <span class="gmtag">${ag.entregue}/${ag.total} entregas<br>GreenMile <b>${
+            <span class="gmtag">${ag.entregue}/${ag.total} entregas · <span title="${
+              pp.sem ? pp.sem + ' nota(s) sem peso fora da soma' : 'Peso total das notas do plano'}">${
+              pp.kg ? fmtKg(pp.kg) + ' kg' + (pp.sem ? '*' : '') : 'sem peso'}</span><br>GreenMile <b>${
               pracasSemGm(BASE).includes(g.operacao) ? 'sem integração' : pct(ag.gmSim,ag.gmBase) + '%'}</b></span>
             <span class="badge ${s.cls}">${s.txt}</span>
             <span class="caret" aria-hidden="true">+</span>
@@ -1346,7 +1360,7 @@ function render(){
         </button>
         <div class="lane-body">
           <table><thead><tr><th>NF</th><th>Recebedor</th><th class="hide">Cidade</th>
-            <th>Status SAC</th><th>GreenMile</th></tr></thead><tbody>${linhas}</tbody></table>
+            <th class="kg">Peso (kg)</th><th>Status SAC</th><th>GreenMile</th></tr></thead><tbody>${linhas}</tbody></table>
         </div></article>`;
     }).join('');
 

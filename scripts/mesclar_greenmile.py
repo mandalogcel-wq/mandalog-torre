@@ -169,6 +169,13 @@ def main() -> None:
         # stop.actualDeparture — as variantes com sufixo "Time" dão erro 500.
         nota["gm_chegada"] = g.get("chegada") or ""
         nota["gm_partida"] = g.get("partida") or ""
+        # Peso da NF: o planejado do GreenMile bate com a planilha casa decimal
+        # por casa decimal onde os dois existem, e cobre Sumaré, cuja aba não
+        # tem coluna de peso. Planejado, não realizado: numa devolução parcial
+        # o realizado encolhe, e o peso da nota é o que saiu carregado.
+        if float(g.get("peso_planejado") or 0) > 0:
+            nota["peso_kg"] = round(float(g["peso_planejado"]), 3)
+            nota["peso_origem"] = "greenmile"
 
         # Desfecho não fechado no GreenMile só vale onde a planilha também não
         # tem nada. Nunca rebaixa uma nota já apontada.

@@ -210,6 +210,19 @@ def limpar(v: str) -> str:
     return re.sub(r"\s+", " ", (v or "").replace("\u200e", "").strip())
 
 
+def peso_kg(v: str) -> float | None:
+    """'208,847 KG' -> 208.847. Vírgula decimal, ponto de milhar quando os dois
+    aparecem. Sem número legível, None — nota sem peso, não peso zero."""
+    s = re.sub(r"[^0-9,.]", "", v or "")
+    if "," in s:
+        s = s.replace(".", "").replace(",", ".")
+    try:
+        n = float(s)
+    except ValueError:
+        return None
+    return round(n, 3) if n > 0 else None
+
+
 def titulo(v: str) -> str:
     v = limpar(v)
     return v.title() if v.isupper() or v.islower() else v
@@ -337,6 +350,8 @@ def ler_csv(caminho: Path) -> tuple[list[dict], list[str]]:
             "cliente": get("cliente"),
             "cidade": cidade(get("cidade")),
             "peso": get("peso"),
+            "peso_kg": peso_kg(get("peso")),
+            "peso_origem": "planilha" if peso_kg(get("peso")) else "",
             "motorista": titulo(get("motorista")),
             "placa": get("placa").upper(),
             "perfil": get("perfil_cobranca").upper(),
