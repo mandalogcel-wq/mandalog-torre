@@ -349,7 +349,7 @@ body.velho .kpi{border-bottom-color:var(--navy-3)!important}
   <img src="assets/mandalog.png" alt="Mandalog Operações Logísticas">
   <i class="div"></i>
   <img src="assets/3coracoes.png" alt="3 Corações">
-  <div class="tag">Parceria que move todo o Brasil<br>Operação de distribuição · Vale do Paraíba</div>
+  <div class="tag">Parceria que move todo o Brasil<br><span id="tagOp">Operação de distribuição · Vale do Paraíba</span></div>
 </header>
 
 <div class="faixa">
@@ -852,6 +852,38 @@ function relogio(){
 var SENHA = new URLSearchParams(location.hash.replace(/^#/, "")).get("s") || "";
 var CHAVE = null, SALT = null;
 
+/* ---------- recorte por praça ----------
+   tv.html?op=guarulhos mostra só os veículos dessa praça; várias, separadas por
+   vírgula (op=guarulhos,sjc). É recorte de tela: o arquivo cifrado continua com
+   todas as praças, e a senha é a mesma. */
+function semAcento(s){
+  return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+function nomePraca(op){ return String(op).replace(/^Café · /, ""); }
+var RECORTE = (new URLSearchParams(location.search).get("op") || "")
+  .split(",").map(semAcento).filter(Boolean);
+function naPraca(op){ return RECORTE.indexOf(semAcento(nomePraca(op))) >= 0; }
+
+function recortar(j){
+  if (!RECORTE.length) return j;
+  var vs = j.veiculos.filter(function(v){ return naPraca(v.op); });
+  // Payload antigo, sem o campo por veículo, não pode emprestar o total do dia.
+  var gss = vs.every(function(v){ return "gm_sem_sac" in v; })
+    ? vs.reduce(function(s, v){ return s + v.gm_sem_sac; }, 0) : 0;
+  return Object.assign({}, j, {
+    veiculos: vs,
+    pracas: (j.pracas || []).filter(function(p){ return naPraca(p.op); }),
+    gm_sem_sac: gss
+  });
+}
+
+if (RECORTE.length){
+  var rotulo = RECORTE.map(function(r){ return r.charAt(0).toUpperCase() + r.slice(1); }).join(" · ");
+  if (RECORTE.length === 1 && RECORTE[0] === "sjc") rotulo = "SJC";
+  $("tagOp").textContent = "Operação de distribuição · " + rotulo;
+  document.title = "Torre operacional · " + rotulo;
+}
+
 function b64bytes(s){ return Uint8Array.from(atob(s), function(c){ return c.charCodeAt(0); }); }
 
 function chavePara(env){
@@ -882,7 +914,7 @@ $("portaForm").addEventListener("submit", function(ev){
   SENHA = $("senha").value;
   CHAVE = null; SALT = null;
   // Grava no fragmento para a TV não pedir de novo ao recarregar.
-  history.replaceState(null, "", location.pathname + "#s=" + encodeURIComponent(SENHA));
+  history.replaceState(null, "", location.pathname + location.search + "#s=" + encodeURIComponent(SENHA));
   $("portaAviso").textContent = "Abrindo…";
   buscar();
 });
@@ -912,7 +944,7 @@ function buscar(){
         var e = new Error("senha"); e.senha = true; throw e;
       });
     })
-    .then(function(j){ dados = j; $("porta").hidden = true; render(); })
+    .then(function(j){ dados = recortar(j); $("porta").hidden = true; render(); })
     .catch(function(e){
       if (e.senha){
         // Senha errada ou trocada: a tela não mostra dado que não consegue ler.

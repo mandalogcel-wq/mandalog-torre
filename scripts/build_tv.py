@@ -215,6 +215,9 @@ def main() -> None:
             # mostra os dois, nunca somados — somar produz número falso.
             "semapont": sum(1 for n in notas if n["classe"] == "semapont"),
             "gm": sum(1 for n in feitas if n["gm_ok"]),
+            # Por veículo, para a torre recortada por praça (tv.html?op=...)
+            # somar só o que é dela. O total do dia continua em gm_sem_sac.
+            "gm_sem_sac": sum(1 for n in notas if n["gm_ok"] and n["classe"] == "semapont"),
             "saida": saida,
             "saida_fonte": fonte_saida,
             "ultima_baixa": baixas[-1] if baixas else "",
