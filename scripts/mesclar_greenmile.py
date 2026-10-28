@@ -220,6 +220,10 @@ def main() -> None:
         recentes = [n for n in ent if n["operacao"] == op and (n.get("data") or "") >= corte]
         com = sum(1 for n in recentes if n.get("peso_kg"))
         print(f"    {op}: {com}/{len(recentes)} notas dos últimos 30 dias com peso")
+        perfis = {}
+        for n in recentes:
+            perfis[n.get("perfil") or "(vazio)"] = perfis.get(n.get("perfil") or "(vazio)", 0) + 1
+        print("      perfis: " + ", ".join(f"{k} {v}" for k, v in sorted(perfis.items(), key=lambda x: -x[1])))
 
 
 if __name__ == "__main__":

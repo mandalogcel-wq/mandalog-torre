@@ -115,6 +115,13 @@ h1 em{font-style:normal;color:var(--laranja)}
 .placa{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:11.5px;letter-spacing:.08em;border:1px solid var(--navy);padding:2px 6px 1px}
 .meta{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.07em;color:var(--ink-3);text-transform:uppercase}
 .cidades{color:var(--ink-2);font-size:12.5px;margin-top:4px}
+.cap{display:block;margin-top:6px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.04em;color:var(--ink-2)}
+.cap b{color:var(--ink);font-weight:600}
+.cap .comp{color:var(--reent)}.cap .disp{color:var(--ok)}.cap .acima{color:var(--reent);font-weight:600}
+.capbar{display:flex;height:6px;max-width:360px;margin-top:4px;background:#EDEFF2;border:1px solid var(--rule)}
+.capbar i{display:block;height:100%}
+.capbar i.ent{background:var(--ok)}.capbar i.comp{background:var(--reent)}.capbar i.dev{background:var(--devol)}
+.capbar i.sap{background:repeating-linear-gradient(45deg,var(--neutro) 0 2px,transparent 2px 5px)}
 .lane-right{display:flex;align-items:center;gap:15px;justify-content:flex-end;flex-wrap:wrap}
 .strip{display:flex;gap:2px;flex-wrap:wrap;max-width:320px}
 .blk{width:12px;height:21px;border:1px solid rgba(0,0,0,.16)}
@@ -547,6 +554,45 @@ const fmtKg = v => v.toLocaleString('pt-BR', {maximumFractionDigits: v >= 100 ? 
 function pesoPlano(notas){
   const com = notas.filter(n => n.peso_kg > 0);
   return {kg: com.reduce((s, n) => s + n.peso_kg, 0), sem: notas.length - com.length};
+}
+
+// Capacidade de carga por perfil de cobrança, em kg. Por ora só Guarulhos
+// mostra a conta (OPS_CAPACIDADE); as outras praças entram quando a tabela
+// for validada para elas. Perfil fora da tabela não inventa número: a linha
+// diz que a capacidade não está cadastrada.
+const CAPACIDADE_KG = {
+  'FIORINO': 650, 'VAN': 1500, 'HR': 1500, 'VUC': 3000,
+  '3/4': 4000, 'TOCO': 6000, 'TRUCK': 12000
+};
+const OPS_CAPACIDADE = ['Café · Guarulhos'];
+
+// O que o veículo carregou, o que voltou e precisa sair de novo, e o que
+// sobra para o próximo carregamento. Reentrega e nota ainda em andamento
+// ocupam o veículo. Devolução volta para o CD e não é recarregada, então
+// libera espaço. Sem apontamento fica à parte: o desfecho não é conhecido,
+// e somá-lo à reentrega daria número falso — mas também não pode ser
+// oferecido como espaço livre.
+function capacidadePlano(g){
+  if(!OPS_CAPACIDADE.includes(g.operacao)) return '';
+  const cap = CAPACIDADE_KG[String(g.perfil || '').toUpperCase().replace(/\s+/g, '')];
+  const kg = cl => g.notas.filter(n => n.peso_kg > 0 && (!cl || cl.includes(n.classe)))
+    .reduce((s, n) => s + n.peso_kg, 0);
+  const total = kg(), ent = kg(['entregue']), dev = kg(['devolucao']);
+  const comp = kg(['reentregar', 'andamento']), sap = kg(['semapont']);
+  const semPeso = g.notas.filter(n => !(n.peso_kg > 0)).length;
+  const aviso = semPeso ? ` · <span title="Notas sem peso ficam fora da conta">${semPeso} NF sem peso</span>` : '';
+  if(!total) return `<span class="cap">Sem peso informado nas notas${aviso}</span>`;
+  if(!cap) return `<span class="cap">Carregado <b>${fmtKg(total)} kg</b> · capacidade não cadastrada para o perfil ${g.perfil || '—'}${aviso}</span>`;
+  const disp = Math.max(0, cap - comp - sap);
+  const w = v => (Math.min(v, cap) / cap * 100).toFixed(1) + '%';
+  return `<span class="cap">
+      Carregado <b>${fmtKg(total)}</b> de ${fmtKg(cap)} kg${total > cap ? ' <span class="acima">acima da capacidade</span>' : ''}
+      · <span class="comp">Comprometido <b class="comp">${fmtKg(comp)} kg</b> (${pct(comp, cap)}%)</span>
+      ${sap ? `· Sem apontamento <b>${fmtKg(sap)} kg</b>` : ''}
+      · <span class="disp">Disponível <b class="disp">${fmtKg(disp)} kg</b></span>${aviso}
+      <span class="capbar" title="Entregue ${fmtKg(ent)} kg · devolução ${fmtKg(dev)} kg · comprometido ${fmtKg(comp)} kg · sem apontamento ${fmtKg(sap)} kg · capacidade ${fmtKg(cap)} kg">
+        <i class="ent" style="width:${w(ent)}"></i><i class="dev" style="width:${w(dev)}"></i><i class="comp" style="width:${w(comp)}"></i><i class="sap" style="width:${w(sap)}"></i>
+      </span></span>`;
 }
 
 function statusPlano(g){
@@ -1347,6 +1393,7 @@ function render(){
               <span class="meta">${g.perfil || 's/ perfil'} · plano ${g.plano} · ${g.origem}</span>
             </span>
             <span class="cidades">${g.cidades.join(' · ') || 'sem cidade informada'}</span>
+            ${capacidadePlano(g)}
           </span>
           <span class="lane-right">
             <span class="strip">${strip}</span>
