@@ -35,7 +35,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -211,6 +211,15 @@ def main() -> None:
     print(f"  GreenMile: {aplicadas} notas atualizadas "
           f"({divergentes} divergiam do apontamento manual) · "
           f"{len(payload.get('posicoes', []))} posições de veículo")
+    ent = [n for n in dado["notas"] if n["tipo"] == "ENTREGA"]
+    por_origem = {o: sum(1 for n in ent if n.get("peso_origem") == o) for o in ("greenmile", "planilha")}
+    corte = (datetime.now(timezone.utc) - timedelta(days=30)).date().isoformat()
+    print(f"  peso: {por_origem['greenmile']} do GreenMile · {por_origem['planilha']} da planilha · "
+          f"{len(ent) - sum(por_origem.values())} sem peso")
+    for op in sorted({n["operacao"] for n in ent}):
+        recentes = [n for n in ent if n["operacao"] == op and (n.get("data") or "") >= corte]
+        com = sum(1 for n in recentes if n.get("peso_kg"))
+        print(f"    {op}: {com}/{len(recentes)} notas dos últimos 30 dias com peso")
 
 
 if __name__ == "__main__":
