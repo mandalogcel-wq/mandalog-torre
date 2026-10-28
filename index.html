@@ -556,13 +556,14 @@ function pesoPlano(notas){
   return {kg: com.reduce((s, n) => s + n.peso_kg, 0), sem: notas.length - com.length};
 }
 
-// Capacidade de carga por perfil de cobrança, em kg. Por ora só Guarulhos
+// Capacidade de carga por perfil de cobrança, em kg, validada pelo Marcus em
+// 28/10/2026. Por ora só Guarulhos
 // mostra a conta (OPS_CAPACIDADE); as outras praças entram quando a tabela
 // for validada para elas. Perfil fora da tabela não inventa número: a linha
 // diz que a capacidade não está cadastrada.
 const CAPACIDADE_KG = {
-  'FIORINO': 650, 'VAN': 1500, 'HR': 1500, 'VUC': 3000,
-  '3/4': 4000, 'TOCO': 6000, 'TRUCK': 12000
+  'FIORINO': 500, 'VAN': 1500, 'HR': 1500, 'VUC': 2000,
+  '3/4': 3500, 'TOCO': 6000, 'TRUCK': 12000
 };
 const OPS_CAPACIDADE = ['Café · Guarulhos'];
 
