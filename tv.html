@@ -495,6 +495,8 @@ function agoraMin(){
    Quem saiu 12:00 tem janela menor e plano mais apertado, e é comparado com o
    próprio plano — não com o de quem saiu 08:00.
 --------------------------------------------------------------------------- */
+var TOLERA_ATENCAO = 1.1;
+
 function avaliar(v, agora, jan){
   var saida = Math.max(jan.abre, hm2min(v.saida));
   var janela = Math.max(1, jan.fecha - saida);
@@ -518,8 +520,14 @@ function avaliar(v, agora, jan){
   }
   r.exige = resta / pend;
   r.aperto = plano / r.exige;
+  // Atenção só para quem já está atrás do próprio plano. No começo do dia
+  // nenhum veículo teve tempo de entregar, mas cada minuto sem baixa já deixa
+  // o aperto em 1,007× — em 29/10/2026 às 08h04 a tela pôs os 20 veículos de
+  // Guarulhos em "Atenção · cobrar baixa", o que ensina a sala a ignorar o
+  // amarelo. Exige também folga de 10%, para não piscar em cima do limite.
+  var atras = v.ok < r.esperado;
   r.estado = r.aperto > dados.limite_aperto ? "critico"
-           : r.aperto > 1 ? "atencao" : "rota";
+           : (r.aperto > TOLERA_ATENCAO && atras) ? "atencao" : "rota";
   r.urg = r.estado === "critico" ? "Ação" : r.estado === "atencao" ? "Atenção" : "";
   return r;
 }
@@ -697,7 +705,7 @@ function render(){
   /* ---- tela 1 ---- */
   var k = $("kpis"); k.textContent = "";
   kpi(k, "", "Notas de hoje", String(tot),
-      vs.length + " veículos · " + Object.keys(pracasN).length + " praças");
+      vs.length + " veículos · " + plural(Object.keys(pracasN).length, "praça", "praças"));
   kpi(k, "bom k-ok", "Entregues", String(ok),
       (tot ? (ok / tot * 100).toFixed(1) : "0") + "%");
   kpi(k, "", "Pendentes", String(tot - ok), "em " + emRota + " veículos");
@@ -832,7 +840,11 @@ function render(){
        "tratados como 08:00 — a planilha não tem a coluna de onda nessas praças");
 
   telas[0].dataset.sub = tot + " notas · " + vs.length + " veículos · "
-    + Object.keys(praca).length + " praças";
+    + plural(Object.keys(praca).length, "praça", "praças");
+  // Com uma praça só (tv.html?op=...), "Praças hoje" vira uma linha esticada
+  // na tela inteira e repete o que o Ritmo já mostra. Sai do rodízio.
+  telas[1].dataset.pular = Object.keys(praca).length <= 1 ? "1" : "";
+  if (dots[1]) dots[1].hidden = telas[1].dataset.pular === "1";
   telas[1].dataset.sub = Object.keys(praca).map(function(o){
     return o.replace(/^Café · /, ""); }).sort().join(" · ");
   telas[4].dataset.sub = "Adesão ao GreenMile e apontamento — por praça";
@@ -840,6 +852,16 @@ function render(){
 }
 
 /* -------------------------------- rodízio -------------------------------- */
+
+function plural(n, um, varios){ return n + " " + (n === 1 ? um : varios); }
+
+function proxima(){
+  for (var k = 1; k <= telas.length; k++){
+    var n = (iTela + k) % telas.length;
+    if (telas[n].dataset.pular !== "1") return n;
+  }
+  return iTela;
+}
 
 function mostrar(n){
   if (telas[iTela]){ telas[iTela].classList.remove("on"); dots[iTela].classList.remove("on"); }
@@ -990,7 +1012,7 @@ buscar();
 setInterval(relogio, 10 * 1000);
 setInterval(render, MS_TICK);
 setInterval(buscar, MS_FETCH);
-setInterval(function(){ mostrar((iTela + 1) % telas.length); }, MS_TELA);
+setInterval(function(){ mostrar(proxima()); }, MS_TELA);
 </script>
 
 </body>
